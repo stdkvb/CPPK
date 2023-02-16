@@ -1,0 +1,19 @@
+@mixin contain {
+  width: 100%;
+  height: 100%;
+	object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin errorMessageStyles {
+	display: none;
+
+	padding-left: .75rem;
+
+	color: $red;
+	font-size: .875rem;
+}

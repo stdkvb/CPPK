@@ -1,0 +1,103 @@
+* {
+  @include FontFamilyMontserratRegular;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $white;
+	overflow-x: hidden;
+}
+
+h1 {
+
+  line-height: 125%;
+  font-size: 4.5em;
+
+  @include tablet_small {
+    line-height: 140%;
+    font-size: 2em;
+  }
+}
+
+h2 {
+
+  font-size: 3.5em;
+
+  @include tablet_small {
+    font-size: 1.625em;
+  }
+}
+
+h3 {
+
+  font-size: 2.25em;
+
+  @include tablet_small {
+
+    font-size: 1.25em;
+  }
+}
+
+a {
+  font-size: 1em;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+
+  font-size: 15px;
+	line-height: 130%;
+	cursor: pointer;
+
+	:disabled {
+		cursor: default;
+	}
+}
+
+p {
+
+  font-size: 1.25em;
+
+  @include tablet_small {
+    font-size: 1em;
+  }
+
+  &.subtitle {
+
+    font-size: 1.5em;
+
+    @include tablet_small {
+      font-size: 1.25em;
+    }
+  }
+}
+
+.container {
+	width: 100%;
+	max-width: $desktop;
+	padding: 0 14px;
+	margin: 0 auto;
+
+	@include desktop {
+		max-width: $desktop_base;
+	}
+	@include desktop_base {
+		max-width: $desktop_small;
+	}
+	@include desktop_small {
+		max-width: $desktop_extra_small;
+	}
+	@include desktop_extra_small {
+		max-width: $tablet;
+	}
+}
