@@ -1,0 +1,62 @@
+.btn {
+	padding: 1em 2.25em;
+	border: none;
+	background-color: $gray80;
+	color: $white;
+	position: relative;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $white;
+		color: $gray90;
+	}
+
+	&_disable {
+		color: $gray60;
+		cursor: default;
+	}
+
+	&_secondary {
+		background-color: $white;
+		color: $gray90;
+
+		&:hover {
+			background-color: $gray80;
+			color: $white;
+		}
+
+		&_disable {
+			background-color: $gray50;
+			color: $gray30;
+			cursor: default;
+		}
+	}
+
+	&_blue-border {
+		border: 1px solid $blue50;
+		background-color: $white;
+		color: $blue50;
+
+		&_disable {
+			border: 1px solid $gray30;
+			color: $gray30;
+			cursor: default;
+		}
+	}
+
+	&_blue-fill {
+		background-color: $blue50;
+		color: $white;
+
+		&_disable {
+			border: 1px solid $gray30;
+			color: $gray30;
+			cursor: default;
+		}
+	}
+
+	.children {
+		position: relative;
+		z-index: 20;
+	}
+}
