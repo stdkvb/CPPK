@@ -1,0 +1,8 @@
+<template id="header-desktop">
+	@@if (context.desktopClass) {@@include('components/business/header/_desktop.html', {class: "@@desktopClass"})}
+	@@if (!context.desktopClass) {@@include('components/business/header/_desktop.html')}
+</template>
+<template id="header-mobile">
+	@@if (context.mobileClass) {@@include('components/business/header/_mobile.html', {class: "@@mobileClass"})}
+	@@if (!context.mobileClass) {@@include('components/business/header/_mobile.html')}
+</template>

@@ -1,0 +1,18 @@
+<header id="header" class="header header_desktop container@@if (context.class) { @@class}">
+	@@include('components/ui/_logo.html')
+	<nav>
+		<ul>
+			<li><a class="link" href="/">Обучение</a></li>
+			<li><a class="link" href="/">О&nbsp;центре</a></li>
+			<li><a class="link" href="/">Контакты</a></li>
+		</ul>
+		<ul>
+			<li><a class="link link_secondary" href="/">Проекты</a></li>
+			<li><a class="link link_secondary" href="/">Сотрудничество</a></li>
+			<li><a class="link link_secondary" href="/">Мероприятия</a></li>
+			<li><a class="link link-icon link-icon_eye" href="/"></a></li>
+		</ul>
+	</nav>
+	<a class="link link-phone" href="tel:88002332222">8-800-233-22-22</a>
+	@@include('components/ui/_link-button.html', {children: 'Оставить&nbsp;заявку', href: '/', class: 'btn_secondary'})
+</header>

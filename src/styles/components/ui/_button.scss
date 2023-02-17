@@ -1,10 +1,12 @@
 .btn {
+	@include regular-14;
 	padding: 1em 2.25em;
 	border: none;
 	background-color: $gray80;
 	color: $white;
 	position: relative;
 	cursor: pointer;
+	transition: all $transitionDuration;
 
 	&:hover {
 		background-color: $white;
@@ -59,4 +61,9 @@
 		position: relative;
 		z-index: 20;
 	}
+
+	.cover {
+		@include contain;
+		z-index:30
+	 }
 }

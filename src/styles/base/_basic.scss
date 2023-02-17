@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+	line-height: 130%;
 }
 
 html {
@@ -10,12 +11,11 @@ html {
 }
 
 body {
-	background-color: $white;
+	background-color: $black;
 	overflow-x: hidden;
 }
 
 h1 {
-
   line-height: 125%;
   font-size: 4.5em;
 
@@ -45,7 +45,6 @@ h3 {
 }
 
 a {
-  font-size: 1em;
   text-decoration: none;
 }
 
@@ -54,9 +53,6 @@ ul {
 }
 
 button {
-
-  font-size: 15px;
-	line-height: 130%;
 	cursor: pointer;
 
 	:disabled {
@@ -84,20 +80,22 @@ p {
 
 .container {
 	width: 100%;
-	max-width: $desktop;
-	padding: 0 14px;
+	max-width: 1810px;
+	padding: 0;
 	margin: 0 auto;
 
-	@include desktop {
-		max-width: $desktop_base;
-	}
-	@include desktop_base {
-		max-width: $desktop_small;
-	}
-	@include desktop_small {
-		max-width: $desktop_extra_small;
-	}
-	@include desktop_extra_small {
-		max-width: $tablet;
-	}
+	// @include desktop {
+	// 	max-width: $desktop_base;
+	// }
+	// @include desktop_base {
+	// 	max-width: $desktop_small;
+	// }
+	// @include desktop_small {
+	// 	max-width: $desktop_extra_small;
+	// }
+	// @include desktop_extra_small {
+	// 	max-width: $tablet;
+	// }
 }
+
+

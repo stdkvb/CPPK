@@ -1,0 +1,78 @@
+.header {
+	padding: 0 0 0 5em;
+	z-index: 10;
+	align-items: center;
+
+	.logo {
+		height: max-content;
+		position: relative;
+		z-index: 30;
+	}
+
+	nav > ul {
+		display: flex;
+	}
+
+	&_transparent {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 0;
+		background-color: transparent;
+	}
+
+	&_desktop {
+		display: flex;
+		gap: 2.5em;
+		justify-content: space-between;
+
+		nav {
+			display: flex;
+			gap: 3.75em;
+
+			& > ul {
+				align-items: center;
+				gap: 2.5em;
+			}
+		}
+
+		.btn {
+			padding: 2.875em 3.625em;
+		}
+
+		@include desktop_base {
+			display: none;
+		}
+	}
+
+	// &_mobile {
+	// 	display: none;
+	// 	position: relative;
+	// 	overflow: hidden;
+
+	// 	width: 100%;
+	// 	padding-left: $-outsidePaddingSize;
+	// 	padding-right: $-outsidePaddingSize;
+	// 	justify-content: space-between;
+
+	// 	z-index: 30;
+
+	// 	@include desktop_base {
+	// 		display: flex;
+	// 	}
+
+	// 	@include tablet_small {
+	// 		padding-top: .75em;
+	// 		padding-bottom: .75em;
+	// 	}
+
+	// 	&__right-side {
+	// 		display: flex;
+	// 		gap: 2em;
+	// 	}
+
+	// 	.header__personal-account-btn-container {
+	// 		justify-items: flex-end;
+	// 	}
+	// }
+}

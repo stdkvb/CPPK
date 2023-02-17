@@ -1,0 +1,65 @@
+.link {
+	transition: color $transitionDuration;
+	color: $white;
+	@include regular-18;
+
+	&:hover {
+		color: $blue30;
+	}
+
+	&_secondary {
+		color: $gray20;
+		@include regular-16;
+	}
+
+	&-phone {
+		@include regular-22;
+	}
+
+	&-icon {
+		display: flex;
+		align-items: center;
+		font-size: 2.25rem;
+		line-height: 0;
+		width: 1.5em;
+		height: 1.5em;
+		border-radius: .27em;
+		position: relative;
+
+		&::before {
+			z-index: 20;
+		}
+
+		&__group {
+			display: flex;
+			gap: 1rem;
+		}
+
+		&_eye {
+			&::before {
+				content: url("@icons/eye.svg");
+			}
+		}
+
+		&_youtube {
+			padding: 7px 9px;
+
+			&::before {
+				content: url("@icons/youtube.svg");
+			}
+		}
+
+		&_vk {
+			padding: 9px;
+
+			&::before {
+				content: url("@icons/vk.svg");
+			}
+		}
+
+		.cover {
+			@include contain;
+			z-index: 30;
+		}
+	}
+}
