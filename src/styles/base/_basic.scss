@@ -11,7 +11,7 @@ html {
 }
 
 body {
-	background-color: $black;
+	background-color: $gray70;
 	overflow-x: hidden;
 }
 
@@ -80,9 +80,7 @@ p {
 
 .container {
 	width: 100%;
-	max-width: 1810px;
-	padding: 0;
-	margin: 0 auto;
+	padding-left: 13.125em;
 
 	// @include desktop {
 	// 	max-width: $desktop_base;

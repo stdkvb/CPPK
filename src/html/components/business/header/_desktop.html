@@ -1,18 +1,32 @@
 <header id="header" class="header header_desktop container@@if (context.class) { @@class}">
-	@@include('components/ui/_logo.html')
-	<nav>
+	<div id="left-bar" class="left-bar">
+		@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary'})
 		<ul>
-			<li><a class="link" href="/">Обучение</a></li>
-			<li><a class="link" href="/">О&nbsp;центре</a></li>
-			<li><a class="link" href="/">Контакты</a></li>
+			<li><a class="link" style="background-image: url(@icons/user.svg);" href="/"></a></li>
+			<li><a class="link" style="background-image: url(@icons/VR.svg);" href="/"></a></li>
+			<li><a class="link" style="background-image: url(@icons/laptop.svg);" href="/"></a></li>
 		</ul>
 		<ul>
-			<li><a class="link link_secondary" href="/">Проекты</a></li>
-			<li><a class="link link_secondary" href="/">Сотрудничество</a></li>
-			<li><a class="link link_secondary" href="/">Мероприятия</a></li>
-			<li><a class="link link-icon link-icon_eye" href="/"></a></li>
+			<li><a class="link" style="background-image: url(@icons/search.svg);" href="/"></a></li>
+			<li><a class="link" style="background-image: url(@icons/mail.svg);" href="/"></a></li>
 		</ul>
-	</nav>
-	<a class="link link-phone" href="tel:88002332222">8-800-233-22-22</a>
-	@@include('components/ui/_link-button.html', {children: 'Оставить&nbsp;заявку', href: '/', class: 'btn_secondary'})
+	</div>
+	<div id="top-bar" class="top-bar">
+		@@include('components/ui/_logo.html')
+		<nav>
+			<ul>
+				<li><a class="link" href="/">Обучение</a></li>
+				<li><a class="link" href="/">О&nbsp;центре</a></li>
+				<li><a class="link" href="/">Контакты</a></li>
+			</ul>
+			<ul>
+				<li><a class="link link_secondary" href="/">Проекты</a></li>
+				<li><a class="link link_secondary" href="/">Сотрудничество</a></li>
+				<li><a class="link link_secondary" href="/">Мероприятия</a></li>
+				<li><a class="link link-icon link-icon_eye" href="/"></a></li>
+			</ul>
+		</nav>
+		<a class="link link-phone" href="tel:88002332222">8-800-233-22-22</a>
+		@@include('components/ui/_link-button.html', {children: 'Оставить&nbsp;заявку', href: '/', class: 'btn_secondary'})
+	</div>
 </header>
