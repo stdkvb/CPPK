@@ -82,18 +82,9 @@ p {
 	width: 100%;
 	padding-left: 13.125em;
 
-	// @include desktop {
-	// 	max-width: $desktop_base;
-	// }
-	// @include desktop_base {
-	// 	max-width: $desktop_small;
-	// }
-	// @include desktop_small {
-	// 	max-width: $desktop_extra_small;
-	// }
-	// @include desktop_extra_small {
-	// 	max-width: $tablet;
-	// }
+	@include tablet {
+		padding: 0 1.25em;
+	}
 }
 
 

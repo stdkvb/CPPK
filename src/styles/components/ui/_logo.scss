@@ -2,10 +2,9 @@
 	&::before {
 		content: url("@icons/logo.svg");
 	}
-
-	// @include tablet_small {
-	// 	&::before {
-	// 		content: url("@icons/logo-mini.svg");
-	// 	}
-	// }
+	@include mobile {
+		&::before {
+			content: url("@icons/logo-mini.svg");
+		}
+	}
 }
