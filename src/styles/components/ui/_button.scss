@@ -1,8 +1,8 @@
 .btn {
 	@include regular-14;
 	padding: 1em 2.25em;
-	border: none;
-	background-color: $gray80;
+	border: solid 1px rgba(255, 255, 255, 0.6);
+	background-color: transparent;
 	color: $white;
 	position: relative;
 	cursor: pointer;
@@ -65,5 +65,13 @@
 	.cover {
 		@include contain;
 		z-index:30
+	 }
+
+	 .btn-arrow {
+		&::before {
+			content: url(@icons/btn-arrow.svg);
+			width: 5px;
+			margin-left: 2em;
+		}
 	 }
 }

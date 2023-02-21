@@ -4,6 +4,8 @@
 @import 'base/mixins';
 @import 'base/basic';
 
+@import 'pages/main.scss';
+
 @import 'components/ui/logo';
 @import 'components/ui/button';
 @import 'components/ui/link';
@@ -11,3 +13,5 @@
 @import 'components/business/header';
 @import 'components/business/footer';
 @import 'components/business/bottom-bar';
+@import 'components/business/page-title';
+@import 'components/business/events';

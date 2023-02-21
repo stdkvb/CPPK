@@ -13,35 +13,23 @@ html {
 body {
 	background-color: $gray70;
 	overflow-x: hidden;
+	position: relative;
 }
 
 h1 {
-  line-height: 125%;
-  font-size: 4.5em;
-
-  @include tablet_small {
-    line-height: 140%;
-    font-size: 2em;
-  }
+  @include regular-64;
+	color: $white;
 }
 
 h2 {
-
-  font-size: 3.5em;
-
-  @include tablet_small {
-    font-size: 1.625em;
-  }
+  @include regular-48;
+	color: $black;
 }
 
 h3 {
 
-  font-size: 2.25em;
-
-  @include tablet_small {
-
-    font-size: 1.25em;
-  }
+  @include medium-20;
+	color: $gray80;
 }
 
 a {

@@ -1,8 +1,27 @@
 <!doctype html>
 <html lang='ru'>
 	@@include('meta/_head.html', {title: 'ЦППК'})
-	<body>
+	<body class="main-page">
+		<img class="background" src="@images/main-background.png" />
 		@@include('components/business/_header.html')
+		<main>
+			<section class="page-title container">
+				<h1>Постройте эффективную<br>систему корпоративного<br>обучения</h1>
+				@@include('components/ui/_button.html', {children: 'Перейти к программам<span class="btn-arrow"></span>', href: '/'})
+			</section>
+			<section class="events swiper" dir="rtl">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<span>12 <span>февраля</span></span>
+						<h3>Набор в группу тренинг тренеров</h3>
+					</div>
+					<div class="swiper-slide">
+						<span>12 <span>февраля</span></span>
+						<h3>Набор в группу тренинг тренеров</h3>
+					</div>
+				</div>
+			</section>
+		</main>
 		@@include('components/business/_footer.html')
 		@@include('components/business/_bottom-bar.html')
 		@@include('meta/_includeScripts.html')

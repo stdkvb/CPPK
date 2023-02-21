@@ -1,0 +1,30 @@
+.events {
+	margin-top: 9.3em;
+
+	.swiper-slide {
+		padding: 1.5em 2.25em;
+		width: 32em;
+		background-color: $gray04;
+		min-height: 12.4em;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5em;
+		text-align: left;
+		@include mobile {
+			width: 18em;
+			min-height: 9.9em;
+		}
+
+		&:nth-child(2n) {
+			background-color: $gray10;
+		}
+		span {
+			color: $blue50;
+			@include regular-36;
+
+			&:last-child {
+				@include regular-18;
+			}
+		}
+	}
+}

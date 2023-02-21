@@ -15,7 +15,7 @@ const paths = {
 	},
 	src: {
 		html: `${SRC_FOLDER_PATH}/html/pages/*.html`,
-		styles: `${SRC_FOLDER_PATH}/styles/**/*.scss`,
+		styles: `${SRC_FOLDER_PATH}/styles/style.scss`,
 		scripts: `${SRC_FOLDER_PATH}/scripts`,
 		utilsScripts: `${SRC_FOLDER_PATH}/utilsScripts`,
 		images: `${SRC_FOLDER_PATH}/files/images/*.{jpg,jpeg,png,gif,webp}`,
