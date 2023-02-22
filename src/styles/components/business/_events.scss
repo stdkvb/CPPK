@@ -1,5 +1,8 @@
 .events {
 	margin-top: 9.3em;
+	@include tablet {
+		margin-top: 5.4em;
+	}
 
 	.swiper-slide {
 		padding: 1.5em 2.25em;
@@ -10,7 +13,7 @@
 		flex-direction: column;
 		gap: 1.5em;
 		text-align: left;
-		@include mobile {
+		@include tablet {
 			width: 18em;
 			min-height: 9.9em;
 		}

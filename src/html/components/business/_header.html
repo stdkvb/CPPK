@@ -1,10 +1,30 @@
 <header id="header" class="header container@@if (context.class) { @@class}">
 	<div id="left-bar" class="left-bar">
-		@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary'})
+		@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn'})
 		<ul>
 			<li><a class="link" style="background-image: url(@icons/user.svg);" href="/"></a></li>
-			<li><a class="link" style="background-image: url(@icons/VR.svg);" href="/"></a></li>
-			<li><a class="link" style="background-image: url(@icons/laptop.svg);" href="/"></a></li>
+			<li class="service-menu-link">
+				<a class="link" style="background-image: url(@icons/VR.svg);" href="/"></a>
+				<div class="service-menu">
+					<a class="link" href="/"><span class="link-arrow"></span>Закрыть</a>
+					<h2>VR</h2>
+					<img src="@images/remote-learning.png">
+					<p>VR</p>
+						@@include('components/ui/_button.html', {children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
+				</div>
+			</li>
+			<li class="service-menu-link">
+				<a class="link" style="background-image: url(@icons/laptop.svg);" href="/"></a>
+				<div class="service-menu">
+					<a class="link" href="/"><span class="link-arrow"></span>Закрыть</a>
+					<h2>Дистанционное обучение</h2>
+					<img src="@images/remote-learning.png">
+					<p>Мы поможем Вам учиться в комфортной
+						для Вас среде. Вы сможете осваивать новые направления и возможности, совмещая
+						с другими видами деятельности</p>
+						@@include('components/ui/_button.html', {children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
+				</div>
+			</li>
 		</ul>
 		<ul>
 			<li><a class="link" style="background-image: url(@icons/search.svg);" href="/"></a></li>
@@ -29,4 +49,5 @@
 		<a class="link link-phone" href="tel:88002332222">8-800-233-22-22</a>
 		@@include('components/ui/_link-button.html', {children: 'Оставить&nbsp;заявку', href: '/', class: 'btn_secondary'})
 	</div>
+
 </header>

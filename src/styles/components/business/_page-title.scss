@@ -1,6 +1,12 @@
 .page-title {
-	margin-top: 28em;
-
+	margin-top: 18em;
+	margin-left: 6.125em;
+	@include desktop_base {
+		margin-left: 0;
+	}
+	@include tablet {
+		margin-top: 8.8em;
+	}
 	.btn {
 		margin-top: 3.75em;
 	}

@@ -2,7 +2,7 @@
 	z-index: 10;
 	background-color: transparent;
 	border-bottom: solid 0.0625em rgba(255, 255, 255, 0.2);
-	height: 6em;
+	height: 110px;
 	@include tablet {
 		backdrop-filter: blur(20px);
 	}
@@ -14,7 +14,7 @@
 	.logo {
 		height: max-content;
 		position: relative;
-		z-index: 30;
+		z-index: 9;
 	}
 
 	nav > ul {
@@ -60,7 +60,7 @@
 		top: 0;
 		left: 0;
 		height: 100vh;
-		width: 6.875em;
+		width: 110px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -74,17 +74,18 @@
 			display: none;
 		}
 
-		.btn {
+		.burger-btn {
 			padding: 0;
-			height: 6.875em;
+			height: 110px;
 			width: 100%;
 			background-image: url(@icons/burger-black.svg);
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: auto;
+			border: none;
 		}
 
-		.btn:hover {
+		.burger-btn:hover {
 			background-image: url(@icons/burger-white.svg);
 		}
 
@@ -104,12 +105,45 @@
 		}
 	}
 
-	.menu {
-		position: fixed;
+	.service-menu {
+		position: absolute;
+		z-index: -1;
 		top: 0;
-		left: 6.875em;
-		width: 100%;
+		left: -47.5em;
+		width: 47.5em;
 		height: 100vh;
-		background-color: $gray40;
+		background-color: $blue50;
+		padding: 3em 5.9em 3em 12.8em;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5em;
+		transition: all $transitionDuration;
+
+		.link {
+			display: flex;
+			width: 7em;
+		}
+
+		h2 {
+			@include medium-36;
+			color: $white;
+		}
+
+		p {
+			@include regular-18;
+			color: $white;
+		}
+
+		.btn {
+			max-width: 14em;
+		}
 	}
+
+	.service-menu-link:hover {
+		.service-menu {
+			transform: translateX(47.5em);
+		}
+	}
+
+
 }

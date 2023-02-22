@@ -1,5 +1,6 @@
 .btn {
-	@include regular-14;
+	@include regular-14-uppercase;
+	height: 4.57em;
 	padding: 1em 2.25em;
 	border: solid 1px rgba(255, 255, 255, 0.6);
 	background-color: transparent;
@@ -11,6 +12,10 @@
 	&:hover {
 		background-color: $white;
 		color: $gray90;
+
+		.children .btn-arrow {
+			background-image: url(@icons/btn-arrow-hover.svg);
+		}
 	}
 
 	&_disable {
@@ -59,19 +64,20 @@
 
 	.children {
 		position: relative;
-		z-index: 20;
+		display: flex;
+		align-items: center;
+
+		.btn-arrow {
+			width: 7px;
+			height: 14px;
+			margin-left: 2em;
+			background-image: url(@icons/btn-arrow.svg);
+			transition: all $transitionDuration;
+		}
 	}
 
 	.cover {
 		@include contain;
 		z-index:30
-	 }
-
-	 .btn-arrow {
-		&::before {
-			content: url(@icons/btn-arrow.svg);
-			width: 5px;
-			margin-left: 2em;
-		}
 	 }
 }
