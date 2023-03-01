@@ -1,7 +1,7 @@
 .bottom-bar {
 	display: none;
-	position: absolute;
-	bottom: -4.5em;
+	position: fixed;
+	bottom: 0;
 	background-color: $blue50;
 	width: 100%;
 	height: 4.5em;

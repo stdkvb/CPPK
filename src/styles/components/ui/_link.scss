@@ -7,6 +7,7 @@
 
 	&:hover {
 		color: $blue30;
+		cursor: pointer;
 
 		.link-arrow {
 			opacity: 0.5;
@@ -45,10 +46,6 @@
 		width: 1.5em;
 		height: 1.5em;
 		position: relative;
-
-		&::before {
-			z-index: 9;
-		}
 
 		&__group {
 			display: flex;

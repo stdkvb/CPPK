@@ -1,7 +1,7 @@
 <div id="bottom-bar" class="bottom-bar">
-	<a class="link" style="background-image: url(@icons/user.svg);" href="/"></a>
-	<a class="link" style="background-image: url(@icons/VR.svg);" href="/"></a>
-	<a class="link" style="background-image: url(@icons/laptop.svg);" href="/"></a>
-	<a class="link" style="background-image: url(@icons/search.svg);" href="/"></a>
-	@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary'})
+	<a class="link" style="background-image: url(@icons/user.svg);"></a>
+	<a class="link" id="virtual-reality" style="background-image: url(@icons/VR.svg);"></a>
+	<a class="link" id="remote-learning" style="background-image: url(@icons/laptop.svg);"></a>
+	<a class="link" id="bottom-search-btn" style="background-image: url(@icons/search.svg);"></a>
+	@@include('components/ui/_button.html', {children: '', id:'bottom-burger-btn', class: 'btn_secondary'})
 </div>

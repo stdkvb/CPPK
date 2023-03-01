@@ -71,7 +71,7 @@
 		backdrop-filter: blur(20px);
 		z-index: 10;
 		@include tablet {
-			display: none;
+			visibility: hidden;
 		}
 
 		.burger-btn {
@@ -105,6 +105,55 @@
 		}
 	}
 
+	.menu {
+		position: absolute;
+		top: 0;
+		left: -100vw;
+		width: 100vw;
+		height: 100vh;
+		background-color: $gray80;
+		padding: 5em 5em 5em 10em;
+		visibility: visible;
+		transition: all $transitionDuration;
+		@include tablet {
+			padding: 2em 1.5em 	5em 1.5em;
+		}
+
+		&_active {
+			transform: translateX(100vw);
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 23px;
+			left: 23px;
+			width: 2.125em;
+			height: 2.125em;
+			background-image: url(@icons/close.svg);
+			@include tablet {
+				display: none;
+			}
+		}
+
+		@include min_tablet{
+			.menu__accordion {
+				position: relative;
+			}
+
+			.accordion__content {
+				position: absolute;
+				top: 0;
+				left: 486px;
+			}
+		}
+
+		.header__social {
+			margin-top: 0.25em;
+			gap: 1em;
+			display: flex;
+		}
+	}
+
 	.service-menu {
 		position: absolute;
 		z-index: -1;
@@ -118,6 +167,19 @@
 		flex-direction: column;
 		gap: 2.5em;
 		transition: all $transitionDuration;
+		@include tablet {
+			visibility: visible;
+			left: -100vw;
+			width: 100vw;
+			padding: 1.5em 2em 1.5em 1.5em;
+		}
+
+		&_active {
+			transform: translateX(47.5em);
+			@include tablet {
+				transform: translateX(100vw);
+			}
+		}
 
 		.link {
 			display: flex;
@@ -127,6 +189,9 @@
 		h2 {
 			@include medium-36;
 			color: $white;
+			@include tablet {
+				@include medium-24;
+			}
 		}
 
 		p {
@@ -136,6 +201,16 @@
 
 		.btn {
 			max-width: 14em;
+			@include mobile {
+				width: 100%;
+			}
+		}
+
+		img {
+			max-width: 40em;
+			@include mobile {
+				width: 100%;
+			}
 		}
 	}
 
@@ -145,5 +220,151 @@
 		}
 	}
 
+	.search-menu {
+		position: absolute;
+		top: 0;
+		left: -100vw;
+		width: 100vw;
+		height: 100vh;
+		background-color: $gray80;
+		padding: 5em 5em 5em 10em;
+		visibility: visible;
+		transition: all $transitionDuration;
+		@include tablet {
+			padding: 2em 1.5em 	5em 1.5em;
+		}
 
+		&_active {
+			transform: translateX(100vw);
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 23px;
+			left: 23px;
+			width: 2.125em;
+			height: 2.125em;
+			background-image: url(@icons/close.svg);
+			@include tablet {
+				display: none;
+			}
+		}
+
+		.top-container {
+			display: flex;
+			@include desktop_huge {
+				flex-direction: column;
+			}
+		}
+
+		.search-bar {
+			margin: 0 0 5em 0;
+			border: solid 1px $gray30;
+			max-width: 1135px;
+			@include tablet {
+				padding-right: 1.5em;
+			}
+			@include desktop_huge {
+				margin: 0 0 1em 0;
+			}
+
+			input {
+				color: $gray30;
+				@include tablet {
+					padding: 0 1.5em;
+				}
+			}
+
+			button {
+				background-image: url(@icons/search-bar-button-white.svg);
+			}
+		}
+
+		.select {
+			position: relative;
+			width: 15.9em;
+			height: 4.5em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 4.2em;
+			@include regular-18;
+			color: $white;
+			@include desktop_huge {
+				margin-left: 0;
+			}
+			@include tablet {
+				width: 100%;
+			}
+			.select-trigger {
+				position: relative;
+				width: 100%;
+				padding: 0.7rem 0.8rem;
+				cursor: pointer;
+			}
+
+			.select-trigger::after {
+				content: url(@icons/chevron-down.svg);
+				position: absolute;
+				height: 16px;
+				bottom: 16px;
+				right: 0.8rem;
+				transition: transform $transitionDuration ease;
+			}
+
+			.select-options {
+				position: absolute;
+				top: 4.6rem;
+				left: 0;
+				width: 100%;
+				border: solid 1px $gray60;
+				z-index: 1;
+				display: none;
+				background-color: $gray80;
+
+				.select-option {
+					position: relative;
+					padding: 1em;
+				}
+
+				.select-option:hover {
+					background-color: $gray60;
+				}
+
+				.select-option:not(:last-of-type)::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0.8rem;
+					width: calc(100% - 1.6rem);
+				}
+			}
+		}
+
+		.select.isActive {
+			.select-options {
+				display: block;
+			}
+			.select-trigger::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		h2 {
+			color: $white;
+			@include medium-28;
+			margin-bottom: 1.7em;
+		}
+
+		ul {
+			gap: 1em;
+
+			.link {
+				display: block;
+				width: fit-content;
+				height: unset;
+		  }
+		}
+
+	}
 }

@@ -1,5 +1,6 @@
 .events {
 	margin-top: 9.3em;
+	z-index: -1 !important;
 	@include tablet {
 		margin-top: 5.4em;
 	}
