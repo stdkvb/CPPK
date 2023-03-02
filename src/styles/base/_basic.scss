@@ -32,7 +32,6 @@ h2 {
 }
 
 h3 {
-
   @include medium-20;
 	color: $gray80;
 }
@@ -59,7 +58,8 @@ p {
 
 .container {
 	width: 100%;
-	padding-left: 13.125em;
+	padding-left: 210px;
+	background-color: $gray04;
 
 	@include tablet {
 		padding: 0 1.25em;

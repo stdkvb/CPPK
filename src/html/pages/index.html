@@ -2,7 +2,6 @@
 <html lang='ru'>
 	@@include('meta/_head.html', {title: 'ЦППК'})
 	<body class="main-page">
-		<img class="background" src="@images/main-background.png" />
 		@@include('components/business/_header.html')
 		<main>
 			<section class="page-title container">
@@ -28,9 +27,22 @@
 					</div>
 				</div>
 			</section>
-			<section class="main-directions container">
-				<h2>Основные направления</h2>
-				@@include('components/ui/_search-bar.html', {placeholder: 'Начните вводить название программы или направления'})
+			<section class="programms container">
+				<div class="programms__tabs swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide_active">
+							<h2>Повышение квалификации</h2>
+						</div>
+						<div class="swiper-slide">
+							<h2>Профессиональная переподготовка</h2>
+						</div>
+						<div class="swiper-slide">
+							<h2>Курсы<br>и семинары</h2>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+
 			</section>
 		</main>
 		@@include('components/business/_footer.html')

@@ -1,6 +1,7 @@
 .page-title {
 	margin-top: 18em;
-	margin-left: 6.125em;
+	padding-left: 310px;
+	background-color: transparent;
 	@include desktop_base {
 		margin-left: 0;
 	}

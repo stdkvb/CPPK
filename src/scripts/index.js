@@ -5,6 +5,21 @@ const eventsSwiper = new Swiper('.events', {
 	spaceBetween: 0
 })
 
+const programmsTabsSwiper = new Swiper('.programms__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 44,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			scrollbar: false,
+			spaceBetween: 100,
+		}
+	}
+})
+
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')
