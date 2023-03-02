@@ -1,7 +1,15 @@
-.partners__cards {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(130px, 223px));
-	gap: 4px;
+.partners {
+	// display: grid;
+	// grid-template-columns: repeat(auto-fit, minmax(130px, 223px));
+	// gap: 4px;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	& .swiper-slide {
+		width: 224px;
+	}
 
 	img {
 		width: 100%;

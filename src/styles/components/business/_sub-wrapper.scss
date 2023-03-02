@@ -1,11 +1,26 @@
 .sub-wrapper {
 	display: grid;
 	grid-template-columns: 1fr minmax(min-content, 472px);
+	grid-template-areas: "content sidebar";
+
+	@include desktop_medium {
+		grid-template-columns: 1fr minmax(min-content, 368px);
+	}
+
+	@include tablet {
+		grid-template-columns: 1fr;
+		grid-template-areas: "sidebar" "content";
+	}
 
 	&__content {
 		background-color: $gray04;
 		margin-left: 100px;
-		padding: 100px 100px 140px 100px;
+		padding: 100px;
+		grid-area: content;
+
+		@include desktop_medium {
+			padding-right: 50px;
+		}
 
 		h2 {
 			@include medium-36;
@@ -21,6 +36,9 @@
 		flex-wrap: wrap;
 		margin-bottom: 60px;
 
+		@include tablet {
+			display: none;
+		}
 
 		.link_blue {
 			position: relative;
@@ -34,7 +52,6 @@
 				position: absolute;
 				right: -20px;
 				top: 0;
-
 			}
 		}
 	}
@@ -75,9 +92,5 @@
 			height: auto;
 			margin-top: 60px;
 		}
-	}
-
-	&__sidebar {
-		background-color: $white;
 	}
 }
