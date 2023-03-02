@@ -20,10 +20,21 @@
 	}
 
 	&_blue {
+<<<<<<< HEAD
 		color: $blue60;
 		@include regular-18;
 
 		&:hover {
+=======
+		color: $blue50;
+		&:link,
+		&:visited {
+			color: $blue50;
+		}
+
+		&:hover,
+		&:active {
+>>>>>>> c6ca6b24172519cb3103c37c0acdf774f64df646
 			color: $blue30;
 		}
 

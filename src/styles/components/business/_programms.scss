@@ -1,5 +1,5 @@
 .programms {
-
+	position: relative;
 	.programms__tabs {
 		padding: 140px 0 80px 0;
 		@include tablet {
@@ -42,9 +42,100 @@
 		.swiper-scrollbar {
 			bottom: 30px;
 			background: $blue20;
+			@include min_tablet {
+				display: none;
+			}
+
 			.swiper-scrollbar-drag {
 				background: $blue50;
 			}
+		}
+	}
+
+	.programms__cards.swiper {
+		position: unset;
+	}
+	.programms__cards {
+		height: auto;
+		@include min_tablet {
+			margin-left: 320px;
+		}
+		.swiper-slide {
+			padding: 48px;
+			width: 440px;
+			background-color: $white;
+			height: 200px;
+			@include tablet {
+				width: 282px;
+				height: 163px;
+				padding: 20px 24px;
+			}
+			h3 {
+				color: $gray90;
+				@include medium-20;
+				margin-bottom: 31px;
+				@include tablet {
+					@include medium-18;
+				}
+			}
+			.link {
+				@include regular-16;
+			}
+		}
+		.swiper-button-prev {
+			height: 21px;
+			width: 8px;
+			top: 179px;
+			left: unset;
+			right:220px !important;
+			@include desktop_huge {
+				display: none;
+			}
+			&:after {
+				content: url(@icons/swiper-arrow.svg);
+				transform: rotate(180deg);
+			}
+		}
+		.swiper-button-next {
+			height: 21px;
+			width: 8px;
+			top: 170px;
+			right: 130px !important;
+			@include desktop_huge {
+				display: none;
+			}
+			&:after {
+				content: url(@icons/swiper-arrow.svg);
+			}
+		}
+
+	}
+
+	.programms__download {
+		width: 320px;
+		height: 370px;
+		padding: 115px 32px 32px 32px;
+		background: url(@images/programms-download-background.png);
+		margin-top: 32px;
+		@include min_tablet {
+			height: 604px;
+			position: absolute;
+			top: 344px;
+			z-index: 1;
+			margin: 0;
+		}
+		h3 {
+			@include medium-24;
+			color: $white;
+			margin-bottom: 269px;
+			@include tablet {
+				@include medium-20;
+				margin-bottom: 74px;
+			}
+		}
+
+		.btn {
+			width: 100%;
 		}
 	}
 }
