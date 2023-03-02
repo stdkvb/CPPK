@@ -1,8 +1,8 @@
 footer {
 	width: 100%;
-	background: $gray90;
 
 	.container {
+		background-color: $gray90;
 		padding: 5em 0 2.125em 0;
 		@include tablet {
 			padding: 3.75em 1.25em 6.5em 1.25em;
