@@ -15,7 +15,28 @@ const programmsTabsSwiper = new Swiper('.programms__tabs', {
 	breakpoints: {
 		992: {
 			scrollbar: false,
-			spaceBetween: 100,
+			spaceBetween: 100
+		}
+	}
+})
+
+const programmsCardsSwiper = new Swiper('.programms__cards', {
+	slidesPerView: 'auto',
+	spaceBetween: 2,
+	grid: {
+		fill: 'row',
+		rows: 2
+	},
+	breakpoints: {
+		992: {
+			grid: {
+				fill: 'row',
+				rows: 3
+			},
+			navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
 		}
 	}
 })

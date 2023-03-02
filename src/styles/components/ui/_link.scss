@@ -20,7 +20,7 @@
 	}
 
 	&_blue {
-
+		color: $blue50;
 		&:link,
 		&:visited {
 			color: $blue50;
@@ -34,9 +34,6 @@
 		&_disabled {
 			color: $gray30;
 		}
-
-
-
 	}
 
 	&-phone {
