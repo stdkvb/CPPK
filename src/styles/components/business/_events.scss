@@ -1,34 +1,58 @@
 .events {
 	margin-top: 9.3em;
-	z-index: -1 !important;
 	@include tablet {
 		margin-top: 5.4em;
 	}
 
 	.swiper-slide {
 		padding: 1.5em 2.25em;
-		width: 32em;
+		width: 17.5em;
 		background-color: $gray04;
-		min-height: 12.4em;
+		min-height: 11.3em;
 		display: flex;
 		flex-direction: column;
-		gap: 1.5em;
 		text-align: left;
+		align-items: end;
+		@include regular-18;
+		color: $gray60;
 		@include tablet {
 			width: 18em;
 			min-height: 9.9em;
 		}
 
+		&:nth-last-child(1) {
+			background-color: $blue60;
+			color: $white;
+			.link {
+				color: $white;
+				border-bottom: solid 1px $white;
+			}
+		}
+
 		&:nth-child(2n) {
 			background-color: $gray10;
 		}
-		span {
-			color: $blue50;
-			@include regular-36;
 
-			&:last-child {
-				@include regular-18;
-			}
+		p {
+			@include regular-18;
+		}
+
+		span {
+			@include regular-32;
+			margin-right: 0.25em;
+		}
+
+		h4 {
+			@include regular-16;
+			margin-top: 0.5em;
+		}
+
+		.link {
+			width: fit-content;
+			text-align: left;
+			color: $gray60;
+			margin-top: 2em;
+			border-bottom: solid 1px $gray60;
 		}
 	}
 }
