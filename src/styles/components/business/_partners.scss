@@ -1,0 +1,10 @@
+.partners__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(130px, 223px));
+	gap: 4px;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}

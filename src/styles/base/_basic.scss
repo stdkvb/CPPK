@@ -1,8 +1,8 @@
 * {
-  @include FontFamilyMontserratRegular;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	@include FontFamilyMontserratRegular;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	line-height: 130%;
 }
 
@@ -16,32 +16,34 @@ body {
 }
 
 h1 {
-  @include regular-64;
+	@include regular-64;
 	color: $white;
+
 	@include tablet {
 		@include regular-48
 	}
+
 	@include mobile {
 		@include regular-36
 	}
 }
 
 h2 {
-  @include medium-48;
+	@include medium-48;
 	color: $black;
 }
 
 h3 {
-  @include medium-20;
+	@include medium-20;
 	color: $gray80;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 button {
@@ -53,7 +55,7 @@ button {
 }
 
 p {
-  @include regular-16;
+	@include regular-16;
 }
 
 .container {
@@ -66,4 +68,8 @@ p {
 	}
 }
 
-
+.sub-container {
+	max-width: 1810px;
+	margin-left: 110px;
+	padding: 80px 0 120px 100px;
+}

@@ -19,11 +19,33 @@
 		@include regular-16;
 	}
 
+	&_blue {
+
+		&:link,
+		&:visited {
+			color: $blue50;
+		}
+
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
+
+		&_disabled {
+			color: $gray30;
+		}
+
+
+
+	}
+
 	&-phone {
 		@include regular-22;
+
 		@include desktop_huge {
 			margin-right: 1.3em;
 		}
+
 		@include mobile {
 			@include regular-18;
 		}
