@@ -5,6 +5,12 @@ const eventsSwiper = new Swiper('.events', {
 	spaceBetween: 0
 })
 
+const partnersSwiper = new Swiper('.partners', {
+	slidesPerView: 'auto',
+	spaceBetween: 4,
+
+})
+
 const programmsTabsSwiper = new Swiper('.programms__tabs', {
 	slidesPerView: 'auto',
 	spaceBetween: 44,
@@ -116,4 +122,18 @@ const menuToggle = document.querySelector('.accordion__toggle')
 const subMenu = document.querySelector('.accordion__content')
 menuToggle.addEventListener('mouseover', () => {
 	subMenu.classList.add('accordion__content_active')
+})
+
+// sub-menu accordeon
+takeControlAccordion('.sub-menu', '.sub-menu__list', {
+	accordionItemSelector: '.sub-menu__links',
+	accordionItemTogglerSelector: '.sub-menu__toggle',
+	accordionItemContentSelector: '.sub-menu__content',
+	accordionItemActiveClass: 'sub-menu__links_active'
+})
+
+const subMenuToggle = document.querySelector('.sub-menu__toggle')
+const subMenuContent = document.querySelector('.sub-menu__content')
+subMenuToggle.addEventListener('click', () => {
+	subMenuContent.classList.toggle('sub-menu__content_active')
 })

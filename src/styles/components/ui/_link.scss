@@ -20,23 +20,18 @@
 	}
 
 	&_blue {
+		color: $blue60;
+		@include regular-18;
 
-		&:link,
-		&:visited {
-			color: $blue50;
-		}
-
-		&:hover,
-		&:active {
+		&:hover {
 			color: $blue30;
 		}
 
 		&_disabled {
+			cursor: auto;
 			color: $gray30;
+			@include regular-18;
 		}
-
-
-
 	}
 
 	&-phone {
