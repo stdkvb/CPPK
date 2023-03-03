@@ -20,93 +20,91 @@
 	}
 
 	&_blue {
-<<<<<<< HEAD
 		color: $blue60;
 		@include regular-18;
 
 		&:hover {
-=======
-		color: $blue50;
-		&:link,
-		&:visited {
 			color: $blue50;
+
+			&:link,
+			&:visited {
+				color: $blue50;
+			}
+
+			&:hover,
+			&:active {
+				color: $blue30;
+			}
+
+			&_disabled {
+				cursor: auto;
+				color: $gray30;
+				@include regular-18;
+			}
 		}
 
-		&:hover,
-		&:active {
->>>>>>> c6ca6b24172519cb3103c37c0acdf774f64df646
-			color: $blue30;
+		&-phone {
+			@include regular-22;
+
+			@include desktop_huge {
+				margin-right: 1.3em;
+			}
+
+			@include mobile {
+				@include regular-18;
+			}
 		}
 
-		&_disabled {
-			cursor: auto;
-			color: $gray30;
-			@include regular-18;
-		}
-	}
-
-	&-phone {
-		@include regular-22;
-
-		@include desktop_huge {
-			margin-right: 1.3em;
+		&-arrow {
+			display: block;
+			width: 24px;
+			height: 0.9em;
+			background-image: url(@icons/link-arrow.svg);
+			background-repeat: no-repeat;
+			margin-right: 20px;
+			transition: opacity $transitionDuration;
 		}
 
-		@include mobile {
-			@include regular-18;
-		}
-	}
-
-	&-arrow {
-		display: block;
-		width: 24px;
-		height: 0.9em;
-		background-image: url(@icons/link-arrow.svg);
-		background-repeat: no-repeat;
-		margin-right: 20px;
-		transition: opacity $transitionDuration;
-	}
-
-	&-icon {
-		display: flex;
-		align-items: center;
-		line-height: 0;
-		width: 1.5em;
-		height: 1.5em;
-		position: relative;
-
-		&__group {
+		&-icon {
 			display: flex;
-			gap: 1rem;
-		}
+			align-items: center;
+			line-height: 0;
+			width: 1.5em;
+			height: 1.5em;
+			position: relative;
 
-		&_burger {
-			&::before {
-				content: url("@icons/burger.svg");
+			&__group {
+				display: flex;
+				gap: 1rem;
 			}
-		}
 
-		&_eye {
-			&::before {
-				content: url("@icons/eye.svg");
+			&_burger {
+				&::before {
+					content: url("@icons/burger.svg");
+				}
 			}
-		}
 
-		&_youtube {
-			&::before {
-				content: url("@icons/youtube.svg");
+			&_eye {
+				&::before {
+					content: url("@icons/eye.svg");
+				}
 			}
-		}
 
-		&_vk {
-			&::before {
-				content: url("@icons/vk.svg");
+			&_youtube {
+				&::before {
+					content: url("@icons/youtube.svg");
+				}
 			}
-		}
 
-		.cover {
-			@include contain;
-			z-index: 30;
+			&_vk {
+				&::before {
+					content: url("@icons/vk.svg");
+				}
+			}
+
+			.cover {
+				@include contain;
+				z-index: 30;
+			}
 		}
 	}
-}
