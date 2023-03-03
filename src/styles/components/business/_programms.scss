@@ -83,32 +83,20 @@
 			}
 		}
 		.swiper-button-prev {
-			height: 21px;
-			width: 8px;
 			top: 179px;
 			left: unset;
 			right:220px !important;
 			@include desktop_huge {
 				display: none;
 			}
-			&:after {
-				content: url(@icons/swiper-arrow.svg);
-				transform: rotate(180deg);
-			}
 		}
 		.swiper-button-next {
-			height: 21px;
-			width: 8px;
 			top: 170px;
 			right: 130px !important;
 			@include desktop_huge {
 				display: none;
 			}
-			&:after {
-				content: url(@icons/swiper-arrow.svg);
-			}
 		}
-
 	}
 
 	.programms__download {

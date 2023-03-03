@@ -148,6 +148,39 @@
 				background: '@images/banner-background-1.png',
 				image: '@images/banner-image-1.png'
 			})
+			<section class="about-us container">
+				<div class="about-us__text-container">
+					<div>
+						<h2>Центр профессиональной подготовки кадров</h2>
+						<p>Мы один из крупнейших учебных центров Башкирии, и растем каждый год! Большой опыт работы на образовательном рынке позволяет нам создавать эффективные инструменты успеха.</p>
+						@@include('components/ui/_button.html', {children: 'Подробнее о компании', class: 'btn_blue-border', href: '/'})
+					</div>
+					<div class="about-us__numbers">
+						<span>20</span>
+						<p>лет на рынке профессионального образования</p>
+					</div>
+					<div class="about-us__numbers">
+						<span>800</span>
+						<p>специальностей и профессий по 33 направлениям</p>
+					</div>
+				</div>
+				<div class="about-us__photo swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="@images/about-us-1.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/about-us-2.png">
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-pagination"></div>
+					<div class="about-us__photo-description">
+						<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы</p>
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('components/business/_footer.html')
 		@@include('components/business/_bottom-bar.html')
