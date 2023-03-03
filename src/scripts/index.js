@@ -6,8 +6,14 @@ const eventsSwiper = new Swiper('.events', {
 })
 
 const partnersSwiper = new Swiper('.partners', {
+	spaceBetween: 4,
 	slidesPerView: 'auto',
-	spaceBetween: 4
+	breakpoints: {
+		1024: {
+			slidesPerView: 5,
+
+		}
+	},
 })
 
 const programmsTabsSwiper = new Swiper('.programms__tabs', {
@@ -161,6 +167,20 @@ menuToggle.addEventListener('mouseover', () => {
 	subMenu.classList.add('accordion__content_active')
 })
 
+// sub-menu accordeon
+takeControlAccordion('.sub-menu', '.sub-menu__list', {
+	accordionItemSelector: '.sub-menu__links',
+	accordionItemTogglerSelector: '.sub-menu__toggle',
+	accordionItemContentSelector: '.sub-menu__content',
+	accordionItemActiveClass: 'sub-menu__links_active'
+})
+
+const subMenuToggle = document.querySelector('.sub-menu__toggle')
+const subMenuContent = document.querySelector('.sub-menu__content')
+subMenuToggle.addEventListener('click', () => {
+	subMenuContent.classList.toggle('sub-menu__content_active')
+})
+
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
 benefitsCards.children[0].addEventListener('mouseenter', (e) => {
@@ -200,16 +220,3 @@ benefitsCards.children[4].addEventListener('mouseleave', (e) => {
 	e.target.classList.remove('benefits__card_active')
 })
 
-// sub-menu accordeon
-takeControlAccordion('.sub-menu', '.sub-menu__list', {
-	accordionItemSelector: '.sub-menu__links',
-	accordionItemTogglerSelector: '.sub-menu__toggle',
-	accordionItemContentSelector: '.sub-menu__content',
-	accordionItemActiveClass: 'sub-menu__links_active'
-})
-
-const subMenuToggle = document.querySelector('.sub-menu__toggle')
-const subMenuContent = document.querySelector('.sub-menu__content')
-subMenuToggle.addEventListener('click', () => {
-	subMenuContent.classList.toggle('sub-menu__content_active')
-})
