@@ -1,33 +1,28 @@
 .sub-wrapper {
 	display: grid;
-	grid-template-columns: 1fr minmax(min-content, 472px);
+	grid-template-columns: 80% 1fr;
 	grid-template-areas: "content sidebar";
 
-	@include desktop_medium {
-		grid-template-columns: 1fr minmax(min-content, 368px);
-	}
-
 	@include tablet {
-		grid-template-columns: 1fr;
-		grid-template-areas: "sidebar" "content";
+		display: block;
 	}
 
 	&__content {
 		background-color: $gray04;
 		margin-left: 100px;
-		padding: 100px;
+		padding: 100px 100px 140px;
 		grid-area: content;
 
 		@include desktop_medium {
 			padding-right: 50px;
 		}
 
-		h2 {
-			@include medium-36;
-			line-height: 1.3;
-
-			margin: 60px 0 40px 0;
+		@include tablet {
+			margin-left: 0;
+			padding: 32px 20px 60px;
 		}
+
+
 
 	}
 
@@ -57,17 +52,43 @@
 	}
 
 	&__text {
-		margin-bottom: 140px;
 
+		h2 {
+			@include medium-36;
+			line-height: 1.3;
+			margin: 60px 0 40px 0;
 
+			&:first-child {
+				@include tablet {
+					margin-top: 0;
+				}
+			}
+
+			@include tablet {
+				@include medium-24;
+				margin-bottom: 32px;
+			}
+		}
 
 		p {
 			@include regular-18;
 			line-height: 1.3;
 
-			&:not(:last-child) {
-				margin-bottom: 18px;
+			&:not(:first-child) {
+				margin-top: 18px;
 			}
+
+			@include tablet {
+				@include regular-16;
+			}
+		}
+
+		span {
+			@include regular-16;
+			line-height: 1.3;
+			color: $gray60;
+			display: inline-block;
+			margin-top: 18px;
 		}
 
 		li {
@@ -75,7 +96,11 @@
 			line-height: 1.3;
 			position: relative;
 			padding-left: 50px;
-			margin-bottom: 24px;
+
+			&:not(:first-child) {
+				margin-top: 24px;
+			}
+
 
 			&::before {
 				content: url(@icons/check.svg);
@@ -84,6 +109,10 @@
 				position: absolute;
 				left: 0;
 
+			}
+
+			@include tablet {
+				@include regular-16;
 			}
 		}
 

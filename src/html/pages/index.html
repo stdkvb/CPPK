@@ -1,31 +1,134 @@
 <!doctype html>
 <html lang='ru'>
-	@@include('meta/_head.html', {title: 'ЦППК'})
-	<body class="main-page">
-		@@include('components/business/_header.html')
-		<main>
-			<section class="page-title container">
-				<h1>Постройте эффективную<br>систему корпоративного<br>обучения</h1>
-				@@include('components/ui/_button.html', {children: 'Перейти к программам<span class="btn-arrow"></span>', href: '/'})
-			</section>
-			<section class="events swiper" dir="rtl">
+@@include('meta/_head.html', {title: 'ЦППК'})
+
+<body class="main-page">
+	@@include('components/business/_header.html')
+	<main>
+		<section class="page-title container">
+			<h1>Постройте эффективную<br>систему корпоративного<br>обучения</h1>
+			@@include('components/ui/_button.html', {children: 'Перейти к программам<span class="btn-arrow"></span>',
+			href: '/'})
+		</section>
+		<section class="events swiper" dir="rtl">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<p><span>12</span>февраля</p>
+					<h4>Набор в группу тренинг тренеров</h4>
+					<a class="link">Подробнее</a>
+				</div>
+				<div class="swiper-slide">
+					<p><span>12</span>февраля</p>
+					<h4>Набор в группу тренинг тренеров</h4>
+					<a class="link">Подробнее</a>
+				</div>
+				<div class="swiper-slide">
+					<p><span>12</span>февраля</p>
+					<h4>Набор в группу тренинг тренеров</h4>
+					<a class="link">Подробнее</a>
+				</div>
+			</div>
+		</section>
+		<section class="programms container">
+			<div class="programms__tabs swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<p><span>12</span>февраля</p>
-						<h4>Набор в группу тренинг тренеров</h4>
-						<a class="link">Подробнее</a>
+					<div class="swiper-slide swiper-slide_active">
+						<h2>Повышение квалификации</h2>
 					</div>
 					<div class="swiper-slide">
-						<p><span>12</span>февраля</p>
-						<h4>Набор в группу тренинг тренеров</h4>
-						<a class="link">Подробнее</a>
+						<h2>Профессиональная переподготовка</h2>
 					</div>
 					<div class="swiper-slide">
-						<p><span>12</span>февраля</p>
-						<h4>Набор в группу тренинг тренеров</h4>
-						<a class="link">Подробнее</a>
+						<h2>Курсы<br>и семинары</h2>
 					</div>
 				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+			<div class="programms__cards swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Строительство, проектирование, инженерные изыскания</h3>
+						<a class="link link_blue">41 специальность &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Нефтегазовое дело</h3>
+						<a class="link link_blue">2 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Сельское хозяйство</h3>
+						<a class="link link_blue">3 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Строительство, проектирование, инженерные изыскания</h3>
+						<a class="link link_blue">41 специальность &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Нефтегазовое дело</h3>
+						<a class="link link_blue">2 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Сельское хозяйство</h3>
+						<a class="link link_blue">3 специальности &rarr;</a>
+					</div>
+				</div>
+<<<<<<< HEAD
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="programms__download">
+				<h3>Скачайте полный перечень программ в формате pdf</h3>
+				@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', href:
+				'/'})
+			</div>
+		</section>
+		<section class="benefits container">
+			<h2>Более 800 специальностей<br>по различным направлениям</h2>
+			<div class="benefits__cards">
+				<div class="benefits__card">
+					<h3>Получайте не только теорию</h3>
+					<p>Мы используем современные технологии, в том числе шлем виртуальной реальности, используя который
+						Вы сможете отработать новые навыки безопасно</p>
+=======
 			</section>
 			<section class="programms container">
 				<div class="programms__tabs swiper">
@@ -41,129 +144,77 @@
 						</div>
 					</div>
 					<div class="swiper-scrollbar"></div>
+>>>>>>> 48b4171157551ea638314c118108577a083838d9
 				</div>
-				<div class="programms__cards swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<h3>Профессиональное обучение по рабочим профессиям</h3>
-							<a class="link link_blue">38 специальностей &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Железнодорожная безопасность</h3>
-							<a class="link link_blue">24 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Строительство, проектирование, инженерные изыскания</h3>
-							<a class="link link_blue">41 специальность &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Радиационная безопасность</h3>
-							<a class="link link_blue">9 специальностей &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Жилищно-коммунальное хозяйство</h3>
-							<a class="link link_blue">24 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Кадровое дело, HR, персонал</h3>
-							<a class="link link_blue">9 специальностей &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Нефтегазовое дело</h3>
-							<a class="link link_blue">2 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Сельское хозяйство</h3>
-							<a class="link link_blue">3 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Профессиональное обучение по рабочим профессиям</h3>
-							<a class="link link_blue">38 специальностей &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Железнодорожная безопасность</h3>
-							<a class="link link_blue">24 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Строительство, проектирование, инженерные изыскания</h3>
-							<a class="link link_blue">41 специальность &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Радиационная безопасность</h3>
-							<a class="link link_blue">9 специальностей &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Жилищно-коммунальное хозяйство</h3>
-							<a class="link link_blue">24 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Кадровое дело, HR, персонал</h3>
-							<a class="link link_blue">9 специальностей &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Нефтегазовое дело</h3>
-							<a class="link link_blue">2 специальности &rarr;</a>
-						</div>
-						<div class="swiper-slide">
-							<h3>Сельское хозяйство</h3>
-							<a class="link link_blue">3 специальности &rarr;</a>
-						</div>
-					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
+				<div class="benefits__card">
+					<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
+					<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
 				</div>
-				<div class="programms__download">
-					<h3>Скачайте полный перечень программ в формате pdf</h3>
-					@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', href: '/'})
+				<div class="benefits__card">
+					<h3>Экономьте с нами</h3>
+					<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
 				</div>
-			</section>
-			<section class="benefits container">
-				<h2>Более 800 специальностей<br>по различным направлениям</h2>
-				<div class="benefits__cards">
-					<div class="benefits__card">
-						<h3>Получайте не только теорию</h3>
-						<p>Мы используем современные технологии, в том числе шлем виртуальной реальности, используя который Вы сможете отработать новые навыки безопасно</p>
+				<div class="benefits__card">
+					<h3>Обучайте кадры дистанционно!</h3>
+					<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.
+					</p>
+				</div>
+				<div class="benefits__card">
+					<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
+				</div>
+			</div>
+		</section>
+		@@include('components/business/_banner.html',
+		{title: 'Спланируйте годовой бюджет компании',
+		subtitle: 'Оставьте свою почту, и мы вышлем подробный учебный план на текущий год',
+		button: 'Получить учебный план',
+		background: '@images/banner-background-1.png',
+		image: '@images/banner-image-1.png'
+		})
+		<section class="about-us container">
+			<div class="about-us__text-container">
+				<div>
+					<h2>Центр профессиональной подготовки кадров</h2>
+					<p>Мы один из крупнейших учебных центров Башкирии, и растем каждый год! Большой опыт работы на
+						образовательном рынке позволяет нам создавать эффективные инструменты успеха.</p>
+					@@include('components/ui/_button.html', {children: 'Подробнее о компании', class: 'btn_blue-border',
+					href: '/'})
+				</div>
+				<div class="about-us__numbers">
+					<span>20</span>
+					<p>лет на рынке профессионального образования</p>
+				</div>
+				<div class="about-us__numbers">
+					<span>800</span>
+					<p>специальностей и профессий по 33 направлениям</p>
+				</div>
+			</div>
+			<div class="about-us__photo swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="@images/about-us-1.png">
 					</div>
-					<div class="benefits__card">
-						<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
-						<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
-					</div>
-					<div class="benefits__card">
-						<h3>Экономьте с нами</h3>
-						<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
-					</div>
-					<div class="benefits__card">
-						<h3>Обучайте кадры дистанционно!</h3>
-						<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.</p>
-					</div>
-					<div class="benefits__card">
-						<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
+					<div class="swiper-slide">
+						<img src="@images/about-us-2.png">
 					</div>
 				</div>
-			</section>
-			@@include('components/business/_banner.html',
-				{title: 'Спланируйте годовой бюджет компании',
-				subtitle: 'Оставьте свою почту, и мы вышлем подробный учебный план на текущий год',
-				button: 'Получить учебный план',
-				background: '@images/banner-background-1.png',
-				image: '@images/banner-image-1.png'
-			})
-			<section class="about-us container">
-				<div class="about-us__text-container">
-					<div>
-						<h2>Центр профессиональной подготовки кадров</h2>
-						<p>Мы один из крупнейших учебных центров Башкирии, и растем каждый год! Большой опыт работы на образовательном рынке позволяет нам создавать эффективные инструменты успеха.</p>
-						@@include('components/ui/_button.html', {children: 'Подробнее о компании', class: 'btn_blue-border', href: '/'})
-					</div>
-					<div class="about-us__numbers">
-						<span>20</span>
-						<p>лет на рынке профессионального образования</p>
-					</div>
-					<div class="about-us__numbers">
-						<span>800</span>
-						<p>специальностей и профессий по 33 направлениям</p>
-					</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
+				<div class="about-us__photo-description">
+					<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы</p>
 				</div>
+<<<<<<< HEAD
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
+=======
 				<div class="about-us__photo swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -271,3 +322,4 @@
 		@@include('meta/_includeScripts.html')
 	</body>
 </html>
+>>>>>>> 48b4171157551ea638314c118108577a083838d9
