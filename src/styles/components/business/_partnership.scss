@@ -1,0 +1,57 @@
+.partnership {
+	padding-top: 130px;
+	padding-right: 100px;
+	padding-bottom: 140px;
+	background-color: $white;
+	display: grid;
+	grid-template-areas:
+		"title icons"
+		"button icons";
+	grid-template-columns: 40% 60%;
+	grid-template-rows: repeat(2, 1fr);
+	@include desktop_huge {
+		display: block;
+	}
+	@include tablet {
+		padding: 60px 0;
+	}
+
+	h2 {
+		grid-area: title;
+		margin-bottom: 144px;
+		@include desktop_huge {
+			margin-bottom: 0;
+		}
+		@include tablet {
+			@include medium-24;
+			margin: 0 24px 32px 24px;
+		}
+	}
+
+	.btn {
+		max-width: 320px;
+		grid-area: button;
+		@include tablet {
+			margin: 32px 24px 0 24px;
+		}
+	}
+
+	.partnership__icons {
+		.swiper-slide {
+			border: solid 1px $gray04;
+			background-color: $white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 229px;
+			height: 174px;
+			@include tablet {
+				width: 130px;
+				height: 98px;
+				img {
+					max-width: 110px;
+				}
+			}
+		}
+	}
+}

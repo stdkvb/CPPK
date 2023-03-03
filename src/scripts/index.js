@@ -63,6 +63,15 @@ const aboutUsSwiper = new Swiper('.about-us__photo', {
 	}
 })
 
+const partnershipIconsSwiper = new Swiper('.partnership__icons', {
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+	grid: {
+		fill: 'row',
+		rows: 2
+	}
+})
+
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')

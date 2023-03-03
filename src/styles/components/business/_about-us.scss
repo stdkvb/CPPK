@@ -1,11 +1,13 @@
 .about-us {
 	padding-top: 130px;
 	padding-left: 0;
+	background-color: $white;
 	@include tablet {
 		padding: 60px 0 0 0;
 	}
 	.about-us__text-container {
 		padding-left: 210px;
+		padding-right: 100px;
 		display: grid;
 		grid-template-columns: 1fr 0.5fr 0.5fr;
 		gap: 40px;
@@ -46,6 +48,7 @@
 		}
 
 		.about-us__numbers {
+			max-width: 373px;
 			span {
 				color: $blue50;
 				@include bold-106;
