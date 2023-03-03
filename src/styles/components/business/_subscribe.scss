@@ -1,0 +1,36 @@
+.subscribe {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	padding-right: 130px;
+	background-color: $blue50;
+	display: flex;
+	justify-content: space-between;
+	@include tablet {
+		flex-direction: column;
+		gap: 40px;
+	}
+	.subscribe__text {
+		width: 50%;
+		@include tablet {
+			width: unset;
+		}
+	}
+
+	.subscribe__form {
+		display: flex;
+		@include desktop_huge {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	h3 {
+		@include medium-24;
+		color: $white;
+		margin-bottom: 8px;
+	}
+
+	p {
+		color: $white;
+	}
+}

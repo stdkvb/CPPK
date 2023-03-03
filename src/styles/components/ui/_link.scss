@@ -76,6 +76,7 @@
 			&__group {
 				display: flex;
 				gap: 1rem;
+<<<<<<< HEAD
 			}
 
 			&_burger {
@@ -108,3 +109,38 @@
 			}
 		}
 	}
+=======
+			}
+
+			&_burger {
+				&::before {
+					content: url("@icons/burger.svg");
+				}
+			}
+
+			&_eye {
+				&::before {
+					content: url("@icons/eye.svg");
+				}
+			}
+
+			&_youtube {
+				&::before {
+					content: url("@icons/youtube.svg");
+				}
+			}
+
+			&_vk {
+				&::before {
+					content: url("@icons/vk.svg");
+				}
+			}
+
+			.cover {
+				@include contain;
+				z-index: 30;
+			}
+		}
+	}
+}
+>>>>>>> 6b12d9f8b4af4b563fa7ea4cf9412ed5dd39f098

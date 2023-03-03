@@ -7,7 +7,7 @@
 		}
 
 		.swiper-slide {
-			max-width: 381px;
+			max-width: fit-content;
 			height: 124px;
 			display: flex;
 			align-items: flex-end;
@@ -24,7 +24,6 @@
 			}
 
 			@include tablet {
-				max-width: 191px;
 				height: 52px;
 
 				h2 {
@@ -83,32 +82,20 @@
 			}
 		}
 		.swiper-button-prev {
-			height: 21px;
-			width: 8px;
 			top: 179px;
 			left: unset;
 			right:220px !important;
 			@include desktop_huge {
 				display: none;
 			}
-			&:after {
-				content: url(@icons/swiper-arrow.svg);
-				transform: rotate(180deg);
-			}
 		}
 		.swiper-button-next {
-			height: 21px;
-			width: 8px;
 			top: 170px;
 			right: 130px !important;
 			@include desktop_huge {
 				display: none;
 			}
-			&:after {
-				content: url(@icons/swiper-arrow.svg);
-			}
 		}
-
 	}
 
 	.programms__download {

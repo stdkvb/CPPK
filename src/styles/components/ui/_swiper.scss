@@ -1,0 +1,15 @@
+.swiper-button-prev {
+	height: 21px !important;
+	width: 8px !important;
+	&:after {
+		content: url(@icons/swiper-arrow.svg) !important;
+		transform: rotate(180deg) !important;
+	}
+}
+.swiper-button-next {
+	height: 21px !important;
+	width: 8px !important;
+	&:after {
+		content: url(@icons/swiper-arrow.svg) !important;
+	}
+}

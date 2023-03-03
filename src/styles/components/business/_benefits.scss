@@ -1,47 +1,82 @@
 .benefits {
 	padding-top: 140px;
-	// .benefits__backgrounds {
-	// 	position: absolute;
-	// 	img {
-	// 		display: none;
-	// 	}
-	// 	.active {
-	// 		display: block;
-	// 	}
-	// }
+	padding-bottom: 140px;
+	@include tablet {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		h2 {
+			@include medium-24;
+		}
+	}
+
 	.benefits__cards {
 		background-image: url(@images/benefits-background-1.png);
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: 50%;
 		position: relative;
-		margin-top: 80px;
+		margin: 80px 100px 0 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-template-areas:
 		"card-1 . . card-2"
 		"card-3 card-4 . card-5";
+		@include desktop_huge {
+			background-size: contain;
+		}
+		@include desktop {
+			display: flex;
+			flex-direction: column;
+		}
+		@include tablet {
+			margin: 30px 0 0 0;
+		}
+
 		.benefits__card {
-			background: $white;
+			background-color: $gray04;
 			border: solid 1px $gray10;
 			padding: 48px;
-			.benefits__background {
-				position: absolute;
-				top:0;
-				left: 300px;
-				display: none;
-				&_active {
-					display: block;
+			@include desktop {
+				background-color: $white;
+				&:last-of-type {
+					background-color: $gray04;
+					border: none;
 				}
 			}
+			@include mobile {
+				padding: 24px;
+			}
+
 			h3 {
 				@include medium-18;
 				color: $gray90;
 				margin-bottom: 32px;
+				@include mobile {
+					margin-bottom: 12px;
+				}
 			}
 
 			p {
 				color: $gray70;
+			}
+
+			.link {
+				display: flex;
+				color: $gray70;
+
+				&:hover {
+					color: $blue30;
+				}
+
+				span {
+					width: 34px;
+					height: 34px;
+					margin-right: 40px;
+					background-image: url(@icons/download.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
 			}
 
 			&:nth-child(1) {
@@ -59,6 +94,7 @@
 			&:nth-child(5) {
 				grid-area: card-5;
 			}
+
 			&_active {
 				h3 {
 					color: $blue50;

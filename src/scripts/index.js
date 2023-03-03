@@ -7,8 +7,7 @@ const eventsSwiper = new Swiper('.events', {
 
 const partnersSwiper = new Swiper('.partners', {
 	slidesPerView: 'auto',
-	spaceBetween: 4,
-
+	spaceBetween: 4
 })
 
 const programmsTabsSwiper = new Swiper('.programms__tabs', {
@@ -40,9 +39,63 @@ const programmsCardsSwiper = new Swiper('.programms__cards', {
 				rows: 3
 			},
 			navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			}
+		}
+	}
+})
+
+const aboutUsSwiper = new Swiper('.about-us__photo', {
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+	loop: true,
+	autoplay: {
+		delay: 5000
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true
+	}
+})
+
+const partnershipIconsSwiper = new Swiper('.partnership__icons', {
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+	grid: {
+		fill: 'row',
+		rows: 2
+	}
+})
+
+const reviewsTabsSwiper = new Swiper('.reviews__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 44,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			scrollbar: false,
+			spaceBetween: 100
+		}
+	}
+})
+
+const reviewsCardsSwiper = new Swiper('.reviews__cards', {
+	slidesPerView: 'auto',
+	spaceBetween: 40,
+	breakpoints: {
+		992: {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			}
 		}
 	}
 })
@@ -145,6 +198,45 @@ menuToggle.addEventListener('mouseover', () => {
 	subMenu.classList.add('accordion__content_active')
 })
 
+// benefits backgrounds
+const benefitsCards = document.querySelector('.benefits__cards')
+benefitsCards.children[0].addEventListener('mouseenter', (e) => {
+	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-1.png)'
+	e.target.classList.add('benefits__card_active')
+})
+benefitsCards.children[1].addEventListener('mouseenter', (e) => {
+	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-2.png)'
+	e.target.classList.add('benefits__card_active')
+})
+benefitsCards.children[2].addEventListener('mouseenter', (e) => {
+	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-3.png)'
+	e.target.classList.add('benefits__card_active')
+})
+benefitsCards.children[3].addEventListener('mouseenter', (e) => {
+	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-4.png)'
+	e.target.classList.add('benefits__card_active')
+})
+benefitsCards.children[4].addEventListener('mouseenter', (e) => {
+	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-5.png)'
+	e.target.classList.add('benefits__card_active')
+})
+
+benefitsCards.children[0].addEventListener('mouseleave', (e) => {
+	e.target.classList.remove('benefits__card_active')
+})
+benefitsCards.children[1].addEventListener('mouseleave', (e) => {
+	e.target.classList.remove('benefits__card_active')
+})
+benefitsCards.children[2].addEventListener('mouseleave', (e) => {
+	e.target.classList.remove('benefits__card_active')
+})
+benefitsCards.children[3].addEventListener('mouseleave', (e) => {
+	e.target.classList.remove('benefits__card_active')
+})
+benefitsCards.children[4].addEventListener('mouseleave', (e) => {
+	e.target.classList.remove('benefits__card_active')
+})
+
 // sub-menu accordeon
 takeControlAccordion('.sub-menu', '.sub-menu__list', {
 	accordionItemSelector: '.sub-menu__links',
@@ -157,25 +249,4 @@ const subMenuToggle = document.querySelector('.sub-menu__toggle')
 const subMenuContent = document.querySelector('.sub-menu__content')
 subMenuToggle.addEventListener('click', () => {
 	subMenuContent.classList.toggle('sub-menu__content_active')
-// benefits backgrounds
-const benefitsCards = document.querySelector('.benefits__cards')
-benefitsCards.children[0].addEventListener('mouseover', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-1.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[1].addEventListener('mouseover', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-2.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[2].addEventListener('mouseover', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-3.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[3].addEventListener('mouseover', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-4.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[4].addEventListener('mouseover', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-5.png)'
-	e.target.classList.add('benefits__card_active')
 })
