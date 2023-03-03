@@ -145,7 +145,6 @@ menuToggle.addEventListener('mouseover', () => {
 	subMenu.classList.add('accordion__content_active')
 })
 
-<<<<<<< HEAD
 // sub-menu accordeon
 takeControlAccordion('.sub-menu', '.sub-menu__list', {
 	accordionItemSelector: '.sub-menu__links',
@@ -158,7 +157,6 @@ const subMenuToggle = document.querySelector('.sub-menu__toggle')
 const subMenuContent = document.querySelector('.sub-menu__content')
 subMenuToggle.addEventListener('click', () => {
 	subMenuContent.classList.toggle('sub-menu__content_active')
-=======
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
 benefitsCards.children[0].addEventListener('mouseover', (e) => {
@@ -180,5 +178,4 @@ benefitsCards.children[3].addEventListener('mouseover', (e) => {
 benefitsCards.children[4].addEventListener('mouseover', (e) => {
 	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-5.png)'
 	e.target.classList.add('benefits__card_active')
->>>>>>> c6ca6b24172519cb3103c37c0acdf774f64df646
 })
