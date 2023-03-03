@@ -7,7 +7,7 @@
 		}
 
 		.swiper-slide {
-			max-width: 381px;
+			max-width: fit-content;
 			height: 124px;
 			display: flex;
 			align-items: flex-end;
@@ -24,7 +24,6 @@
 			}
 
 			@include tablet {
-				max-width: 191px;
 				height: 52px;
 
 				h2 {

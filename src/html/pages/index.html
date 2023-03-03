@@ -31,10 +31,10 @@
 				<div class="programms__tabs swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide swiper-slide_active">
-							<h2>Повышение квалификации</h2>
+							<h2>Повышение<br>квалификации</h2>
 						</div>
 						<div class="swiper-slide">
-							<h2>Профессиональная переподготовка</h2>
+							<h2>Профессиональная<br>переподготовка</h2>
 						</div>
 						<div class="swiper-slide">
 							<h2>Курсы<br>и семинары</h2>
@@ -213,7 +213,46 @@
 				</div>
 				@@include('components/ui/_button.html', {children: 'Подробнее о сотрудничестве', class: 'btn_blue-border', href: '/'})
 			</section>
-
+			<section class="reviews container">
+				<div class="reviews__tabs swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide_active">
+							<h2>Отзывы</h2>
+						</div>
+						<div class="swiper-slide">
+							<h2>Благодарности</h2>
+						</div>
+						<div class="swiper-slide">
+							<h2>Грамоты</h2>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+				<div class="reviews__cards swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="@images/review.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/review.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/review.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/review.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/review.png">
+						</div>
+						<div class="swiper-slide">
+							<img src="@images/review.png">
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</section>
 		</main>
 		@@include('components/business/_footer.html')
 		@@include('components/business/_bottom-bar.html')

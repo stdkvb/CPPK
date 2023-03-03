@@ -62,9 +62,6 @@ p {
 	width: 100%;
 	padding-left: 210px;
 	background-color: $gray04;
-	@include desktop_medium {
-		padding-left: 160px;
-	}
 	@include tablet {
 		padding: 0 24px;
 	}
