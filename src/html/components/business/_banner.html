@@ -1,0 +1,16 @@
+<section class="banner container" style="background-image: @@if (context.background) {url(@@background)};">
+	<div class="banner__text">
+		@@if (context.title) {
+			<h2>@@title</h2>
+		}
+		@@if (context.subtitle) {
+			<p>@@subtitle</p>
+		}
+		@@if (context.button) {
+		@@include('components/ui/_button.html', {children: '@@button', class: 'btn_secondary', href: '/'})
+		}
+	</div>
+	@@if (context.image) {
+		<img src="@@image">
+	}
+</section>
