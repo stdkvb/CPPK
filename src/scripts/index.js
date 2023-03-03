@@ -69,6 +69,43 @@ const aboutUsSwiper = new Swiper('.about-us__photo', {
 	}
 })
 
+const partnershipIconsSwiper = new Swiper('.partnership__icons', {
+	slidesPerView: 'auto',
+	spaceBetween: 0,
+	grid: {
+		fill: 'row',
+		rows: 2
+	}
+})
+
+const reviewsTabsSwiper = new Swiper('.reviews__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 44,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			scrollbar: false,
+			spaceBetween: 100
+		}
+	}
+})
+
+const reviewsCardsSwiper = new Swiper('.reviews__cards', {
+	slidesPerView: 'auto',
+	spaceBetween: 40,
+	breakpoints: {
+		992: {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			}
+		}
+	}
+})
+
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')

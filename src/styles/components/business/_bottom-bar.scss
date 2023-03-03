@@ -7,6 +7,7 @@
 	height: 4.5em;
 	align-items: center;
 	justify-content: flex-end;
+	z-index: 2;
 	@include tablet {
 		display: flex;
 	}

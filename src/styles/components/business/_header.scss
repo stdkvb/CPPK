@@ -68,7 +68,8 @@
 		background-color: transparent;
 		padding-bottom: 3.75em;
 		border-right: solid 0.0625em rgba(255, 255, 255, 0.2);
-		backdrop-filter: blur(20px);
+		// backdrop-filter: blur(20px);
+		background-color: $gray80;
 		z-index: 10;
 		@include tablet {
 			visibility: hidden;
