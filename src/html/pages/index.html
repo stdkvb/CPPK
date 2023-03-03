@@ -253,6 +253,18 @@
 					<div class="swiper-button-next"></div>
 				</div>
 			</section>
+			<section class="subscribe container">
+				<div class="subscribe__text">
+					<h3>Подпишитесь на рассылку</h3>
+					<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших клиентов по подписке</p>
+				</div>
+				<form class="subscribe__form">
+					<label>
+						<input>
+					</label>
+					@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn__blue-fill', href: '/'})
+				</form>
+				</section>
 		</main>
 		@@include('components/business/_footer.html')
 		@@include('components/business/_bottom-bar.html')

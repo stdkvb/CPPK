@@ -63,7 +63,8 @@ p {
 	padding-left: 210px;
 	background-color: $gray04;
 	@include tablet {
-		padding: 0 24px;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 }
 
