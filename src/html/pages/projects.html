@@ -3,8 +3,8 @@
 @@include('meta/_head.html', {title: 'Проекты'})
 
 <body class="main-page">
-	<img class="background" src="@images/sub-fon.png" />
 	@@include('components/business/_header.html')
+	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
 	<main>
 		<section class="sub-container">
 			<h1>Проекты</h1>
@@ -19,37 +19,37 @@
 				</div>
 				<div class="sub-wrapper__text">
 					<div class="projects">
-						<div class="projects__item">
+						<a href="#" class="projects__item">
 							<div class="projects__logo"><img src="@icons/competention.svg" alt="АИС Компетенция"></div>
-							<a href="#" class="link link_gray projects__title">АИС "Компетенция"</a>
+							<h3 class="projects__title">АИС "Компетенция"</h3>
 							<span class="projects__text">
 								Автоматизация процессов управления компетенциями сотрудников
 							</span>
-						</div>
-						<div class="projects__item">
+						</a>
+						<a href="#" class="projects__item">
 							<div class="projects__logo"><img src="@icons/project__vr.svg" alt="vr"></div>
-							<a href="#" class="link link_gray projects__title">VR</a>
+							<h3 class="projects__title">VR</h3>
 							<span class="projects__text">
 								Обучение с помощью шлемов виртуальной реальности
 							</span>
-						</div>
-						<div class="projects__item">
+						</a>
+						<a href="#" class="projects__item">
 							<div class="projects__logo"><img src="@icons/zoom.svg" alt="zoom"></div>
-							<a href="#" class="link link_gray projects__title">Аудит промышленной безопасности</a>
+							<h3 class="projects__title">Аудит промышленной безопасности</h3>
 							<span class="projects__text">
 								Рекомендации для приведения документации и оборудования предприятия в соответствие с
 								требованиями промышленной безопасности
 							</span>
-						</div>
-						<div class="projects__item">
+						</a>
+						<a href="#" class="projects__item">
 							<div class="projects__logo"><img src="@icons/decret.svg" alt="decret"></div>
-							<a href="#" class="link link_gray projects__title">Содействие занятости женщин -
-								декретницы</a>
+							<h3 class="projects__title">Содействие занятости женщин -
+								декретницы</h3>
 							<span class="projects__text">
 								Программы обучения и повышения квалификации женщин, находящихся в отпуске по уходу за
 								ребенком
 							</span>
-						</div>
+						</a>
 					</div>
 
 				</div>

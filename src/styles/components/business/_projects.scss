@@ -40,9 +40,14 @@
 	&__item {
 		background-color: $white;
 		padding: 48px;
+		transition: all $transitionDuration;
 
 		@include desktop_extra_small {
 			padding: 24px;
+		}
+
+		&:hover {
+			background-color: $blue50;
 		}
 	}
 
@@ -55,6 +60,7 @@
 		max-width: 64px;
 		height: 64px;
 		margin: 0 0 32px 0;
+		transition: all $transitionDuration;
 
 		img {
 			width: 100%;
@@ -62,11 +68,24 @@
 		}
 	}
 
+	&__item:hover &__logo {
+		background-color: $blue30;
+
+		img {
+			opacity: 0;
+		}
+	}
+
+
 	&__title {
 		@include medium-18;
 		display: block;
 		color: $black;
 		margin: 0 0 20px 0;
+	}
+
+	&__item:hover &__title {
+		color: $white;
 	}
 
 
@@ -76,5 +95,9 @@
 		color: $gray60;
 		display: inline-block;
 		margin: 0;
+	}
+
+	&__item:hover &__text {
+		color: $gray04;
 	}
 }

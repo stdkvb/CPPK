@@ -2,11 +2,13 @@
 	padding-top: 120px;
 	padding-bottom: 120px;
 	position: relative;
+
 	@include tablet {
 		padding-top: 50px;
 		padding-bottom: 60px;
 		padding-right: 0;
 	}
+
 	// display: grid;
 	// grid-template-columns: 1fr 280px;
 	// grid-template-rows: 3.5em 37.5em;
@@ -18,6 +20,7 @@
 	h2 {
 		// grid-area: title;
 		margin-bottom: 80px;
+
 		@include tablet {
 			margin-bottom: 32px;
 		}
@@ -30,6 +33,7 @@
 		position: absolute;
 		top: 120px;
 		right: 100px;
+
 		@include tablet {
 			position: unset;
 			margin-top: 55px;
@@ -39,6 +43,7 @@
 
 	.news__cards {
 		grid-area: cards;
+
 		@include tablet {
 			overflow: unset;
 		}
@@ -56,6 +61,7 @@
 				"text text"
 				"date button";
 			transition: background-color $transitionDuration;
+
 			@include tablet {
 				height: 217px;
 				width: 320px;
@@ -66,6 +72,7 @@
 				grid-area: text;
 				color: $gray90;
 				transition: color $transitionDuration;
+
 				@include tablet {
 					@include medium-16;
 				}
@@ -81,6 +88,7 @@
 			.link-icon {
 				grid-area: button;
 				justify-self: end;
+
 				@include tablet {
 					justify-self: unset;
 				}
@@ -101,13 +109,16 @@
 			&:hover {
 				@include min_tablet {
 					background-color: $blue50;
+
 					img {
 						opacity: 1;
 
 					}
+
 					h3 {
 						color: $white;
 					}
+
 					span {
 						color: $white;
 					}
@@ -115,10 +126,51 @@
 			}
 
 		}
+
+		&_list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 2px;
+
+			@include tablet_small {
+				grid-template-columns: 1fr;
+			}
+
+			.swiper-slide {
+				width: 100%;
+				height: auto;
+
+				@include tablet {
+					width: 100%;
+					height: auto;
+					padding: 20px 24px;
+
+					.link-icon {
+						justify-self: end;
+					}
+				}
+
+				h3 {
+					margin-bottom: 60px;
+				}
+
+				img {
+					margin: 0;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				span {
+					display: flex;
+				}
+			}
+		}
+
 		.swiper-scrollbar {
 			bottom: -30px;
 			left: unset;
 			background: $blue20;
+
 			@include min_tablet {
 				display: none;
 			}
