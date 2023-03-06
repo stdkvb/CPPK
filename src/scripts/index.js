@@ -106,6 +106,27 @@ const reviewsCardsSwiper = new Swiper('.reviews__cards', {
 	}
 })
 
+const newsCardsSwiper = new Swiper('.news__cards', {
+	slidesPerView: 'auto',
+	spaceBetween: 4,
+	grid: {
+		fill: 'row',
+		rows: 1
+	},
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			grid: {
+				fill: 'row',
+				rows: 2
+			}
+		}
+	}
+})
+
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')
