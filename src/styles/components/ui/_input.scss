@@ -1,0 +1,114 @@
+input {
+	transition: all $transitionDuration;
+	padding: 1.67em 1.8em;
+	border: 1px solid $white;
+	outline: none;
+
+	color: $white;
+	background-color: transparent;
+
+	&:focus, &[type^=hidden]:focus + input {
+
+	}
+	&:disabled {
+	}
+	&::placeholder {
+		color: $white;
+	}
+}
+
+.input__container {
+	font-size: .875rem;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+
+	.input__label {
+		margin-bottom: -.25rem;
+		color: $white;
+
+		& ~ .toggle-show-password-btn {
+			top: calc(1.0625rem + 1.75em);
+		}
+	}
+
+	.input__label {
+		margin-bottom: -.25rem;
+		color: $white;
+
+		& ~ .toggle-show-password-btn {
+			top: calc(1.0625rem + 1.75em);
+		}
+	}
+
+	.error-message {
+		@include errorMessageStyles;
+	}
+
+	&_password {
+		input[type="password"] {
+			padding-right: calc(.75rem + 26px);
+		}
+
+		.toggle-show-password-btn {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 26px;
+			height: 26px;
+			top: calc(1.0625rem - 3px);
+			right: .8125rem;
+
+			cursor: pointer;
+		}
+
+		input[type="password"] + .toggle-show-password-btn {
+			&::before {
+				width: 18px;
+				height: 16px;
+				content: url("@icons/openLock.svg");
+			}
+		}
+
+		input[type="text"] + .toggle-show-password-btn {
+			&::before {
+				width: 19px;
+				height: 11px;
+				content: url("@icons/closeLock.svg")
+			}
+		}
+	}
+
+	&_valid {
+		input:not(:focus) {
+
+		}
+	}
+
+	&_invalid {
+		input:not(:focus) {
+
+		}
+
+		.error-message {
+			display: block;
+		}
+	}
+
+	.placeholder {
+		position: absolute;
+		color: $white;
+		top: 1.0625rem;
+		left: .75rem;
+
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+

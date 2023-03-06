@@ -185,23 +185,6 @@
 				<div class="about-us__photo-description">
 					<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы</p>
 				</div>
-				<div class="about-us__photo swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="@images/about-us-1.png">
-						</div>
-						<div class="swiper-slide">
-							<img src="@images/about-us-2.png">
-						</div>
-					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-pagination"></div>
-					<div class="about-us__photo-description">
-						<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы
-						</p>
-					</div>
-				</div>
 		</section>
 		<section class="partnership container">
 			<h2>Обучаем сотрудников крупнейших компаний</h2>
@@ -283,10 +266,8 @@
 					клиентов по подписке</p>
 			</div>
 			<form class="subscribe__form">
-				<label>
-					<input>
-				</label>
-				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn__blue-fill', href: '/'})
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary',  type: 'submit'})
 			</form>
 		</section>
 	</main>
