@@ -33,10 +33,10 @@
 			<div class="programms__tabs swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide_active">
-						<h2>Повышение квалификации</h2>
+						<h2>Повышение<br>квалификации</h2>
 					</div>
 					<div class="swiper-slide">
-						<h2>Профессиональная переподготовка</h2>
+						<h2>Профессиональная<br>переподготовка</h2>
 					</div>
 					<div class="swiper-slide">
 						<h2>Курсы<br>и семинары</h2>
@@ -111,40 +111,39 @@
 						<a class="link link_blue">3 специальности &rarr;</a>
 					</div>
 				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="programms__download">
+				<h3>Скачайте полный перечень программ в формате pdf</h3>
+				@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', href: '/'})
+			</div>
 		</section>
-		<section class="programms container">
-			<div class="programms__tabs swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide_active">
-						<h2>Повышение<br>квалификации</h2>
-					</div>
-					<div class="swiper-slide">
-						<h2>Профессиональная<br>переподготовка</h2>
-					</div>
-					<div class="swiper-slide">
-						<h2>Курсы<br>и семинары</h2>
-					</div>
+		<section class="benefits container">
+			<h2>Более 800 специальностей<br>по различным направлениям</h2>
+			<div class="benefits__cards">
+				<div class="benefits__card">
+					<h3>Получайте не только теорию</h3>
+					<p>Мы используем современные технологии, в том числе шлем виртуальной реальности, используя который Вы сможете отработать новые навыки безопасно</p>
 				</div>
-				<div class="swiper-scrollbar"></div>
-			</div>
-			<div class="benefits__card">
-				<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
-				<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
-			</div>
-			<div class="benefits__card">
-				<h3>Экономьте с нами</h3>
-				<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
-			</div>
-			<div class="benefits__card">
-				<h3>Обучайте кадры дистанционно!</h3>
-				<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.
-				</p>
-			</div>
-			<div class="benefits__card">
-				<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
-			</div>
+				<div class="benefits__card">
+					<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
+					<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
+				</div>
+				<div class="benefits__card">
+					<h3>Экономьте с нами</h3>
+					<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
+				</div>
+				<div class="benefits__card">
+					<h3>Обучайте кадры дистанционно!</h3>
+					<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.</p>
+				</div>
+				<div class="benefits__card">
+					<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
+				</div>
 			</div>
 		</section>
+
 		@@include('components/business/_banner.html',
 		{title: 'Спланируйте годовой бюджет компании',
 		subtitle: 'Оставьте свою почту, и мы вышлем подробный учебный план на текущий год',

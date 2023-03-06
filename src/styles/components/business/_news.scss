@@ -99,16 +99,18 @@
 			}
 
 			&:hover {
-				background-color: $blue50;
-				img {
-					opacity: 1;
+				@include min_tablet {
+					background-color: $blue50;
+					img {
+						opacity: 1;
 
-				}
-				h3 {
-					color: $white;
-				}
-				span {
-					color: $white;
+					}
+					h3 {
+						color: $white;
+					}
+					span {
+						color: $white;
+					}
 				}
 			}
 

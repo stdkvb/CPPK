@@ -6,16 +6,13 @@
 		padding: 60px 0 0 0;
 	}
 	.about-us__text-container {
-		margin-left: 210px;
 		padding-right: 100px;
 		display: grid;
 		grid-template-columns: 1fr 0.5fr 0.5fr;
 		gap: 40px;
 		align-items: end;
 		padding-bottom: 120px;
-		@include min_desktop_medium {
-			padding-left: 210px;
-		}
+		padding-left: 210px;
 		@include desktop {
 			grid-template-columns: 1fr;
 		}
