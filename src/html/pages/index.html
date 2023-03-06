@@ -4,6 +4,7 @@
 
 <body class="main-page">
 	@@include('components/business/_header.html')
+	<video class="main-page__background" src="@videos/sample-5s.mp4" autoplay muted loop></video>
 	<main>
 		<section class="page-title container">
 			<h1>Постройте эффективную<br>систему корпоративного<br>обучения</h1>
@@ -235,7 +236,7 @@
 			</div>
 			<div class="reviews__cards swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
+					<div class="swiper-slide open-modal" modalId="review-1">
 						<img src="@images/review.png">
 					</div>
 					<div class="swiper-slide">
@@ -262,52 +263,52 @@
 			<h2>Новости</h2>
 			<div class="news__cards swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
+					<a class="swiper-slide" href="/">
 						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
+						<span class="link-icon link-icon_arrow"></span>
 						<img src="@images/news-1.png">
-					</div>
-					<div class="swiper-slide">
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>ЦППК подводит итоги 2022 года</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide">
 						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>ЦППК подводит итоги 2022 года</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
-					<div class="swiper-slide">
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
 						<h3>ЦППК подводит итоги 2022 года</h3>
 						<span>12 января 2023</span>
-						<a class="link link-icon link-icon_arrow" href="/"></a>
-					</div>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
 				</div>
 				<div class="swiper-scrollbar"></div>
 			</div>
@@ -327,6 +328,7 @@
 	</main>
 	@@include('components/business/_footer.html')
 	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-1'})
 	@@include('meta/_includeScripts.html')
 </body>
 
