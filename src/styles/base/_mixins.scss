@@ -8,3 +8,12 @@
   right: 0;
   bottom: 0;
 }
+
+@mixin errorMessageStyles {
+	display: none;
+
+	padding-left: .75rem;
+
+	color: $error40;
+	font-size: .875rem;
+}

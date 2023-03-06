@@ -26,6 +26,7 @@
 		&:link,
 		&:visited {
 			color: $blue50;
+<<<<<<< HEAD
 		}
 
 		&:hover,
@@ -123,6 +124,95 @@
 			cursor: auto;
 			color: $gray30;
 			@include regular-18;
+=======
 		}
 	}
+
+	&:hover,
+		&:active {
+			color: $blue30;
+		}
+
+	&_disabled {
+		cursor: auto;
+		color: $gray30;
+		@include regular-18;
+	}
+
+	&-phone {
+		@include regular-22;
+
+		@include desktop_huge {
+			margin-right: 1.3em;
+		}
+
+		@include mobile {
+			@include regular-18;
+		}
+	}
+
+	&-arrow {
+		display: block;
+		width: 24px;
+		height: 0.9em;
+		background-image: url(@icons/link-arrow.svg);
+		background-repeat: no-repeat;
+		margin-right: 20px;
+		transition: opacity $transitionDuration;
+	}
+
+	&-icon {
+		display: flex;
+		align-items: center;
+		line-height: 0;
+		width: 1.5em;
+		height: 1.5em;
+		position: relative;
+
+		&__group {
+			display: flex;
+			gap: 1rem;
+		}
+
+		&_burger {
+			&::before {
+				content: url("@icons/burger.svg");
+			}
+>>>>>>> ac58e53c68884d0bf02240b21c5d92a048fd023d
+		}
+
+		&_eye {
+			&::before {
+				content: url("@icons/eye.svg");
+			}
+		}
+
+		&_youtube {
+			&::before {
+				content: url("@icons/youtube.svg");
+			}
+		}
+
+		&_vk {
+			&::before {
+				content: url("@icons/vk.svg");
+			}
+		}
+
+		&_arrow {
+			&::before {
+				content: url("@icons/arrow-in-circle.svg");
+			}
+		}
+
+		.cover {
+			@include contain;
+			z-index: 30;
+		}
+	}
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> ac58e53c68884d0bf02240b21c5d92a048fd023d

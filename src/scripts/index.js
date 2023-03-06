@@ -1,4 +1,8 @@
-import takeControlAccordion from './accordion'
+import { takeControlAccordion, takeControlModals } from './takeControl'
+
+takeControlModals('.open-modal', '.modal-close',{
+	activeModalClass: 'modal_active'
+})
 
 //Btn "Show-more"
 const clientsElements = document.querySelector('.clients');
@@ -128,6 +132,28 @@ const reviewsCardsSwiper = new Swiper('.reviews__cards', {
 	}
 })
 
+const newsCardsSwiper = new Swiper('.news__cards', {
+	slidesPerView: 'auto',
+	spaceBetween: 4,
+	grid: {
+		fill: 'row',
+		rows: 1
+	},
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			grid: {
+				fill: 'row',
+				rows: 2
+			}
+		}
+	}
+})
+
+
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')
@@ -227,18 +253,18 @@ menuToggle.addEventListener('mouseover', () => {
 })
 
 // sub-menu accordeon
-takeControlAccordion('.sub-menu', '.sub-menu__list', {
-	accordionItemSelector: '.sub-menu__links',
-	accordionItemTogglerSelector: '.sub-menu__toggle',
-	accordionItemContentSelector: '.sub-menu__content',
-	accordionItemActiveClass: 'sub-menu__links_active'
-})
+// takeControlAccordion('.sub-menu', '.sub-menu__list', {
+// 	accordionItemSelector: '.sub-menu__links',
+// 	accordionItemTogglerSelector: '.sub-menu__toggle',
+// 	accordionItemContentSelector: '.sub-menu__content',
+// 	accordionItemActiveClass: 'sub-menu__links_active'
+// })
 
-const subMenuToggle = document.querySelector('.sub-menu__toggle')
-const subMenuContent = document.querySelector('.sub-menu__content')
-subMenuToggle.addEventListener('click', () => {
-	subMenuContent.classList.toggle('sub-menu__content_active')
-})
+// const subMenuToggle = document.querySelector('.sub-menu__toggle')
+// const subMenuContent = document.querySelector('.sub-menu__content')
+// subMenuToggle.addEventListener('click', () => {
+// 	subMenuContent.classList.toggle('sub-menu__content_active')
+// })
 
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')

@@ -4,6 +4,7 @@
 
 <body class="main-page">
 	@@include('components/business/_header.html')
+	<video class="main-page__background" src="@videos/sample-5s.mp4" autoplay muted loop></video>
 	<main>
 		<section class="page-title container">
 			<h1>Постройте эффективную<br>систему корпоративного<br>обучения</h1>
@@ -33,10 +34,10 @@
 			<div class="programms__tabs swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide_active">
-						<h2>Повышение квалификации</h2>
+						<h2>Повышение<br>квалификации</h2>
 					</div>
 					<div class="swiper-slide">
-						<h2>Профессиональная переподготовка</h2>
+						<h2>Профессиональная<br>переподготовка</h2>
 					</div>
 					<div class="swiper-slide">
 						<h2>Курсы<br>и семинары</h2>
@@ -111,40 +112,39 @@
 						<a class="link link_blue">3 специальности &rarr;</a>
 					</div>
 				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="programms__download">
+				<h3>Скачайте полный перечень программ в формате pdf</h3>
+				@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', href: '/'})
+			</div>
 		</section>
-		<section class="programms container">
-			<div class="programms__tabs swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide_active">
-						<h2>Повышение<br>квалификации</h2>
-					</div>
-					<div class="swiper-slide">
-						<h2>Профессиональная<br>переподготовка</h2>
-					</div>
-					<div class="swiper-slide">
-						<h2>Курсы<br>и семинары</h2>
-					</div>
+		<section class="benefits container">
+			<h2>Более 800 специальностей<br>по различным направлениям</h2>
+			<div class="benefits__cards">
+				<div class="benefits__card">
+					<h3>Получайте не только теорию</h3>
+					<p>Мы используем современные технологии, в том числе шлем виртуальной реальности, используя который Вы сможете отработать новые навыки безопасно</p>
 				</div>
-				<div class="swiper-scrollbar"></div>
-			</div>
-			<div class="benefits__card">
-				<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
-				<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
-			</div>
-			<div class="benefits__card">
-				<h3>Экономьте с нами</h3>
-				<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
-			</div>
-			<div class="benefits__card">
-				<h3>Обучайте кадры дистанционно!</h3>
-				<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.
-				</p>
-			</div>
-			<div class="benefits__card">
-				<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
-			</div>
+				<div class="benefits__card">
+					<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
+					<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
+				</div>
+				<div class="benefits__card">
+					<h3>Экономьте с нами</h3>
+					<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
+				</div>
+				<div class="benefits__card">
+					<h3>Обучайте кадры дистанционно!</h3>
+					<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.</p>
+				</div>
+				<div class="benefits__card">
+					<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
+				</div>
 			</div>
 		</section>
+
 		@@include('components/business/_banner.html',
 		{title: 'Спланируйте годовой бюджет компании',
 		subtitle: 'Оставьте свою почту, и мы вышлем подробный учебный план на текущий год',
@@ -184,23 +184,6 @@
 				<div class="swiper-pagination"></div>
 				<div class="about-us__photo-description">
 					<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы</p>
-				</div>
-				<div class="about-us__photo swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="@images/about-us-1.png">
-						</div>
-						<div class="swiper-slide">
-							<img src="@images/about-us-2.png">
-						</div>
-					</div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-pagination"></div>
-					<div class="about-us__photo-description">
-						<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы
-						</p>
-					</div>
 				</div>
 		</section>
 		<section class="partnership container">
@@ -253,7 +236,7 @@
 			</div>
 			<div class="reviews__cards swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
+					<div class="swiper-slide open-modal" modalId="review-1">
 						<img src="@images/review.png">
 					</div>
 					<div class="swiper-slide">
@@ -276,22 +259,76 @@
 				<div class="swiper-button-next"></div>
 			</div>
 		</section>
+		<section class="news container">
+			<h2>Новости</h2>
+			<div class="news__cards swiper">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="/">
+						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+						<img src="@images/news-1.png">
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>ЦППК подводит итоги 2022 года</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide">
+						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>ЦППК подводит итоги 2022 года</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>ЦППК подводит итоги 2022 года</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+			@@include('components/ui/_button.html', {children: 'Все новости', class: 'btn_blue-border', type: 'button', href: '/'})
+
+		</section>
 		<section class="subscribe container">
 			<div class="subscribe__text">
 				<h3>Подпишитесь на рассылку</h3>
-				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших
-					клиентов по подписке</p>
+				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших клиентов по подписке</p>
 			</div>
 			<form class="subscribe__form">
-				<label>
-					<input>
-				</label>
-				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn__blue-fill', href: '/'})
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary',  type: 'submit'})
 			</form>
 		</section>
 	</main>
 	@@include('components/business/_footer.html')
 	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-1'})
 	@@include('meta/_includeScripts.html')
 </body>
 

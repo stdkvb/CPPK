@@ -1,0 +1,132 @@
+.news {
+	padding-top: 120px;
+	padding-bottom: 120px;
+	position: relative;
+	@include tablet {
+		padding-top: 50px;
+		padding-bottom: 60px;
+		padding-right: 0;
+	}
+	// display: grid;
+	// grid-template-columns: 1fr 280px;
+	// grid-template-rows: 3.5em 37.5em;
+	// grid-template-areas:
+	// 	"title button"
+	// 	"cards cards";
+	// gap: 80px;
+
+	h2 {
+		// grid-area: title;
+		margin-bottom: 80px;
+		@include tablet {
+			margin-bottom: 32px;
+		}
+	}
+
+	.btn {
+		// grid-area: button;
+		// margin-right: 100px;
+		// min-width: 180px;
+		position: absolute;
+		top: 120px;
+		right: 100px;
+		@include tablet {
+			position: unset;
+			margin-top: 55px;
+			width: calc(100% - 24px);
+		}
+	}
+
+	.news__cards {
+		grid-area: cards;
+		@include tablet {
+			overflow: unset;
+		}
+
+		.swiper-slide {
+			position: relative;
+			height: 300px;
+			width: 570px;
+			padding: 48px 48px 41px 48px;
+			background-color: $white;
+			display: grid;
+			grid-template-columns: 1fr 0.5fr;
+			grid-template-rows: 1fr 40px;
+			grid-template-areas:
+				"text text"
+				"date button";
+			transition: background-color $transitionDuration;
+			@include tablet {
+				height: 217px;
+				width: 320px;
+				padding: 20px 24px;
+			}
+
+			h3 {
+				grid-area: text;
+				color: $gray90;
+				transition: color $transitionDuration;
+				@include tablet {
+					@include medium-16;
+				}
+			}
+
+			span {
+				grid-area: date;
+				transition: color $transitionDuration;
+				@include regular-18;
+				color: $gray60;
+			}
+
+			.link-icon {
+				grid-area: button;
+				justify-self: end;
+				@include tablet {
+					justify-self: unset;
+				}
+			}
+
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: -1;
+				width: 100%;
+				opacity: 0;
+				transition: opacity $transitionDuration;
+				filter: brightness(40%);
+			}
+
+			&:hover {
+				@include min_tablet {
+					background-color: $blue50;
+					img {
+						opacity: 1;
+
+					}
+					h3 {
+						color: $white;
+					}
+					span {
+						color: $white;
+					}
+				}
+			}
+
+		}
+		.swiper-scrollbar {
+			bottom: -30px;
+			left: unset;
+			background: $blue20;
+			@include min_tablet {
+				display: none;
+			}
+
+			.swiper-scrollbar-drag {
+				background: $blue50;
+			}
+		}
+	}
+
+}

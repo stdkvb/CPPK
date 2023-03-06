@@ -18,9 +18,17 @@
 
 	.subscribe__form {
 		display: flex;
+		gap: 32px;
 		@include desktop_huge {
 			flex-direction: column;
 			gap: 20px;
+		}
+
+		.input__container {
+			width: 413px;
+			@include tablet {
+				width: 100%;
+			}
 		}
 	}
 
