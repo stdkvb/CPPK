@@ -168,8 +168,18 @@ const VR = document.getElementById('virtual-reality')
 const vrMenu = document.getElementById('vr-menu')
 const RL = document.getElementById('remote-learning')
 const rlMenu = document.getElementById('rl-menu')
+const profile = document.getElementById('profile')
+const profileMenu = document.getElementById('profile-menu')
 const bottomSearchButton = document.getElementById('bottom-search-btn')
 const bottomBurgerButton = document.getElementById('bottom-burger-btn')
+
+profile.addEventListener('click', () => {
+	rlMenu.classList.remove('service-menu_active')
+	searchMenu.classList.remove('search-menu_active')
+	menu.classList.remove('menu_active')
+	vrMenu.classList.remove('service-menu_active')
+	profileMenu.classList.toggle('profile-menu_active')
+})
 
 VR.addEventListener('click', () => {
 	rlMenu.classList.remove('service-menu_active')
@@ -204,7 +214,11 @@ const menuCloseButtons = document.querySelectorAll('.close-btn')
 menuCloseButtons.forEach((elem) => {
 	elem.addEventListener('click', () => {
 		rlMenu.classList.remove('service-menu_active')
+		rlMenu.style.transform = 'translateX(-47.5em)'
 		vrMenu.classList.remove('service-menu_active')
+		vrMenu.style.transform = 'translateX(-47.5em)'
+		profileMenu.classList.remove('profile-menu_active')
+		profileMenu.style.transform = 'translateX(-47.5em)'
 		menu.classList.remove('menu_active')
 		searchMenu.classList.remove('search-menu_active')
 	})

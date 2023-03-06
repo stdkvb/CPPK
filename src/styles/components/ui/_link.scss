@@ -110,4 +110,25 @@
 			z-index: 30;
 		}
 	}
+
+	&_gray {
+		color: $gray60;
+		@include regular-18;
+
+		&:link,
+		&:visited {
+			color: $gray60;
+		}
+
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
+
+		&_disabled {
+			cursor: auto;
+			color: $gray30;
+			@include regular-18;
+		}
+	}
 }
