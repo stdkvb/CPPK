@@ -2,9 +2,30 @@
 	width: 100%;
 	height: auto;
 	position: relative;
-	overflow: hidden;
+	margin-top: 60px;
+	object-fit: cover;
 
-	img {
-		margin: 0;
+	& video {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.video-controler {
+	background-image: url(@icons/playVideo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 84px;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	border: none;
+
+	&.active {
+		display: none;
 	}
 }

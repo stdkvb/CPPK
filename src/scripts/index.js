@@ -1,5 +1,27 @@
 import takeControlAccordion from './accordion'
 
+//Btn "Show-more"
+const clientsElements = document.querySelector('.clients');
+const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
+moreButton = addEventListener("click", function () {
+	clientsElements.classList.add('active');
+
+})
+
+// Video
+const playButton = document.querySelector('.video-controler');
+const videoContainer = document.querySelector('.video-container video');
+playButton.addEventListener('click', () => {
+	playButton.classList.add('active');
+	videoContainer.play();
+})
+videoContainer.addEventListener('click', () => {
+	playButton.classList.remove('active');
+	videoContainer.pause();
+})
+
+
+
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
 	spaceBetween: 0

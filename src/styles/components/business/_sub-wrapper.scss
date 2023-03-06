@@ -1,6 +1,6 @@
 .sub-wrapper {
 	display: grid;
-	grid-template-columns: 80% 1fr;
+	grid-template-columns: 79% 1fr;
 	grid-template-areas: "content sidebar";
 
 	@include tablet {
@@ -14,7 +14,7 @@
 		grid-area: content;
 
 		@include desktop_medium {
-			padding-right: 50px;
+			padding: 100px 50px 140px;
 		}
 
 		@include tablet {

@@ -23,6 +23,25 @@
 		cursor: default;
 	}
 
+	&_primary_blue {
+		background-color: transparent;
+		color: $blue50;
+		border: solid 1px $blue50;
+		padding: 22px 88px;
+
+		&_disabled {
+			pointer-events: none;
+			background-color: transparent;
+			color: $gray30;
+			border: solid 1px $gray30;
+		}
+
+		&:hover {
+			background-color: $blue50;
+			color: $white;
+		}
+	}
+
 	&_secondary {
 		background-color: $white;
 		color: $gray90;
@@ -79,6 +98,6 @@
 
 	.cover {
 		@include contain;
-		z-index:30
-	 }
+		z-index: 30
+	}
 }

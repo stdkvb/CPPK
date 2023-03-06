@@ -20,27 +20,23 @@
 	}
 
 	&_blue {
-		color: $blue60;
+		color: $blue50;
 		@include regular-18;
 
-		&:hover {
+		&:link,
+		&:visited {
 			color: $blue50;
+		}
 
-			&:link,
-			&:visited {
-				color: $blue50;
-			}
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
 
-			&:hover,
-			&:active {
-				color: $blue30;
-			}
-
-			&_disabled {
-				cursor: auto;
-				color: $gray30;
-				@include regular-18;
-			}
+		&_disabled {
+			cursor: auto;
+			color: $gray30;
+			@include regular-18;
 		}
 
 		&-phone {
@@ -76,7 +72,6 @@
 			&__group {
 				display: flex;
 				gap: 1rem;
-<<<<<<< HEAD
 			}
 
 			&_burger {
@@ -109,38 +104,25 @@
 			}
 		}
 	}
-=======
-			}
 
-			&_burger {
-				&::before {
-					content: url("@icons/burger.svg");
-				}
-			}
+	&_gray {
+		color: $gray60;
+		@include regular-18;
 
-			&_eye {
-				&::before {
-					content: url("@icons/eye.svg");
-				}
-			}
+		&:link,
+		&:visited {
+			color: $gray60;
+		}
 
-			&_youtube {
-				&::before {
-					content: url("@icons/youtube.svg");
-				}
-			}
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
 
-			&_vk {
-				&::before {
-					content: url("@icons/vk.svg");
-				}
-			}
-
-			.cover {
-				@include contain;
-				z-index: 30;
-			}
+		&_disabled {
+			cursor: auto;
+			color: $gray30;
+			@include regular-18;
 		}
 	}
 }
->>>>>>> 6b12d9f8b4af4b563fa7ea4cf9412ed5dd39f098

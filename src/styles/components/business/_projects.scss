@@ -1,0 +1,80 @@
+.other-projects {
+	margin-left: 100px;
+	padding: 100px 100px 140px;
+	background-color: $gray10;
+
+	@include desktop_medium {
+		padding: 100px 50px 140px;
+	}
+
+	@include tablet {
+		margin-left: 0;
+		padding: 32px 20px 60px;
+	}
+
+	h2 {
+		margin-bottom: 60px;
+
+		@include tablet {
+			@include medium-24;
+			margin-bottom: 32px;
+		}
+	}
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2px;
+
+	&>* img,
+	&>a,
+	&>span {
+		margin: 0;
+	}
+
+	@include desktop_extra_small {
+		grid-template-columns: 1fr;
+	}
+
+	&__item {
+		background-color: $white;
+		padding: 48px;
+
+		@include desktop_extra_small {
+			padding: 24px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $gray04;
+		padding: 10px;
+		max-width: 64px;
+		height: 64px;
+		margin: 0 0 32px 0;
+
+		img {
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+
+	&__title {
+		@include medium-18;
+		display: block;
+		color: $black;
+		margin: 0 0 20px 0;
+	}
+
+
+	&__text {
+		@include regular-16;
+		line-height: 1.3;
+		color: $gray60;
+		display: inline-block;
+		margin: 0;
+	}
+}
