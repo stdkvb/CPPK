@@ -7,8 +7,13 @@
 		padding: 52px 26px 52px 26px;
 	}
 
+	@include desktop_extra_small {
+		margin-left: 100px;
+	}
+
 	@include tablet {
 		padding: 60px 20px 32px;
+		margin-left: 0;
 		background-color: $gray04;
 	}
 
@@ -29,7 +34,6 @@
 
 
 		@include tablet {
-			cursor: pointer;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;

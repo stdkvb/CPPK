@@ -1,9 +1,10 @@
 import { takeControlAccordion, takeControlModals } from './takeControl'
 
-takeControlModals('.open-modal', '.modal-close',{
+takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
+/*
 //Btn "Show-more"
 const clientsElements = document.querySelector('.clients');
 const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
@@ -23,7 +24,7 @@ videoContainer.addEventListener('click', () => {
 	playButton.classList.remove('active');
 	videoContainer.pause();
 })
-
+*/
 
 
 const eventsSwiper = new Swiper('.events', {

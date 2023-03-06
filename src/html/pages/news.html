@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Новости'})
+
+<body class="main-page">
+	@@include('components/business/_header.html')
+	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
+	<main>
+		<section class="sub-container">
+			<h1>Проекты</h1>
+		</section>
+		<section class="sub-wrapper">
+			@@include('components/business/_sub-menu.html')
+
+			<div class="sub-wrapper__content">
+				<div class="sub-wrapper__directory">
+					<a href="#" class="link_blue">О центре</a>
+					<a class="link_blue_disabled">Новости</a>
+				</div>
+				<div class="sub-wrapper__nav">
+					<a href="#">Новости</a>
+					<a href="#">События</a>
+				</div>
+
+				<div class="sub-wrapper__text">
+					<div class="news">
+						<div class="news__cards news__cards_list">
+							<a class="swiper-slide" href="/">
+								<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+								<img src="@images/news-1.png">
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+									работников промышленных предприятий</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>ЦППК подводит итоги 2022 года</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide">
+								<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+									работников промышленных предприятий</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>ЦППК подводит итоги 2022 года</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+									работников промышленных предприятий</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+							<a class="swiper-slide" href="/">
+								<h3>ЦППК подводит итоги 2022 года</h3>
+								<span>12 января 2023</span>
+								<span class="link-icon link-icon_arrow"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribe container">
+			<div class="subscribe__text">
+				<h3>Подпишитесь на рассылку</h3>
+				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших
+					клиентов по подписке</p>
+			</div>
+			<form class="subscribe__form">
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type:
+				'submit'})
+			</form>
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

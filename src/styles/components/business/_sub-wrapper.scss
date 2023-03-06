@@ -3,7 +3,7 @@
 	grid-template-columns: 79% 1fr;
 	grid-template-areas: "content sidebar";
 
-	@include tablet {
+	@include desktop_extra_small {
 		display: block;
 	}
 
@@ -52,6 +52,9 @@
 	}
 
 	&__text {
+		.news {
+			padding: 0;
+		}
 
 		h2 {
 			@include medium-36;
