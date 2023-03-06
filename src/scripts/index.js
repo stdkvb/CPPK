@@ -1,30 +1,27 @@
 import { takeControlAccordion, takeControlModals } from './takeControl'
 
-takeControlModals('.open-modal', '.modal-close',{
+takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
-//Btn "Show-more"
-const clientsElements = document.querySelector('.clients');
-const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
-moreButton = addEventListener("click", function () {
-	clientsElements.classList.add('active');
+// // Btn "Show-more"
+// const clientsElements = document.querySelector('.clients')
+// const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue')
+// moreButton = addEventListener('click', () => {
+// 	clientsElements.classList.add('active')
+// })
 
-})
-
-// Video
-const playButton = document.querySelector('.video-controler');
-const videoContainer = document.querySelector('.video-container video');
-playButton.addEventListener('click', () => {
-	playButton.classList.add('active');
-	videoContainer.play();
-})
-videoContainer.addEventListener('click', () => {
-	playButton.classList.remove('active');
-	videoContainer.pause();
-})
-
-
+// // Video
+// const playButton = document.querySelector('.video-controler')
+// const videoContainer = document.querySelector('.video-container video')
+// playButton.addEventListener('click', () => {
+// 	playButton.classList.add('active')
+// 	videoContainer.play()
+// })
+// videoContainer.addEventListener('click', () => {
+// 	playButton.classList.remove('active')
+// 	videoContainer.pause()
+// })
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
@@ -36,10 +33,9 @@ const partnersSwiper = new Swiper('.partners', {
 	slidesPerView: 'auto',
 	breakpoints: {
 		1024: {
-			slidesPerView: 5,
-
+			slidesPerView: 5
 		}
-	},
+	}
 })
 
 const programmsTabsSwiper = new Swiper('.programms__tabs', {
@@ -153,7 +149,6 @@ const newsCardsSwiper = new Swiper('.news__cards', {
 	}
 })
 
-
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')
@@ -253,18 +248,18 @@ menuToggle.addEventListener('mouseover', () => {
 })
 
 // sub-menu accordeon
-// takeControlAccordion('.sub-menu', '.sub-menu__list', {
-// 	accordionItemSelector: '.sub-menu__links',
-// 	accordionItemTogglerSelector: '.sub-menu__toggle',
-// 	accordionItemContentSelector: '.sub-menu__content',
-// 	accordionItemActiveClass: 'sub-menu__links_active'
-// })
+takeControlAccordion('.sub-menu', '.sub-menu__list', {
+	accordionItemSelector: '.sub-menu__links',
+	accordionItemTogglerSelector: '.sub-menu__toggle',
+	accordionItemContentSelector: '.sub-menu__content',
+	accordionItemActiveClass: 'sub-menu__links_active'
+})
 
-// const subMenuToggle = document.querySelector('.sub-menu__toggle')
-// const subMenuContent = document.querySelector('.sub-menu__content')
-// subMenuToggle.addEventListener('click', () => {
-// 	subMenuContent.classList.toggle('sub-menu__content_active')
-// })
+const subMenuToggle = document.querySelector('.sub-menu__toggle')
+const subMenuContent = document.querySelector('.sub-menu__content')
+subMenuToggle.addEventListener('click', () => {
+	subMenuContent.classList.toggle('sub-menu__content_active')
+})
 
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
@@ -304,4 +299,3 @@ benefitsCards.children[3].addEventListener('mouseleave', (e) => {
 benefitsCards.children[4].addEventListener('mouseleave', (e) => {
 	e.target.classList.remove('benefits__card_active')
 })
-

@@ -236,23 +236,23 @@
 			</div>
 			<div class="reviews__cards swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide open-modal" modalId="review-1">
-						<img src="@images/review.png">
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide" >
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
 					</div>
 					<div class="swiper-slide">
-						<img src="@images/review.png">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide" >
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
 					</div>
 					<div class="swiper-slide">
-						<img src="@images/review.png">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
 					</div>
-					<div class="swiper-slide">
-						<img src="@images/review.png">
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/review.png">
-					</div>
-					<div class="swiper-slide">
-						<img src="@images/review.png">
+					<div class="swiper-slide" >
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
 					</div>
 				</div>
 				<div class="swiper-button-prev"></div>
@@ -328,7 +328,8 @@
 	</main>
 	@@include('components/business/_footer.html')
 	@@include('components/business/_bottom-bar.html')
-	@@include('components/business/_reviews-modal.html', { modalId: 'review-1'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-1', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-2', image: 'review.png'})
 	@@include('meta/_includeScripts.html')
 </body>
 
