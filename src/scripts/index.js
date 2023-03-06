@@ -4,6 +4,7 @@ takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
+<<<<<<< HEAD
 /*
 //Btn "Show-more"
 const clientsElements = document.querySelector('.clients');
@@ -25,7 +26,26 @@ videoContainer.addEventListener('click', () => {
 	videoContainer.pause();
 })
 */
+=======
+// // Btn "Show-more"
+// const clientsElements = document.querySelector('.clients')
+// const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue')
+// moreButton = addEventListener('click', () => {
+// 	clientsElements.classList.add('active')
+// })
+>>>>>>> main
 
+// // Video
+// const playButton = document.querySelector('.video-controler')
+// const videoContainer = document.querySelector('.video-container video')
+// playButton.addEventListener('click', () => {
+// 	playButton.classList.add('active')
+// 	videoContainer.play()
+// })
+// videoContainer.addEventListener('click', () => {
+// 	playButton.classList.remove('active')
+// 	videoContainer.pause()
+// })
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
@@ -37,10 +57,9 @@ const partnersSwiper = new Swiper('.partners', {
 	slidesPerView: 'auto',
 	breakpoints: {
 		1024: {
-			slidesPerView: 5,
-
+			slidesPerView: 5
 		}
-	},
+	}
 })
 
 const programmsTabsSwiper = new Swiper('.programms__tabs', {
@@ -154,7 +173,6 @@ const newsCardsSwiper = new Swiper('.news__cards', {
 	}
 })
 
-
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')
@@ -174,8 +192,18 @@ const VR = document.getElementById('virtual-reality')
 const vrMenu = document.getElementById('vr-menu')
 const RL = document.getElementById('remote-learning')
 const rlMenu = document.getElementById('rl-menu')
+const profile = document.getElementById('profile')
+const profileMenu = document.getElementById('profile-menu')
 const bottomSearchButton = document.getElementById('bottom-search-btn')
 const bottomBurgerButton = document.getElementById('bottom-burger-btn')
+
+profile.addEventListener('click', () => {
+	rlMenu.classList.remove('service-menu_active')
+	searchMenu.classList.remove('search-menu_active')
+	menu.classList.remove('menu_active')
+	vrMenu.classList.remove('service-menu_active')
+	profileMenu.classList.toggle('profile-menu_active')
+})
 
 VR.addEventListener('click', () => {
 	rlMenu.classList.remove('service-menu_active')
@@ -210,7 +238,11 @@ const menuCloseButtons = document.querySelectorAll('.close-btn')
 menuCloseButtons.forEach((elem) => {
 	elem.addEventListener('click', () => {
 		rlMenu.classList.remove('service-menu_active')
+		rlMenu.style.transform = 'translateX(-47.5em)'
 		vrMenu.classList.remove('service-menu_active')
+		vrMenu.style.transform = 'translateX(-47.5em)'
+		profileMenu.classList.remove('profile-menu_active')
+		profileMenu.style.transform = 'translateX(-47.5em)'
 		menu.classList.remove('menu_active')
 		searchMenu.classList.remove('search-menu_active')
 	})
@@ -254,18 +286,18 @@ menuToggle.addEventListener('mouseover', () => {
 })
 
 // sub-menu accordeon
-// takeControlAccordion('.sub-menu', '.sub-menu__list', {
-// 	accordionItemSelector: '.sub-menu__links',
-// 	accordionItemTogglerSelector: '.sub-menu__toggle',
-// 	accordionItemContentSelector: '.sub-menu__content',
-// 	accordionItemActiveClass: 'sub-menu__links_active'
-// })
+takeControlAccordion('.sub-menu', '.sub-menu__list', {
+	accordionItemSelector: '.sub-menu__links',
+	accordionItemTogglerSelector: '.sub-menu__toggle',
+	accordionItemContentSelector: '.sub-menu__content',
+	accordionItemActiveClass: 'sub-menu__links_active'
+})
 
-// const subMenuToggle = document.querySelector('.sub-menu__toggle')
-// const subMenuContent = document.querySelector('.sub-menu__content')
-// subMenuToggle.addEventListener('click', () => {
-// 	subMenuContent.classList.toggle('sub-menu__content_active')
-// })
+const subMenuToggle = document.querySelector('.sub-menu__toggle')
+const subMenuContent = document.querySelector('.sub-menu__content')
+subMenuToggle.addEventListener('click', () => {
+	subMenuContent.classList.toggle('sub-menu__content_active')
+})
 
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
@@ -305,4 +337,3 @@ benefitsCards.children[3].addEventListener('mouseleave', (e) => {
 benefitsCards.children[4].addEventListener('mouseleave', (e) => {
 	e.target.classList.remove('benefits__card_active')
 })
-

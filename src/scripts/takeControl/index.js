@@ -1,4 +1,4 @@
-import takeControlAccordion from "./accordion";
-import takeControlModals from "./modal";
+import takeControlAccordion from './accordion'
+import takeControlModals from './modal'
 
 export { takeControlAccordion, takeControlModals }
