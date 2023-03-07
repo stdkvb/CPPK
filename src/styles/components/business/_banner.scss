@@ -25,9 +25,14 @@
 			@include tablet {
 				margin-top: 32px;
 			}
+			@include mobile {
+				max-width: unset;
+				width: 100%;
+			}
 		}
 	}
 	img {
+		height: 100%;
 		@include tablet {
 			display: none;
 		}

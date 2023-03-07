@@ -67,7 +67,6 @@ p {
 		padding-left: 130px;
 	}
 
-
 	@include tablet {
 		padding-left: 24px;
 		padding-right: 24px;
@@ -92,5 +91,12 @@ p {
 	@include tablet {
 		margin: 0;
 		padding: 44px 20px;
+	}
+
+	&_no-padding {
+		padding-bottom: 0;
+		@include tablet {
+			padding-bottom: 0;
+		}
 	}
 }
