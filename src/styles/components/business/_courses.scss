@@ -1,18 +1,19 @@
 .courses {
 	padding-top: 140px;
-	padding-bottom: 140px;
 	display: grid;
-	grid-template-columns: 1fr 472px;
+	grid-template-columns: 1fr 572px;
 	grid-template-areas:
 	 "search search"
 	 "cards right-bar";
 	@include desktop {
 		display: block;
+		padding-top: 60px;
 	}
 
 	.search-bar {
 		grid-area: search;
 		width: calc(100% - 100px);
+		margin-top: unset;
 		@include tablet {
 			width: 100%;
 			margin: 0;
@@ -37,11 +38,13 @@
 	&__cards {
 		grid-area: cards;
 		margin-top: 60px;
+		margin-bottom: 140px;
 		@include desktop {
 			margin-right: 100px;
 		}
 		@include tablet {
 			margin-right: 0;
+			margin-bottom: 60px;
 		}
 
 		&.active .courses__card {

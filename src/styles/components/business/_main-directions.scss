@@ -10,6 +10,7 @@
 
 	.search-bar{
 		margin-left: 100px;
+		margin-top: unset;
 		width: calc(100% - 200px);
 		@include tablet {
 			width: 100%;
