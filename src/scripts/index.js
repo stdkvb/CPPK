@@ -4,6 +4,32 @@ takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
+//show more
+const cardsList = document.querySelector('.cards-list')
+const showMoreButton = document.querySelector('.show-more-btn')
+showMoreButton.addEventListener('click', () => {
+	cardsList.classList.add('active')
+	showMoreButton.style.display = 'none'
+})
+
+// //Btn "Show-more"
+// const clientsElements = document.querySelector('.clients');
+// const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
+// moreButton = addEventListener("click", function () {
+// 	clientsElements.classList.add('active');
+// })
+
+// // Video
+// const playButton = document.querySelector('.video-controler');
+// const videoContainer = document.querySelector('.video-container video');
+// playButton.addEventListener('click', () => {
+// 	playButton.classList.add('active');
+// 	videoContainer.play();
+// })
+// videoContainer.addEventListener('click', () => {
+// 	playButton.classList.remove('active');
+// 	videoContainer.pause();
+// })
 // // Btn "Show-more"
 // const clientsElements = document.querySelector('.clients')
 // const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue')
@@ -145,6 +171,16 @@ const newsCardsSwiper = new Swiper('.news__cards', {
 				fill: 'row',
 				rows: 2
 			}
+		}
+	}
+})
+
+const navBarSwiper = new Swiper('.nav-bar', {
+	slidesPerView: 'auto',
+	spaceBetween: 44,
+	breakpoints: {
+		992: {
+			spaceBetween: 80,
 		}
 	}
 })

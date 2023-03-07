@@ -1,0 +1,30 @@
+.aside-banner {
+	background-image: url(@images/aside-banner-background.png);
+	padding: 48px 52px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: sticky;
+	top: 0;
+	@include tablet {
+		padding: 20px 24px;
+	}
+
+	span {
+		@include medium-20;
+		color: $white;
+	}
+
+	h3 {
+		@include medium-24;
+		color: $white;
+		@include tablet {
+			@include medium-18;
+		}
+	}
+
+	.link {
+		@include regular-16;
+		margin-top: 20px;
+	}
+}
