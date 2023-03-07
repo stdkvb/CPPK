@@ -6,6 +6,9 @@
 	@include tablet {
 		backdrop-filter: blur(20px);
 	}
+	@include mobile {
+		height: 80px;
+	}
 
 	.container {
 		margin: 0;
