@@ -27,6 +27,13 @@
 		</section>
 		<section class="courses container">
 			@@include('components/ui/_search-bar.html', { placeholder: 'Введите запрос'})
+			<div class="courses__right-bar">
+				<div class="aside-banner">
+					<span>12 февраля</span>
+					<h3>Семинар «Экономическая безопасность предпринимательской деятельности»</h3>
+					<a class="link">Подробнее &rarr;</a>
+				</div>
+			</div>
 			<ul class="courses__cards cards-list">
 				@@include('components/business/_course-card.html',
 					{
@@ -77,13 +84,7 @@
 					<a class="btn btn_primary_blue show-more-btn">Показать еще</a>
 				</div>
 			</ul>
-			<div class="courses__right-bar">
-				<div class="aside-banner">
-					<span>12 февраля</span>
-					<h3>Семинар «Экономическая безопасность предпринимательской деятельности»</h3>
-					<a class="link">Подробнее &rarr;</a>
-				</div>
-			</div>
+
 		</section>
 		@@include('components/business/_banner.html',
 		{title: 'Не нашли нужную программу?',

@@ -6,6 +6,9 @@
 	gap: 20px;
 	position: sticky;
 	top: 0;
+	@include tablet {
+		padding: 20px 24px;
+	}
 
 	span {
 		@include medium-20;
@@ -15,6 +18,9 @@
 	h3 {
 		@include medium-24;
 		color: $white;
+		@include tablet {
+			@include medium-18;
+		}
 	}
 
 	.link {

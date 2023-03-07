@@ -8,6 +8,7 @@
 	@include desktop {
 		display: block;
 		padding-top: 60px;
+		background-color: $white;
 	}
 
 	.search-bar {
@@ -29,6 +30,16 @@
 		background-color: $white;
 		margin-top: 60px;
 		margin-left: 100px;
+		@include desktop {
+			margin-top: 32px;
+			margin-left: 0;
+			margin-right: 100px;
+		}
+		@include tablet {
+			margin-top: 32px;
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 
 	&__card:nth-child(1n + 6) {
@@ -41,6 +52,7 @@
 		margin-bottom: 140px;
 		@include desktop {
 			margin-right: 100px;
+			margin-top: 32px;
 		}
 		@include tablet {
 			margin-right: 0;

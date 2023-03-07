@@ -10,10 +10,10 @@
 		"title old-price"
 		"title new-price"
 		"tags button";
-
+	@include desktop {
+		border: none;
+	}
 	@include tablet {
-		border: none;
-		border: none;
 		height: unset;
 		padding: 24px;
 		display: flex;
