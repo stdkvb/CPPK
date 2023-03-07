@@ -25,9 +25,141 @@
 				</nav>
 			</div>
 		</section>
-		<section class="sub-wrapper">
-
+		<section class="main-directions container">
+			@@include('components/ui/_search-bar.html', { placeholder: 'Введите запрос'})
+			<ul class="main-directions__cards cards-list">
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">6 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">5 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">7 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">6 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">5 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">7 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">6 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">5 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">7 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">6 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">5 специальностей &rarr;</a>
+					</a>
+				</li>
+				<li class="main-directions__card">
+					<a href="/">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">7 специальностей &rarr;</a>
+					</a>
+				</li>
+			</ul>
+			<div class="main-directions__more">
+				<a class="btn btn_primary_blue show-more-btn">Показать еще</a>
+			</div>
 		</section>
+		@@include('components/business/_banner.html',
+		{title: 'Не нашли нужную программу?',
+		subtitle: 'Возможно информация о ней еще не внесена на сайт. Позвоните нам по номеру 8-800-233-22-22 или скачайте полный перечень программ в формате pdf',
+		button: 'Получить перечень',
+		background: '@images/banner-background-2.png',
+		image: '@images/banner-image-2.png'
+		})
 	</main>
 
 	@@include('components/business/_footer.html')

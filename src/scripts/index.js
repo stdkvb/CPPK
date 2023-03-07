@@ -4,12 +4,19 @@ takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
+//show more
+const cardsList = document.querySelector('.cards-list')
+const showMoreButton = document.querySelector('.show-more-btn')
+showMoreButton.addEventListener('click', () => {
+	cardsList.classList.add('active')
+	showMoreButton.style.display = 'none'
+})
+
 // //Btn "Show-more"
 // const clientsElements = document.querySelector('.clients');
 // const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
 // moreButton = addEventListener("click", function () {
 // 	clientsElements.classList.add('active');
-
 // })
 
 // // Video

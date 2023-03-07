@@ -1,3 +1,101 @@
 .main-directions {
-	padding-top: 8.75em;
+	padding-top: 80px;
+	padding-left: 110px;
+	background-color: $gray04;
+	@include tablet {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background-color: $white;
+	}
+
+	.search-bar{
+		margin-left: 100px;
+		width: calc(100% - 200px);
+		@include tablet {
+			width: 100%;
+			margin: 0;
+		}
+
+		input::placeholder {
+			color: $gray70;
+		}
+	}
+
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-top: 60px;
+		@include desktop {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include tablet {
+			margin-top: 32px;
+			grid-template-columns: 1fr;
+		}
+
+		&.active .main-directions__card {
+			&:nth-child(1n + 10) {
+				display: flex;
+			}
+		}
+	}
+
+	&__card {
+		padding: 70px 100px;
+		height: 273px;
+		border: solid 1px $gray10;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: background-color $transitionDuration;
+		@include tablet {
+			background-color: $gray04;
+			border: none;
+			border-bottom: solid 1px $gray10;
+			height: 131px;
+			padding: 20px 24px;
+
+			&:nth-child(1n + 10) {
+				display: none;
+			}
+		}
+		h3 {
+			color: $gray90;
+			@include medium-28;
+			transition: color $transitionDuration;
+			@include tablet {
+				@include medium-18;
+			}
+		}
+		.link {
+			transition: color $transitionDuration;
+			@include regular-16;
+		}
+
+		&:hover {
+			background-color: $blue50;
+			h3 {
+				color: $white;
+			}
+			.link {
+				color: $white;
+			}
+		}
+	}
+
+	&__more a {
+		display: none;
+		margin-top: 32px;
+		text-align: center;
+
+		@include tablet {
+			display: inline-block;
+		};
+
+		@include mobile {
+			width: 100%;
+			margin-top: 32px;
+		}
+	}
 }
