@@ -27,30 +27,17 @@
 		&:visited {
 			color: $blue50;
 		}
-<<<<<<< HEAD
-
-		&:hover,
-=======
 	}
 
 	&:hover,
->>>>>>> main
-		&:active {
-			color: $blue30;
-		}
+	&:active {
+		color: $blue30;
+	}
 
-<<<<<<< HEAD
-		&_disabled {
-			cursor: auto;
-			color: $gray30;
-			@include regular-18;
-		}
-=======
 	&_disabled {
 		cursor: auto;
 		color: $gray30;
 		@include regular-18;
->>>>>>> main
 	}
 
 	&-phone {
@@ -144,8 +131,4 @@
 			@include regular-18;
 		}
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
