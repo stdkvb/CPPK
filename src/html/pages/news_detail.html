@@ -1,20 +1,20 @@
 <!doctype html>
 <html lang='ru'>
-@@include('meta/_head.html', {title: 'Проекты - деталка'})
+@@include('meta/_head.html', {title: 'Новости - детальная'})
 
 <body class="main-page">
 	@@include('components/business/_header.html')
 	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
 	<main>
 		<section class="sub-container">
-			<h1>Проекты</h1>
+			<h1>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h1>
 		</section>
 		<section class="sub-wrapper">
-			@@include('components/business/_sub-menu.html', {subscribe: ''})
+			@@include('components/business/_sub-menu.html', {subscribe: 'true'})
 
 			<div class="sub-wrapper__content">
-				@@include('components/business/_directory.html', {parent: 'О центре', link: 'Проекты',
-				disabled: 'АИС "Компетенция"'})
+				@@include('components/business/_directory.html', {parent: 'О центре', link: 'Новости',
+				disabled: 'Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК'})
 
 				<div class="sub-wrapper__text">
 					<p>
@@ -62,37 +62,27 @@
 					</p>
 					<img src="@images/structure.jpg" alt="Структура проекта">
 				</div>
-
-
-
-
 			</div>
 
 			<div class="other-cards">
-				<h2>Другие проекты</h2>
-				<div class="projects">
-					<a href="#" class="projects__item">
-						<div class="projects__logo"><img src="@icons/zoom.svg" alt="zoom"></div>
-						<div class="projects__title">Аудит промышленной безопасности</div>
-						<span class="projects__text">
-							Рекомендации для приведения документации и оборудования предприятия в соответствие с
-							требованиями промышленной безопасности
-						</span>
-					</a>
-					<a href="#" class="projects__item">
-						<div class="projects__logo"><img src="@icons/decret.svg" alt="decret"></div>
-						<div class="projects__title">Содействие занятости женщин -
-							декретницы</div>
-						<span class="projects__text">
-							Программы обучения и повышения квалификации женщин, находящихся в отпуске по уходу за
-							ребенком
-						</span>
-					</a>
+				<h2>Читайте так же</h2>
+				<div class="news">
+					<div class="news__cards news__cards_list">
+						<a class="swiper-slide" href="/">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+							<img src="@images/news-1.png">
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+					</div>
 				</div>
 			</div>
-
-
-
 		</section>
 	</main>
 

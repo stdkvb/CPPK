@@ -23,6 +23,45 @@
 		display: flex;
 		flex-direction: column;
 		gap: 52px;
+
+		.subscribe {
+			background: url(@images/subscribe_bg.png);
+			flex-direction: column;
+			gap: 40px;
+
+			margin: 0 -52px;
+			width: auto;
+
+			@include desktop_medium {
+				margin: 0 -26px;
+			}
+
+			@include desktop_extra_small {
+				display: none;
+			}
+
+			&__text {
+				width: auto !important;
+			}
+
+			&__form {
+				flex-direction: column;
+
+				.input__container {
+					width: 100% !important;
+				}
+			}
+		}
+
+		.container {
+			padding-left: 52px;
+			padding-right: 52px;
+
+			@include desktop_medium {
+				padding-left: 26px;
+				padding-right: 26px;
+			}
+		}
 	}
 
 	&__links_active &__icon {
@@ -65,7 +104,7 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		transition: all .7s;
+		transition: all $transitionDuration;
 		overflow-y: hidden;
 
 

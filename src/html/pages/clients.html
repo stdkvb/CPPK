@@ -10,13 +10,10 @@
 			<h1>История успеха</h1>
 		</section>
 		<section class="sub-wrapper">
-			@@include('components/business/_sub-menu.html')
+			@@include('components/business/_sub-menu.html', {subscribe: ''})
 
 			<div class="sub-wrapper__content">
-				<div class="sub-wrapper__directory">
-					<a href="#" class="link_blue">О центре</a>
-					<a class="link_blue_disabled">Отзывы</a>
-				</div>
+				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Отзывы'})
 				<div class="sub-wrapper__text">
 					<div class="clients">
 						<div class="clients__item">

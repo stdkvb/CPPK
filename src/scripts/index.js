@@ -311,6 +311,13 @@ subMenuToggle.addEventListener('click', () => {
 	subMenuContent.classList.toggle('sub-menu__content_active')
 })
 
+takeControlAccordion('.vacancies', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
+})
+
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
 benefitsCards.children[0].addEventListener('mouseenter', (e) => {
