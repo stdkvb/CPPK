@@ -1,0 +1,25 @@
+<li class="courses__card">
+	<a href="/">
+		@@if (context.title) {
+			<h3>@@title</h3>
+		}
+		<div class="courses__tags">
+			@@if (context.tag-1) {
+				<span>@@tag-1</span>
+			}
+			@@if (context.tag-2) {
+				<span>@@tag-2</span>
+			}
+			@@if (context.tag-3) {
+				<span>@@tag-3</span>
+			}
+		</div>
+		@@if (context.old-price) {
+			<span class="courses__old-price">@@old-price ₽</span>
+		}
+		@@if (context.old-price) {
+			<span class="courses__new-price">@@new-price ₽</span>
+		}
+		@@include('components/ui/_button.html', {children: 'Оставить заявку', class: 'btn_blue-fill', type: 'button', href: '/'})
+	</a>
+</li>

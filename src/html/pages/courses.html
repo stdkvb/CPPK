@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Курсы и семинары'})
+
+<body class="main-page">
+	@@include('components/business/_header.html')
+	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
+	<main>
+		<section class="sub-container sub-container_no-padding">
+			<h1>Курсы и семинары</h1>
+			<div class="nav-bar swiper">
+				<nav class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a class="nav-bar__link" href="#">Повышение<br>квалификации</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link " href="#">Профессиональная<br>переподготовка</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link" href="#">Краткосрочное<br>обучение</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link  nav-bar__link_active" href="#">Курсы<br>и семинары</a>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<section class="courses container">
+			@@include('components/ui/_search-bar.html', { placeholder: 'Введите запрос'})
+			<ul class="courses__cards cards-list">
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag-1: '72 ак.часа',
+						tag-2: 'Дистанционно',
+						tag-3: 'Очно',
+						old-price: '36 000',
+						new-price: '24 000'
+					})
+
+				<div class="courses__more">
+					<a class="btn btn_primary_blue show-more-btn">Показать еще</a>
+				</div>
+			</ul>
+			<div class="courses__right-bar">
+
+			</div>
+		</section>
+		@@include('components/business/_banner.html',
+		{title: 'Не нашли нужную программу?',
+		subtitle: 'Возможно информация о ней еще не внесена на сайт. Позвоните нам по номеру 8-800-233-22-22 или скачайте полный перечень программ в формате pdf',
+		button: 'Получить перечень',
+		background: '@images/banner-background-2.png',
+		image: '@images/banner-image-2.png'
+		})
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
