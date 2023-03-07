@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Направления'})
+
+<body class="main-page">
+	@@include('components/business/_header.html')
+	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
+	<main>
+		<section class="sub-container sub-container_no-padding">
+			<h1>Направления по повышению квалификации</h1>
+			<div class="nav-bar swiper">
+				<nav class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a class="nav-bar__link nav-bar__link_active" href="#">Повышение<br>квалификации</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link " href="#">Профессиональная<br>переподготовка</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link" href="#">Краткосрочное<br>обучение</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link" href="#">Курсы<br>и семинары</a>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<section class="sub-wrapper">
+
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
