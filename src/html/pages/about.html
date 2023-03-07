@@ -10,13 +10,11 @@
 			<h1>О центре</h1>
 		</section>
 		<section class="sub-wrapper">
-			@@include('components/business/_sub-menu.html')
+			@@include('components/business/_sub-menu.html', {subscribe: ''})
 
 			<div class="sub-wrapper__content">
-				<div class="sub-wrapper__directory">
-					<a href="#" class="link_blue">О центре</a>
-					<a class="link_blue_disabled">О центре</a>
-				</div>
+				@@include('components/business/_directory.html', {parent: 'О центре',
+				disabled: 'О центре'})
 				<div class="sub-wrapper__text">
 					<h2>Центр профессиональной подготовки кадров</h2>
 					<p>Центр профессиональной подготовки кадров — молодое и динамично развивающееся образовательное

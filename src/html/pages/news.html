@@ -7,77 +7,83 @@
 	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
 	<main>
 		<section class="sub-container">
-			<h1>Проекты</h1>
+			<h1>Новости</h1>
 		</section>
 		<section class="sub-wrapper">
-			@@include('components/business/_sub-menu.html')
+			@@include('components/business/_sub-menu.html', {subscribe: 'true'})
 
 			<div class="sub-wrapper__content">
-				<div class="sub-wrapper__directory">
-					<a href="#" class="link_blue">О центре</a>
-					<a class="link_blue_disabled">Новости</a>
-				</div>
+				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Новости'})
+
 				<div class="sub-wrapper__nav">
 					<a href="#">Новости</a>
 					<a href="#">События</a>
 				</div>
 
-				<div class="sub-wrapper__text">
-					<div class="news">
-						<div class="news__cards news__cards_list">
-							<a class="swiper-slide" href="/">
-								<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-								<img src="@images/news-1.png">
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
-									работников промышленных предприятий</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>ЦППК подводит итоги 2022 года</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide">
-								<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
-									работников промышленных предприятий</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>ЦППК подводит итоги 2022 года</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
-									работников промышленных предприятий</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-							<a class="swiper-slide" href="/">
-								<h3>ЦППК подводит итоги 2022 года</h3>
-								<span>12 января 2023</span>
-								<span class="link-icon link-icon_arrow"></span>
-							</a>
-						</div>
+				<div class="news">
+					<div class="news__cards news__cards_list">
+						<a class="swiper-slide" href="/">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+							<img src="@images/news-1.png">
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>ЦППК подводит итоги 2022 года</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>ЦППК подводит итоги 2022 года</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>ЦППК подводит итоги 2022 года</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
 					</div>
 				</div>
+
+				@@include('components/ui/_pagination.html')
 			</div>
+
+
 		</section>
 		<section class="subscribe container">
 			<div class="subscribe__text">
