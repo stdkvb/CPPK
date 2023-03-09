@@ -1,0 +1,11 @@
+<label class="checkbox">
+	<input
+		@@if (context.required) {required}
+		@@if (context.id) {id="@@id"}
+		@@if (context.name) {name="@@name"}
+		data-type="checkbox"
+		type="checkbox"
+	>
+	@@if (context.label && context.label !== "undefined") {<span class="label">@@label</span>}
+	<span class="custom-checkbox"></span>
+</label>

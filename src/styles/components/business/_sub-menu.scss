@@ -3,6 +3,10 @@
 	padding: 52px;
 	grid-area: sidebar;
 
+	&_no-padding {
+		padding: 0;
+	}
+
 	@include desktop_medium {
 		padding: 52px 26px 52px 26px;
 	}

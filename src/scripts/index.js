@@ -4,13 +4,51 @@ takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
-//show more
-const cardsList = document.querySelector('.cards-list')
-const showMoreButton = document.querySelector('.show-more-btn')
-showMoreButton.addEventListener('click', () => {
-	cardsList.classList.add('active')
-	showMoreButton.style.display = 'none'
+// dropdown select
+const elSelect = document.getElementsByClassName('select')[0]
+const elSelectValue = elSelect.children[0]
+const elSelectOptions = elSelect.children[1]
+
+Array.from(elSelectOptions.children).forEach((elOption) => {
+	elOption.addEventListener('click', (e) => {
+		elSelectValue.textContent = e.target.textContent
+		elSelect.classList.remove('isActive')
+	})
 })
+
+elSelectValue.addEventListener('click', () => {
+	elSelect.classList.toggle('isActive')
+})
+
+document.addEventListener('click', (e) => {
+	const didClickedOutside = !elSelect.contains(e.target)
+	if (didClickedOutside) {
+		elSelect.classList.remove('isActive')
+	}
+})
+
+//show more
+// const cardsList = document.querySelector('.cards-list')
+// const showMoreButton = document.querySelector('.show-more-btn')
+// showMoreButton.addEventListener('click', () => {
+// 	cardsList.classList.add('active')
+// 	showMoreButton.style.display = 'none'
+// })
+
+// filter accordeon
+// takeControlAccordion('.direction__filters', '.accordion__list', {
+// 	accordionItemSelector: '.accordion__item',
+// 	accordionItemTogglerSelector: '.accordion__toggle',
+// 	accordionItemContentSelector: '.accordion__content',
+// 	accordionItemActiveClass: 'accordion__item_active'
+// })
+
+// //Btn "Show-more"
+// const clientsElements = document.querySelector('.clients');
+// const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
+// moreButton = addEventListener("click", function () {
+// 	clientsElements.classList.add('active');
+// })
 
 // // Video
 // const playButton = document.querySelector('.video-controler');
@@ -235,28 +273,7 @@ menuCloseButtons.forEach((elem) => {
 	})
 })
 
-// dropdown select
-const elSelect = document.getElementsByClassName('select')[0]
-const elSelectValue = elSelect.children[0]
-const elSelectOptions = elSelect.children[1]
 
-Array.from(elSelectOptions.children).forEach((elOption) => {
-	elOption.addEventListener('click', (e) => {
-		elSelectValue.textContent = e.target.textContent
-		elSelect.classList.remove('isActive')
-	})
-})
-
-elSelectValue.addEventListener('click', () => {
-	elSelect.classList.toggle('isActive')
-})
-
-document.addEventListener('click', (e) => {
-	const didClickedOutside = !elSelect.contains(e.target)
-	if (didClickedOutside) {
-		elSelect.classList.remove('isActive')
-	}
-})
 
 // menu accordeon
 takeControlAccordion('.menu__accordion', '.accordion__list', {

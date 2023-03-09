@@ -62,11 +62,17 @@
 		border: 1px solid $blue50;
 		background-color: transparent;
 		color: $blue50;
+		display: block;
 
 		&_disable {
 			border: 1px solid $gray30;
 			color: $gray30;
 			cursor: default;
+		}
+
+		&:hover {
+			background-color: $blue50;
+			color: $white;
 		}
 	}
 

@@ -77,14 +77,26 @@ p {
 	max-width: 1810px;
 	margin-left: 110px;
 	padding: 80px 0 120px 100px;
+	min-height: 338px;
 
-	& h1 {
+	h1 {
 		@include regular-36;
 		max-width: 785px;
 
 		@include tablet {
 			@include medium-28;
 		}
+	}
+
+	h2 {
+		@include regular-18;
+		color: $white;
+		margin-top: 24px;
+	}
+
+
+	@include desktop_extra_small {
+		margin-left: 26px;
 	}
 
 	@include tablet {
@@ -99,4 +111,28 @@ p {
 			padding-bottom: 0;
 		}
 	}
+
+	<<<<<<< HEAD
 }
+
+=======
+}
+
+.main-page__background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	min-height: 1095px;
+	filter: brightness(40%);
+
+	@media screen and (min-width: 1900px) {
+		width: 100vw;
+	}
+
+	&_sub {
+		min-height: none;
+		filter: none;
+	}
+}
+
+>>>>>>>e619dba203eb97162c2537e0f7b9a8c71bb178df
