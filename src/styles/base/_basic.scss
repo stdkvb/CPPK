@@ -111,3 +111,20 @@ p {
 		}
 	}
 }
+
+.main-page__background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	min-height: 1095px;
+	filter: brightness(40%);
+
+	@media screen and (min-width: 1900px) {
+		width: 100vw;
+	}
+
+	&_sub {
+		min-height: none;
+		filter: none;
+	}
+}

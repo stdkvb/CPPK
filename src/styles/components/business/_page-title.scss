@@ -2,14 +2,22 @@
 	margin-top: 16em;
 	padding-left: 310px;
 	background-color: transparent;
+
 	@include desktop_base {
 		margin-left: 0;
 	}
+
 	@include tablet {
 		margin-top: 8.8em;
 	}
+
 	.btn {
 		margin-top: 3.75em;
 		z-index: -1;
+	}
+
+	span {
+		@include regular-28;
+		color: $white;
 	}
 }
