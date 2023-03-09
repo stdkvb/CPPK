@@ -12,6 +12,14 @@ showMoreButton.addEventListener('click', () => {
 	showMoreButton.style.display = 'none'
 })
 
+// filter accordeon
+takeControlAccordion('.direction__filters', '.accordion__list', {
+	accordionItemSelector: '.accordion__item',
+	accordionItemTogglerSelector: '.accordion__toggle',
+	accordionItemContentSelector: '.accordion__content',
+	accordionItemActiveClass: 'accordion__item_active'
+})
+
 // //Btn "Show-more"
 // const clientsElements = document.querySelector('.clients');
 // const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
