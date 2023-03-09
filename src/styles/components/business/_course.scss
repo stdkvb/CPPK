@@ -21,11 +21,6 @@
 		}
 	}
 
-	&__sticky-container {
-		position: sticky;
-		top: 52px;
-	}
-
 	&__right-bar {
 		grid-area: right-bar;
 		background-color: $white;
@@ -41,36 +36,80 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
-	}
 
-	&__filters {
-		margin: 52px 25px;
-		@include desktop_medium {
-			margin: 52px 0;
-		}
-		@include tablet {
-			margin: 32px 0;
-		}
-		.accordion__toggle {
-			height: 40px;
-			border-bottom: solid 1px $gray30;
-		}
-		h4 {
-			@include medium-16;
-			color: $gray90;
-		}
-		.accordion-icon {
-			visibility: visible !important;
-			background-image: url(../files/icons/chevron-down_black.svg) !important;
-		}
-		.accordion__content {
-			ul {
-				@include medium-14;
-				color: $gray60;
-				margin: 20px 30px;
+		.sticky-container {
+			position: sticky;
+			top: 52px;
+			border-bottom: solid 1px $gray10;
+
+			.manager {
+				padding: 32px 51px;
+				border-top: solid 1px $gray10;
+				display: grid;
+				column-gap: 20px;
+				row-gap: 4px;
+				grid-template-columns: 66px 1fr;
+				grid-template-rows: 42px 1fr;
+				grid-template-areas:
+					"image name"
+					"image phone";
+				@include tablet {
+					display: none;
+				}
+				img {
+					grid-area: image;
+				}
+				span {
+					grid-area: name;
+					max-height: 42px;
+					@include regular-16;
+					color: $gray50;
+				}
+				a {
+					grid-area: phone;
+					@include medium-16;
+					color: $gray90;
+				}
+			}
+
+			.order {
+				padding: 32px 48px;
 				display: flex;
 				flex-direction: column;
-				gap: 12px;
+				gap: 8px;
+				border-top: solid 1px $gray10;
+				border-bottom: solid 1px $gray10;
+				@include medium-16;
+				span:last-of-type {
+					@include regular-14;
+					color: $gray50;
+				}
+				@include tablet {
+					display: none;
+				}
+			}
+
+			.btn_blue-border {
+				padding: 1.5em 2.25em;
+				margin: 32px 48px;
+				@include tablet {
+					display: none;
+				}
+				.children:before {
+					content: '';
+					width: 16px;
+					height: 16px;
+					margin-right: 16px;
+					background-image: url(@icons/download-blue.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+					transition: all $transitionDuration;
+				}
+				&:hover {
+					.children:before {
+						background-image: url(@icons/download-white.svg);
+					}
+				}
 			}
 		}
 	}

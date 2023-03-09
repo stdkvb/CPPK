@@ -11,8 +11,8 @@
 			<h1>Монтаж, техническое обслуживание и ремонт систем (элементов систем) дымоудаления и противодымной вентиляции, включая диспетчеризацию и проведение пусконаладочных работ</h1>
 		</section>
 		<section class="course container">
-			<div class="direction__right-bar">
-				<div class="direction__sticky-container">
+			<div class="course__right-bar">
+				<div class="sticky-container">
 					<form class="buy-banner">
 						<span class="buy-banner__old-price">24 000 руб</span>
 						<span class="buy-banner__new-price">15 000 руб</span>
@@ -26,7 +26,16 @@
 						@@include('components/ui/_button.html', { children: 'Оставить заявку', class: 'btn_blue-fill', type: 'submit'})
 						<p class="buy-banner__completed"><span>4356</span> человек уже прошли этот курс</p>
 					</form>
-
+					<div class="manager">
+						<img src="@images/manager.png">
+						<span>Алефтина Киселева, ответственный менеджер</span>
+						<a href="tel:+79862562323">тел: +7 (986)-256-23-23</a>
+					</div>
+					<div class="order">
+						<span>ПРИКАЗ МИНИСТЕРСТВА ТРУДА И СОЦИАЛЬНОЙ ЗАЩИТЫ РОССИЙСКОЙ ФЕДЕРАЦИИ</span>
+						<span>от 22 апреля 2021 года N 274н Об утверждении профессионального стандарта "Специалист в области охраны труда"</span>
+					</div>
+					@@include('components/ui/_link-button.html', { children: 'скачать учебный план', class: 'btn_blue-border', href: '#'})
 				</div>
 			</div>
 			<!-- <section class="reviews container">
