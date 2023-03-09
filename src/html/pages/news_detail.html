@@ -10,7 +10,12 @@
 			<h1>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h1>
 		</section>
 		<section class="sub-wrapper">
-			@@include('components/business/_sub-menu.html', {subscribe: 'true'})
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu sub-menu_bg"',
+			links: 'true',
+			subscribe: 'true',
+			feedback: ''
+			})
 
 			<div class="sub-wrapper__content">
 				@@include('components/business/_directory.html', {parent: 'О центре', link: 'Новости',

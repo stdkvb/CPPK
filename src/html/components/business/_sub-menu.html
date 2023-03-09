@@ -1,5 +1,6 @@
-<div class="sub-menu">
+<div @@class>
 	<div class="sub-menu__list">
+		@@if (context.links) {
 		<div class="sub-menu__links">
 			<div class="sub-menu__toggle">
 				<span>О центре</span>
@@ -19,6 +20,7 @@
 				<a href="#" class="link link_secondary">Работа у нас</a>
 			</div>
 		</div>
+		}
 		@@if (context.subscribe) {
 		<div class="subscribe container">
 			<div class="subscribe__text">
@@ -32,6 +34,21 @@
 			</form>
 		</div>
 		}
-
+		@@if (context.feedback) {
+		<div class="feedback">
+			<div class="feedback__text">
+				<h3>Не нашли ответа на нужный вопрос?</h3>
+				<p>
+					Задайте вопрос на сайте или позвоните нам на горячую линию
+					по номеру 8-800-233-22-22
+				</p>
+			</div>
+			<form class="feedback__form">
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type:
+				'submit'})
+			</form>
+		</div>
+		}
 	</div>
 </div>
