@@ -12,13 +12,19 @@
 	}
 
 	@include desktop_extra_small {
-		margin-left: 100px;
+		margin-left: 110px;
+		padding: 60px 20px 32px;
 	}
 
 	@include tablet {
-		padding: 60px 20px 32px;
 		margin-left: 0;
-		background-color: $gray04;
+	}
+
+	&_bg {
+		@include desktop_extra_small {
+			background-color: $gray04;
+		}
+
 	}
 
 	&__list {
@@ -76,7 +82,7 @@
 		display: none;
 
 
-		@include tablet {
+		@include desktop_extra_small {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;

@@ -106,10 +106,16 @@ p {
 
 	&_no-padding {
 		padding-bottom: 0;
+
 		@include tablet {
 			padding-bottom: 0;
 		}
 	}
+
+	<<<<<<< HEAD
+}
+
+=======
 }
 
 .main-page__background {
@@ -128,3 +134,5 @@ p {
 		filter: none;
 	}
 }
+
+>>>>>>>e619dba203eb97162c2537e0f7b9a8c71bb178df

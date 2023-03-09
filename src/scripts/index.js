@@ -61,24 +61,6 @@ document.addEventListener('click', (e) => {
 // 	playButton.classList.remove('active');
 // 	videoContainer.pause();
 // })
-// // Btn "Show-more"
-// const clientsElements = document.querySelector('.clients')
-// const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue')
-// moreButton = addEventListener('click', () => {
-// 	clientsElements.classList.add('active')
-// })
-
-// // Video
-// const playButton = document.querySelector('.video-controler')
-// const videoContainer = document.querySelector('.video-container video')
-// playButton.addEventListener('click', () => {
-// 	playButton.classList.add('active')
-// 	videoContainer.play()
-// })
-// videoContainer.addEventListener('click', () => {
-// 	playButton.classList.remove('active')
-// 	videoContainer.pause()
-// })
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
@@ -321,7 +303,7 @@ subMenuToggle.addEventListener('click', () => {
 	subMenuContent.classList.toggle('sub-menu__content_active')
 })
 
-takeControlAccordion('.vacancies', '.accordion__list', {
+takeControlAccordion('.sub-wrapper__accordion', '.accordion__list', {
 	accordionItemSelector: '.accordion__item',
 	accordionItemTogglerSelector: '.accordion__toggle',
 	accordionItemContentSelector: '.accordion__content',

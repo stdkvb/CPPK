@@ -10,12 +10,17 @@
 			<h1>История успеха</h1>
 		</section>
 		<section class="sub-wrapper">
-			@@include('components/business/_sub-menu.html', {subscribe: ''})
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu sub-menu_bg"',
+			links: 'true',
+			subscribe: '',
+			feedback: ''
+			})
 
 			<div class="sub-wrapper__content">
 				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Отзывы'})
 				<div class="sub-wrapper__text">
-					<div class="clients">
+					<div class="cards-list clients">
 						<div class="clients__item">
 							<div class="clients__logo"><img src="@icons/himics.svg" alt="rsh"></div>
 							<dv class="clients__text">
@@ -24,7 +29,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</dv>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-1">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -35,7 +41,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</div>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-2">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -46,7 +53,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</dv>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-3">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -57,7 +65,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</div>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-4">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -68,7 +77,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</dv>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-5">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -79,7 +89,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</div>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-6">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -90,7 +101,8 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</dv>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-7">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
 						<div class="clients__item">
@@ -101,35 +113,13 @@
 								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
 								Федерации
 							</div>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
+							<a href="#" class="link_blue clients__link open-modal" modalId="review-8">Благодарственное
+								письмо</a>
 							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
 						</div>
-						<div class="clients__item">
-							<div class="clients__logo"><img src="@icons/himics.svg" alt="rsh"></div>
-							<dv class="clients__text">
-								Министерство экономического развития Республики Башкортостан благодарит Вас за участие в
-								презентации экономического потенциала Республики Башкортостан, которая состоялась 13
-								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
-								Федерации
-							</dv>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
-							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
-						</div>
-						<div class="clients__item">
-							<div class="clients__logo"><img src="@icons/iosh.svg" alt="iosh"></div>
-							<div class="clients__text">
-								Министерство экономического развития Республики Башкортостан благодарит Вас за участие в
-								презентации экономического потенциала Республики Башкортостан, которая состоялась 13
-								октября 2017 года в г. Москве в Резиденции Посла Швейцарской конференции в Российской
-								Федерации
-							</div>
-							<a href="#" class="link_blue clients__link">Благодарственное письмо</a>
-							<span class="clients__author">С.В. Новиков, глава администрации г. Уфа</span>
-						</div>
-
 
 						<div class="clients__more">
-							<a class="btn btn_primary_blue">Показать еще</a>
+							<a class="show-more-btn btn btn_primary_blue">Показать еще</a>
 						</div>
 					</div>
 
@@ -143,6 +133,14 @@
 
 	@@include('components/business/_footer.html')
 	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-1', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-2', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-3', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-4', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-5', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-6', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-7', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-8', image: 'review.png'})
 	@@include('meta/_includeScripts.html')
 </body>
 

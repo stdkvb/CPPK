@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Ошибка 404'})
+
+<body class="main-page">
+	@@include('components/business/_header.html')
+	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
+	<main>
+		<section class="sub-container">
+			<h1>Ошибка 404</h1>
+		</section>
+		<section class="error-page">
+			<div class="error-page__content">
+				<h2>Упс! Ошибка!</h2>
+				<p>Страница удалена или перенесена на другой адрес!</p>
+				<p>Воспользуйтесь основным меню или поиском. Мы уверены, что вы найдете то, что искали</p>
+			</div>
+			<div class="error-page__search">
+
+			</div>
+
+
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

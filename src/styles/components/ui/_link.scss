@@ -27,17 +27,17 @@
 		&:visited {
 			color: $blue50;
 		}
-	}
 
-	&:hover,
-	&:active {
-		color: $blue30;
-	}
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
 
-	&_disabled {
-		cursor: auto;
-		color: $gray30;
-		@include regular-18;
+		&_disabled {
+			cursor: auto;
+			color: $gray30;
+			@include regular-18;
+		}
 	}
 
 	&-phone {
@@ -112,7 +112,6 @@
 	}
 
 	&_gray {
-		color: $gray60;
 		@include regular-18;
 
 		&:link,
