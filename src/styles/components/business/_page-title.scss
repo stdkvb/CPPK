@@ -2,6 +2,8 @@
 	margin-top: 16em;
 	padding-left: 310px;
 	background-color: transparent;
+	display: flex;
+	flex-direction: column;
 
 	@include desktop_base {
 		margin-left: 0;
@@ -19,5 +21,42 @@
 	span {
 		@include regular-28;
 		color: $white;
+		margin-bottom: 16px;
+		@include tablet {
+			@include regular-16;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__details {
+		display: flex;
+		gap: 80px;
+		margin-top: 60px;
+		margin-bottom: 90px;
+		flex-wrap: wrap;
+		@include tablet {
+			gap: 20px;
+			margin-top: 44px;
+			margin-bottom: 60px;
+			flex-direction: column;
+		}
+	}
+
+	&__detail {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		max-width: 300px;
+		span {
+			margin: 0;
+			@include regular-16;
+			@include tablet {
+				margin: 0;
+			}
+			&:last-of-type {
+				@include bold-18;
+
+			}
+		}
 	}
 }
