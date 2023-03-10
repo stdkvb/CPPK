@@ -1,32 +1,448 @@
 .course {
-	display: grid;
-	grid-template-columns: 1fr 572px;
-	grid-template-areas:
-	 "directory right-bar"
-	 "search right-bar"
-	 "cards right-bar"
-	 "text-content right-bar";
+	padding-left: 0;
+	display: flex;
+	// display: grid;
+	// grid-template-columns: 1fr 472px;
+	// grid-template-areas:
+	//  "content right-bar";
 	@include desktop_medium {
-		display: block;
-		padding-top: 60px;
-		padding-right: 100px;
+		// display: block;
+		flex-direction: column-reverse;
+	}
+	@include desktop_extra_small {
+		padding-left: 0;
+	}
+	@include tablet {
+		padding: 0;
 		background-color: $white;
 	}
 
-	.directory {
-		margin-top: 100px;
-		grid-area: directory;
-		@include desktop_medium {
+	&__content {
+		grid-area: content;
+		.directory {
+			margin-top: 100px;
+			margin-left: 210px;
+			grid-area: directory;
+			@include desktop_medium {
+				margin-top: 0;
+			}
+		}
+		.course__text-content {
+			margin-bottom: 100px;
+			margin-left: 210px;
+			padding-right: 88px;
+			@include tablet {
+				margin-bottom: 0;
+				padding-top: 100px;
+				padding-bottom: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-left: 0;
+			}
+
+			h3 {
+				@include medium-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			h4 {
+				@include medium-18;
+				margin-bottom: 10px;
+			}
+
+			p {
+				@include regular-18;
+				margin-bottom: 30px;
+				color: $gray80;
+				@include tablet {
+					@include regular-16;
+					margin-bottom: 16px;
+				}
+			}
+
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+
+			li {
+				@include regular-18;
+				line-height: 1.3;
+				position: relative;
+				padding-left: 50px;
+
+				&:not(:first-child) {
+					margin-top: 24px;
+				}
+
+
+				&::before {
+					content: url(@icons/check.svg);
+					width: 26px;
+					height: 26px;
+					position: absolute;
+					left: 0;
+
+				}
+
+				@include tablet {
+					@include regular-16;
+				}
+			}
+
+			&_blue {
+				background-color: $blue50;
+				padding: 40px 48px;
+				display: flex;
+				margin-right: 100px;
+				gap: 32px;
+				@include tablet {
+					margin-left: 20px;
+					margin-right: 20px;
+					padding: 20px;
+				}
+				@include mobile {
+					img {
+						display: none;
+					}
+				}
+				p {
+					color: $white;
+				}
+			}
+
+			&_gray {
+				@include tablet {
+					background-color: $gray04;
+				}
+			}
+
+			&_diplom {
+				img {
+					width: 100%;
+					max-width: 510px;
+					margin-bottom: 24px;
+				}
+			}
+
+			&_recomendations {
+				list-style: none;
+				padding-top: 80px;
+				@include tablet {
+					padding-top: 50px;
+				}
+				li::before {
+					content: '';
+				}
+
+				.courses__card {
+					padding: 0;
+					a {
+						h3 {
+							@include medium-24;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.video-container {
 			margin-top: 0;
+			margin-bottom: 100px;
+			margin-left: 110px;
+			width: unset;
+			@include tablet {
+				margin-left: 0;
+				margin-bottom: 60px;
+			}
+		}
+
+		.advantages {
+			margin-left: 210px;
+			margin-right: 100px;
+			margin-bottom: 100px;
+			@include tablet {
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 60px;
+				padding: 0 20px;
+			}
+			h3 {
+				@include medium-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			p {
+				@include regular-18;
+				color: $gray60;
+			}
+
+			&__tabs {
+				margin-bottom: 24px;
+				@include tablet {
+					padding-bottom: 47px;
+				}
+				.swiper-slide {
+					max-width: fit-content;
+					display: flex;
+					align-items: flex-end;
+					height: 31px;
+
+					h4 {
+						color: $gray50;
+						@include medium-18;
+					}
+					&_active {
+						h4 {
+							color: $black;
+							@include medium-24;
+						}
+					}
+
+					@include tablet {
+						&_active {
+							h4 {
+								@include medium-20;
+							}
+						}
+					}
+				}
+
+				.swiper-scrollbar {
+					bottom: 24px;
+					background: $blue20;
+					@include min_tablet {
+						display: none;
+					}
+
+					.swiper-scrollbar-drag {
+						background: $blue50;
+					}
+				}
+			}
+		}
+
+		.stages {
+			background-color: $blue50;
+			margin-bottom: 100px;
+			margin-left: 210px;
+			padding: 100px;
+			@include tablet {
+				margin-bottom: 0;
+				padding-top: 100px;
+				padding-bottom: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-left: 0;
+			}
+
+			h3 {
+				@include medium-36;
+				color: $white;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			ul {
+				padding-left: 20px;
+
+				li {
+					max-width: 923px;
+					color: $white;
+
+					&::marker {
+						content: url(@icons/stages-marker-1.svg);
+
+					}
+				}
+			}
+		}
+
+		.modules {
+			background-color: $white;
+			margin-bottom: 100px;
+			margin-left: 210px;
+			padding: 100px;
+			@include tablet {
+				margin-bottom: 0;
+				padding-top: 100px;
+				padding-bottom: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-left: 0;
+			}
+
+			h3 {
+				@include medium-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			&__module {
+				@include medium-24;
+				display: block;
+				width: 100%;
+				background-color: $gray10;
+				padding: 20px 28px;
+			}
+
+			ul {
+				list-style-type: decimal;
+				padding-left: 40px;
+				padding-top: 28px;
+
+				li {
+					margin-bottom: 12px;
+					max-width: 923px;
+				}
+			}
+
+			&__banner {
+				background-color: $blue50;
+				padding: 40px 48px;
+				margin-top: 48px;
+				display: grid;
+				grid-template-columns: 1fr 260px;
+				grid-template-areas:
+					"title button"
+					"subtitle button";
+				@include tablet {
+					display: block;
+					padding: 20px;
+				}
+				h4 {
+					grid-area: title;
+					margin-bottom: 12px;
+					@include medium-28;
+					color: $white;
+				}
+
+				p {
+					grid-area: subtitle;
+					@include medium-18;
+					color: $white;
+				}
+
+				.btn {
+					grid-area: button;
+					margin-left: 20px;
+					@include tablet {
+						width: 100%;
+						margin-top: 32px;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		.banner {
+			padding-left: 210px;
+			background-position: right;
+			background-repeat: no-repeat;
+			background-color: $blue50;
+			overflow: hidden;
+			@include tablet {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			div {
+				margin-top: 80px;
+				margin-bottom: 80px;
+				@include tablet {
+					margin-top: 50px;
+					margin-bottom: 60px;
+				}
+				h2 {
+					@include medium-36;
+					@include tablet {
+						@include medium-24;
+					}
+				}
+				.btn {
+					margin-top: 40px;
+				}
+			}
+			img {
+				margin-right: 40px;
+			}
+		}
+
+		.reviews {
+			background-color: $gray04;
+			padding-right: 0;
+			margin-left: 210px;
+			max-width: 1100px;
+			@include tablet {
+				margin-left: 0;
+				padding-left: 20px;
+			}
+			@include mobile {
+				padding-left: 0;
+			}
+			h3 {
+				@include regular-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include regular-24;
+					margin-bottom: 32px;
+					margin-right: 20px;
+				}
+				@include mobile {
+					margin-left: 20px;
+				}
+			}
+			&__cards {
+			}
+		}
+
+		.partnership {
+			display: block;
+			background-color: $gray04;
+			padding-right: 0;
+			margin-left: 210px;
+			@include tablet {
+				margin-left: 0;
+				padding-left: 20px;
+			}
+			@include mobile {
+				padding-left: 0;
+			}
+			h3 {
+				@include regular-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include regular-24;
+					margin-bottom: 32px;
+					margin-right: 20px;
+				}
+				@include mobile {
+					margin-left: 20px;
+				}
+			}
 		}
 	}
 
 	&__right-bar {
 		grid-area: right-bar;
 		background-color: $white;
-		margin-left: 100px;
+		min-width: 472px;
 		@include desktop_medium  {
-			margin-left: 0;
+			margin-left: 210px;
+			margin-right: 100px;
 			.aside-banner {
 				display: none;
 			}
@@ -41,6 +457,9 @@
 			position: sticky;
 			top: 52px;
 			border-bottom: solid 1px $gray10;
+			@include tablet {
+				border: none;
+			}
 
 			.manager {
 				padding: 32px 51px;
@@ -53,7 +472,7 @@
 				grid-template-areas:
 					"image name"
 					"image phone";
-				@include tablet {
+				@include desktop_medium {
 					display: none;
 				}
 				img {
@@ -84,15 +503,16 @@
 					@include regular-14;
 					color: $gray50;
 				}
-				@include tablet {
+				@include desktop_medium {
 					display: none;
 				}
 			}
 
 			.btn_blue-border {
+				grid-area: btn;
 				padding: 1.5em 2.25em;
 				margin: 32px 48px;
-				@include tablet {
+				@include desktop_medium {
 					display: none;
 				}
 				.children:before {
@@ -113,41 +533,5 @@
 			}
 		}
 	}
-
-	&__card:nth-child(1n + 6) {
-		display: none;
-	}
-
-	&__cards {
-		grid-area: cards;
-		margin-top: 60px;
-		margin-bottom: 140px;
-		@include desktop_medium  {
-			margin-top: 32px;
-		}
-		@include tablet {
-			margin-right: 0;
-			margin-bottom: 60px;
-		}
-
-		&.active .courses__card {
-			&:nth-child(1n + 6) {
-				display: flex;
-			}
-		}
-	}
-
-	&__more a {
-		display: inline-block;
-		margin-top: 32px;
-		text-align: center;
-
-		@include mobile {
-			width: 100%;
-			margin-top: 32px;
-		}
-	}
-
-
 }
 

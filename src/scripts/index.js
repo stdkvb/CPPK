@@ -198,6 +198,21 @@ const navBarSwiper = new Swiper('.nav-bar', {
 	}
 })
 
+const advantagesTabsSwiper = new Swiper('.advantages__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 44,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			scrollbar: false,
+			spaceBetween: 80
+		}
+	}
+})
+
 // search menu
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.querySelector('.search-menu')
