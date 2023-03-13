@@ -309,11 +309,21 @@
 						<span class="buy-banner__new-price">15 000 руб</span>
 						@@include('components/ui/_checkbox.html', { label: '<span>Скидка - 10%</span> при оплате до 12.02.2022'})
 						@@include('components/ui/_checkbox.html', { label: '<span>Скидка - 30%</span> при оплате за 3х и более участников одним чеком'})
-						<select>
-							<option>Очная форма</option>
-							<option>Заочная форма</option>
-							<option>Дистанционное обучение</option>
-						</select>
+						@@include('components/ui/_select.html', {
+							id: 'question01',
+							placeholder: 'Форма обучения',
+							selectItems: [
+								{	text: 'Очная форма',
+									value: 'Очная форма'
+								},
+								{	text: 'Заочная форма',
+									value: 'Заочная форма'
+								},
+								{	text: 'Дистанционное обучение',
+								value: 'Дистанционное обучение'
+								},
+							]
+						})
 						@@include('components/ui/_button.html', { children: 'Оставить заявку', class: 'btn_blue-fill', type: 'submit'})
 						<p class="buy-banner__completed"><span>4356</span> человек уже прошли этот курс</p>
 					</form>

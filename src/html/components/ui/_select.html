@@ -1,0 +1,55 @@
+<div id="select01" class="custom-select question01" style="width:220px;">
+  <select id="question01" @@if (context.required) {required} @@if (context.id) {@@id}>
+		<option>Форма обучения</option>
+		@@if(context.placeholder) {
+			<option data-value="0">@@placeholder</option>
+		}
+		@@if(context.selectItems?.length) {
+			@@for(let i = 0; i < selectItems.length; i++) {
+				<option data-value="`+selectItems[i].value+`">
+					`+selectItems[i].text+`
+				</option>
+			}
+		}
+  </select>
+  <div class="arrow"></div>
+</div>
+<!--
+<div class="select__container">
+	@@if (context.label) {
+		@@if (context.id) {
+			<label class="select__label" for="@@id">@@label@@if (context.required) {*}</label>
+		}
+		@@if (!context.id) {
+			<span class="select__label">@@label@@if (context.required) {*}</span>
+		}
+	}
+	<div class="select">
+		<input
+			@@if (context.placeholder) {placeholder="@@placeholder@@if (context.required) {*}"}
+			@@if (context.required) {required}
+			@@if (context.id) {id="@@id"}
+			readonly
+			@@if(context.selectItems?.length === 0) {disabled}
+			type="text"
+		>
+		<label class="opened-indicator"></label>
+		@@if(context.selectItems?.length) {
+			<ul class="select__list">
+				@@for(let i = 0; i < selectItems.length; i++) {
+					<li data-value="`+selectItems[i].value+`">
+						`+selectItems[i].text+`
+					</li>
+				}
+			</ul>
+		}
+	</div>
+	<input
+		@@if (context.name) {name="@@name"}
+		type="hidden"
+	>
+	<span class="error-message">
+		@@if (context.errorMessage) {@@errorMessage}
+		@@if (!context.errorMessage) {Ошибка}
+	</span>
+</div> -->
