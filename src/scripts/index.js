@@ -254,9 +254,11 @@ takeControlAccordion('.sub-menu', '.sub-menu__list', {
 
 const subMenuToggle = document.querySelector('.sub-menu__toggle')
 const subMenuContent = document.querySelector('.sub-menu__content')
-subMenuToggle.addEventListener('click', () => {
-	subMenuContent.classList.toggle('sub-menu__content_active')
-})
+if (subMenuContent !== null) {
+	subMenuToggle.addEventListener('click', () => {
+		subMenuContent.classList.toggle('sub-menu__content_active')
+	})
+}
 
 takeControlAccordion('.sub-wrapper__accordion', '.accordion__list', {
 	accordionItemSelector: '.accordion__item',
@@ -267,42 +269,44 @@ takeControlAccordion('.sub-wrapper__accordion', '.accordion__list', {
 
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
-benefitsCards.children[0].addEventListener('mouseenter', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-1.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[1].addEventListener('mouseenter', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-2.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[2].addEventListener('mouseenter', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-3.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[3].addEventListener('mouseenter', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-4.png)'
-	e.target.classList.add('benefits__card_active')
-})
-benefitsCards.children[4].addEventListener('mouseenter', (e) => {
-	benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-5.png)'
-	e.target.classList.add('benefits__card_active')
-})
+if (benefitsCards !== null) {
+	benefitsCards.children[0].addEventListener('mouseenter', (e) => {
+		benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-1.png)'
+		e.target.classList.add('benefits__card_active')
+	})
+	benefitsCards.children[1].addEventListener('mouseenter', (e) => {
+		benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-2.png)'
+		e.target.classList.add('benefits__card_active')
+	})
+	benefitsCards.children[2].addEventListener('mouseenter', (e) => {
+		benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-3.png)'
+		e.target.classList.add('benefits__card_active')
+	})
+	benefitsCards.children[3].addEventListener('mouseenter', (e) => {
+		benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-4.png)'
+		e.target.classList.add('benefits__card_active')
+	})
+	benefitsCards.children[4].addEventListener('mouseenter', (e) => {
+		benefitsCards.style.backgroundImage = 'url(../files/images/benefits-background-5.png)'
+		e.target.classList.add('benefits__card_active')
+	})
 
-benefitsCards.children[0].addEventListener('mouseleave', (e) => {
-	e.target.classList.remove('benefits__card_active')
-})
-benefitsCards.children[1].addEventListener('mouseleave', (e) => {
-	e.target.classList.remove('benefits__card_active')
-})
-benefitsCards.children[2].addEventListener('mouseleave', (e) => {
-	e.target.classList.remove('benefits__card_active')
-})
-benefitsCards.children[3].addEventListener('mouseleave', (e) => {
-	e.target.classList.remove('benefits__card_active')
-})
-benefitsCards.children[4].addEventListener('mouseleave', (e) => {
-	e.target.classList.remove('benefits__card_active')
-})
+	benefitsCards.children[0].addEventListener('mouseleave', (e) => {
+		e.target.classList.remove('benefits__card_active')
+	})
+	benefitsCards.children[1].addEventListener('mouseleave', (e) => {
+		e.target.classList.remove('benefits__card_active')
+	})
+	benefitsCards.children[2].addEventListener('mouseleave', (e) => {
+		e.target.classList.remove('benefits__card_active')
+	})
+	benefitsCards.children[3].addEventListener('mouseleave', (e) => {
+		e.target.classList.remove('benefits__card_active')
+	})
+	benefitsCards.children[4].addEventListener('mouseleave', (e) => {
+		e.target.classList.remove('benefits__card_active')
+	})
+}
 
 // dropdown select
 const elSelect = document.getElementsByClassName('select')[0]
@@ -327,13 +331,15 @@ document.addEventListener('click', (e) => {
 	}
 })
 
-//show more
+// show more
 const cardsList = document.querySelector('.cards-list')
 const showMoreButton = document.querySelector('.show-more-btn')
-showMoreButton.addEventListener('click', () => {
-	cardsList.classList.add('active')
-	showMoreButton.style.display = 'none'
-})
+if (showMoreButton !== null) {
+	showMoreButton.addEventListener('click', () => {
+		cardsList.classList.add('active')
+		showMoreButton.style.display = 'none'
+	})
+}
 
 // filter accordeon
 takeControlAccordion('.direction__filters', '.accordion__list', {
@@ -346,18 +352,22 @@ takeControlAccordion('.direction__filters', '.accordion__list', {
 // Btn "Show-more"
 const clientsElements = document.querySelector('.clients');
 const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue');
-moreButton = addEventListener("click", function () {
-	clientsElements.classList.add('active');
-})
+if (moreButton !== null) {
+	moreButton = addEventListener("click", function () {
+		clientsElements.classList.add('active');
+	})
+}
 
 // Video
 const playButton = document.querySelector('.video-controler');
 const videoContainer = document.querySelector('.video-container video');
-playButton.addEventListener('click', () => {
-	playButton.classList.add('active');
-	videoContainer.play();
-})
-videoContainer.addEventListener('click', () => {
-	playButton.classList.remove('active');
-	videoContainer.pause();
-})
+if (videoContainer !== null) {
+	playButton.addEventListener('click', () => {
+		playButton.classList.add('active');
+		videoContainer.play();
+	})
+	videoContainer.addEventListener('click', () => {
+		playButton.classList.remove('active');
+		videoContainer.pause();
+	})
+}
