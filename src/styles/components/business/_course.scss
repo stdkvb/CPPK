@@ -13,13 +13,13 @@
 	}
 
 	&__content {
-		grid-area: content;
+		overflow: hidden;
 		.directory {
 			margin-top: 100px;
 			margin-left: 210px;
 			grid-area: directory;
 			@include desktop_medium {
-				margin-top: 0;
+				display: none;
 			}
 		}
 		.course__text-content {
@@ -494,8 +494,6 @@
 					margin-left: 20px;
 				}
 			}
-			&__cards {
-			}
 		}
 
 		.partnership {
@@ -533,11 +531,13 @@
 		@include desktop_medium  {
 			margin-left: 210px;
 			margin-right: 100px;
+			background-color: $gray04;
 			.aside-banner {
 				display: none;
 			}
 		}
 		@include tablet {
+			background-color: $white;
 			margin-top: 32px;
 			margin-left: 0;
 			margin-right: 0;
@@ -547,7 +547,7 @@
 			position: sticky;
 			top: 52px;
 			border-bottom: solid 1px $gray10;
-			@include tablet {
+			@include desktop_medium {
 				border: none;
 			}
 
