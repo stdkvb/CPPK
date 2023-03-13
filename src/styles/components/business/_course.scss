@@ -1,12 +1,7 @@
 .course {
 	padding-left: 0;
 	display: flex;
-	// display: grid;
-	// grid-template-columns: 1fr 472px;
-	// grid-template-areas:
-	//  "content right-bar";
 	@include desktop_medium {
-		// display: block;
 		flex-direction: column-reverse;
 	}
 	@include desktop_extra_small {
@@ -28,16 +23,18 @@
 			}
 		}
 		.course__text-content {
+			margin-top: 100px;
 			margin-bottom: 100px;
 			margin-left: 210px;
 			padding-right: 88px;
 			@include tablet {
+				margin-top: 0;
 				margin-bottom: 0;
-				padding-top: 100px;
+				margin-left: 0;
+				padding-top: 60px;
 				padding-bottom: 60px;
 				padding-left: 20px;
 				padding-right: 20px;
-				margin-left: 0;
 			}
 
 			h3 {
@@ -66,6 +63,10 @@
 
 			p:last-of-type {
 				margin-bottom: 0;
+			}
+
+			ul {
+				margin-bottom: 43px;
 			}
 
 			li {
@@ -100,8 +101,8 @@
 				margin-right: 100px;
 				gap: 32px;
 				@include tablet {
-					margin-left: 20px;
-					margin-right: 20px;
+					margin-left: 0;
+					margin-right: 0;
 					padding: 20px;
 				}
 				@include mobile {
@@ -130,7 +131,6 @@
 
 			&_recomendations {
 				list-style: none;
-				padding-top: 80px;
 				@include tablet {
 					padding-top: 50px;
 				}
@@ -152,12 +152,10 @@
 
 		.video-container {
 			margin-top: 0;
-			margin-bottom: 100px;
 			margin-left: 110px;
 			width: unset;
 			@include tablet {
 				margin-left: 0;
-				margin-bottom: 60px;
 			}
 		}
 
@@ -168,8 +166,9 @@
 			@include tablet {
 				margin-left: 0;
 				margin-right: 0;
-				margin-bottom: 60px;
-				padding: 0 20px;
+				margin-bottom: 0;
+				padding: 60px 20px 60px 20px;
+				background-color: $gray04;
 			}
 			h3 {
 				@include medium-36;
@@ -226,6 +225,34 @@
 					.swiper-scrollbar-drag {
 						background: $blue50;
 					}
+				}
+			}
+
+			&__cards {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				margin-top: 24px;
+				@include tablet {
+					display: block;
+				}
+			}
+
+			&__card {
+				padding: 48px;
+				background-color: $white;
+				border: solid 1px $gray04;
+				@include tablet {
+					padding: 24px;
+				}
+				img {
+					margin-bottom: 32px;
+				}
+				h4 {
+					@include medium-18;
+					margin-bottom: 20px;
+				}
+				p {
+					@include regular-16;
 				}
 			}
 		}
@@ -337,7 +364,7 @@
 			padding: 100px;
 			@include tablet {
 				margin-bottom: 0;
-				padding-top: 100px;
+				padding-top: 50px;
 				padding-bottom: 60px;
 				padding-left: 20px;
 				padding-right: 20px;
@@ -445,6 +472,8 @@
 		.reviews {
 			background-color: $gray04;
 			padding-right: 0;
+			padding-top: 0;
+			padding-bottom: 0;
 			margin-left: 210px;
 			max-width: 1100px;
 			@include tablet {
@@ -474,6 +503,7 @@
 			display: block;
 			background-color: $gray04;
 			padding-right: 0;
+			padding-bottom: 0;
 			margin-left: 210px;
 			@include tablet {
 				margin-left: 0;
