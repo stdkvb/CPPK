@@ -245,6 +245,24 @@ bottomBurgerButton.addEventListener('click', () => {
 	menu.classList.toggle('menu_active')
 })
 
+// profile
+const signupBtn = document.getElementById('signup-btn')
+const signup = document.getElementById('signup')
+const signinBtn = document.getElementById('signin-btn')
+const signin = document.getElementById('signin')
+signupBtn.addEventListener('click', () => {
+	signinBtn.classList.remove('profile__title_active')
+	signupBtn.classList.add('profile__title_active')
+	signin.classList.remove('profile__form_active')
+	signup.classList.add('profile__form_active')
+})
+signinBtn.addEventListener('click', () => {
+	signupBtn.classList.remove('profile__title_active')
+	signinBtn.classList.add('profile__title_active')
+	signup.classList.remove('profile__form_active')
+	signin.classList.add('profile__form_active')
+})
+
 // close all menu
 const menuCloseButtons = document.querySelectorAll('.close-btn')
 menuCloseButtons.forEach((elem) => {

@@ -1,8 +1,14 @@
-import takeControlCommunicationForms from './communication.js'
+import takeControlProfileForms from './profile.js'
 
 const takeControlForms = () => {
-	takeControlCommunicationForms('.profile__registration', 'form', {
+	takeControlProfileForms('.registration', 'form', {
 		elementsNames: ['email', 'password', 'repeat-password', 'name', 'phone', 'agreement'],
+		onSubmit: () => {
+		}
+	})
+
+	takeControlProfileForms('.authoristaion', 'form', {
+		elementsNames: ['email', 'password'],
 		onSubmit: () => {
 		}
 	})

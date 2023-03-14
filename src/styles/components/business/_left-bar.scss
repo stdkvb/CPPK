@@ -188,7 +188,7 @@
 			@include regular-20;
 			color: $gray50;
 			@include tablet {
-				@include regular-20;
+				@include regular-16;
 			}
 			&:hover {
 				cursor: pointer;
@@ -203,6 +203,18 @@
 				&:hover {
 				cursor: unset;
 				}
+			}
+		}
+
+		&__form {
+			display: none;
+			&_active {
+				display: block;
+			}
+			a {
+				@include regular-16;
+				color: $white;
+				text-decoration: underline;
 			}
 		}
 

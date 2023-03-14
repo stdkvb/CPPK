@@ -38,10 +38,17 @@ const typeCompliance = {
 			invalidStateClassName: 'textarea__container_invalid',
 			validStateClassName: 'textarea__container_valid'
 		}
-	}
+	},
+	password: {
+		Controller: DefaultInputController,
+		options: {
+			invalidStateClassName: 'input__container_invalid',
+			validStateClassName: 'input__container_valid'
+		},
+	},
 }
 
-class CommunicationFormController {
+class ProfileFormController {
 	constructor(form, options = {}) {
 		if (!form) {
 			return
@@ -135,4 +142,4 @@ class CommunicationFormController {
 	}
 }
 
-export default CommunicationFormController
+export default ProfileFormController
