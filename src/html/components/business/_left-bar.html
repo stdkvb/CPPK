@@ -1,0 +1,127 @@
+<div id="left-bar" class="left-bar">
+	@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
+	<div class="menu">
+		<a class="link close-btn"></a>
+		<div class="menu__accordion accordion">
+			<div class="accordion__list">
+				<div class="accordion__item">
+					<div class="accordion__toggle">
+						<span>Повышение квалификации</span>
+						<div>
+							<button class="accordion-icon"></button>
+						</div>
+					</div>
+					<div class="accordion__content">
+						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
+						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
+						<a class="link">Специалист по метрологии</a>
+						<a class="link">Транспорт/Безопасность дорожного движения</a>
+						<a class="link">Бережливое производство</a>
+						<a class="link">Бухгалтерия</a>
+						<a class="link">Госзакупки</a>
+						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
+						<a class="link">Драгоценные металлы</a>
+						<a class="link">Инженерные изыскания</a>
+						<a class="link">Комплексная защита объектов информатизации</a>
+						<a class="link">Ландшафтный дизайн</a>
+						<a class="link">Маркетинг</a>
+						<a class="link">Охрана труда</a>
+						<a class="link">Повышение производительности труда</a>
+						<a class="link">Пожарная безопасность</a>
+						<a class="link">Проектирование</a>
+						<a class="link">Радиационная и атомная безопасность</a>
+						<a class="link">Строительство</a>
+						<a class="link">Технический английский язык</a>
+						<a class="link">Транспортная безопасность</a>
+						<a class="link">Управление персоналом и кадры</a>
+						<a class="link">Экологическая безопасность</a>
+					</div>
+				</div>
+				<div class="accordion__item">
+					<div class="accordion__toggle">
+						<span>Профессиональная переподготовка</span>
+						<div>
+							<button class="accordion-icon"></button>
+						</div>
+					</div>
+					<div class="accordion__content">
+						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
+						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
+						<a class="link">Специалист по метрологии</a>
+						<a class="link">Транспорт/Безопасность дорожного движения</a>
+						<a class="link">Бережливое производство</a>
+						<a class="link">Бухгалтерия</a>
+						<a class="link">Госзакупки</a>
+						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
+						<a class="link">Драгоценные металлы</a>
+						<a class="link">Инженерные изыскания</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="tel;+73472009690" class="link link_secondary menu__phone">8-800-233-22-22</a>
+		<div class="menu__social">
+			<a href="/" class="link link-icon link-icon_vk"></a>
+			<a href="/" class="link link-icon link-icon_youtube"></a>
+		</div>
+	</div>
+	<ul>
+		<li class="service-menu-link">
+			<a class="link" id="profile-btn" style="background-image: url(@icons/user.svg);"></a>
+			<div class="service-menu profile" id="profile-menu">
+				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
+
+			</div>
+		</li>
+		<li class="service-menu-link">
+			<a class="link" style="background-image: url(@icons/VR.svg);"></a>
+			<div class="service-menu" id="vr-menu">
+				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
+				<h2>VR</h2>
+				<img src="@images/remote-learning.png">
+				<p>VR</p>
+					@@include('components/ui/_button.html', {children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
+			</div>
+		</li>
+		<li class="service-menu-link">
+			<a class="link" style="background-image: url(@icons/laptop.svg);"></a>
+			<div class="service-menu" id="rl-menu">
+				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
+				<h2>Дистанционное обучение</h2>
+				<img src="@images/remote-learning.png">
+				<p>Мы поможем Вам учиться в комфортной
+					для Вас среде. Вы сможете осваивать новые направления и возможности, совмещая
+					с другими видами деятельности</p>
+					@@include('components/ui/_button.html', {children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
+			</div>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<a class="link" id="search-btn" style="background-image: url(@icons/search.svg);"></a>
+			<div class="search-menu">
+				<a class="link close-btn"></a>
+				<form class="top-container">
+					@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
+					<div class="select js-selectCustom">
+						<div class="select-trigger">Поиск по программам</div>
+						<div class="select-options">
+							<div class="select-option">Поиск по программам</div>
+							<div class="select-option">Другой поиск</div>
+							<div class="select-option">Еще другой поиск</div>
+						</div>
+					</div>
+				</form>
+				<h2>Популярные запросы</h2>
+				<ul>
+					<li><a class="link link_secondary" href="/">Деятельность учителя по формированию функциональной грамотности школьников</a></li>
+					<li><a class="link link_secondary" href="/">Поведенческий аудит безопасности (ПАБ)</a></li>
+					<li><a class="link link_secondary" href="/">Специалист по метрологии</a></li>
+					<li><a class="link link_secondary" href="/">Транспорт/Безопасность дорожного движения</a></li>
+					<li><a class="link link_secondary" href="/">Бережливое производство</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a class="link" style="background-image: url(@icons/mail.svg);" href="/"></a></li>
+	</ul>
+</div>
