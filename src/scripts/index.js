@@ -372,6 +372,7 @@ if (videoContainer !== null) {
 	})
 }
 
+// custom select
 function customSelect(id) {
 	let x
 	let i
@@ -388,7 +389,7 @@ function customSelect(id) {
 	x = document.getElementsByClassName(id)
 	l = x.length
 
-	closeArrow = document.getElementById('select01')
+	closeArrow = document.getElementById('select-container')
 
 	for (i = 0; i < l; i++) {
 		selElmnt = x[i].getElementsByTagName('select')[0]
@@ -488,4 +489,4 @@ then close all select boxes: */
 	document.addEventListener('click', closeAllSelect)
 }
 
-customSelect('question01')
+customSelect('select-container')

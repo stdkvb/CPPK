@@ -1,9 +1,9 @@
 .custom-select {
   position: relative;
-	width: 100% !important;
+	width: 100%;
   &.open {
     .arrow {
-      transform: rotate(180deg);
+      transform: rotate(180deg) translateX(50%);
     }
   }
 
@@ -26,9 +26,12 @@
   top: calc(50% - 1rem);
   transition: all 0.2s ease-in-out;
   z-index: 1;
+	@include tablet {
+		right: 0;
+	}
 
   &::before {
-    content: url(@icons/chevron-down-black.svg);
+    content: url(@icons/chevron-down_black.svg);
     position: absolute;
     transition: all $transitionDuration ease-in-out;
   }
@@ -62,6 +65,7 @@
 
   div {
     padding: 20px 24px;
+		border: solid 1px $gray10;
 
     &:hover
    {

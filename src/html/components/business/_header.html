@@ -102,7 +102,7 @@
 				<a class="link" id="search-btn" style="background-image: url(@icons/search.svg);"></a>
 				<div class="search-menu">
 					<a class="link close-btn"></a>
-					<div class="top-container">
+					<form class="top-container">
 						@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
 						<div class="select js-selectCustom">
 							<div class="select-trigger">Поиск по программам</div>
@@ -112,7 +112,7 @@
 								<div class="select-option">Еще другой поиск</div>
 							</div>
 						</div>
-					</div>
+					</form>
 					<h2>Популярные запросы</h2>
 					<ul>
 						<li><a class="link link_secondary" href="/">Деятельность учителя по формированию функциональной грамотности школьников</a></li>
