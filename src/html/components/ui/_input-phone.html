@@ -1,4 +1,4 @@
-<div class="input__container input__container_email">
+<div class="input__container input__container_phone">
 	@@if (context.label) {
 		@@if (context.id) {
 			<label class="input__label" for="@@id">@@label@@if (context.required) {*}</label>
@@ -8,13 +8,16 @@
 		}
 	}
 	<input
+		@@if (context.name) {name="@@name"}
+		type="hidden"
+	/>
+	<input
 		@@if (context.placeholder) {placeholder="@@placeholder@@if (context.required) {*}"}
-		@@if (!context.placeholder) {placeholder="Электронная почта@@if (context.required) {*}"}
+		@@if (!context.placeholder) {placeholder="Номер телефона@@if (context.required) {*}"}
 		@@if (context.required) {required}
 		@@if (context.id) {id="@@id"}
-		@@if (context.name) {name="@@name"}
-		data-type="email"
-		type="email"
+		data-type="tel"
+		type="tel"
 	>
 	<span class="error-message">
 		@@if (context.errorMessage) {@@errorMessage}

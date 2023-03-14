@@ -1,8 +1,10 @@
-import { takeControlAccordion, takeControlModals } from './takeControl'
+import { takeControlAccordion, takeControlModals, takeControlForms } from './takeControl'
 
 takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
+
+takeControlForms();
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
@@ -155,27 +157,55 @@ const advantagesTabsSwiper = new Swiper('.advantages__tabs', {
 	}
 })
 
-// search menu
-const searchBtn = document.getElementById('search-btn')
-const searchMenu = document.querySelector('.search-menu')
-searchBtn.addEventListener('click', () => {
-	searchMenu.classList.add('search-menu_active')
-})
-
-// burger menu
+// left bar
 const burgerBtn = document.getElementById('burger-btn')
-const menu = document.querySelector('.menu')
+const menu = document.getElementById('menu')
+const profileBtn = document.getElementById('profile-btn')
+const profileMenu = document.getElementById('profile-menu')
+const vrBtn = document.getElementById('vr-btn')
+const vrMenu = document.getElementById('vr-menu')
+const rlBtn = document.getElementById('rl-btn')
+const rlMenu = document.getElementById('rl-menu')
+const searchBtn = document.getElementById('search-btn')
+const searchMenu = document.getElementById('search-menu')
+
 burgerBtn.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
+	vrMenu.classList.remove('service-menu_active')
+	rlMenu.classList.remove('service-menu_active')
 	menu.classList.add('menu_active')
 })
 
-// bottom menu
+profileBtn.addEventListener('mouseenter', () => {
+	vrMenu.classList.remove('service-menu_active')
+	rlMenu.classList.remove('service-menu_active')
+	profileMenu.classList.add('service-menu_active')
+})
+
+vrBtn.addEventListener('mouseenter', () => {
+	profileMenu.classList.remove('service-menu_active')
+	rlMenu.classList.remove('service-menu_active')
+	vrMenu.classList.add('service-menu_active')
+})
+
+rlBtn.addEventListener('mouseenter', () => {
+	profileMenu.classList.remove('service-menu_active')
+	vrMenu.classList.remove('service-menu_active')
+	rlMenu.classList.add('service-menu_active')
+})
+
+searchBtn.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
+	vrMenu.classList.remove('service-menu_active')
+	rlMenu.classList.remove('service-menu_active')
+	searchMenu.classList.add('search-menu_active')
+})
+
+
+// bottom bar
 const VR = document.getElementById('virtual-reality')
-const vrMenu = document.getElementById('vr-menu')
 const RL = document.getElementById('remote-learning')
-const rlMenu = document.getElementById('rl-menu')
 const profile = document.getElementById('profile')
-const profileMenu = document.getElementById('profile-menu')
 const bottomSearchButton = document.getElementById('bottom-search-btn')
 const bottomBurgerButton = document.getElementById('bottom-burger-btn')
 
@@ -184,7 +214,7 @@ profile.addEventListener('click', () => {
 	searchMenu.classList.remove('search-menu_active')
 	menu.classList.remove('menu_active')
 	vrMenu.classList.remove('service-menu_active')
-	profileMenu.classList.toggle('profile-menu_active')
+	profileMenu.classList.toggle('service-menu_active')
 })
 
 VR.addEventListener('click', () => {
@@ -219,13 +249,10 @@ bottomBurgerButton.addEventListener('click', () => {
 const menuCloseButtons = document.querySelectorAll('.close-btn')
 menuCloseButtons.forEach((elem) => {
 	elem.addEventListener('click', () => {
-		rlMenu.classList.remove('service-menu_active')
-		rlMenu.style.transform = 'translateX(-47.5em)'
-		vrMenu.classList.remove('service-menu_active')
-		vrMenu.style.transform = 'translateX(-47.5em)'
-		profileMenu.classList.remove('profile-menu_active')
-		profileMenu.style.transform = 'translateX(-47.5em)'
 		menu.classList.remove('menu_active')
+		profileMenu.classList.remove('service-menu_active')
+		vrMenu.classList.remove('service-menu_active')
+		rlMenu.classList.remove('service-menu_active')
 		searchMenu.classList.remove('search-menu_active')
 	})
 })

@@ -1,6 +1,6 @@
 <div id="left-bar" class="left-bar">
 	@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
-	<div class="menu">
+	<div class="menu" id="menu">
 		<a class="link close-btn"></a>
 		<div class="menu__accordion accordion">
 			<div class="accordion__list">
@@ -70,11 +70,25 @@
 			<a class="link" id="profile-btn" style="background-image: url(@icons/user.svg);"></a>
 			<div class="service-menu profile" id="profile-menu">
 				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
-
+				<div class="profile__tabs">
+					<a class="profile__title profile__title_active">Регистрация</a>
+					<a class="profile__title">Авторизация</a>
+				</div>
+				<div class="profile__registration">
+					<form>
+						@@include('components/ui/_input-email.html', {name: 'email', required: true})
+						@@include('components/ui/_input-password.html', {name: 'password', required: true})
+						@@include('components/ui/_input-password.html', {placeholder: 'Повторите пароль', name: 'repeat-password', required: true})
+						@@include('components/ui/_input-text.html', {placeholder: 'ФИО', name: 'name', required: true})
+						@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
+						@@include('components/ui/_checkbox.html', {label: 'Я даю свое согласие на <a href="#">обработку моих персональных данных</a>', name: 'agreement', required: true})
+						@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
+					</form>
+				</div>
 			</div>
 		</li>
 		<li class="service-menu-link">
-			<a class="link" style="background-image: url(@icons/VR.svg);"></a>
+			<a class="link" id="vr-btn" style="background-image: url(@icons/VR.svg);"></a>
 			<div class="service-menu" id="vr-menu">
 				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
 				<h2>VR</h2>
@@ -84,7 +98,7 @@
 			</div>
 		</li>
 		<li class="service-menu-link">
-			<a class="link" style="background-image: url(@icons/laptop.svg);"></a>
+			<a class="link" id="rl-btn" style="background-image: url(@icons/laptop.svg);"></a>
 			<div class="service-menu" id="rl-menu">
 				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
 				<h2>Дистанционное обучение</h2>
@@ -99,7 +113,7 @@
 	<ul>
 		<li>
 			<a class="link" id="search-btn" style="background-image: url(@icons/search.svg);"></a>
-			<div class="search-menu">
+			<div class="search-menu" id="search-menu">
 				<a class="link close-btn"></a>
 				<form class="top-container">
 					@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})

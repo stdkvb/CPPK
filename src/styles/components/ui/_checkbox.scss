@@ -9,7 +9,6 @@
 
 	input[type=checkbox] {
 		position: absolute;
-
 		left: -10000px;
 	}
 
@@ -26,6 +25,8 @@
 
 		padding: .5em;
 		height: 100%;
+		max-width: 16px;
+		max-height: 16px;
 
 		border: 1px solid $gray70;
 
@@ -52,7 +53,6 @@
 
 	input[type=checkbox]:checked ~ .custom-checkbox {
 		border-color: $blue50;
-		// background-color: $blue50;
 
 		&::before {
 			content: url(@icons/checbox-content-blue.svg);
@@ -60,8 +60,14 @@
 	}
 
 	&_invalid {
+		.label {
+			color: $error40 !important;
+			a {
+				color: $error40 !important;
+			}
+		}
 		.custom-checkbox {
-			border-color: $error40;
+			border-color: $error40 !important;
 		}
 	}
 }
