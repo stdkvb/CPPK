@@ -33,13 +33,14 @@
 		background-image: url(@icons/burger-white.svg);
 	}
 
-	.link {
+	.link-icon {
 		display: block;
-		width: 2.5em;
-		height: 2.5em;
+		width: 40px;
+		height: 40px;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: auto;
+		position: unset;
 	}
 
 	ul {
@@ -58,6 +59,12 @@
 		padding: 5em 5em 5em 10em;
 		visibility: visible;
 		transition: all $transitionDuration;
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+  	scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		@include tablet {
 			padding: 2em 1.5em 	5em 1.5em;
 		}
@@ -67,14 +74,32 @@
 		}
 
 		.close-btn {
-			position: absolute;
-			top: 23px;
-			left: 23px;
-			width: 2.125em;
-			height: 2.125em;
+			position: sticky;
+			margin-left: -140px;
+			margin-top: -60px;
+			top: -60px;
+			width: 21px;
+			height: 21px;
 			background-image: url(@icons/close.svg);
+			background-position: center;
+			background-repeat: no-repeat;
 			@include tablet {
 				display: none;
+			}
+		}
+
+		.accordion__item {
+			padding-right: 24px;
+		}
+
+		ul {
+			margin-top: 48px;
+			max-width: 486px;
+			.link {
+				@include regular-24;
+				@include tablet {
+					@include regular-16;
+				}
 			}
 		}
 
@@ -83,10 +108,28 @@
 				position: relative;
 			}
 
+			.accordion__toggle {
+				span {
+					@include regular-28;
+					color: $gray30;
+				}
+			}
+
+			.accordion__item_active {
+				.accordion__toggle {
+					span {
+						color: $white;
+					}
+				}
+			}
+
 			.accordion__content {
 				position: absolute;
 				top: 0;
 				left: 486px;
+				.link {
+					@include regular-18;
+				}
 			}
 		}
 
@@ -116,7 +159,7 @@
 	}
 
 	.service-menu {
-		position: absolute;
+		position: fixed;
 		z-index: -1;
 		top: 0;
 		left: -47.5em;
@@ -128,11 +171,17 @@
 		flex-direction: column;
 		gap: 2.5em;
 		transition: all $transitionDuration;
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+  	scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		@include tablet {
 			visibility: visible;
 			left: -100vw;
 			width: 100vw;
-			padding: 1.5em 2em 1.5em 1.5em;
+			padding: 1.5em 2em 5em 1.5em;
 		}
 
 		&_active {
@@ -260,6 +309,12 @@
 		padding: 5em 5em 5em 10em;
 		visibility: visible;
 		transition: all $transitionDuration;
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+  	scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 		@include tablet {
 			padding: 2em 1.5em 	5em 1.5em;
 		}
