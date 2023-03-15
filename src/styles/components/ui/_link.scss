@@ -105,6 +105,12 @@
 			}
 		}
 
+		&_cross {
+			&::before {
+				content: url("@icons/cross-black.svg");
+			}
+		}
+
 		.cover {
 			@include contain;
 			z-index: 30;

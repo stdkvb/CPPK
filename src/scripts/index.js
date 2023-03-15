@@ -1,10 +1,11 @@
-import { takeControlAccordion, takeControlModals, takeControlForms } from './takeControl'
+import { takeControlAccordion, takeControlModals, takeControlForms, takeControlCookie } from './takeControl'
 
 takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
 
-takeControlForms();
+takeControlForms()
+takeControlCookie('.cookie-container', '.cookie-accept')
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',

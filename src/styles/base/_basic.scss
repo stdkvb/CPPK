@@ -125,6 +125,9 @@ p {
 	video {
 		width: 100%;
 		min-width: 2250px;
+		@include tablet {
+			min-width: 1400px;
+		}
 	}
 
 	&_sub {

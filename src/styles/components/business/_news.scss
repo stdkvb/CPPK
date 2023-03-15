@@ -2,6 +2,7 @@
 	padding-top: 120px;
 	padding-bottom: 120px;
 	position: relative;
+	overflow: hidden;
 
 	@include tablet {
 		padding-top: 50px;
@@ -9,16 +10,7 @@
 		padding-right: 0;
 	}
 
-	// display: grid;
-	// grid-template-columns: 1fr 280px;
-	// grid-template-rows: 3.5em 37.5em;
-	// grid-template-areas:
-	// 	"title button"
-	// 	"cards cards";
-	// gap: 80px;
-
 	h2 {
-		// grid-area: title;
 		margin-bottom: 80px;
 
 		@include tablet {
@@ -27,9 +19,6 @@
 	}
 
 	.btn {
-		// grid-area: button;
-		// margin-right: 100px;
-		// min-width: 180px;
 		position: absolute;
 		top: 120px;
 		right: 100px;
