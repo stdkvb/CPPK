@@ -144,7 +144,7 @@
 
 		.link {
 			display: flex;
-			width: 7em;
+			width: 8em;
 		}
 
 		h2 {
@@ -206,6 +206,11 @@
 			}
 		}
 
+		&__subtitle {
+			@include regular-16;
+			color: $white;
+		}
+
 		&__form {
 			display: none;
 			&_active {
@@ -216,6 +221,10 @@
 				color: $white;
 				text-decoration: underline;
 			}
+		}
+
+		.btn {
+			max-width: unset;
 		}
 
 		form {
@@ -237,9 +246,6 @@
 						content: url(@icons/checbox-content-white.svg);
 					}
 				}
-			}
-			.btn {
-				max-width: unset;
 			}
 		}
 	}

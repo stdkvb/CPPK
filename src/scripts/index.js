@@ -218,6 +218,7 @@ profile.addEventListener('click', () => {
 })
 
 VR.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
 	searchMenu.classList.remove('search-menu_active')
 	menu.classList.remove('menu_active')
@@ -225,6 +226,7 @@ VR.addEventListener('click', () => {
 })
 
 RL.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	searchMenu.classList.remove('search-menu_active')
 	menu.classList.remove('menu_active')
@@ -232,6 +234,7 @@ RL.addEventListener('click', () => {
 })
 
 bottomSearchButton.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	menu.classList.remove('menu_active')
@@ -239,6 +242,7 @@ bottomSearchButton.addEventListener('click', () => {
 })
 
 bottomBurgerButton.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	searchMenu.classList.remove('search-menu_active')

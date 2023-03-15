@@ -26,17 +26,9 @@ input {
 	gap: .75rem;
 
 	.input__label {
-		margin-bottom: -.25rem;
+		margin-bottom: 28px;
 		color: $white;
-
-		& ~ .toggle-show-password-btn {
-			top: calc(1.0625rem + 1.75em);
-		}
-	}
-
-	.input__label {
-		margin-bottom: -.25rem;
-		color: $white;
+		@include regular-16;
 
 		& ~ .toggle-show-password-btn {
 			top: calc(1.0625rem + 1.75em);
