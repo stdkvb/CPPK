@@ -184,67 +184,11 @@
 	<ul>
 		<li class="service-menu-link">
 			<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg);"></a>
-			<div class="service-menu profile" id="profile-menu">
-				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
-				<div class="profile__tabs">
-					<a class="profile__title" id="signup-btn">Регистрация</a>
-					<a class="profile__title profile__title_active" id="signin-btn">Авторизация</a>
-				</div>
-				<div class="profile__form registration" id="signup">
-					<form>
-						@@include('components/ui/_input-email.html', {name: 'email', required: true})
-						@@include('components/ui/_input-password.html', {name: 'password', required: true})
-						@@include('components/ui/_input-password.html', {placeholder: 'Повторите пароль', name: 'repeat-password', required: true})
-						@@include('components/ui/_input-text.html', {placeholder: 'ФИО', name: 'name', required: true})
-						@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
-						@@include('components/ui/_checkbox.html', {label: 'Я даю свое согласие на <a href="#">обработку моих персональных данных</a>', name: 'agreement', required: true})
-						@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
-					</form>
-				</div>
-				<div class="profile__form profile__form_active authorisation" id="signin">
-					<form>
-						@@include('components/ui/_input-email.html', {name: 'email', required: true})
-						@@include('components/ui/_input-password.html', {name: 'password', required: true})
-						<a>Восстановление пароля</a>
-						@@include('components/ui/_button.html', {children: 'Авторизоваться', class: 'btn_secondary', type: 'submit'})
-					</form>
-				</div>
-			</div>
-			<!-- <div class="service-menu profile" id="profile-menu">
-				<a class="link close-btn"><span class="link-arrow"></span>Вернуться</a>
-				<h4 class="profile__title profile__title_active">Восстановление пароля</h4>
-				<div class="profile__form profile__form_active password-recovery">
-					<form>
-						@@include('components/ui/_input-email.html', {label: 'Ведите почту, с помощью которой регистрировались на сайте. На нее мы отправим код подтверждения', name: 'email', required: true})
-						@@include('components/ui/_button.html', {children: 'Отправить код', class: 'btn_secondary', type: 'submit'})
-					</form>
-				</div>
-			</div> -->
-			<!-- <div class="service-menu profile" id="profile-menu">
-				<a class="link close-btn"><span class="link-arrow"></span>Вернуться</a>
-				<h4 class="profile__title profile__title_active">Восстановление пароля</h4>
-				<div class="profile__form profile__form_active password-recovery">
-					<form>
-						@@include('components/ui/_input-email.html', {label: 'Введите четырехзначный код, который мы отправили на почту sobakasutulaya@yandex.ru', placeholder: '__ - __ - __ - __', name: 'email', required: true})
-						@@include('components/ui/_button.html', {children: 'Далее', class: 'btn_secondary', type: 'submit'})
-					</form>
-				</div>
-			</div> -->
-			<!-- <div class="service-menu profile" id="profile-menu">
-				<h4 class="profile__title profile__title_active">Задайте пароль</h4>
-				<div class="profile__form profile__form_active password-recovery">
-					<form>
-						@@include('components/ui/_input-password.html', {label: 'Старый пароль был сброшен. Новый пароль должен быть не менее 6 символов, содержать строчные и заглавные буквы и цифры и отличаться от предыдущего', name: 'password', required: true})
-						@@include('components/ui/_input-password.html', {placeholder: 'Повторите пароль', name: 'repeat-password', required: true})
-						@@include('components/ui/_button.html', {children: 'Далее', class: 'btn_secondary', type: 'submit'})
-					</form>
-				</div>
-			</div> -->
-			<!-- <div class="service-menu profile" id="profile-menu">
-				<h4 class="profile__title profile__title_active">Новый пароль успешно сохранен!</h4>
-				<span class="profile__subtitle">Авторизуйтесь с новым данными</span>
-				@@include('components/ui/_button.html', {children: 'Авторизация', class: 'btn_secondary'})
-			</div> -->
+			@@include('components/business/profile/_profile.html')
+			<!-- @@include('components/business/profile/_recovery.html')
+			@@include('components/business/profile/_recovery-confirmation.html')
+			@@include('components/business/profile/_recovery-new-password.html')
+			@@include('components/business/profile/_recovery-success.html') -->
 		</li>
 		<li class="service-menu-link">
 			<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg);"></a>
