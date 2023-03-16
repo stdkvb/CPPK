@@ -2,10 +2,12 @@
 <html lang='ru'>
 @@include('meta/_head.html', {title: 'Работа у нас'})
 
-<body class="main-page">
+<body>
 	@@include('components/business/_header.html')
 	@@include('components/business/_left-bar.html')
-	<img class="main-page__background main-page__background_sub" src="@images/sub-fon.png" />
+	<div class="page__background page__background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
 	<main>
 		<section class="sub-container">
 			<h1>Работа у нас</h1>

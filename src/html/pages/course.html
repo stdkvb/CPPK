@@ -2,12 +2,14 @@
 <html lang='ru'>
 @@include('meta/_head.html', {title: 'ЦППК'})
 
-<body class="course-page">
+<body>
 	@@include('components/business/_header.html')
 	@@include('components/business/_left-bar.html')
-	<video class="main-page__background" src="@videos/sample-5s.mp4" autoplay muted loop></video>
+	<div class="page__background">
+		<video src="@videos/sample-5s.mp4" autoplay muted loop></video>
+	</div>
 	<main>
-		<section class="page-title container">
+		<section class="page-title page-title_secondary container">
 			<span class="page-title__subtitle">Повышение квалификации по программе:</span>
 			<h1>Монтаж, техническое обслуживание и ремонт систем (элементов систем) дымоудаления и противодымной вентиляции, включая диспетчеризацию и проведение пусконаладочных работ</h1>
 			<div class="page-title__details">
