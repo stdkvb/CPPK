@@ -1,0 +1,14 @@
+<div class="service-menu service-menu_gray" id="call-request-menu">
+	<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
+	<h2>Оставьте свои данные</h2>
+	<p>Мы перезвоним и проконсультируем по любым вопросам</p>
+	<div class="service-menu__form active">
+		<form>
+			@@include('components/ui/_input-text.html', {placeholder: 'Ваше имя', name: 'name', required: true})
+			@@include('components/ui/_input-email.html', {name: 'email', required: true})
+			@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
+			@@include('components/ui/_checkbox.html', {label: 'Я даю свое согласие на <a href="#">обработку моих персональных данных</a>', name: 'agreement', required: true})
+			@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type: 'submit'})
+		</form>
+	</div>
+</div>

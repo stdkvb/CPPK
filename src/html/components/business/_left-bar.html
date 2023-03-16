@@ -185,10 +185,10 @@
 		<li class="service-menu-link">
 			<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg);"></a>
 			@@include('components/business/profile/_profile.html')
-			<!-- @@include('components/business/profile/_recovery.html')
-			@@include('components/business/profile/_recovery-confirmation.html')
-			@@include('components/business/profile/_recovery-new-password.html')
-			@@include('components/business/profile/_recovery-success.html') -->
+			<!-- @@include('components/business/profile/_recovery.html') -->
+			<!-- @@include('components/business/profile/_recovery-confirmation.html') -->
+			<!-- @@include('components/business/profile/_recovery-new-password.html') -->
+			<!-- @@include('components/business/profile/_recovery-success.html') -->
 		</li>
 		<li class="service-menu-link">
 			<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg);"></a>
@@ -197,7 +197,7 @@
 				<h2>VR</h2>
 				<img src="@images/remote-learning.png">
 				<p>VR</p>
-					@@include('components/ui/_button.html', {children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
+					@@include('components/ui/_button.html', {class: 'btn_narrow', children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
 			</div>
 		</li>
 		<li class="service-menu-link">
@@ -209,7 +209,7 @@
 				<p>Мы поможем Вам учиться в комфортной
 					для Вас среде. Вы сможете осваивать новые направления и возможности, совмещая
 					с другими видами деятельности</p>
-					@@include('components/ui/_button.html', {children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
+					@@include('components/ui/_button.html', {class: 'btn_narrow', children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
 			</div>
 		</li>
 	</ul>
@@ -241,4 +241,5 @@
 		</li>
 		<li><a class="link link-icon" style="background-image: url(@icons/mail.svg);" href="/"></a></li>
 	</ul>
+	@@include('components/business/_call-request.html')
 </div>

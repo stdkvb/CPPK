@@ -87,6 +87,12 @@
 		}
 	}
 
+	&_narrow {
+		@include min-mobile {
+			max-width: fit-content;
+		}
+	}
+
 	.children {
 		position: relative;
 		display: flex;

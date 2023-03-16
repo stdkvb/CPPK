@@ -1,10 +1,10 @@
-<div class="service-menu profile" id="profile-menu">
+<div class="service-menu service-menu_gray" id="profile-menu">
 	<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
-	<div class="profile__tabs">
-		<a class="profile__title" id="signup-btn">Регистрация</a>
-		<a class="profile__title profile__title_active" id="signin-btn">Авторизация</a>
+	<div class="service-menu__tabs">
+		<h2 id="signup-btn">Регистрация</h2>
+		<h2 class="active" id="signin-btn">Авторизация</h2>
 	</div>
-	<div class="profile__form registration" id="signup">
+	<div class="service-menu__form registration" id="signup">
 		<form>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {name: 'password', required: true})
@@ -15,7 +15,7 @@
 			@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
 		</form>
 	</div>
-	<div class="profile__form profile__form_active authorisation" id="signin">
+	<div class="service-menu__form active authorisation" id="signin">
 		<form>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {name: 'password', required: true})

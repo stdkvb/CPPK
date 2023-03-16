@@ -1,0 +1,22 @@
+<div class="textarea__container">
+	@@if (context.label) {
+		@@if (context.id) {
+			<label class="textarea__label" for="@@id">@@label@@if (context.required) {*}</label>
+		}
+		@@if (!context.id) {
+			<span class="textarea__label">@@label@@if (context.required) {*}</span>
+		}
+	}
+	<textarea
+		@@if (context.placeholder) {placeholder="@@placeholder@@if (context.required && !context.label) {*}"}
+		@@if (!context.placeholder) {placeholder="Введите текст@@if (context.required) {*}"}
+		@@if (context.required) {required}
+		@@if (context.id) {id="@@id"}
+		@@if (context.name) {name="@@name"}
+		data-type="textarea"
+	></textarea>
+	<span class="error-message">
+		@@if (context.errorMessage) {@@errorMessage}
+		@@if (!context.errorMessage) {Ошибка}
+	</span>
+</div>

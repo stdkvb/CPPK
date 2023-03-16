@@ -169,12 +169,22 @@ const rlBtn = document.getElementById('rl-btn')
 const rlMenu = document.getElementById('rl-menu')
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.getElementById('search-menu')
+const callRequestBtn = document.getElementById('call-request-btn')
+const callRequestMenu = document.getElementById('call-request-menu')
 
 burgerBtn.addEventListener('click', () => {
 	profileMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
 	menu.classList.add('menu_active')
+})
+
+callRequestBtn.addEventListener('click', () => {
+	profileMenu.classList.remove('service-menu_active')
+	vrMenu.classList.remove('service-menu_active')
+	rlMenu.classList.remove('service-menu_active')
+	menu.classList.remove('menu_active')
+	callRequestMenu.classList.add('service-menu_active')
 })
 
 profileBtn.addEventListener('mouseenter', () => {
@@ -201,7 +211,6 @@ searchBtn.addEventListener('click', () => {
 	rlMenu.classList.remove('service-menu_active')
 	searchMenu.classList.add('search-menu_active')
 })
-
 
 // bottom bar
 const VR = document.getElementById('virtual-reality')
@@ -256,16 +265,16 @@ const signup = document.getElementById('signup')
 const signinBtn = document.getElementById('signin-btn')
 const signin = document.getElementById('signin')
 signupBtn.addEventListener('click', () => {
-	signinBtn.classList.remove('profile__title_active')
-	signupBtn.classList.add('profile__title_active')
-	signin.classList.remove('profile__form_active')
-	signup.classList.add('profile__form_active')
+	signinBtn.classList.remove('active')
+	signupBtn.classList.add('active')
+	signin.classList.remove('active')
+	signup.classList.add('active')
 })
 signinBtn.addEventListener('click', () => {
-	signupBtn.classList.remove('profile__title_active')
-	signinBtn.classList.add('profile__title_active')
-	signup.classList.remove('profile__form_active')
-	signin.classList.add('profile__form_active')
+	signupBtn.classList.remove('active')
+	signinBtn.classList.add('active')
+	signup.classList.remove('active')
+	signin.classList.add('active')
 })
 
 // close all menu
@@ -277,6 +286,7 @@ menuCloseButtons.forEach((elem) => {
 		vrMenu.classList.remove('service-menu_active')
 		rlMenu.classList.remove('service-menu_active')
 		searchMenu.classList.remove('search-menu_active')
+		callRequestMenu.classList.remove('service-menu_active')
 	})
 })
 
