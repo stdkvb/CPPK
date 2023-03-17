@@ -9,12 +9,12 @@
 		<video src="@videos/sample-5s.mp4" autoplay muted loop></video>
 	</div>
 	<main>
-		<section class="page-title container">
+		<section class="page-title container element-animation">
 			<h1>Постройте эффективную<br>систему корпоративного<br>обучения</h1>
 			@@include('components/ui/_button.html', {children: 'Перейти к программам<span class="btn-arrow"></span>',
 			href: '/'})
 		</section>
-		<section class="events swiper" dir="rtl">
+		<section class="events swiper element-animation element-animation__fromRight" dir="rtl">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<p><span>12</span>февраля</p>
@@ -34,7 +34,7 @@
 			</div>
 		</section>
 		<section class="programms container">
-			<div class="programms__tabs swiper">
+			<div class="programms__tabs swiper element-animation">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide_active">
 						<h2>Повышение<br>квалификации</h2>
@@ -48,7 +48,7 @@
 				</div>
 				<div class="swiper-scrollbar"></div>
 			</div>
-			<div class="programms__cards swiper">
+			<div class="programms__cards swiper element-animation element-animation__fromRight">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<h3>Профессиональное обучение по рабочим профессиям</h3>
@@ -118,39 +118,38 @@
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 			</div>
-			<div class="programms__download">
+			<div class="programms__download element-animation element-animation__fromLeft">
 				<h3>Скачайте полный перечень программ в формате pdf</h3>
 				@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', href:
 				'/'})
 			</div>
 		</section>
-		<section class="benefits container">
-			<h2>Более 800 специальностей<br>по различным направлениям</h2>
-			<div class="benefits__cards">
-				<div class="benefits__card">
+		<section class="benefits container element-animation">
+			<h2 class="element-animation">Более 800 специальностей<br>по различным направлениям</h2>
+			<div class="benefits__cards element-animation">
+				<div class="benefits__card element-animation">
 					<h3>Получайте не только теорию</h3>
 					<p>Мы используем современные технологии, в том числе шлем виртуальной реальности, используя который
 						Вы сможете отработать новые навыки безопасно</p>
 				</div>
-				<div class="benefits__card">
+				<div class="benefits__card element-animation">
 					<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
 					<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
 				</div>
-				<div class="benefits__card">
+				<div class="benefits__card element-animation">
 					<h3>Экономьте с нами</h3>
 					<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
 				</div>
-				<div class="benefits__card">
+				<div class="benefits__card element-animation">
 					<h3>Обучайте кадры дистанционно!</h3>
 					<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.
 					</p>
 				</div>
-				<div class="benefits__card">
+				<div class="benefits__card element-animation">
 					<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
 				</div>
 			</div>
 		</section>
-
 		@@include('components/business/_banner.html',
 		{title: 'Спланируйте годовой бюджет компании',
 		subtitle: 'Оставьте свою почту, и мы вышлем подробный учебный план на текущий год',
@@ -161,22 +160,22 @@
 		<section class="about-us container">
 			<div class="about-us__text-container">
 				<div>
-					<h2>Центр профессиональной подготовки кадров</h2>
-					<p>Мы один из крупнейших учебных центров Башкирии, и растем каждый год! Большой опыт работы на
+					<h2 class="element-animation">Центр профессиональной подготовки кадров</h2>
+					<p class="element-animation element-animation__fromLeft">Мы один из крупнейших учебных центров Башкирии, и растем каждый год! Большой опыт работы на
 						образовательном рынке позволяет нам создавать эффективные инструменты успеха.</p>
-					@@include('components/ui/_button.html', {children: 'Подробнее о компании', class: 'btn_blue-border',
+					@@include('components/ui/_button.html', {children: 'Подробнее о компании', class: 'btn_blue-border element-animation element-animation__fromLeft',
 					href: '/'})
 				</div>
-				<div class="about-us__numbers">
+				<div class="about-us__numbers element-animation">
 					<span class="value">20</span>
 					<p>лет на рынке профессионального образования</p>
 				</div>
-				<div class="about-us__numbers">
+				<div class="about-us__numbers element-animation">
 					<span class="value">800</span>
 					<p>специальностей и профессий по 33 направлениям</p>
 				</div>
 			</div>
-			<div class="about-us__photo swiper">
+			<div class="about-us__photo swiper element-animation">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="@images/about-us-1.png">
@@ -188,13 +187,13 @@
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 				<div class="swiper-pagination"></div>
-				<div class="about-us__photo-description">
+				<div class="about-us__photo-description element-animation element-animation__fromLeft">
 					<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы</p>
 				</div>
 		</section>
 		<section class="partnership container">
-			<h2>Обучаем сотрудников крупнейших компаний</h2>
-			<div class="partnership__icons swiper">
+			<h2 class="element-animation">Обучаем сотрудников крупнейших компаний</h2>
+			<div class="partnership__icons swiper element-animation element-animation__fromRight">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="@icons/UMK.svg">
@@ -222,11 +221,11 @@
 					</div>
 				</div>
 			</div>
-			@@include('components/ui/_button.html', {children: 'Подробнее о сотрудничестве', class: 'btn_blue-border',
+			@@include('components/ui/_button.html', {children: 'Подробнее о сотрудничестве', class: 'btn_blue-border element-animation element-animation__fromLeft',
 			href: '/'})
 		</section>
 		<section class="reviews container">
-			<div class="reviews__tabs swiper">
+			<div class="reviews__tabs swiper element-animation element-animation__fromLeft">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide swiper-slide_active">
 						<h2>Отзывы</h2>
@@ -240,7 +239,7 @@
 				</div>
 				<div class="swiper-scrollbar"></div>
 			</div>
-			<div class="reviews__cards swiper">
+			<div class="reviews__cards swiper element-animation element-animation__fromRight">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img class="open-modal" src="@images/review.png" modalId="review-1">
@@ -266,8 +265,8 @@
 			</div>
 		</section>
 		<section class="news container">
-			<h2>Новости</h2>
-			<div class="news__cards swiper">
+			<h2 class="element-animation element-animation__fromLeft">Новости</h2>
+			<div class="news__cards swiper element-animation element-animation__fromRight">
 				<div class="swiper-wrapper">
 					<a class="swiper-slide" href="/">
 						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
@@ -321,9 +320,8 @@
 				</div>
 				<div class="swiper-scrollbar"></div>
 			</div>
-			@@include('components/ui/_button.html', {children: 'Все новости', class: 'btn_blue-border', type: 'button',
+			@@include('components/ui/_button.html', {children: 'Все новости', class: 'btn_blue-border element-animation element-animation__fromRight', type: 'button',
 			href: '/'})
-
 		</section>
 		<section class="subscribe container">
 			<div class="subscribe__text">

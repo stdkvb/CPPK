@@ -9,6 +9,25 @@ new CounterItemController({
 	clearHoverDelay: 700
 });
 
+function onEntry(entry) {
+	document.querySelector('#header').classList.add('element-show');
+	document.querySelector('#left-bar').classList.add('element-show');
+	document.querySelector('#bottom-bar').classList.add('element-show');
+	entry.forEach((change) => {
+		if (change.isIntersecting) {
+			change.target.classList.add('element-show');
+		}
+	});
+}
+let options = { threshold: [0.1] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+//console.log(elements);
+for (let elm of elements) {
+	observer.observe(elm);
+}
+
+
 takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })

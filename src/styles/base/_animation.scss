@@ -1,0 +1,32 @@
+.element-animation {
+	opacity: 0 !important;
+	-webkit-transform: translateY(100px) !important;
+	transform: translateY(100px) !important;
+	-webkit-transition: all $transitionDuration;
+	transition: all $transitionDuration;
+
+	&__fromLeft {
+		-webkit-transform: translateX(-100px) !important;
+		transform: translateX(-100px) !important;
+	}
+
+    &__fromRight {
+		-webkit-transform: translateX(100px) !important;
+		transform: translateX(100px) !important;
+	}
+
+	&__fromUp {
+		-webkit-transform: translateY(-100px) !important;
+		transform: translateY(-100px) !important;
+	}
+
+	&__delay {
+		transition-delay: $transitionDuration;
+	}
+
+	&.element-show {
+		opacity: 1 !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+	}
+}

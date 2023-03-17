@@ -1,5 +1,5 @@
 <section class="banner container" style="background-image: @@if (context.background) {url(@@background)};">
-	<div class="banner__text">
+	<div class="banner__text element-animation">
 		@@if (context.title) {
 			<h2>@@title</h2>
 		}
@@ -11,6 +11,6 @@
 		}
 	</div>
 	@@if (context.image) {
-		<img src="@@image">
+		<img class="element-animation" src="@@image">
 	}
 </section>

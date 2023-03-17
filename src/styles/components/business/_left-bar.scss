@@ -13,7 +13,6 @@
 	border-right: solid 0.0625em rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(20px);
 	z-index: 10;
-	transition: background-color $transitionDuration ease;
 	@include tablet {
 		visibility: hidden;
 	}
@@ -24,7 +23,7 @@
 	.burger-btn {
 		padding: 0;
 		height: 110px;
-		width: 100%;
+		width: 101%;
 		background-image: url(@icons/burger-black.svg);
 		background-repeat: no-repeat;
 		background-position: center;
@@ -33,6 +32,7 @@
 	}
 
 	.burger-btn:hover {
+		background-color: transparent;
 		background-image: url(@icons/burger-white.svg);
 	}
 

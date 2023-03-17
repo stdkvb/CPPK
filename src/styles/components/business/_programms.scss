@@ -1,5 +1,8 @@
 .programms {
 	position: relative;
+	@include tablet {
+		padding-right: 0;
+	}
 	.programms__tabs {
 		padding: 140px 0 80px 0;
 		@include tablet {
