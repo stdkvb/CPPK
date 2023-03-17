@@ -1,8 +1,8 @@
-<div id="select-container" class="custom-select select-container">
-  <select id="question" @@if (context.required) {required}>
-		<option>Форма обучения</option>
+<div class="custom-select @@if (context.class) {@@class}">
+  <select @@if (context.required) {required}>
 		@@if(context.placeholder) {
 			<option data-value="0">@@placeholder</option>
+			<option></option>
 		}
 		@@if(context.selectItems?.length) {
 			@@for(let i = 0; i < selectItems.length; i++) {

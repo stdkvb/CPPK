@@ -1,82 +1,99 @@
 .custom-select {
   position: relative;
 	width: 100%;
-  &.open {
-    .arrow {
-      transform: rotate(180deg) translateX(50%);
-    }
-  }
+	height: 100%;
 
-  select {
+	select {
     display: none;
   }
-}
 
-.select-selected {
-  position: relative;
-  padding: 20px 0;
-}
+	&.open {
+    .arrow {
+      transform: rotate(180deg) translateY(4px);
+    }
+  }
 
-.arrow {
-  display: flex;
-  position: absolute;
-  width: 1.4rem;
-  height: 1.4rem;
-  right: 2rem;
-  top: calc(50% - 1rem);
-  transition: all 0.2s ease-in-out;
-  z-index: 1;
-	@include tablet {
-		right: 0;
+	.arrow {
+		display: flex;
+		position: absolute;
+		height: 12px;
+		width: 12px;
+		right: 2rem;
+		transition: all 0.2s ease-in-out;
+		z-index: 1;
+		top: 50%;
+		transform: translateY(-50%);
+		@include tablet {
+			right: 0;
+		}
+
+		&::before {
+			content: url(@icons/chevron-down_black.svg);
+			position: absolute;
+			transition: all $transitionDuration ease-in-out;
+			height: 12px;
+			width: 12px;
+			display: flex;
+		}
 	}
 
-  &::before {
-    content: url(@icons/chevron-down_black.svg);
-    position: absolute;
-    transition: all $transitionDuration ease-in-out;
-  }
-}
+	.select-items div,
+	.select-selected {
+		padding: 20px 20px;
+		@include medium-16;
+		color: $gray70;
+		cursor: pointer;
+		user-select: none;
+		position: relative;
+	}
 
-.select-items div,
-.select-selected {
-  @include medium-16;
-  color: $gray90;
-  cursor: pointer;
-  user-select: none;
-}
+	.select-items {
+		position: absolute;
+		background-color: $white;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 99;
+		overflow: hidden;
+		opacity: 1;
+		height: auto;
+		visibility: visible;
+		border: solid 1px $gray20;
 
-.select-items {
-  position: absolute;
-  background-color: #ffffff;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  overflow: hidden;
-  opacity: 1;
-  height: auto;
-  visibility: visible;
-
-  &.select-hide {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-  }
-
-  div {
-    padding: 20px 24px;
-		border: solid 1px $gray10;
-
-    &:hover
-   {
-      background-color: $gray60;
-      color: #ffffff;
-    }
-
-		&:nth-child(1) {
-			display: none;
+		&.select-hide {
+			opacity: 0;
+			visibility: hidden;
+			height: 0;
 		}
-  }
+
+		div {
+			&:hover {
+				background-color: $gray60;
+				color: $white;
+			}
+
+			&:nth-child(1) {
+				display: none;
+			}
+		}
+	}
+
+	&_secondary {
+		.select-selected {
+			color: $white;
+		}
+		.arrow::before {
+			content: url(@icons/chevron-down.svg);
+		}
+		.select-items {
+			background-color: $gray80;
+			color: $white;
+			border: solid 1px $gray70;
+
+			div {
+				color: $white;
+			}
+		}
+
+	}
 }
-
-

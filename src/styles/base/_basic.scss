@@ -126,6 +126,7 @@ p {
 		width: 100%;
 		min-width: 2250px;
 		@include tablet {
+			width: unset;
 			min-width: 1400px;
 		}
 	}

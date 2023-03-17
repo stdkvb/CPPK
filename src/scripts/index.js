@@ -368,29 +368,6 @@ if (benefitsCards !== null) {
 	})
 }
 
-// dropdown select
-const elSelect = document.getElementsByClassName('select')[0]
-const elSelectValue = elSelect.children[0]
-const elSelectOptions = elSelect.children[1]
-
-Array.from(elSelectOptions.children).forEach((elOption) => {
-	elOption.addEventListener('click', (e) => {
-		elSelectValue.textContent = e.target.textContent
-		elSelect.classList.remove('isActive')
-	})
-})
-
-elSelectValue.addEventListener('click', () => {
-	elSelect.classList.toggle('isActive')
-})
-
-document.addEventListener('click', (e) => {
-	const didClickedOutside = !elSelect.contains(e.target)
-	if (didClickedOutside) {
-		elSelect.classList.remove('isActive')
-	}
-})
-
 // show more
 const cardsList = document.querySelector('.cards-list')
 const showMoreButton = document.querySelector('.show-more-btn')
@@ -438,18 +415,14 @@ function customSelect(id) {
 	let i
 	let j
 	let l
-	let closeArrow
 	let ll
 	let selElmnt
 	let a
 	let b
-	let arrow
 	let c
 	/* look for any elements with the class "custom-select": */
 	x = document.getElementsByClassName(id)
 	l = x.length
-
-	closeArrow = document.getElementById('select-container')
 
 	for (i = 0; i < l; i++) {
 		selElmnt = x[i].getElementsByTagName('select')[0]
@@ -509,8 +482,7 @@ function customSelect(id) {
 			e.stopPropagation()
 			closeAllSelect(this)
 			this.nextSibling.classList.toggle('select-hide')
-			closeArrow.classList.toggle('open')
-			this.classList.toggle('select-arrow-active')
+			this.parentNode.classList.toggle('open')
 		})
 	}
 
@@ -531,16 +503,12 @@ function customSelect(id) {
 		for (i = 0; i < yl; i++) {
 			if (elmnt == y[i]) {
 				arrNo.push(i)
-			} else {
-				y[i].classList.remove('select-arrow-active')
 			}
 		}
 
 		for (i = 0; i < xl; i++) {
 			if (arrNo.indexOf(i)) {
 				x[i].classList.add('select-hide')
-				closeArrow.classList.remove('open')
-				// x[i]closeArrow.classList.add("open");
 			}
 		}
 	}
@@ -549,4 +517,4 @@ then close all select boxes: */
 	document.addEventListener('click', closeAllSelect)
 }
 
-customSelect('select-container')
+customSelect('custom-select')

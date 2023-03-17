@@ -220,14 +220,22 @@
 				<a class="link close-btn"></a>
 				<form class="top-container">
 					@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
-					<div class="select js-selectCustom">
-						<div class="select-trigger">Поиск по программам</div>
-						<div class="select-options">
-							<div class="select-option">Поиск по программам</div>
-							<div class="select-option">Другой поиск</div>
-							<div class="select-option">Еще другой поиск</div>
-						</div>
-					</div>
+					@@include('components/ui/_select.html', {
+						class: 'custom-select_secondary',
+						placeholder: 'Поиск по категориям',
+						selectItems: [
+							{	text: 'Категория 1',
+								value: 'Категория 1'
+							},
+							{	text: 'Категория 2',
+								value: 'Категория 2'
+							},
+							{	text: 'Категория 3',
+							value: 'Категория 3'
+							},
+						]
+					})
+
 				</form>
 				<h2>Популярные запросы</h2>
 				<ul>
