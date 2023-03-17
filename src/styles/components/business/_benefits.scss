@@ -22,6 +22,7 @@
 		grid-template-areas:
 		"card-1 . . card-2"
 		"card-3 card-4 . card-5";
+		transition: background-image $transitionDuration ease;
 		@include desktop_huge {
 			background-size: contain;
 		}

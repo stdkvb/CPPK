@@ -1,4 +1,13 @@
 import { takeControlAccordion, takeControlModals, takeControlForms, takeControlCookie } from './takeControl'
+import CounterItemController from './ElementsControllers/CounterItemController.js'
+
+new CounterItemController({
+	countersElementsWrapperSelector: '.about-us__text-container',
+	counterElementSelector: '.about-us__numbers',
+	counterNumElementSelector: '.value',
+	calcAnimationDelay: 3000,
+	clearHoverDelay: 700
+});
 
 takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
@@ -523,24 +532,26 @@ customSelect('custom-select')
 const leftBar = document.querySelector('.left-bar')
 const programmsSection = document.querySelector('.programms')
 
-const visible = function (target) {
-	const targetPosition = {
-		top: window.pageYOffset + target.getBoundingClientRect().top
-	}
-	const windowPosition = {
-		top: window.pageYOffset,
-		left: window.pageXOffset,
-		right: window.pageXOffset + document.documentElement.clientWidth,
-		bottom: window.pageYOffset + document.documentElement.clientHeight
-	}
+if (programmsSection !== null) {
+	const visible = function (target) {
+		const targetPosition = {
+			top: window.pageYOffset + target.getBoundingClientRect().top
+		}
+		const windowPosition = {
+			top: window.pageYOffset,
+			left: window.pageXOffset,
+			right: window.pageXOffset + document.documentElement.clientWidth,
+			bottom: window.pageYOffset + document.documentElement.clientHeight
+		}
 
-	if (targetPosition.top < windowPosition.bottom) {
-		leftBar.classList.remove('left-bar_transparent')
-	} else {
-		leftBar.classList.add('left-bar_transparent')
+		if (targetPosition.top < windowPosition.bottom) {
+			leftBar.classList.remove('left-bar_transparent')
+		} else {
+			leftBar.classList.add('left-bar_transparent')
+		}
 	}
-}
-window.addEventListener('scroll', () => {
+	window.addEventListener('scroll', () => {
+		visible(programmsSection)
+	})
 	visible(programmsSection)
-})
-visible(programmsSection)
+}
