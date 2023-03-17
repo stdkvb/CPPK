@@ -33,11 +33,15 @@
 
 	&_gray {
 		background-color: $gray80;
+
+		.link:hover {
+			color: $gray50;
+		}
 	}
 
 	.link {
 		display: flex;
-		width: 8em;
+		width: fit-content;
 	}
 
 	h2 {
@@ -97,6 +101,10 @@
 			@include regular-16;
 			color: $white;
 			text-decoration: underline;
+		}
+
+		a:hover {
+			cursor: pointer;
 		}
 
 		form {

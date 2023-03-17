@@ -90,6 +90,7 @@ const aboutUsSwiper = new Swiper('.about-us__photo', {
 	slidesPerView: 'auto',
 	spaceBetween: 0,
 	loop: true,
+	parallax: true,
 	autoplay: {
 		delay: 5000
 	},
@@ -197,6 +198,7 @@ const rlBtn = document.getElementById('rl-btn')
 const rlMenu = document.getElementById('rl-menu')
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.getElementById('search-menu')
+const mailBtn = document.getElementById('mail-btn')
 const callRequestBtn = document.getElementById('call-request-btn')
 const callRequestMenu = document.getElementById('call-request-menu')
 
@@ -218,18 +220,33 @@ callRequestBtn.addEventListener('click', () => {
 profileBtn.addEventListener('mouseenter', () => {
 	vrMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
+	profileBtn.classList.remove('link-icon_disable')
+	vrBtn.classList.add('link-icon_disable')
+	rlBtn.classList.add('link-icon_disable')
+	searchBtn.classList.add('link-icon_disable')
+	mailBtn.classList.add('link-icon_disable')
 	profileMenu.classList.add('service-menu_active')
 })
 
 vrBtn.addEventListener('mouseenter', () => {
 	profileMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
+	vrBtn.classList.remove('link-icon_disable')
+	profileBtn.classList.add('link-icon_disable')
+	rlBtn.classList.add('link-icon_disable')
+	searchBtn.classList.add('link-icon_disable')
+	mailBtn.classList.add('link-icon_disable')
 	vrMenu.classList.add('service-menu_active')
 })
 
 rlBtn.addEventListener('mouseenter', () => {
 	profileMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
+	rlBtn.classList.remove('link-icon_disable')
+	vrBtn.classList.add('link-icon_disable')
+	profileBtn.classList.add('link-icon_disable')
+	searchBtn.classList.add('link-icon_disable')
+	mailBtn.classList.add('link-icon_disable')
 	rlMenu.classList.add('service-menu_active')
 })
 
@@ -237,6 +254,7 @@ searchBtn.addEventListener('click', () => {
 	profileMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
+	searchBtn.classList.remove('link-icon_disable')
 	searchMenu.classList.add('search-menu_active')
 })
 
@@ -252,6 +270,11 @@ profile.addEventListener('click', () => {
 	searchMenu.classList.remove('search-menu_active')
 	menu.classList.remove('menu_active')
 	vrMenu.classList.remove('service-menu_active')
+	VR.classList.add('link_disable')
+	RL.classList.add('link_disable')
+	bottomSearchButton.classList.add('link_disable')
+	bottomBurgerButton.classList.add('link_disable')
+	profile.classList.toggle('link_disable')
 	profileMenu.classList.toggle('service-menu_active')
 })
 
@@ -260,6 +283,11 @@ VR.addEventListener('click', () => {
 	rlMenu.classList.remove('service-menu_active')
 	searchMenu.classList.remove('search-menu_active')
 	menu.classList.remove('menu_active')
+	profile.classList.add('link_disable')
+	RL.classList.add('link_disable')
+	bottomSearchButton.classList.add('link_disable')
+	bottomBurgerButton.classList.add('link_disable')
+	VR.classList.toggle('link_disable')
 	vrMenu.classList.toggle('service-menu_active')
 })
 
@@ -268,6 +296,11 @@ RL.addEventListener('click', () => {
 	vrMenu.classList.remove('service-menu_active')
 	searchMenu.classList.remove('search-menu_active')
 	menu.classList.remove('menu_active')
+	VR.classList.add('link_disable')
+	profile.classList.add('link_disable')
+	bottomSearchButton.classList.add('link_disable')
+	bottomBurgerButton.classList.add('link_disable')
+	RL.classList.toggle('link_disable')
 	rlMenu.classList.toggle('service-menu_active')
 })
 
@@ -276,6 +309,11 @@ bottomSearchButton.addEventListener('click', () => {
 	rlMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	menu.classList.remove('menu_active')
+	VR.classList.add('link_disable')
+	RL.classList.add('link_disable')
+	profile.classList.add('link_disable')
+	bottomBurgerButton.classList.add('link_disable')
+	bottomSearchButton.classList.toggle('link_disable')
 	searchMenu.classList.toggle('search-menu_active')
 })
 
@@ -284,6 +322,11 @@ bottomBurgerButton.addEventListener('click', () => {
 	rlMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	searchMenu.classList.remove('search-menu_active')
+	VR.classList.add('link_disable')
+	RL.classList.add('link_disable')
+	bottomSearchButton.classList.add('link_disable')
+	profile.classList.add('link_disable')
+	bottomBurgerButton.classList.toggle('link_disable')
 	menu.classList.toggle('menu_active')
 })
 
@@ -315,6 +358,12 @@ menuCloseButtons.forEach((elem) => {
 		rlMenu.classList.remove('service-menu_active')
 		searchMenu.classList.remove('search-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
+		rlBtn.classList.remove('link-icon_disable')
+		vrBtn.classList.remove('link-icon_disable')
+		profileBtn.classList.remove('link-icon_disable')
+		searchBtn.classList.remove('link-icon_disable')
+		mailBtn.classList.remove('link-icon_disable')
+		bottomBurgerButton.classList.remove('link_disable')
 	})
 })
 

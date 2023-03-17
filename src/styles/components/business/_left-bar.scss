@@ -44,6 +44,10 @@
 		background-position: center;
 		background-size: auto;
 		position: unset;
+
+		&_disable {
+			opacity: 0.2;
+		}
 	}
 
 	ul {
@@ -120,12 +124,18 @@
 						color: $white;
 					}
 				}
+				.accordion__content {
+					left: 486px;
+					opacity: 1;
+				}
 			}
 
 			.accordion__content {
 				position: absolute;
 				top: 0;
-				left: 486px;
+				// left: 486px;
+				left: 0;
+				opacity: 0;
 				.link {
 					@include regular-18;
 				}
