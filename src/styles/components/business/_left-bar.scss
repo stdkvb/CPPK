@@ -8,14 +8,17 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background-color: transparent;
+	background-color: $gray80;
 	padding-bottom: 3.75em;
 	border-right: solid 0.0625em rgba(255, 255, 255, 0.2);
-	// backdrop-filter: blur(20px);
-	background-color: $gray80;
+	backdrop-filter: blur(20px);
 	z-index: 10;
+	transition: background-color $transitionDuration ease;
 	@include tablet {
 		visibility: hidden;
+	}
+	&_transparent {
+		background-color: transparent;
 	}
 
 	.burger-btn {
