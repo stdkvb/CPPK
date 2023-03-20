@@ -1,8 +1,10 @@
-import { takeControlAccordion, takeControlModals, takeControlForms, takeControlCookie } from './takeControl'
+import { takeControlAccordion, takeControlModals, takeControlForms, takeControlCookie, takeControlYandexMap } from './takeControl'
 import CounterItemController from './ElementsControllers/CounterItemController.js'
 import customSelect from './ElementsControllers/CustomSelect'
 
 customSelect('custom-select')
+
+takeControlYandexMap()
 
 new CounterItemController({
 	countersElementsWrapperSelector: '.about-us__text-container',
@@ -37,6 +39,7 @@ takeControlModals('.open-modal', '.modal-close', {
 
 takeControlForms()
 takeControlCookie('.cookie-container', '.cookie-accept')
+
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
@@ -469,15 +472,6 @@ takeControlAccordion('.direction__filters', '.accordion__list', {
 	accordionItemContentSelector: '.accordion__content',
 	accordionItemActiveClass: 'accordion__item_active'
 })
-
-// Btn "Show-more"
-const clientsElements = document.querySelector('.clients')
-const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue')
-if (moreButton !== null) {
-	moreButton = addEventListener('click', () => {
-		clientsElements.classList.add('active')
-	})
-}
 
 // Video
 const playButton = document.querySelector('.video-controler')

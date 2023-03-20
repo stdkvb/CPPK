@@ -38,4 +38,77 @@
 			}
 		}
 	}
+
+	&__search {
+		form {
+			display: grid;
+			grid-template-columns: 1fr 333px;
+			align-items: center;
+
+			@include tablet_small {
+				grid-template-columns: 1fr;
+			}
+
+			.search-bar {
+				margin-top: 0;
+
+				@include tablet_small {
+					margin-bottom: 20px;
+				}
+			}
+
+			input {
+				color: $gray90;
+				transition: color $transitionDuration;
+
+				&::placeholder {
+					color: $gray60;
+				}
+
+				&:hover {
+					&::placeholder {
+						color: $gray90;
+					}
+				}
+			}
+
+			.custom-select {
+				margin-left: 40px;
+				display: flex;
+				align-items: center;
+
+				@include tablet_small {
+					margin-left: 0;
+					justify-content: center;
+				}
+
+				.select-selected {
+					color: $gray90;
+
+					@include tablet_small {
+						width: 100%;
+						text-align: center;
+					}
+				}
+
+				.arrow {
+					right: 96px;
+					top: 44%;
+
+					@include tablet_small {
+						right: 40px;
+					}
+
+					&::before {
+						content: url('@icons/chevron-down_black.svg');
+					}
+				}
+
+				&.open .arrow {
+					top: 53%;
+				}
+			}
+		}
+
+	}
 }

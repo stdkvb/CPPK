@@ -2,10 +2,12 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 80px;
+	margin-bottom: 80px;
 
 	@include tablet {
 		grid-template-columns: 1fr;
 		column-gap: 0;
+		margin-bottom: 32px;
 	}
 
 	&__item {
@@ -56,6 +58,15 @@
 			&:hover {
 				filter: brightness(90%);
 			}
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 557px;
+
+		@include tablet {
+			height: 360px;
 		}
 	}
 }

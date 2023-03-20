@@ -43,10 +43,14 @@
 					по номеру 8-800-233-22-22
 				</p>
 			</div>
-			<form class="feedback__form">
-				@@include('components/ui/_input-email.html', {name: 'email'})
-				@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type:
-				'submit'})
+			<form>
+				@@include('components/ui/_input-text.html', {placeholder: 'Ваше имя', name: 'name', required: false})
+				@@include('components/ui/_input-email.html', {name: 'email', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Тема сообщения', name: 'text', required:
+				true})
+				@@include('components/ui/_textarea.html', {placeholder: 'Ваш вопрос', name: 'comment', required:
+				true})
+				@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type: 'submit'})
 			</form>
 		</div>
 		}

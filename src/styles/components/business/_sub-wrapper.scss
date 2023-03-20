@@ -22,9 +22,13 @@
 			padding: 100px 50px 140px 100px;
 		}
 
+		@include desktop_extra_small {
+			margin-left: 110px;
+			padding: 60px 20px;
+		}
+
 		@include tablet {
 			margin-left: 0;
-			padding: 60px 20px;
 		}
 
 		li {
