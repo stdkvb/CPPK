@@ -62,28 +62,34 @@
 		@include min_tablet {
 			margin-left: 320px;
 		}
+
 		.swiper-slide {
-			padding: 48px;
-			width: 440px;
-			background-color: $white;
-			height: 200px;
-			@include tablet {
-				width: 282px;
-				height: 163px;
-				padding: 20px 24px;
-			}
-			h3 {
-				color: $gray90;
-				@include medium-20;
-				margin-bottom: 31px;
-				@include tablet {
-					@include medium-18;
-				}
-			}
-			.link {
-				@include regular-16;
-			}
+			max-width: 1138px;
 		}
+
+		// маленькие карточки макет до 20.03
+		// .swiper-slide {
+		// 	padding: 48px;
+		// 	width: 440px;
+		// 	background-color: $white;
+		// 	height: 200px;
+		// 	@include tablet {
+		// 		width: 282px;
+		// 		height: 163px;
+		// 		padding: 20px 24px;
+		// 	}
+		// 	h3 {
+		// 		color: $gray90;
+		// 		@include medium-20;
+		// 		margin-bottom: 31px;
+		// 		@include tablet {
+		// 			@include medium-18;
+		// 		}
+		// 	}
+		// 	.link {
+		// 		@include regular-16;
+		// 	}
+		// }
 		.swiper-button-prev {
 			top: 179px;
 			left: unset;

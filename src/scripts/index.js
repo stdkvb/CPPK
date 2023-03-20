@@ -70,13 +70,13 @@ const programmsCardsSwiper = new Swiper('.programms__cards', {
 	spaceBetween: 2,
 	grid: {
 		fill: 'row',
-		rows: 2
+		rows: 1
 	},
 	breakpoints: {
 		992: {
 			grid: {
 				fill: 'row',
-				rows: 3
+				rows: 2
 			},
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -274,7 +274,7 @@ profile.addEventListener('click', () => {
 	RL.classList.add('link_disable')
 	bottomSearchButton.classList.add('link_disable')
 	bottomBurgerButton.classList.add('link_disable')
-	profile.classList.toggle('link_disable')
+	profile.classList.remove('link_disable')
 	profileMenu.classList.toggle('service-menu_active')
 })
 
@@ -287,7 +287,7 @@ VR.addEventListener('click', () => {
 	RL.classList.add('link_disable')
 	bottomSearchButton.classList.add('link_disable')
 	bottomBurgerButton.classList.add('link_disable')
-	VR.classList.toggle('link_disable')
+	VR.classList.remove('link_disable')
 	vrMenu.classList.toggle('service-menu_active')
 })
 
@@ -300,7 +300,7 @@ RL.addEventListener('click', () => {
 	profile.classList.add('link_disable')
 	bottomSearchButton.classList.add('link_disable')
 	bottomBurgerButton.classList.add('link_disable')
-	RL.classList.toggle('link_disable')
+	RL.classList.remove('link_disable')
 	rlMenu.classList.toggle('service-menu_active')
 })
 
@@ -313,7 +313,7 @@ bottomSearchButton.addEventListener('click', () => {
 	RL.classList.add('link_disable')
 	profile.classList.add('link_disable')
 	bottomBurgerButton.classList.add('link_disable')
-	bottomSearchButton.classList.toggle('link_disable')
+	bottomSearchButton.classList.remove('link_disable')
 	searchMenu.classList.toggle('search-menu_active')
 })
 
@@ -326,7 +326,7 @@ bottomBurgerButton.addEventListener('click', () => {
 	RL.classList.add('link_disable')
 	bottomSearchButton.classList.add('link_disable')
 	profile.classList.add('link_disable')
-	bottomBurgerButton.classList.toggle('link_disable')
+	bottomBurgerButton.classList.remove('link_disable')
 	menu.classList.toggle('menu_active')
 })
 
@@ -364,6 +364,10 @@ menuCloseButtons.forEach((elem) => {
 		searchBtn.classList.remove('link-icon_disable')
 		mailBtn.classList.remove('link-icon_disable')
 		bottomBurgerButton.classList.remove('link_disable')
+		VR.classList.remove('link_disable')
+		RL.classList.remove('link_disable')
+		bottomSearchButton.classList.remove('link_disable')
+		profile.classList.remove('link_disable')
 	})
 })
 
