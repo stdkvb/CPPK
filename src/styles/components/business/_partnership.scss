@@ -47,12 +47,22 @@
 			align-items: center;
 			width: 229px;
 			height: 174px;
+			filter: grayscale(100%);
+			transition: filter $transitionDuration;
+
+			img {
+				max-width: 200px;
+			}
+
 			@include tablet {
 				width: 130px;
 				height: 98px;
 				img {
 					max-width: 110px;
 				}
+			}
+			&:hover {
+				filter: unset;
 			}
 		}
 	}

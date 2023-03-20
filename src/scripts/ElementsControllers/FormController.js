@@ -3,6 +3,7 @@ import EmailInputController from './EmailInputController.js'
 import PhoneInputController from './PhoneInputController.js'
 import CheckboxInputController from './CheckboxInputController.js'
 import TextAreaController from './TextAreaController.js'
+import PasswordInputController from './PasswordInputController.js'
 
 const typeCompliance = {
 	text: {
@@ -40,7 +41,7 @@ const typeCompliance = {
 		}
 	},
 	password: {
-		Controller: DefaultInputController,
+		Controller: PasswordInputController,
 		options: {
 			invalidStateClassName: 'input__container_invalid',
 			validStateClassName: 'input__container_valid'
@@ -48,7 +49,7 @@ const typeCompliance = {
 	},
 }
 
-class ProfileFormController {
+class FormController {
 	constructor(form, options = {}) {
 		if (!form) {
 			return
@@ -142,4 +143,14 @@ class ProfileFormController {
 	}
 }
 
-export default ProfileFormController
+const takeControlForm = (formContainerSelector, formSelector, defaultOptions) => {
+	const formsContainers = document.querySelectorAll(formContainerSelector)
+
+	formsContainers.forEach((formContainer) => {
+		const form = formContainer.querySelector(formSelector)
+
+		new FormController(form, defaultOptions)
+	})
+}
+
+export default takeControlForm

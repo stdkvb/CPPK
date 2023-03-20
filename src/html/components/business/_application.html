@@ -1,10 +1,10 @@
 <div class="service-menu service-menu_gray service-menu_active" id="request-menu">
 	<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
 	<h2>Заявка на обучение</h2>
-	<div class="service-menu__form active">
+	<div class="service-menu__form active application">
 		<form>
 			@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', name: 'company'})
-			@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', name: 'name', required: true})
+			@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', errorMessage: 'Введите имя представителя' name: 'name', required: true})
 			@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_textarea.html', {placeholder: 'Введите текст комментария', name: 'comment'})
