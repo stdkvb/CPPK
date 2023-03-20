@@ -70,13 +70,13 @@ const programmsCardsSwiper = new Swiper('.programms__cards', {
 	spaceBetween: 2,
 	grid: {
 		fill: 'row',
-		rows: 1
+		rows: 2
 	},
 	breakpoints: {
 		992: {
 			grid: {
 				fill: 'row',
-				rows: 2
+				rows: 3
 			},
 			navigation: {
 				nextEl: '.swiper-button-next',
