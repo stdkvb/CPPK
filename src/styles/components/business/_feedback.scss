@@ -13,4 +13,41 @@
 			color: $gray60;
 		}
 	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		input,
+		textarea {
+			color: $gray90;
+			transition: color $transitionDuration;
+
+			&::placeholder {
+				color: $gray60;
+			}
+
+			&:hover {
+				&::placeholder {
+					color: $gray90;
+				}
+			}
+		}
+
+		textarea {
+			padding: 20px 24px;
+		}
+
+		.btn_secondary {
+			background-color: $blue50;
+			border: 1px solid $blue50;
+			color: $gray04;
+
+			&:hover {
+				background-color: $white;
+				color: $blue50;
+			}
+		}
+	}
 }

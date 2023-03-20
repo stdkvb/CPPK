@@ -1,5 +1,7 @@
-import { takeControlAccordion, takeControlModals, takeControlForms, takeControlCookie } from './takeControl'
+import { takeControlAccordion, takeControlModals, takeControlForms, takeControlCookie, takeControlYandexMap } from './takeControl'
 import CounterItemController from './ElementsControllers/CounterItemController.js'
+
+takeControlYandexMap()
 
 new CounterItemController({
 	countersElementsWrapperSelector: '.about-us__text-container',
@@ -34,6 +36,7 @@ takeControlModals('.open-modal', '.modal-close', {
 
 takeControlForms()
 takeControlCookie('.cookie-container', '.cookie-accept')
+
 
 const eventsSwiper = new Swiper('.events', {
 	slidesPerView: 'auto',
@@ -467,15 +470,6 @@ takeControlAccordion('.direction__filters', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
-// Btn "Show-more"
-const clientsElements = document.querySelector('.clients')
-const moreButton = document.querySelector('.sub-wrapper__more > .btn_primary_blue')
-if (moreButton !== null) {
-	moreButton = addEventListener('click', () => {
-		clientsElements.classList.add('active')
-	})
-}
-
 // Video
 const playButton = document.querySelector('.video-controler')
 const videoContainer = document.querySelector('.video-container video')
@@ -520,12 +514,12 @@ function customSelect(id) {
 
 		for (j = 1; j < ll; j++) {
 			/* for each option in the original select element,
-    create a new DIV that will act as an option item: */
+	create a new DIV that will act as an option item: */
 			c = document.createElement('DIV')
 			c.innerHTML = selElmnt.options[j].innerHTML
 			c.addEventListener('click', function (e) {
 				/* when an item is clicked, update the original select box,
-        and the selected item: */
+		and the selected item: */
 				let y
 				let i
 				let k
@@ -559,7 +553,7 @@ function customSelect(id) {
 		x[i].appendChild(b)
 		a.addEventListener('click', function (e) {
 			/* when the select box is clicked, close any other select boxes,
-      and open/close the current select box: */
+	  and open/close the current select box: */
 			e.stopPropagation()
 			closeAllSelect(this)
 			this.nextSibling.classList.toggle('select-hide')

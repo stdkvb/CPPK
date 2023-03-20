@@ -19,7 +19,25 @@
 				<p>Воспользуйтесь основным меню или поиском. Мы уверены, что вы найдете то, что искали</p>
 			</div>
 			<div class="error-page__search">
+				<form>
+					@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
+					@@include('components/ui/_select.html', {
+					class: 'custom-select_secondary',
+					placeholder: 'Поиск по программам',
+					selectItems: [
+					{ text: 'Программа 1',
+					value: 'Программа 1'
+					},
+					{ text: 'Программа 2',
+					value: 'Программа 2'
+					},
+					{ text: 'Программа 3',
+					value: 'Программа 3'
+					},
+					]
+					})
 
+				</form>
 			</div>
 
 
