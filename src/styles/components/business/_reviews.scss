@@ -68,6 +68,7 @@
 				filter: grayscale(100%);
 				max-width: 235px;
 				max-height: 330px;
+				transition: filter $transitionDuration;
 
 				&:hover {
 					filter: unset;
