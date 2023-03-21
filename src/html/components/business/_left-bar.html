@@ -1,254 +1,33 @@
 <div id="left-bar" class="left-bar element-animation element-animation__fromLeft">
 	@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
-	<div class="menu" id="menu">
-		<a class="link close-btn"></a>
-		<!-- <div class="menu__accordion accordion">
-			<div class="accordion__list">
-				<div class="accordion__item">
-					<div class="accordion__toggle">
-						<span>Повышение квалификации</span>
-						<div>
-							<button class="accordion-icon"></button>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
-						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
-						<a class="link">Специалист по метрологии</a>
-						<a class="link">Транспорт/Безопасность дорожного движения</a>
-						<a class="link">Бережливое производство</a>
-						<a class="link">Бухгалтерия</a>
-						<a class="link">Госзакупки</a>
-						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
-						<a class="link">Драгоценные металлы</a>
-						<a class="link">Инженерные изыскания</a>
-						<a class="link">Комплексная защита объектов информатизации</a>
-						<a class="link">Ландшафтный дизайн</a>
-						<a class="link">Маркетинг</a>
-						<a class="link">Охрана труда</a>
-						<a class="link">Повышение производительности труда</a>
-						<a class="link">Пожарная безопасность</a>
-						<a class="link">Проектирование</a>
-						<a class="link">Радиационная и атомная безопасность</a>
-						<a class="link">Строительство</a>
-						<a class="link">Технический английский язык</a>
-						<a class="link">Транспортная безопасность</a>
-						<a class="link">Управление персоналом и кадры</a>
-						<a class="link">Экологическая безопасность</a>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__toggle">
-						<span>Профессиональная переподготовка</span>
-						<div>
-							<button class="accordion-icon"></button>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
-						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
-						<a class="link">Специалист по метрологии</a>
-						<a class="link">Транспорт/Безопасность дорожного движения</a>
-						<a class="link">Бережливое производство</a>
-						<a class="link">Бухгалтерия</a>
-						<a class="link">Госзакупки</a>
-						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
-						<a class="link">Драгоценные металлы</a>
-						<a class="link">Инженерные изыскания</a>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__toggle">
-						<span>Краткосрочное обучение</span>
-						<div>
-							<button class="accordion-icon"></button>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
-						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
-						<a class="link">Специалист по метрологии</a>
-						<a class="link">Транспорт/Безопасность дорожного движения</a>
-						<a class="link">Бережливое производство</a>
-						<a class="link">Бухгалтерия</a>
-						<a class="link">Госзакупки</a>
-						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
-						<a class="link">Драгоценные металлы</a>
-						<a class="link">Инженерные изыскания</a>
-						<a class="link">Комплексная защита объектов информатизации</a>
-						<a class="link">Ландшафтный дизайн</a>
-						<a class="link">Маркетинг</a>
-						<a class="link">Охрана труда</a>
-						<a class="link">Повышение производительности труда</a>
-						<a class="link">Пожарная безопасность</a>
-						<a class="link">Проектирование</a>
-						<a class="link">Радиационная и атомная безопасность</a>
-						<a class="link">Строительство</a>
-						<a class="link">Технический английский язык</a>
-						<a class="link">Транспортная безопасность</a>
-						<a class="link">Управление персоналом и кадры</a>
-						<a class="link">Экологическая безопасность</a>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__toggle">
-						<span>Рабочие специальности</span>
-						<div>
-							<button class="accordion-icon"></button>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
-						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
-						<a class="link">Специалист по метрологии</a>
-						<a class="link">Транспорт/Безопасность дорожного движения</a>
-						<a class="link">Бережливое производство</a>
-						<a class="link">Бухгалтерия</a>
-						<a class="link">Госзакупки</a>
-						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
-						<a class="link">Драгоценные металлы</a>
-						<a class="link">Инженерные изыскания</a>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__toggle">
-						<span>Курсы и семинары</span>
-						<div>
-							<button class="accordion-icon"></button>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
-						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
-						<a class="link">Специалист по метрологии</a>
-						<a class="link">Транспорт/Безопасность дорожного движения</a>
-						<a class="link">Бережливое производство</a>
-						<a class="link">Бухгалтерия</a>
-						<a class="link">Госзакупки</a>
-						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
-						<a class="link">Драгоценные металлы</a>
-						<a class="link">Инженерные изыскания</a>
-						<a class="link">Комплексная защита объектов информатизации</a>
-						<a class="link">Ландшафтный дизайн</a>
-						<a class="link">Маркетинг</a>
-						<a class="link">Охрана труда</a>
-						<a class="link">Повышение производительности труда</a>
-						<a class="link">Пожарная безопасность</a>
-						<a class="link">Проектирование</a>
-						<a class="link">Радиационная и атомная безопасность</a>
-						<a class="link">Строительство</a>
-						<a class="link">Технический английский язык</a>
-						<a class="link">Транспортная безопасность</a>
-						<a class="link">Управление персоналом и кадры</a>
-						<a class="link">Экологическая безопасность</a>
-					</div>
-				</div>
-				<div class="accordion__item">
-					<div class="accordion__toggle">
-						<span>Стажировка</span>
-						<div>
-							<button class="accordion-icon"></button>
-						</div>
-					</div>
-					<div class="accordion__content">
-						<a class="link">Деятельность учителя по формированию функциональной грамотности школьников</a>
-						<a class="link">Поведенческий аудит безопасности (ПАБ)</a>
-						<a class="link">Специалист по метрологии</a>
-						<a class="link">Транспорт/Безопасность дорожного движения</a>
-						<a class="link">Бережливое производство</a>
-						<a class="link">Бухгалтерия</a>
-						<a class="link">Госзакупки</a>
-						<a class="link">Гражданская оборона и чрезвычайные ситуации</a>
-						<a class="link">Драгоценные металлы</a>
-						<a class="link">Инженерные изыскания</a>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<ul>
-			<li><a class="link link_secondary" href="/">Обучение</a></li>
-			<li><a class="link link_secondary" href="/">О центре</a></li>
-			<li><a class="link link_secondary" href="/">Контакты</a></li>
-			<li><a class="link link_secondary" href="/">Проекты</a></li>
-			<li><a class="link link_secondary" href="/">Сотрудничество</a></li>
-			<li><a class="link link_secondary" href="/">Мероприятия</a></li>
-		</ul>
-		<a href="tel:+73472009690" class="link link_secondary menu__phone">8-800-233-22-22</a>
-		<div class="menu__social">
-			<a href="/" class="link link-icon link-icon_vk"></a>
-			<a href="/" class="link link-icon link-icon_youtube"></a>
-		</div>
-	</div>
 	<ul>
 		<li class="service-menu-link">
 			<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg);"></a>
-			@@include('components/business/profile/_profile.html')
-			<!-- @@include('components/business/profile/_recovery.html') -->
-			<!-- @@include('components/business/profile/_recovery-confirmation.html') -->
-			<!-- @@include('components/business/profile/_recovery-new-password.html') -->
-			<!-- @@include('components/business/profile/_recovery-success.html') -->
 		</li>
 		<li class="service-menu-link">
 			<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg);"></a>
-			<div class="service-menu" id="vr-menu">
-				<a class="link close-btn "><span class="link-arrow"></span>Закрыть</a>
-				<h2>VR</h2>
-				<img src="@images/remote-learning.png">
-				<p>VR</p>
-					@@include('components/ui/_button.html', {class: 'btn_narrow', children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
-			</div>
 		</li>
 		<li class="service-menu-link">
 			<a class="link link-icon" id="rl-btn" style="background-image: url(@icons/laptop.svg);"></a>
-			<div class="service-menu" id="rl-menu">
-				<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
-				<h2>Дистанционное обучение</h2>
-				<img src="@images/remote-learning.png">
-				<p>Мы поможем Вам учиться в комфортной
-					для Вас среде. Вы сможете осваивать новые направления и возможности, совмещая
-					с другими видами деятельности</p>
-					@@include('components/ui/_button.html', {class: 'btn_narrow', children: 'Подробнее<span class="btn-arrow"></span>', href: '/'})
-			</div>
 		</li>
 	</ul>
 	<ul>
 		<li>
 			<a class="link link-icon" id="search-btn" style="background-image: url(@icons/search.svg);"></a>
-			<div class="search-menu" id="search-menu">
-				<a class="link close-btn"></a>
-				<form class="top-container">
-					@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
-					@@include('components/ui/_select.html', {
-						class: 'custom-select_secondary',
-						placeholder: 'Поиск по категориям',
-						selectItems: [
-							{	text: 'Категория 1',
-								value: 'Категория 1'
-							},
-							{	text: 'Категория 2',
-								value: 'Категория 2'
-							},
-							{	text: 'Категория 3',
-							value: 'Категория 3'
-							},
-						]
-					})
-
-				</form>
-				<h2>Популярные запросы</h2>
-				<ul>
-					<li><a class="link link_secondary" href="/">Деятельность учителя по формированию функциональной грамотности школьников</a></li>
-					<li><a class="link link_secondary" href="/">Поведенческий аудит безопасности (ПАБ)</a></li>
-					<li><a class="link link_secondary" href="/">Специалист по метрологии</a></li>
-					<li><a class="link link_secondary" href="/">Транспорт/Безопасность дорожного движения</a></li>
-					<li><a class="link link_secondary" href="/">Бережливое производство</a></li>
-				</ul>
-			</div>
 		</li>
 		<li>
 			<a class="link link-icon" id="mail-btn" style="background-image: url(@icons/mail.svg)"></a>
 		</li>
 	</ul>
+	@@include('components/business/_menu.html')
+	@@include('components/business/profile/_profile.html')
+	@@include('components/business/profile/_recovery.html')
+	@@include('components/business/profile/_recovery-confirmation.html')
+	@@include('components/business/profile/_recovery-new-password.html')
+	@@include('components/business/profile/_recovery-success.html')
+	@@include('components/business/_vr-menu.html')
+	@@include('components/business/_rl-menu.html')
+	@@include('components/business/_search-menu.html')
 	@@include('components/business/_call-request.html')
 	@@include('components/business/_learning-plan-request.html')
 	@@include('components/business/_write-to-us.html')
