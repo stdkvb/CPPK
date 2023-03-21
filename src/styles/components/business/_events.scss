@@ -1,14 +1,9 @@
 .events {
-	margin-top: 9.4em;
-	@include tablet {
-		margin-top: 5.4em;
-	}
-
 	.swiper-slide {
 		padding: 1.5em 2.25em;
 		width: 17.5em;
 		background-color: $gray04;
-		min-height: 11.3em;
+		min-height: 170px;
 		display: flex;
 		flex-direction: column;
 		text-align: left;
@@ -25,7 +20,6 @@
 			color: $white;
 			.link {
 				color: $white;
-				border-bottom: solid 1px $white;
 			}
 		}
 
@@ -42,17 +36,15 @@
 			margin-right: 0.25em;
 		}
 
-		h4 {
+		.link {
 			@include regular-16;
 			margin-top: 0.5em;
-		}
-
-		.link {
 			width: fit-content;
 			text-align: left;
 			color: $gray60;
 			margin-top: 2em;
-			border-bottom: solid 1px $gray60;
+			text-decoration: underline;
+
 		}
 	}
 }

@@ -114,27 +114,3 @@ p {
 		}
 	}
 }
-
-.page__background {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	min-height: 1095px;
-	width: 100vw;
-	filter: brightness(40%);
-	overflow: hidden;
-
-	video {
-		width: 100%;
-		min-width: 2250px;
-		@include tablet {
-			width: unset;
-			min-width: 1400px;
-		}
-	}
-
-	&_sub {
-		min-height: none;
-		filter: none;
-	}
-}

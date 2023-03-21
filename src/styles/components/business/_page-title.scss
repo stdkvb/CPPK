@@ -1,17 +1,18 @@
 .page-title {
-	margin-top: 16em;
+	height: calc(100vh - 280px);
 	padding-left: 310px;
 	padding-right: 100px;
 	background-color: transparent;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 
 	@include desktop_base {
 		margin-left: 0;
 	}
 
 	@include tablet {
-		margin-top: 8.8em;
+		height: calc(100vh - 322px);
 	}
 
 	&_secondary {

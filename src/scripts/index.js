@@ -248,31 +248,35 @@ burgerBtn.addEventListener('click', () => {
 	menu.classList.add('menu_active')
 })
 
-callRequestBtn.addEventListener('click', () => {
-	closeAllMenu()
-	callRequestMenu.classList.add('service-menu_active')
-})
+if (callRequestBtn !== null) {
+	callRequestBtn.addEventListener('click', () => {
+		closeAllMenu()
+		callRequestMenu.classList.add('service-menu_active')
+	})
+}
 
-learningPlanRequestBtn.addEventListener('click', () => {
-	closeAllMenu()
-	learningPlanRequestMenu.classList.add('service-menu_active')
-})
+if (learningPlanRequestBtn !== null) {
+	learningPlanRequestBtn.addEventListener('click', () => {
+		closeAllMenu()
+		learningPlanRequestMenu.classList.add('service-menu_active')
+	})
+}
 
-profileBtn.addEventListener('mouseenter', () => {
+profileBtn.addEventListener('click', () => {
 	closeAllMenu()
 	disableServiceMenuIcons()
 	profileBtn.classList.remove('link-icon_disable')
 	profileMenu.classList.add('service-menu_active')
 })
 
-vrBtn.addEventListener('mouseenter', () => {
+vrBtn.addEventListener('click', () => {
 	closeAllMenu()
 	disableServiceMenuIcons()
 	vrBtn.classList.remove('link-icon_disable')
 	vrMenu.classList.add('service-menu_active')
 })
 
-rlBtn.addEventListener('mouseenter', () => {
+rlBtn.addEventListener('click', () => {
 	closeAllMenu()
 	disableServiceMenuIcons()
 	rlBtn.classList.remove('link-icon_disable')
@@ -392,18 +396,18 @@ signinBtn.addEventListener('click', () => {
 })
 
 // menu accordeon
-takeControlAccordion('.menu__accordion', '.accordion__list', {
-	accordionItemSelector: '.accordion__item',
-	accordionItemTogglerSelector: '.accordion__toggle',
-	accordionItemContentSelector: '.accordion__content',
-	accordionItemActiveClass: 'accordion__item_active'
-})
+// takeControlAccordion('.menu__accordion', '.accordion__list', {
+// 	accordionItemSelector: '.accordion__item',
+// 	accordionItemTogglerSelector: '.accordion__toggle',
+// 	accordionItemContentSelector: '.accordion__content',
+// 	accordionItemActiveClass: 'accordion__item_active'
+// })
 
-const menuToggle = document.querySelector('.accordion__toggle')
-const subMenu = document.querySelector('.accordion__content')
-menuToggle.addEventListener('mouseover', () => {
-	subMenu.classList.add('accordion__content_active')
-})
+// const menuToggle = document.querySelector('.accordion__toggle')
+// const subMenu = document.querySelector('.accordion__content')
+// menuToggle.addEventListener('mouseover', () => {
+// 	subMenu.classList.add('accordion__content_active')
+// })
 
 // sub-menu accordeon
 takeControlAccordion('.sub-menu', '.sub-menu__list', {
