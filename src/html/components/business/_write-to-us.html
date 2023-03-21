@@ -1,0 +1,13 @@
+<div class="service-menu service-menu_gray" id="mail-menu">
+	<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
+	<h2>Напишите нам</h2>
+	<div class="service-menu__form active mail">
+		<form>
+			@@include('components/ui/_input-text.html', {placeholder: 'ФИО', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+			@@include('components/ui/_input-email.html', {name: 'email', required: true})
+			@@include('components/ui/_textarea.html', {placeholder: 'Введите ваше сообщение', name: 'message'})
+			@@include('components/ui/_checkbox.html', {label: 'Я даю свое согласие на <a href="#">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
+			@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type: 'submit'})
+		</form>
+	</div>
+</div>

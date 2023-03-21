@@ -2,11 +2,11 @@ textarea {
 	transition: all $transitionDuration;
 	width: 100%;
 	min-height: 7.6875rem;
-	padding: 1.0625rem .75rem;
+	padding: 1.67em 1.8em;
 	border: 1px solid $gray20;
 	outline: none;
 	resize: none;
-
+	@include regular-14;
 	color: $white;
 	background-color: transparent;
 
@@ -39,7 +39,7 @@ textarea {
 }
 
 .textarea__container {
-	font-size: .875rem;
+
 	position: relative;
 	width: 100%;
 	display: flex;

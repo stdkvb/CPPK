@@ -3,7 +3,7 @@ input {
 	padding: 1.67em 1.8em;
 	border: 1px solid $gray20;
 	outline: none;
-
+	@include regular-14;
 	color: $white;
 	background-color: transparent;
 
@@ -19,7 +19,7 @@ input {
 }
 
 .input__container {
-	font-size: .875rem;
+	@include regular-14;
 	position: relative;
 	width: 100%;
 	display: flex;

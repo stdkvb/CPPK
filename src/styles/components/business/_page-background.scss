@@ -8,11 +8,10 @@
 	overflow: hidden;
 
 	video {
-		width: 100%;
-		@include desktop_medium {
-			width: unset;
-			height: 100vh;
-		}
+		 min-height: 100vh;
+		 @media screen and (min-width: 2300px) {
+			width: 100%;
+		 }
 	}
 
 	&_sub {
@@ -20,3 +19,4 @@
 		filter: none;
 	}
 }
+

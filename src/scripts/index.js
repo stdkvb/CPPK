@@ -205,6 +205,7 @@ const rlMenu = document.getElementById('rl-menu')
 const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.getElementById('search-menu')
 const mailBtn = document.getElementById('mail-btn')
+const mailMenu = document.getElementById('mail-menu')
 const callRequestBtn = document.getElementById('call-request-btn')
 const callRequestMenu = document.getElementById('call-request-menu')
 const learningPlanRequestBtn = document.getElementById('learning-plan-request-btn')
@@ -216,8 +217,9 @@ const bottomSearchButton = document.getElementById('bottom-search-btn')
 const bottomBurgerButton = document.getElementById('bottom-burger-btn')
 
 function closeAllMenu() {
-	searchMenu.classList.remove('search-menu_active')
+	mailMenu.classList.remove('service-menu_active')
 	menu.classList.remove('menu_active')
+	searchMenu.classList.remove('search-menu_active')
 	profileMenu.classList.remove('service-menu_active')
 	vrMenu.classList.remove('service-menu_active')
 	rlMenu.classList.remove('service-menu_active')
@@ -287,6 +289,13 @@ searchBtn.addEventListener('click', () => {
 	closeAllMenu()
 	searchBtn.classList.remove('link-icon_disable')
 	searchMenu.classList.add('search-menu_active')
+})
+
+mailBtn.addEventListener('click', () => {
+	closeAllMenu()
+	disableServiceMenuIcons()
+	mailBtn.classList.remove('link-icon_disable')
+	mailMenu.classList.add('service-menu_active')
 })
 
 // bottom bar
