@@ -1,0 +1,97 @@
+.search-menu {
+	position: absolute;
+	top: 0;
+	left: -100vw;
+	width: 100vw;
+	height: 100vh;
+	background-color: $gray80;
+	padding: 5em 5em 5em 10em;
+	visibility: visible;
+	transition: all $transitionDuration;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	@include tablet {
+		padding: 2em 1.5em 	5em 1.5em;
+	}
+
+	&_active {
+		transform: translateX(100vw);
+	}
+
+	.close-btn {
+		position: absolute;
+		top: 23px;
+		left: 23px;
+		width: 2.125em;
+		height: 2.125em;
+		background-image: url(@icons/close.svg);
+		@include tablet {
+			display: none;
+		}
+	}
+
+	.top-container {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		margin-bottom: 80px;
+		@include desktop_huge {
+			gap: 0;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 20px;
+		}
+	}
+
+	.search-bar {
+		margin: 0;
+		border: solid 1px $gray30;
+		max-width: 1135px;
+		@include tablet {
+			padding-right: 1.5em;
+		}
+		@include desktop_huge {
+			margin: 0 0 1em 0;
+		}
+
+		input {
+			color: $gray30;
+			@include tablet {
+				padding: 0 1.5em;
+			}
+		}
+
+		button {
+			background-image: url(@icons/search-bar-button-white.svg);
+		}
+	}
+
+	.custom-select {
+		max-width: 300px;
+	}
+
+	h2 {
+		color: $white;
+		@include medium-28;
+		margin-bottom: 1.7em;
+		@include tablet {
+			@include medium-24;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
+		.link {
+			display: block;
+			width: fit-content;
+			height: unset;
+		}
+	}
+}

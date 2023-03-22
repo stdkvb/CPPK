@@ -14,7 +14,7 @@
 	backdrop-filter: blur(20px);
 	z-index: 10;
 	@include tablet {
-		visibility: hidden;
+		width: 0;
 	}
 	&_transparent {
 		background-color: transparent;
@@ -48,216 +48,15 @@
 		&_disable {
 			opacity: 0.2;
 		}
+
+		@include tablet {
+			display: none;
+		}
 	}
 
 	ul {
 		display: flex;
 		flex-direction: column;
 		gap: 1.25em;
-	}
-
-	.menu {
-		position: absolute;
-		top: 0;
-		left: -100vw;
-		width: 100vw;
-		height: 100vh;
-		background-color: $gray80;
-		padding: 5em 5em 5em 10em;
-		visibility: visible;
-		transition: all $transitionDuration;
-		overflow-y: scroll;
-		-ms-overflow-style: none;
-  	scrollbar-width: none;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-		@include tablet {
-			padding: 2em 1.5em 	5em 1.5em;
-		}
-
-		&_active {
-			transform: translateX(100vw);
-		}
-
-		.close-btn {
-			position: sticky;
-			margin-left: -140px;
-			margin-top: -60px;
-			top: -60px;
-			width: 21px;
-			height: 21px;
-			background-image: url(@icons/close.svg);
-			background-position: center;
-			background-repeat: no-repeat;
-			@include tablet {
-				display: none;
-			}
-		}
-
-		ul {
-			margin-top: 48px;
-			max-width: 486px;
-			.link {
-				@include regular-24;
-				@include tablet {
-					@include regular-16;
-				}
-			}
-		}
-
-		@include min_tablet{
-			.menu__accordion {
-				position: relative;
-			}
-
-			.accordion__toggle {
-				span {
-					@include regular-28;
-					color: $gray30;
-				}
-			}
-
-			.accordion__item_active {
-				.accordion__toggle {
-					span {
-						color: $white;
-					}
-				}
-				.accordion__content {
-					left: 486px;
-					opacity: 1;
-				}
-			}
-
-			.accordion__content {
-				position: absolute;
-				top: 0;
-				// left: 486px;
-				left: 0;
-				opacity: 0;
-				.link {
-					@include regular-18;
-				}
-			}
-		}
-
-		.menu__phone {
-			width: fit-content;
-			@include regular-22;
-			color: $white;
-			height: unset;
-			margin-top: 3.2em;
-			margin-bottom: 0.75em;
-		}
-
-		.menu__social {
-			margin-top: 0.25em;
-			gap: 1em;
-			display: flex;
-
-			.link-icon {
-				display: flex;
-				align-items: center;
-				line-height: 0;
-				width: 1.5em;
-				height: 1.5em;
-				position: relative;
-			}
-		}
-	}
-
-	.search-menu {
-		position: absolute;
-		top: 0;
-		left: -100vw;
-		width: 100vw;
-		height: 100vh;
-		background-color: $gray80;
-		padding: 5em 5em 5em 10em;
-		visibility: visible;
-		transition: all $transitionDuration;
-		overflow-y: scroll;
-		-ms-overflow-style: none;
-  	scrollbar-width: none;
-		&::-webkit-scrollbar {
-			display: none;
-		}
-		@include tablet {
-			padding: 2em 1.5em 	5em 1.5em;
-		}
-
-		&_active {
-			transform: translateX(100vw);
-		}
-
-		.close-btn {
-			position: absolute;
-			top: 23px;
-			left: 23px;
-			width: 2.125em;
-			height: 2.125em;
-			background-image: url(@icons/close.svg);
-			@include tablet {
-				display: none;
-			}
-		}
-
-		.top-container {
-			display: flex;
-			gap: 30px;
-			align-items: center;
-			margin-bottom: 80px;
-			@include desktop_huge {
-				gap: 0;
-				flex-direction: column;
-				align-items: flex-start;
-				margin-bottom: 20px;
-			}
-		}
-
-		.search-bar {
-			margin: 0;
-			border: solid 1px $gray30;
-			max-width: 1135px;
-			@include tablet {
-				padding-right: 1.5em;
-			}
-			@include desktop_huge {
-				margin: 0 0 1em 0;
-			}
-
-			input {
-				color: $gray30;
-				@include tablet {
-					padding: 0 1.5em;
-				}
-			}
-
-			button {
-				background-image: url(@icons/search-bar-button-white.svg);
-			}
-		}
-
-		.custom-select {
-			max-width: 300px;
-		}
-
-		h2 {
-			color: $white;
-			@include medium-28;
-			margin-bottom: 1.7em;
-		}
-
-		ul {
-			gap: 1em;
-
-			.link {
-				display: block;
-				width: fit-content;
-				height: unset;
-			}
-		}
-
 	}
 }
