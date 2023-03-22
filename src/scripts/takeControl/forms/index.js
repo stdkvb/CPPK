@@ -54,6 +54,12 @@ const takeControlForms = () => {
 		onSubmit: () => {
 		}
 	})
+
+	takeControlForm('.subscribe', 'form', {
+		elementsNames: ['email', 'agreement'],
+		onSubmit: () => {
+		}
+	})
 }
 
 export default takeControlForms

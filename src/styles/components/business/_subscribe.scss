@@ -5,8 +5,9 @@
 	background-color: $blue50;
 	display: flex;
 	justify-content: space-between;
+	gap: 20px;
 
-	@include tablet {
+	@include desktop_small {
 		flex-direction: column;
 		gap: 40px;
 	}
@@ -20,48 +21,51 @@
 	}
 
 	.subscribe__form {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
+		display: grid;
+		grid-template-areas:
+			'input btn'
+			'checkbox checkbox';
 		gap: 20px;
+		@include mobile {
+			grid-template-areas:
+			'input'
+			'checkbox'
+			'btn';
+		}
 
-		div {
-			display: flex;
-			gap: 32px;
+		.input__container {
+			grid-area: input;
+			width: 413px;
 
-			.input__container {
-				width: 413px;
-
-				@include tablet {
-					width: 100%;
-				}
-
-				input {
-					width: 100%;
-					border: solid 1px $white;
-				}
+			@include tablet {
+				width: 100%;
 			}
 
-			.btn {
-				display: flex;
-				justify-content: center;
-				width: fit-content;
-				@include mobile {
-					width: 100%;
-				}
-			}
-
-			@include desktop_huge {
-				flex-direction: column;
-				gap: 20px;
-				align-items: flex-end;
+			input {
+				width: 100%;
+				border: solid 1px $white;
 			}
 		}
 
-		@include tablet {
-			align-items: unset;
+		.btn {
+			grid-area: btn;
+			display: flex;
+			justify-content: center;
+			width: fit-content;
+			@include mobile {
+				width: 100%;
+			}
+		}
+
+		.checkbox {
+			grid-area: checkbox;
+			justify-self: flex-end;
+			@include desktop_small {
+				justify-self: unset;
+			}
 		}
 	}
+
 
 	h3 {
 		@include medium-24;
