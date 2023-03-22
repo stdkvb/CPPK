@@ -1,9 +1,13 @@
 .events {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	height: calc(100vh - 453px);
 	.swiper-slide {
 		padding: 1.5em 2.25em;
 		width: 17.5em;
 		background-color: $gray04;
-		min-height: 170px;
+		height: unset;
 		display: flex;
 		flex-direction: column;
 		text-align: left;

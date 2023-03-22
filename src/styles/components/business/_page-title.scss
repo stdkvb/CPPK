@@ -1,5 +1,6 @@
 .page-title {
-	height: calc(100vh - 280px);
+	// height: calc(70vh - 110px);
+	height: 343px;
 	padding-left: 310px;
 	padding-right: 100px;
 	background-color: transparent;
@@ -11,9 +12,9 @@
 		margin-left: 0;
 	}
 
-	@include tablet {
-		height: calc(100vh - 322px);
-	}
+	// @include tablet {
+	// 	height: calc(100vh - 322px);
+	// }
 
 	&_secondary {
 		margin-top: 200px;

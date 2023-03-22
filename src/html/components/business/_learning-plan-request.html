@@ -5,7 +5,7 @@
 		<form>
 			@@include('components/ui/_input-text.html', {placeholder: 'Ваше имя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
-			@@include('components/ui/_checkbox.html', {label: 'Я даю свое согласие на <a href="#">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
+			@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
 			@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type: 'submit'})
 		</form>
 	</div>

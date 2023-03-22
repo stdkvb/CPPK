@@ -38,8 +38,8 @@
 		}
 
 		.swiper-slide {
+			min-height: 300px;
 			position: relative;
-			height: 300px;
 			width: 570px;
 			padding: 48px 48px 41px 48px;
 			background-color: $white;
@@ -61,6 +61,7 @@
 				grid-area: text;
 				color: $gray90;
 				transition: color $transitionDuration;
+				margin-bottom: 20px;
 
 				@include tablet {
 					@include medium-16;
@@ -93,6 +94,8 @@
 				opacity: 0;
 				transition: opacity $transitionDuration;
 				filter: brightness(40%);
+				height: 100%;
+				object-fit: cover;
 			}
 
 			&:hover {

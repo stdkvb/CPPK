@@ -13,3 +13,6 @@
 		content: url(@icons/swiper-arrow.svg) !important;
 	}
 }
+.swiper-slide {
+	height: unset !important;
+}

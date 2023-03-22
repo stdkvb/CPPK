@@ -70,6 +70,23 @@
 			border-color: $error40 !important;
 		}
 	}
+
+	&_white {
+		color: $white;
+		a {
+			color: $white;
+			text-decoration: underline;
+		}
+		.custom-checkbox {
+			border: solid 1px $white;
+		}
+		input[type=checkbox]:checked ~ .custom-checkbox {
+			border-color: $white;
+			&::before {
+				content: url(@icons/checbox-content-white.svg);
+			}
+		}
+	}
 }
 
 .checkboxes-group {

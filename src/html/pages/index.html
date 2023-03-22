@@ -14,22 +14,24 @@
 			@@include('components/ui/_button.html', {children: 'Перейти к программам<span class="btn-arrow"></span>',
 			href: '/'})
 		</section>
-		<section class="events swiper element-animation element-animation__fromRight" dir="rtl">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<p><span>12</span>февраля</p>
-					<a class="link">Набор в группу тренинг тренеров</a>
-					<!-- <a class="link">Подробнее</a> -->
-				</div>
-				<div class="swiper-slide">
-					<p><span>12</span>февраля</p>
-					<a class="link">Набор в группу тренинг тренеров</a>
-					<!-- <a class="link">Подробнее</a> -->
-				</div>
-				<div class="swiper-slide">
-					<p><span>12</span>февраля</p>
-					<a class="link">Набор в группу тренинг тренеров</a>
-					<!-- <a class="link">Подробнее</a> -->
+		<section class="events element-animation element-animation__fromRight" dir="rtl">
+			<div class="swiper" >
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<p><span>18</span>февраля</p>
+						<a class="link">Набор в группу тренинг тренеров</a>
+						<!-- <a class="link">Подробнее</a> -->
+					</div>
+					<div class="swiper-slide">
+						<p><span>24</span>февраля</p>
+						<a class="link">Набор в группу Специалист в сфере закупок</a>
+						<!-- <a class="link">Подробнее</a> -->
+					</div>
+					<div class="swiper-slide">
+						<p><span>03</span>марта</p>
+						<a class="link">Набор в группу Оказание первой помощи (по новым правилам)</a>
+						<!-- <a class="link">Подробнее</a> -->
+					</div>
 				</div>
 			</div>
 		</section>
@@ -288,8 +290,7 @@
 						<img src="@images/news-1.png">
 					</a>
 					<a class="swiper-slide" href="/">
-						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников
-							промышленных предприятий</h3>
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
 						<span>12 января 2023</span>
 						<span class="link-icon link-icon_arrow"></span>
 					</a>
@@ -304,8 +305,7 @@
 						<span class="link-icon link-icon_arrow"></span>
 					</a>
 					<a class="swiper-slide" href="/">
-						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников
-							промышленных предприятий</h3>
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
 						<span>12 января 2023</span>
 						<span class="link-icon link-icon_arrow"></span>
 					</a>
@@ -343,9 +343,11 @@
 					клиентов по подписке</p>
 			</div>
 			<form class="subscribe__form">
-				@@include('components/ui/_input-email.html', {name: 'email'})
-				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type:
-				'submit'})
+				<div>
+					@@include('components/ui/_input-email.html', {name: 'email'})
+					@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type: 'submit'})
+				</div>
+				@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
 			</form>
 		</section>
 	</main>

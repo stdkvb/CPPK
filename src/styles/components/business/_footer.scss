@@ -25,9 +25,13 @@ footer {
 				gap: 0.75em;
 
 				span {
-					@include regular-24;
-					color: $white;
-					margin-bottom: 0.25em;
+					color: $gray20;
+					@include regular-16;
+					&:first-of-type {
+						@include regular-24;
+						color: $white;
+						margin-bottom: 0.25em;
+					}
 				}
 
 				.footer__social {

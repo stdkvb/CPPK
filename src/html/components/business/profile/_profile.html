@@ -4,18 +4,18 @@
 		<h2 id="signup-btn">Регистрация</h2>
 		<h2 class="active" id="signin-btn">Авторизация</h2>
 	</div>
-	<div class="service-menu__form signup" id="signup">
+	<div class="service-menu__form signup element-animation element-animation__fromLeft" id="signup">
 		<form>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {name: 'password', errorMessage: 'Придумайте пароль', required: true, id: 'password'})
 			@@include('components/ui/_input-password.html', {placeholder: 'Повторите пароль', errorMessage: 'Повторите пароль', name: 'repeatpassword', required: true})
 			@@include('components/ui/_input-text.html', {placeholder: 'ФИО', errorMessage: 'Введите ваше имя', name: 'name', required: true})
 			@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
-			@@include('components/ui/_checkbox.html', {label: 'Я даю свое согласие на <a href="#">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: 'true'})
+			@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: 'true'})
 			@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
 		</form>
 	</div>
-	<div class="service-menu__form active signin" id="signin">
+	<div class="service-menu__form active signin element-animation element-animation__fromLeft" id="signin">
 		<form>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {errorMessage: 'Введите пароль', name: 'password', required: true})
