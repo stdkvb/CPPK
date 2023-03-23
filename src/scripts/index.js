@@ -41,9 +41,14 @@ takeControlForms()
 takeControlCookie('.cookie-container', '.cookie-accept')
 
 
-const eventsSwiper = new Swiper('.events', {
+const eventsSwiper = new Swiper('.events__container', {
 	slidesPerView: 'auto',
-	spaceBetween: 0
+	spaceBetween: 0,
+	breakpoints: {
+		992: {
+			slidesPerView: 3
+		}
+	}
 })
 
 const partnersSwiper = new Swiper('.partners', {

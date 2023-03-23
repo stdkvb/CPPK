@@ -1,20 +1,16 @@
 .page-title {
-	// height: calc(70vh - 110px);
-	height: 343px;
+	position: absolute;
+	top: 30vh;
 	padding-left: 310px;
-	padding-right: 100px;
 	background-color: transparent;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	@include desktop_base {
+	@include desktop_large {
 		margin-left: 0;
+		top: 20vh;
 	}
-
-	// @include tablet {
-	// 	height: calc(100vh - 322px);
-	// }
+	@include tablet {
+		margin-left: 0;
+		top: 15vh;
+	}
 
 	&_secondary {
 		margin-top: 200px;

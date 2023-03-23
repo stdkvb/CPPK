@@ -10,6 +10,7 @@
 	transition: all $transitionDuration;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 
 	&:hover {
 		background-color: $white;
