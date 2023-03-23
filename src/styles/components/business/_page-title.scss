@@ -13,8 +13,13 @@
 	}
 
 	&_secondary {
+		position: unset;
 		margin-top: 200px;
 		padding-left: 210px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
 		@include desktop_extra_small {
 			padding-left: 130px;
 		}
@@ -24,6 +29,7 @@
 			padding-right: 24px;
 		}
 		h1 {
+			max-width: 1200px;
 			@include medium-40;
 			@include tablet {
 				@include bold-24;
