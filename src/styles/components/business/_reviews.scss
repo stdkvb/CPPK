@@ -74,6 +74,9 @@
 					filter: unset;
 				}
 			}
+			&:hover {
+				cursor: pointer;
+			}
 		}
 		.swiper-button-prev {
 			top: 103px;
