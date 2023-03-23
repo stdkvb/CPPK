@@ -26,6 +26,7 @@
 
 	&_active {
 		transform: translateX(47.5em);
+		opacity: 1;
 		@include tablet {
 			transform: translateX(100vw);
 		}
@@ -93,10 +94,8 @@
 		}
 	}
 
-
 	&__form {
-		display: none;
-
+		display: block;
 		a {
 			@include regular-16;
 			color: $white;
@@ -114,7 +113,7 @@
 		}
 	}
 
-	.active {
-		display: block;
+	.disabled {
+		display: none;
 	}
 }

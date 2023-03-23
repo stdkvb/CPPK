@@ -394,14 +394,16 @@ const signin = document.getElementById('signin')
 signupBtn.addEventListener('click', () => {
 	signinBtn.classList.remove('active')
 	signupBtn.classList.add('active')
-	signin.classList.remove('active')
-	signup.classList.add('active')
+	signup.classList.remove('disabled')
+	signin.classList.add('disabled')
+	signin.classList.remove('element-show')
 })
 signinBtn.addEventListener('click', () => {
 	signupBtn.classList.remove('active')
 	signinBtn.classList.add('active')
-	signup.classList.remove('active')
-	signin.classList.add('active')
+	signin.classList.remove('disabled')
+	signup.classList.add('disabled')
+	signup.classList.remove('element-show')
 })
 
 // menu accordeon

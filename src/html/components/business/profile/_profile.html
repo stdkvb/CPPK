@@ -4,7 +4,7 @@
 		<h2 id="signup-btn">Регистрация</h2>
 		<h2 class="active" id="signin-btn">Авторизация</h2>
 	</div>
-	<div class="service-menu__form signup element-animation element-animation__fromLeft" id="signup">
+	<div class="service-menu__form disabled signup element-animation element-animation__fromLeft" id="signup">
 		<form>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {name: 'password', errorMessage: 'Придумайте пароль', required: true, id: 'password'})
@@ -15,7 +15,7 @@
 			@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
 		</form>
 	</div>
-	<div class="service-menu__form active signin element-animation element-animation__fromLeft" id="signin">
+	<div class="service-menu__form signin element-animation element-animation__fromLeft" id="signin">
 		<form>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {errorMessage: 'Введите пароль', name: 'password', required: true})

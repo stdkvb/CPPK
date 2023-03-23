@@ -25,21 +25,21 @@
 			@include medium-18;
 		}
 
-		.nav-bar__link:after {
-			display: block;
-			position: absolute;
-			left: 0;
-			width: 0px;
-			height: 8px;
-			bottom: 0;
-			background-color: $blue60;
-			content: "";
-			transition: width 0.3s ease-out;
-		}
+		// .nav-bar__link:after {
+		// 	display: block;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	width: 0;
+		// 	height: 8px;
+		// 	bottom: 0;
+		// 	background-color: $blue60;
+		// 	content: "";
+		// 	transition: width 0.3s ease-out;
+		// }
 
-		.nav-bar__link:hover:after {
-			width: 100%;
-		}
+		// .nav-bar__link:hover:after {
+		// 	width: 100%;
+		// }
 
 		.nav-bar__link_active {
 			@include medium-24;
