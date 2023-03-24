@@ -61,12 +61,18 @@
 		input {
 			color: $gray30;
 			@include tablet {
-				padding: 0 1.5em;
+				padding-left: 1em;
 			}
 		}
 
-		button {
+		&__submit {
 			background-image: url(@icons/search-bar-button-white.svg);
+		}
+
+		&__reset {
+			&:after {
+				content: url(@icons/search-reset-white.svg);
+			}
 		}
 	}
 
