@@ -10,10 +10,10 @@ class CheckboxInputController extends DefaultInputController {
 		this.isValid = !this._input.required || this._input.checked
 	}
 
-	clearField() {
-		this._input.checked = this._initialChecked
-		this.isValid = !this._input.required || this._input.checked
-	}
+	// clearField() {
+	// 	this._input.checked = this._initialChecked
+	// 	this.isValid = !this._input.required || this._input.checked
+	// }
 }
 
 export default CheckboxInputController

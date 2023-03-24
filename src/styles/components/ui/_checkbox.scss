@@ -6,6 +6,7 @@
 	flex-direction: row-reverse;
 	justify-content: flex-end;
 	gap: 0.85em;
+	position: relative;
 
 	input[type=checkbox] {
 		position: absolute;
@@ -59,15 +60,16 @@
 		}
 	}
 
+	.error-message {
+		@include errorMessageStyles;
+		position: absolute;
+		bottom: -20px;
+		left: 0;
+	}
+
 	&_invalid {
-		.label {
-			color: $error40 !important;
-			a {
-				color: $error40 !important;
-			}
-		}
-		.custom-checkbox {
-			border-color: $error40 !important;
+		.error-message {
+			display: block;
 		}
 	}
 
@@ -87,6 +89,8 @@
 			}
 		}
 	}
+
+
 }
 
 .checkboxes-group {

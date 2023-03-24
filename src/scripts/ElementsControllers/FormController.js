@@ -74,6 +74,7 @@ class FormController {
 		// }
 
 		form.addEventListener('submit', (event) => {
+			event.preventDefault()
 			this._submitHandler(event)
 		})
 
@@ -136,7 +137,6 @@ class FormController {
 		if (this._triggerInvalidFields()) {
 			return
 		}
-
 		this._options.onSubmit?.(event)
 
 		// this._clearForm()
