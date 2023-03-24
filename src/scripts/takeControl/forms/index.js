@@ -10,6 +10,7 @@ const takeControlForms = () => {
 	takeControlForm('.signin', 'form', {
 		elementsNames: ['email', 'password'],
 		onSubmit: () => {
+
 		}
 	})
 

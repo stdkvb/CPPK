@@ -395,6 +395,14 @@ menuCloseButtons.forEach((elem) => {
 	})
 })
 
+// close notification button
+const notificationCloseButtons = document.querySelectorAll('.notification__close')
+notificationCloseButtons.forEach((elem) => {
+	elem.addEventListener('click', () => {
+		elem.parentElement.classList.remove('notification_active')
+	})
+})
+
 // profile
 const signupBtn = document.getElementById('signup-btn')
 const signup = document.getElementById('signup')
