@@ -156,6 +156,37 @@ const reviewsCardsSwiper = new Swiper('.reviews__cards', {
 	}
 })
 
+const newsTabsSwiper = new Swiper('.news__tabs', {
+	slidesPerView: 2,
+	spaceBetween: 44,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		992: {
+			scrollbar: false,
+			spaceBetween: 80
+		}
+	}
+})
+
+const docsTabsSwiper = new Swiper('.documents__tabs', {
+	slidesPerView: 'auto',
+	spaceBetween: 44,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		draggable: true
+	},
+	breakpoints: {
+		1700: {
+			slidesPerView: 4,
+			// scrollbar: false,
+			spaceBetween: 80
+		}
+	}
+})
+
 const newsCardsSwiper = new Swiper('.news__cards', {
 	slidesPerView: 'auto',
 	spaceBetween: 4,
@@ -176,6 +207,8 @@ const newsCardsSwiper = new Swiper('.news__cards', {
 		}
 	}
 })
+
+
 
 const navBarSwiper = new Swiper('.nav-bar', {
 	slidesPerView: 'auto',
