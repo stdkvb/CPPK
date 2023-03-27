@@ -16,7 +16,9 @@
 		<section class="direction container">
 			@@include('components/business/_directory.html', {parent: 'Обучение', link: 'Повышение квалификации',
 				disabled: 'Пожарная безопасность'})
-			@@include('components/ui/_search-bar.html', { placeholder: 'Поиск по программам'})
+			<form>
+				@@include('components/ui/_search-bar.html', { placeholder: 'Поиск по программам'})
+			</form>
 			<div class="direction__right-bar">
 				<div class="direction__sticky-container">
 					<div class="direction__filters accordion">
@@ -41,7 +43,7 @@
 					<div class="aside-banner">
 						<h3>Нужна помощь в подборе программы обучения?</h3>
 						<p>Оставьте заявку на сайте или позвоните нам на горячую линию по номеру 8-800-233-22-22</p>
-						@@include('components/ui/_button.html', {children: 'Оставить заявку',	class: 'btn_secondary', href: '/'})
+						@@include('components/ui/_button.html', {children: 'Оставить заявку',	class: 'btn_secondary call-request-btn', href: '/'})
 					</div>
 				</div>
 			</div>

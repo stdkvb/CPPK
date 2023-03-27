@@ -155,6 +155,7 @@
 			margin-top: 0;
 			margin-left: 110px;
 			width: unset;
+			height: unset;
 			@include tablet {
 				margin-left: 0;
 			}
@@ -241,7 +242,7 @@
 			&__card {
 				padding: 48px;
 				background-color: $white;
-				border: solid 1px $gray04;
+				border: solid 2px $gray04;
 				@include tablet {
 					padding: 24px;
 				}
@@ -568,6 +569,7 @@
 					display: none;
 				}
 				img {
+					border-radius: 50%;
 					grid-area: image;
 				}
 				span {

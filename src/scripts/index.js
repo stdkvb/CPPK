@@ -248,7 +248,7 @@ const searchBtn = document.getElementById('search-btn')
 const searchMenu = document.getElementById('search-menu')
 const mailBtn = document.getElementById('mail-btn')
 const mailMenu = document.getElementById('mail-menu')
-const callRequestBtn = document.getElementById('call-request-btn')
+const callRequestBtns = document.querySelectorAll('.call-request-btn')
 const callRequestMenu = document.getElementById('call-request-menu')
 const learningPlanRequestBtn = document.getElementById('learning-plan-request-btn')
 const learningPlanRequestMenu = document.getElementById('learning-plan-request-menu')
@@ -292,10 +292,12 @@ burgerBtn.addEventListener('click', () => {
 	menu.classList.add('menu_active')
 })
 
-if (callRequestBtn !== null) {
-	callRequestBtn.addEventListener('click', () => {
-		closeAllMenu()
-		callRequestMenu.classList.add('service-menu_active')
+if (callRequestBtns !== null) {
+	callRequestBtns.forEach((elem) => {
+		elem.addEventListener('click', () => {
+			closeAllMenu()
+			callRequestMenu.classList.add('service-menu_active')
+		})
 	})
 }
 
