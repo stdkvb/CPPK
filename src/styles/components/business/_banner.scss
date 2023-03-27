@@ -6,6 +6,7 @@
 		margin-top: 120px;
 		max-width: 638px;
 		@include tablet {
+			max-width: unset;
 			margin-top: 60px;
 			margin-bottom: 70px;
 		}
