@@ -370,6 +370,7 @@ bottomProfilebutton.addEventListener('click', () => {
 	disableBottomBarIcons()
 	bottomProfilebutton.classList.remove('link_disable')
 	profileMenu.classList.toggle('service-menu_active')
+	document.body.style.overflow = 'hidden'
 })
 
 bottomVRButton.addEventListener('click', () => {
@@ -382,6 +383,7 @@ bottomVRButton.addEventListener('click', () => {
 	disableBottomBarIcons()
 	bottomVRButton.classList.remove('link_disable')
 	vrMenu.classList.toggle('service-menu_active')
+	document.body.style.overflow = 'hidden'
 })
 
 bottomRLButton.addEventListener('click', () => {
@@ -394,6 +396,7 @@ bottomRLButton.addEventListener('click', () => {
 	disableBottomBarIcons()
 	bottomRLButton.classList.remove('link_disable')
 	rlMenu.classList.toggle('service-menu_active')
+	document.body.style.overflow = 'hidden'
 })
 
 bottomSearchButton.addEventListener('click', () => {
@@ -406,6 +409,7 @@ bottomSearchButton.addEventListener('click', () => {
 	disableBottomBarIcons()
 	bottomSearchButton.classList.remove('link_disable')
 	searchMenu.classList.toggle('search-menu_active')
+	document.body.style.overflow = 'hidden'
 })
 
 bottomBurgerButton.addEventListener('click', () => {
@@ -418,6 +422,7 @@ bottomBurgerButton.addEventListener('click', () => {
 	disableBottomBarIcons()
 	bottomBurgerButton.classList.remove('link_disable')
 	menu.classList.toggle('menu_active')
+	document.body.style.overflow = 'hidden'
 })
 
 // close menu button
@@ -425,6 +430,7 @@ const menuCloseButtons = document.querySelectorAll('.close-btn')
 menuCloseButtons.forEach((elem) => {
 	elem.addEventListener('click', () => {
 		closeAllMenu()
+		document.body.style.overflow = 'unset';
 	})
 })
 

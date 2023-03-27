@@ -17,6 +17,9 @@
 		@include desktop {
 			grid-template-columns: 1fr;
 		}
+		@include desktop_extra_small {
+			padding-left: 20px;
+		}
 		@include tablet {
 			margin-left: 0;
 			gap: 12px;
@@ -72,11 +75,11 @@
 		margin-left: 110px;
 		position: relative;
 		@include desktop {
-			padding-bottom: 120px;
+			// padding-bottom: 120px;
 		}
 		@include tablet {
 			margin-left: 0;
-			padding-bottom: 140px;
+			// padding-bottom: 140px;
 		}
 		img {
 			width: 100%;
@@ -114,12 +117,14 @@
 			@include desktop {
 				width: 100%;
 				padding: 24px 12% 24px 4%;
-				height: 140px;
+				position: unset;
 			}
 			p {
 				color: $gray70;
+				max-width: 95%;
 				@include regular-18;
 				@include tablet {
+					max-width: unset;
 					@include regular-16;
 				}
 			}
@@ -130,7 +135,7 @@
 			bottom: 65px !important;
 			left: 41% !important;
 			@include desktop {
-				bottom: 47px !important;
+				bottom: 20px !important;
 				left: 85% !important;
 			}
 			@include tablet {
@@ -143,7 +148,7 @@
 			bottom: 74px !important;
 			left: 46% !important;
 			@include desktop {
-				bottom: 57px !important;
+				bottom: 29px !important;
 				left: 91% !important;
 			}
 			@include tablet {
@@ -152,6 +157,7 @@
 		}
 
 		.swiper-pagination {
+			bottom: 0;
 			@include min_tablet {
 				display: none;
 			}

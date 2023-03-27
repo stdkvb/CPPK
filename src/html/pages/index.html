@@ -185,7 +185,7 @@
 		background: '@images/banner-background-1.png',
 		image: '@images/banner-image-1.png'
 		})
-		<section class="about-us container">
+		<section class="about-us">
 			<div class="about-us__text-container">
 				<div>
 					<h2 class="element-animation">Центр профессиональной подготовки кадров</h2>
@@ -213,7 +213,7 @@
 					</div>
 				</div>
 				<div class="about-us__photo-description element-animation element-animation__fromLeft">
-					<p>Мы один из крупнейших учебных центров Башкирии,<br>и растем каждый год! Большой опыт работы</p>
+					<p>Мы один из крупнейших учебных центров Башкирии, и растем каждый год!</p>
 				</div>
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
@@ -356,7 +356,7 @@
 				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших
 					клиентов по подписке</p>
 			</div>
-			<form class="subscribe__form">
+			<form class="subscribe__form" novalidate>
 				@@include('components/ui/_input-email.html', {name: 'email', required: true})
 				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type: 'submit'})
 				@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
