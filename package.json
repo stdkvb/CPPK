@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://gitlab.com/wptt/cppk.git"
   },
-  "author": "worsenside",
+  "author": "SitdikovB.",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
