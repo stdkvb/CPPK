@@ -23,9 +23,16 @@
 			<div class="sub-wrapper__content">
 				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Новости'})
 
-				<div class="sub-wrapper__nav">
-					<a href="#">Новости</a>
-					<a href="#">События</a>
+				<div class="news__tabs swiper element-animation element-animation__fromLeft">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide_active">
+							<h2>Новости</h2>
+						</div>
+						<div class="swiper-slide">
+							<h2>События</h2>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
 				</div>
 
 				<div class="news">

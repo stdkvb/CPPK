@@ -1,3 +1,39 @@
+.news__tabs {
+	margin-bottom: 64px;
+
+	@include tablet {
+		margin-bottom: 32px;
+	}
+
+	.swiper-wrapper {
+		align-items: baseline;
+	}
+
+	.swiper-slide {
+		width: fit-content !important;
+
+		h2 {
+			@include regular-24;
+			color: $gray30;
+
+			@include tablet {
+				@include regular-18;
+			}
+		}
+
+		&_active {
+			h2 {
+				@include medium-36;
+				color: $gray90;
+
+				@include tablet {
+					@include medium-20;
+				}
+			}
+		}
+	}
+}
+
 .news {
 	padding-top: 120px;
 	padding-bottom: 120px;
