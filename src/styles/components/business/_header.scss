@@ -17,13 +17,19 @@
 	nav {
 		display: flex;
 		gap: 3.75em;
-		@include desktop_large {
+		@include tablet {
 			display: none;
 		}
+
 		ul {
 			display: flex;
 			align-items: center;
 			gap: 2.5em;
+			&:last-of-type {
+				@include desktop_large {
+					display: none;
+				}
+			}
 		}
 	}
 

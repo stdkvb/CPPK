@@ -38,7 +38,7 @@
 		<div class="course container">
 			<div class="course__content">
 				@@include('components/business/_directory.html', {parent: 'Обучение', link: 'Повышение квалификации', nextlink: 'Пожарная безопасность',
-				disabled: 'Монтаж, техническое обслуживан...'})
+				disabled: 'Монтаж, техническое обслуживание'})
 				<div class="course__text-content">
 					<h3>Описание курса</h3>
 					<p>Специалист по охране труда - специалист, который занимается охраной человеческого труда в различных видах деятельности, осуществляет контроль и обеспечение охраны жизнедеятельности человека.</p>
@@ -137,7 +137,7 @@
 					<ul>
 						<li>
 							<div>
-								Заявка<span>Подайте <a href="#">заявку на обучение</a></span>
+								Заявка<span>Подайте <a class="link link_blue" href="#">заявку на обучение</a></span>
 							</div>
 						</li>
 						<li>
@@ -200,7 +200,7 @@
 					<div class="modules__banner">
 						<h4>Получите программу курса</h4>
 						<p>Отправим подробную программу курса на почту</p>
-						@@include('components/ui/_button.html', {class: 'btn_blue-border', children: 'Получить программу', href: '#'})
+						@@include('components/ui/_button.html', {class: 'btn_secondary', children: 'Получить программу', href: '#'})
 					</div>
 				</div>
 				<div class="course__text-content course__text-content_gray course__text-content_diplom">

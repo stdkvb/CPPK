@@ -11,19 +11,22 @@
 		background-color: $white;
 	}
 
-	.search-bar {
+	form {
 		grid-area: search;
 		width: calc(100% - 100px);
-		margin-top: unset;
-		@include tablet {
-			width: 100%;
-			margin: 0;
-		}
+		.search-bar {
+			margin-top: unset;
+			@include tablet {
+				width: 100%;
+				margin: 0;
+			}
 
-		input::placeholder {
-			color: $gray70;
+			input::placeholder {
+				color: $gray70;
+			}
 		}
 	}
+
 
 	&__right-bar {
 		grid-area: right-bar;

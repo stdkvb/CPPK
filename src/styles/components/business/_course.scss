@@ -262,7 +262,7 @@
 		.stages {
 			background-color: $blue50;
 			margin-bottom: 100px;
-			margin-left: 210px;
+			margin-left: 110px;
 			padding: 100px;
 			@include tablet {
 				margin-bottom: 0;
@@ -350,8 +350,13 @@
 						}
 
 						a {
+							@include regular-16;
 							text-decoration: underline;
 							color: $blue10;
+							display: inline;
+							&:hover {
+								color: $blue30;
+							}
 						}
 					}
 				}
@@ -406,7 +411,7 @@
 				padding: 40px 48px;
 				margin-top: 48px;
 				display: grid;
-				grid-template-columns: 1fr 260px;
+				grid-template-columns: 1fr 284px;
 				grid-template-areas:
 					"title button"
 					"subtitle button";
@@ -529,7 +534,7 @@
 	&__right-bar {
 		grid-area: right-bar;
 		background-color: $white;
-		min-width: 472px;
+		max-width: 472px;
 		@include desktop_medium  {
 			margin-left: 210px;
 			margin-right: 100px;
@@ -574,7 +579,6 @@
 				}
 				span {
 					grid-area: name;
-					max-height: 42px;
 					@include regular-16;
 					color: $gray50;
 				}
@@ -592,7 +596,9 @@
 				gap: 8px;
 				border-top: solid 1px $gray10;
 				border-bottom: solid 1px $gray10;
-				@include medium-16;
+				span {
+					@include medium-16;
+				}
 				span:last-of-type {
 					@include regular-14;
 					color: $gray50;
