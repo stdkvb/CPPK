@@ -52,19 +52,19 @@
 		<section class="programms container">
 			<div class="programms__tabs swiper element-animation">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide_active">
+					<div id="programms-tab-1" class="programms__tab swiper-slide swiper-slide_active">
 						<h2>Повышение<br>квалификации</h2>
 					</div>
-					<div class="swiper-slide">
+					<div id="programms-tab-2" class="programms__tab swiper-slide">
 						<h2>Профессиональная<br>переподготовка</h2>
 					</div>
-					<div class="swiper-slide">
+					<div id="programms-tab-3" class="programms__tab swiper-slide">
 						<h2>Курсы<br>и семинары</h2>
 					</div>
 				</div>
 				<div class="swiper-scrollbar"></div>
 			</div>
-			<div class="programms__cards swiper element-animation element-animation__fromRight">
+			<div id="programms-tab-content-1" class="programms__cards swiper element-animation element-animation__fromRight">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<h3>Профессиональное обучение по рабочим профессиям</h3>
@@ -146,13 +146,177 @@
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 			</div>
+			<div id="programms-tab-content-2" class="programms__cards programms__cards_active swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Строительство, проектирование, инженерные изыскания</h3>
+						<a class="link link_blue">41 специальность &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Нефтегазовое дело</h3>
+						<a class="link link_blue">2 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Сельское хозяйство</h3>
+						<a class="link link_blue">3 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Строительство, проектирование, инженерные изыскания</h3>
+						<a class="link link_blue">41 специальность &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Нефтегазовое дело</h3>
+						<a class="link link_blue">2 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Сельское хозяйство</h3>
+						<a class="link link_blue">3 специальности &rarr;</a>
+					</div>
+
+					<!-- @@include('components/business/_course-card.html',
+					{
+						class: 'swiper-slide',
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					}) -->
+
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="programms-tab-content-3" class="programms__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Строительство, проектирование, инженерные изыскания</h3>
+						<a class="link link_blue">41 специальность &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Нефтегазовое дело</h3>
+						<a class="link link_blue">2 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Сельское хозяйство</h3>
+						<a class="link link_blue">3 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Профессиональное обучение по рабочим профессиям</h3>
+						<a class="link link_blue">38 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Железнодорожная безопасность</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Строительство, проектирование, инженерные изыскания</h3>
+						<a class="link link_blue">41 специальность &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Радиационная безопасность</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Жилищно-коммунальное хозяйство</h3>
+						<a class="link link_blue">24 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Кадровое дело, HR, персонал</h3>
+						<a class="link link_blue">9 специальностей &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Нефтегазовое дело</h3>
+						<a class="link link_blue">2 специальности &rarr;</a>
+					</div>
+					<div class="swiper-slide">
+						<h3>Сельское хозяйство</h3>
+						<a class="link link_blue">3 специальности &rarr;</a>
+					</div>
+
+					<!-- @@include('components/business/_course-card.html',
+					{
+						class: 'swiper-slide',
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					}) -->
+
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
 			<div class="programms__download element-animation element-animation__fromLeft">
 				<h3>Скачайте полный перечень программ в формате pdf</h3>
 				@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', href:
 				'/'})
 			</div>
 		</section>
-		<section class="benefits container element-animation">
+		<section class="benefits container">
 			<h2 class="element-animation">Более 800 специальностей<br>по различным направлениям</h2>
 			<div class="benefits__cards element-animation">
 				<div class="benefits__card element-animation">
@@ -256,19 +420,67 @@
 		<section class="reviews container">
 			<div class="reviews__tabs swiper element-animation element-animation__fromLeft">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide swiper-slide_active">
+					<div id="reviews-tab-1" class="reviews__tab swiper-slide swiper-slide_active">
 						<h2>Отзывы</h2>
 					</div>
-					<div class="swiper-slide">
+					<div id="reviews-tab-2" class="reviews__tab swiper-slide">
 						<h2>Благодарности</h2>
 					</div>
-					<div class="swiper-slide">
+					<div id="reviews-tab-3" class="reviews__tab swiper-slide">
 						<h2>Грамоты</h2>
 					</div>
 				</div>
 				<div class="swiper-scrollbar"></div>
 			</div>
-			<div class="reviews__cards swiper element-animation element-animation__fromRight">
+			<div id="reviews-tab-content-1" class="reviews__cards reviews__cards_active swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="reviews-tab-content-2" class="reviews__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="reviews-tab-content-3" class="reviews__cards swiper element-animation element-animation__fromRight">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img class="open-modal" src="@images/review.png" modalId="review-1">

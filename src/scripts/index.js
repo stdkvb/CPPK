@@ -10,8 +10,6 @@ import customSelect from './ElementsControllers/CustomSelect'
 
 customSelect('custom-select')
 
-// takeControlYandexMap()
-
 new CounterItemController({
 	countersElementsWrapperSelector: '.about-us__text-container',
 	counterElementSelector: '.about-us__numbers',
@@ -501,6 +499,42 @@ takeControlAccordion('.sub-wrapper__accordion', '.accordion__list', {
 	accordionItemActiveClass: 'accordion__item_active'
 })
 
+//programms tabs
+const programmsTabs = document.querySelectorAll('.programms__tab')
+const firstProgrammsTab = document.getElementById('programms-tab-1')
+const secondProgrammsTab = document.getElementById('programms-tab-2')
+const thirdProgrammsTab = document.getElementById('programms-tab-3')
+const programmsTabContents = document.querySelectorAll('.programms__cards')
+const firstProgrammsTabContent = document.getElementById('programms-tab-content-1')
+const secondProgrammsTabContent = document.getElementById('programms-tab-content-2')
+const thirdProgrammsTabContent = document.getElementById('programms-tab-content-3')
+
+function resetProgrammsActiveTabs () {
+	programmsTabs.forEach((elem) => {
+		elem.classList.remove('swiper-slide_active')
+	})
+	programmsTabContents.forEach((elem) => {
+		elem.classList.remove('programms__cards_active')
+	})
+}
+
+programmsTabs.forEach((elem) => {
+	elem.addEventListener('click', () => {
+		resetProgrammsActiveTabs ()
+		elem.classList.add('swiper-slide_active')
+	})
+})
+
+firstProgrammsTab.addEventListener('click', () => {
+	firstProgrammsTabContent.classList.add('programms__cards_active')
+})
+secondProgrammsTab.addEventListener('click', () => {
+	secondProgrammsTabContent.classList.add('programms__cards_active')
+})
+thirdProgrammsTab.addEventListener('click', () => {
+	thirdProgrammsTabContent.classList.add('programms__cards_active')
+})
+
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
 if (benefitsCards !== null) {
@@ -541,6 +575,42 @@ if (benefitsCards !== null) {
 		e.target.classList.remove('benefits__card_active')
 	})
 }
+
+//reviews tabs
+const reviewsTabs = document.querySelectorAll('.reviews__tab')
+const firstReviewsTab = document.getElementById('reviews-tab-1')
+const secondReviewsTab = document.getElementById('reviews-tab-2')
+const thirdReviewsTab = document.getElementById('reviews-tab-3')
+const reviewsTabContents = document.querySelectorAll('.reviews__cards')
+const firstReviewsTabContent = document.getElementById('reviews-tab-content-1')
+const secondReviewsTabContent = document.getElementById('reviews-tab-content-2')
+const thirdReviewsTabContent = document.getElementById('reviews-tab-content-3')
+
+function resetReviewsActiveTabs () {
+	reviewsTabs.forEach((elem) => {
+		elem.classList.remove('swiper-slide_active')
+	})
+	reviewsTabContents.forEach((elem) => {
+		elem.classList.remove('reviews__cards_active')
+	})
+}
+
+reviewsTabs.forEach((elem) => {
+	elem.addEventListener('click', () => {
+		resetReviewsActiveTabs ()
+		elem.classList.add('swiper-slide_active')
+	})
+})
+
+firstReviewsTab.addEventListener('click', () => {
+	firstReviewsTabContent.classList.add('reviews__cards_active')
+})
+secondReviewsTab.addEventListener('click', () => {
+	secondReviewsTabContent.classList.add('reviews__cards_active')
+})
+thirdReviewsTab.addEventListener('click', () => {
+	thirdReviewsTabContent.classList.add('reviews__cards_active')
+})
 
 // show more
 const cardsList = document.querySelector('.cards-list')
@@ -601,3 +671,5 @@ if (programmsSection !== null) {
 	})
 	visible(programmsSection)
 }
+
+// takeControlYandexMap()
