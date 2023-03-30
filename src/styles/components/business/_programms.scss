@@ -1,5 +1,6 @@
 .programms {
 	position: relative;
+	overflow: hidden;
 	@include tablet {
 		padding-right: 0;
 	}

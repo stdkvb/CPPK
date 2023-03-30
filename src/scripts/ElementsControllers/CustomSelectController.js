@@ -1,5 +1,11 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable func-names */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-shadow */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable prefer-const */
 // custom select
-function customSelect(id) {
+function takeControlcustomSelect(id) {
 	let x
 	let i
 	let j
@@ -31,7 +37,7 @@ function customSelect(id) {
     create a new DIV that will act as an option item: */
 			c = document.createElement('DIV')
 			c.innerHTML = selElmnt.options[j].innerHTML
-			c.addEventListener('click', function (e) {
+			c.addEventListener('click', function () {
 				/* when an item is clicked, update the original select box,
         and the selected item: */
 				let y
@@ -106,4 +112,4 @@ then close all select boxes: */
 	document.addEventListener('click', closeAllSelect)
 }
 
-export default customSelect
+export default takeControlcustomSelect

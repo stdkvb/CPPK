@@ -9,6 +9,7 @@
 		"button icons";
 	grid-template-columns: 40% 60%;
 	gap: 43px;
+	overflow: hidden;
 	@include desktop_huge {
 		display: block;
 	}

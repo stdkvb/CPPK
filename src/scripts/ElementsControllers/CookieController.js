@@ -35,4 +35,9 @@ class CookieController {
 		this._cookieContainer.classList.add('cookie-container_showing')
 	}
 }
-export default CookieController
+
+const takeControlCookie = (cookieContainerSelector, cookieAcceptButtonSelector) => {
+	new CookieController(cookieContainerSelector, cookieAcceptButtonSelector)
+}
+
+export default takeControlCookie
