@@ -13,9 +13,11 @@
 	border-right: solid 0.0625em rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(20px);
 	z-index: 10;
+
 	@include tablet {
 		width: 0;
 	}
+
 	&_transparent {
 		background-color: transparent;
 	}

@@ -2,16 +2,18 @@
 	display: grid;
 	grid-template-columns: 1fr 572px;
 	grid-template-areas:
-	 "directory right-bar"
-	 "search right-bar"
-	 "cards right-bar"
-	 "text-content right-bar";
-	 padding-bottom: 140px;
+		"directory right-bar"
+		"search right-bar"
+		"cards right-bar"
+		"text-content right-bar";
+	padding-bottom: 140px;
+
 	@include desktop_medium {
 		display: block;
 		padding-top: 60px;
 		padding-right: 100px;
 	}
+
 	@include tablet {
 		padding-bottom: 60px;
 	}
@@ -19,6 +21,7 @@
 	.directory {
 		margin-top: 100px;
 		grid-area: directory;
+
 		@include desktop_medium {
 			margin-top: 0;
 		}
@@ -27,6 +30,7 @@
 	.search-bar {
 		grid-area: search;
 		margin-top: unset;
+
 		@include tablet {
 			width: 100%;
 			margin: 0;
@@ -46,13 +50,16 @@
 		grid-area: right-bar;
 		background-color: $white;
 		margin-left: 100px;
-		@include desktop_medium  {
+
+		@include desktop_medium {
 			margin-left: 0;
 			background-color: transparent;
+
 			.aside-banner {
 				display: none;
 			}
 		}
+
 		@include tablet {
 			margin-top: 32px;
 			margin-left: 0;
@@ -62,27 +69,34 @@
 
 	&__filters {
 		margin: 52px 52px;
+
 		@include desktop_medium {
 			margin: 52px 0;
 		}
+
 		@include tablet {
 			margin: 32px 0;
 		}
+
 		.accordion__toggle {
 			height: 40px;
 			border-bottom: solid 1px $gray30;
+
 			@include min_tablet {
 				display: none !important;
 			}
 		}
+
 		h4 {
 			@include medium-16;
 			color: $gray90;
 		}
+
 		.accordion-icon {
 			visibility: visible !important;
 			background-image: url(../files/icons/chevron-down_black.svg) !important;
 		}
+
 		.accordion__content {
 			ul {
 				@include medium-14;
@@ -91,6 +105,7 @@
 				display: flex;
 				flex-direction: column;
 				gap: 12px;
+
 				@include min_tablet {
 					margin: 0;
 				}
@@ -106,15 +121,19 @@
 		grid-area: cards;
 		margin-top: 60px;
 		margin-bottom: 140px;
-		@include desktop_medium  {
+
+		@include desktop_medium {
 			margin-top: 32px;
 		}
+
 		@include tablet {
 			margin-right: 0;
 			margin-bottom: 60px;
 		}
+
 		li {
 			margin-bottom: 2px;
+
 			@include desktop_medium {
 				margin-bottom: 4px;
 			}
@@ -141,6 +160,7 @@
 	&__text-content {
 		grid-area: text-content;
 		padding-right: 88px;
+
 		@include tablet {
 			padding-right: 0;
 		}
@@ -148,6 +168,7 @@
 		h3 {
 			@include medium-36;
 			margin-bottom: 60px;
+
 			@include tablet {
 				@include medium-24;
 				margin-bottom: 32px;
@@ -158,11 +179,13 @@
 			@include regular-18;
 			margin-bottom: 30px;
 			color: $gray80;
+
 			@include tablet {
 				@include regular-16;
 				margin-bottom: 16px;
 			}
 		}
+
 		p:last-of-type {
 			margin-bottom: 0;
 		}

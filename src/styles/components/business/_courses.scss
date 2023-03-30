@@ -3,8 +3,9 @@
 	display: grid;
 	grid-template-columns: 1fr 572px;
 	grid-template-areas:
-	 "search search"
-	 "cards right-bar";
+		"search search"
+		"cards right-bar";
+
 	@include desktop {
 		display: block;
 		padding-top: 60px;
@@ -14,8 +15,10 @@
 	form {
 		grid-area: search;
 		width: calc(100% - 100px);
+
 		.search-bar {
 			margin-top: unset;
+
 			@include tablet {
 				width: 100%;
 				margin: 0;
@@ -33,11 +36,13 @@
 		background-color: $white;
 		margin-top: 60px;
 		margin-left: 100px;
+
 		@include desktop {
 			margin-top: 32px;
 			margin-left: 0;
 			margin-right: 100px;
 		}
+
 		@include tablet {
 			margin-top: 32px;
 			margin-left: 0;
@@ -53,10 +58,12 @@
 		grid-area: cards;
 		margin-top: 60px;
 		margin-bottom: 140px;
+
 		@include desktop {
 			margin-right: 100px;
 			margin-top: 32px;
 		}
+
 		@include tablet {
 			margin-right: 0;
 			margin-bottom: 60px;

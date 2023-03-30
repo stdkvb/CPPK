@@ -77,13 +77,11 @@ input {
 
 	&_valid {
 		input:not(:focus) {
-
 		}
 	}
 
 	&_invalid {
 		input:not(:focus) {
-
 		}
 
 		.error-message {

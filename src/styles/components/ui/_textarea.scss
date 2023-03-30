@@ -10,12 +10,10 @@ textarea {
 	color: $white;
 	background-color: transparent;
 
-	&:focus {
+	&:focus {}
 
-	}
-	&:disabled {
+	&:disabled {}
 
-	}
 	&::placeholder {
 		color: $white;
 	}
@@ -23,16 +21,20 @@ textarea {
 	&::-webkit-scrollbar {
 		width: 6px;
 	}
+
 	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: $gray20;
 		border-radius: 20px;
 	}
+
 	&:focus::-webkit-scrollbar-thumb {
 		background-color: $gray40;
 	}
+
 	&:disabled::-webkit-scrollbar-thumb {
 		background-color: $gray30;
 	}
@@ -57,13 +59,11 @@ textarea {
 	}
 
 	&_valid {
-		textarea:not(:focus) {
-		}
+		textarea:not(:focus) {}
 	}
 
 	&_invalid {
-		textarea:not(:focus) {
-		}
+		textarea:not(:focus) {}
 
 		.error-message {
 			display: block;

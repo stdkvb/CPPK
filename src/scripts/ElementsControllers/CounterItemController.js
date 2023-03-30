@@ -33,7 +33,6 @@ class CounterItemController {
 
 		const counterNumElement = counterItemElement.querySelector(counterNumElementSelector)
 
-
 		this._calcNumForAnimation(0, {
 			finishedValue: +this._parseCounterNum(counterNumElement.textContent),
 			counterNumElement
@@ -71,14 +70,7 @@ class CounterItemController {
 
 		const delay = 100
 
-		setTimeout(
-			this._calcNumForAnimation.bind(
-				this,
-				fromValue + finishedValue / (this._options.calcAnimationDelay / delay),
-				options
-			),
-			delay
-		)
+		setTimeout(this._calcNumForAnimation.bind(this, fromValue + finishedValue / (this._options.calcAnimationDelay / delay), options), delay)
 	}
 }
 

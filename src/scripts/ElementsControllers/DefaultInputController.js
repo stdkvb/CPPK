@@ -1,4 +1,4 @@
-import EventObserver from '../../utilsScripts/EventObserver.js'
+import EventObserver from '../../utilsScripts/EventObserver'
 
 class DefaultInputController {
 	isActive = false

@@ -1,40 +1,50 @@
 .banner {
 	display: flex;
+
 	div {
 		display: flex;
 		flex-direction: column;
 		margin-top: 120px;
 		max-width: 638px;
+
 		@include tablet {
 			max-width: unset;
 			margin-top: 60px;
 			margin-bottom: 70px;
 		}
+
 		h2 {
 			color: $white;
 			margin-bottom: 24px;
+
 			@include tablet {
 				@include medium-24;
 			}
 		}
+
 		p {
 			@include regular-20;
 			color: $white;
 		}
+
 		.btn {
 			max-width: 320px;
 			margin-top: 60px;
+
 			@include tablet {
 				margin-top: 32px;
 			}
+
 			@include mobile {
 				max-width: unset;
 				width: 100%;
 			}
 		}
 	}
+
 	img {
 		height: 100%;
+
 		@include tablet {
 			display: none;
 		}

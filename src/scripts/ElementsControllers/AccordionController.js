@@ -5,7 +5,6 @@ class AccordionController {
 			const accordionItemToggler = accordionItemElement.querySelector(options.accordionItemTogglerSelector)
 
 			accordionItemToggler.addEventListener('click', (event) => {
-
 				const isActive = accordionItemElement.classList.contains(options.accordionItemActiveClass)
 				this._deactiveAllAccordionItems()
 
@@ -25,7 +24,7 @@ class AccordionController {
 			accordionItem.classList.remove(this._options.accordionItemActiveClass)
 		})
 	}
-};
+}
 
 const takeControlAccordion = (accordionSectionSelector, accordionContainerSelector, options) => {
 	const accordionParentSection = document.querySelector(accordionSectionSelector)
@@ -41,5 +40,4 @@ const takeControlAccordion = (accordionSectionSelector, accordionContainerSelect
 	})
 }
 
-export default takeControlAccordion;
-
+export default takeControlAccordion

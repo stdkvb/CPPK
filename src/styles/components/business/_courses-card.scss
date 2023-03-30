@@ -10,9 +10,11 @@
 		"title old-price"
 		"title new-price"
 		"tags button";
+
 	@include desktop {
 		border: none;
 	}
+
 	@include tablet {
 		height: unset;
 		padding: 24px;
@@ -22,9 +24,14 @@
 
 	&:hover {
 		background-color: $blue50;
-		h3, .courses__tags span, .courses__old-price, .courses__new-price {
+
+		h3,
+		.courses__tags span,
+		.courses__old-price,
+		.courses__new-price {
 			color: $white;
 		}
+
 		.courses__tags span {
 			background-color: $blue30;
 		}
@@ -48,10 +55,12 @@
 		flex-wrap: wrap;
 		gap: 8px;
 		margin-top: 10px;
+
 		@include tablet {
 			margin-bottom: 24px;
 		}
-		 span {
+
+		span {
 			display: block;
 			width: fit-content;
 			height: 26px;
@@ -60,7 +69,7 @@
 			color: $blue60;
 			transition: all $transitionDuration;
 			@include regular-14;
-		 }
+		}
 	}
 
 	.courses__old-price {
@@ -70,7 +79,8 @@
 		text-align: end;
 		align-self: flex-end;
 		transition: color $transitionDuration;
-		@include 	regular-20;
+		@include regular-20;
+
 		@include tablet {
 			@include regular-16;
 			align-self: flex-start;
@@ -83,7 +93,8 @@
 		color: $black;
 		text-align: end;
 		transition: color $transitionDuration;
-		@include 	regular-36;
+		@include regular-36;
+
 		@include tablet {
 			@include regular-24;
 			text-align: start;
@@ -93,6 +104,7 @@
 
 	.btn {
 		justify-self: end;
+
 		@include min_tablet {
 			max-width: 215px;
 		}

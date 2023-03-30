@@ -14,9 +14,11 @@
 	overflow-y: scroll;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+
 	&::-webkit-scrollbar {
 		display: none;
 	}
+
 	@include tablet {
 		visibility: visible;
 		left: -100vw;
@@ -27,6 +29,7 @@
 	&_active {
 		transform: translateX(47.5em);
 		opacity: 1;
+
 		@include tablet {
 			transform: translateX(100vw);
 		}
@@ -48,6 +51,7 @@
 	h2 {
 		@include medium-36;
 		color: $white;
+
 		@include tablet {
 			@include medium-24;
 		}
@@ -60,6 +64,7 @@
 
 	img {
 		max-width: 40em;
+
 		@include mobile {
 			width: 100%;
 		}
@@ -73,9 +78,11 @@
 		h2 {
 			@include regular-20;
 			color: $gray50;
+
 			@include tablet {
 				@include regular-16;
 			}
+
 			&:hover {
 				cursor: pointer;
 			}
@@ -85,17 +92,20 @@
 			margin-bottom: -5px;
 			@include medium-36;
 			color: $white;
+
 			@include tablet {
 				@include medium-24;
 			}
+
 			&:hover {
-			cursor: unset;
+				cursor: unset;
 			}
 		}
 	}
 
 	&__form {
 		display: block;
+
 		a {
 			@include regular-16;
 			color: $white;

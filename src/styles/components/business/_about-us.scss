@@ -2,6 +2,7 @@
 	padding-top: 130px;
 	padding-left: 0;
 	background-color: $white;
+
 	@include desktop_small {
 		padding-left: 0;
 	}
@@ -14,12 +15,15 @@
 		align-items: end;
 		padding-bottom: 120px;
 		padding-left: 210px;
+
 		@include desktop {
 			grid-template-columns: 1fr;
 		}
+
 		@include desktop_extra_small {
 			padding-left: 20px;
 		}
+
 		@include tablet {
 			margin-left: 0;
 			gap: 12px;
@@ -30,6 +34,7 @@
 
 		h2 {
 			margin-bottom: 68px;
+
 			@include tablet {
 				@include medium-24;
 				margin-bottom: 40px;
@@ -40,6 +45,7 @@
 			color: $gray70;
 			@include regular-18;
 			max-width: 677px;
+
 			@include tablet {
 				@include regular-16;
 			}
@@ -47,9 +53,11 @@
 
 		.btn {
 			margin-top: 48px;
+
 			@include tablet {
 				margin-top: 32px;
 			}
+
 			@include mobile {
 				width: 100%;
 			}
@@ -57,9 +65,11 @@
 
 		.about-us__numbers {
 			max-width: 373px;
+
 			span {
 				color: $blue50;
 				@include bold-106;
+
 				@include tablet {
 					@include bold-70;
 				}
@@ -71,16 +81,20 @@
 			}
 		}
 	}
+
 	.about-us__photo {
 		margin-left: 110px;
 		position: relative;
+
 		@include desktop {
 			// padding-bottom: 120px;
 		}
+
 		@include tablet {
 			margin-left: 0;
 			// padding-bottom: 140px;
 		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -97,10 +111,11 @@
 				display: flex;
 				align-items: center;
 				color: $gray70;
-					@include regular-18;
-					@include tablet {
-						@include regular-16;
-					}
+				@include regular-18;
+
+				@include tablet {
+					@include regular-16;
+				}
 			}
 		}
 
@@ -114,15 +129,18 @@
 			width: 50%;
 			display: flex;
 			align-items: center;
+
 			@include desktop {
 				width: 100%;
 				padding: 24px 12% 24px 4%;
 				position: unset;
 			}
+
 			p {
 				color: $gray70;
 				max-width: 95%;
 				@include regular-18;
+
 				@include tablet {
 					max-width: unset;
 					@include regular-16;
@@ -134,10 +152,12 @@
 			top: unset !important;
 			bottom: 65px !important;
 			left: 41% !important;
+
 			@include desktop {
 				bottom: 20px !important;
 				left: 85% !important;
 			}
+
 			@include tablet {
 				display: none;
 			}
@@ -147,10 +167,12 @@
 			top: unset !important;
 			bottom: 74px !important;
 			left: 46% !important;
+
 			@include desktop {
 				bottom: 29px !important;
 				left: 91% !important;
 			}
+
 			@include tablet {
 				display: none;
 			}
@@ -158,6 +180,7 @@
 
 		.swiper-pagination {
 			bottom: 0;
+
 			@include min_tablet {
 				display: none;
 			}
