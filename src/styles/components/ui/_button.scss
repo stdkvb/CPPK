@@ -1,0 +1,117 @@
+.btn {
+	@include regular-14-uppercase;
+	height: 4.57em;
+	padding: 1em 2.25em;
+	border: solid 1px rgba(255, 255, 255, 0.6);
+	background-color: transparent;
+	color: $white;
+	position: relative;
+	cursor: pointer;
+	transition: all $transitionDuration;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background-color: $white;
+		color: $gray90;
+
+		.children .btn-arrow {
+			background-image: url(@icons/btn-arrow-hover.svg);
+		}
+	}
+
+	&_disable {
+		color: $gray60;
+		cursor: default;
+	}
+
+	&_primary_blue {
+		background-color: transparent;
+		color: $blue50;
+		border: solid 1px $blue50;
+		padding: 22px 88px;
+
+		&_disabled {
+			pointer-events: none;
+			background-color: transparent;
+			color: $gray30;
+			border: solid 1px $gray30;
+		}
+
+		&:hover {
+			background-color: $blue50;
+			color: $white;
+		}
+	}
+
+	&_secondary {
+		background-color: $white;
+		color: $gray90;
+
+		&:hover {
+			background-color: transparent;
+			color: $white;
+		}
+
+		&_disable {
+			background-color: $gray50;
+			color: $gray30;
+			cursor: default;
+		}
+	}
+
+	&_blue-border {
+		border: 1px solid $blue50;
+		color: $black;
+		display: block;
+
+		&_disable {
+			border: 1px solid $gray30;
+			color: $gray30;
+			cursor: default;
+		}
+
+		&:hover {
+			background-color: $blue50;
+			color: $white;
+		}
+	}
+
+	&_blue-fill {
+		background-color: $blue50;
+		color: $white;
+
+		&_disable {
+			border: 1px solid $gray30;
+			color: $gray30;
+			cursor: default;
+		}
+	}
+
+	&_narrow {
+		@include min-mobile {
+			max-width: fit-content;
+		}
+	}
+
+	.children {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.btn-arrow {
+			width: 7px;
+			height: 14px;
+			margin-left: 2em;
+			background-image: url(@icons/btn-arrow.svg);
+			transition: all $transitionDuration;
+		}
+	}
+
+	.cover {
+		@include contain;
+		z-index: 30
+	}
+}

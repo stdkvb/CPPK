@@ -1,0 +1,22 @@
+<div class="input__container input__container_text">
+	@@if (context.label) {
+		@@if (context.id) {
+			<label class="input__label" for="@@id">@@label@@if (context.required) {*}</label>
+		}
+		@@if (!context.id) {
+			<span class="input__label">@@label@@if (context.required) {*}</span>
+		}
+	}
+	<input
+		@@if (context.placeholder) {placeholder="@@placeholder@@if (context.required) {*}"}
+		@@if (context.required) {required}
+		@@if (context.id) {id="@@id"}
+		@@if (context.name) {name="@@name"}
+		data-type="text"
+		type="text"
+	>
+	<span class="error-message">
+		@@if (context.errorMessage) {@@errorMessage}
+		@@if (!context.errorMessage) {Ошибка}
+	</span>
+</div>

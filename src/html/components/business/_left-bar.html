@@ -1,0 +1,36 @@
+<div id="left-bar" class="left-bar element-animation element-animation__fromLeft">
+	@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
+	<ul>
+		<li class="service-menu-link">
+			<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg)"></a>
+		</li>
+		<li class="service-menu-link">
+			<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg)"></a>
+		</li>
+		<li class="service-menu-link">
+			<a class="link link-icon" id="rl-btn" style="background-image: url(@icons/laptop.svg)"></a>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<a class="link link-icon" id="search-btn" style="background-image: url(@icons/search.svg)"></a>
+		</li>
+		<li>
+			<a class="link link-icon" id="mail-btn" style="background-image: url(@icons/mail.svg)"></a>
+		</li>
+	</ul>
+	@@include('components/business/_menu.html')
+	@@include('components/business/profile/_profile.html')
+	@@include('components/business/profile/_recovery.html')
+	@@include('components/business/profile/_recovery-confirmation.html')
+	@@include('components/business/profile/_recovery-new-password.html')
+	@@include('components/business/profile/_recovery-success.html')
+	@@include('components/business/_vr-menu.html')
+	@@include('components/business/_rl-menu.html')
+	@@include('components/business/_search-menu.html')
+	@@include('components/business/_call-request.html')
+	@@include('components/business/_learning-plan-request.html')
+	@@include('components/business/_write-to-us.html')
+</div>
+
+

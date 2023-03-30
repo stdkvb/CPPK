@@ -1,0 +1,27 @@
+.other-cards {
+	margin-left: 100px;
+	padding: 100px 100px 140px;
+	background-color: $gray10;
+
+	@include desktop_medium {
+		padding: 100px 50px 140px;
+	}
+
+	@include tablet {
+		margin-left: 0;
+		padding: 32px 20px 60px;
+	}
+
+	h2 {
+		margin-bottom: 60px;
+
+		@include tablet {
+			@include medium-24;
+			margin-bottom: 32px;
+		}
+	}
+
+	.news {
+		padding: 0;
+	}
+}

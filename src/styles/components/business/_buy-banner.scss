@@ -1,0 +1,72 @@
+.buy-banner {
+  padding: 48px 52px;
+	display: flex;
+	flex-direction: column;
+	background-image: url(@images/buy-banner-background.png);
+	@include desktop_medium {
+		padding: 32px 0;
+		background-image: none;
+	}
+ 	@include tablet {
+		padding: 32px 20px;
+ 	}
+
+ &__old-price {
+	@include regular-20;
+	color: $gray40;
+	text-decoration: line-through;
+	margin-bottom: 8px;
+	@include tablet {
+		@include regular-18;
+		margin-bottom: 0;
+	}
+ }
+
+ &__new-price {
+	@include regular-48;
+	color: $blue50;
+	margin-bottom: 32px;
+	@include tablet {
+		@include regular-28;
+		margin-bottom: 24px;
+	}
+ }
+
+ .checkbox {
+	margin-bottom: 12px;
+
+	.label {
+		span {
+			color: $gray90;
+		}
+	}
+ }
+
+ .custom-select .arrow {
+	left: 12em;
+ }
+
+ select {
+	margin-bottom: 32px;
+	@include tablet {
+		margin-bottom: 24px;
+	}
+ }
+
+ .btn {
+	width: 100%;
+	margin-bottom: 32px;
+	 @include tablet {
+		margin-bottom: 24px;
+	 }
+ }
+
+ p {
+	@include medium-16;
+	color: $gray70;
+
+	span {
+		color: $gray90;
+	}
+ }
+}

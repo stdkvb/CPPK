@@ -1,0 +1,58 @@
+<div @@class>
+	<div class="sub-menu__list">
+		@@if (context.links) {
+		<div class="sub-menu__links">
+			<div class="sub-menu__toggle">
+				<span>О центре</span>
+				<div>
+					<button class="sub-menu__icon"></button>
+				</div>
+			</div>
+			<div class="sub-menu__content">
+				<a href="#" class="link link_secondary link_active">О центре</a>
+				<a href="#" class="link link_secondary">История успеха</a>
+				<a href="#" class="link link_secondary">Сведения об образовательной организации</a>
+				<a href="#" class="link link_secondary">Отзывы</a>
+				<a href="#" class="link link_secondary">Проекты</a>
+				<a href="#" class="link link_secondary">Сотрудничество</a>
+				<a href="#" class="link link_secondary">Документы</a>
+				<a href="#" class="link link_secondary">Новости</a>
+				<a href="#" class="link link_secondary">Работа у нас</a>
+			</div>
+		</div>
+		}
+		@@if (context.subscribe) {
+		<div class="subscribe container">
+			<div class="subscribe__text">
+				<h3>Подпишитесь на наши новости и узнавайте
+					о событиях первыми</h3>
+			</div>
+			<form class="subscribe__form">
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type:
+				'submit'})
+			</form>
+		</div>
+		}
+		@@if (context.feedback) {
+		<div class="feedback">
+			<div class="feedback__text">
+				<h3>Не нашли ответа на нужный вопрос?</h3>
+				<p>
+					Задайте вопрос на сайте или позвоните нам на горячую линию
+					по номеру 8-800-233-22-22
+				</p>
+			</div>
+			<form>
+				@@include('components/ui/_input-text.html', {placeholder: 'Ваше имя', name: 'name', required: false})
+				@@include('components/ui/_input-email.html', {name: 'email', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Тема сообщения', name: 'text', required:
+				true})
+				@@include('components/ui/_textarea.html', {placeholder: 'Ваш вопрос', name: 'comment', required:
+				true})
+				@@include('components/ui/_button.html', {children: 'Отправить', class: 'btn_secondary', type: 'submit'})
+			</form>
+		</div>
+		}
+	</div>
+</div>

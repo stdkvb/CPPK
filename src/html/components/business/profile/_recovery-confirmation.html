@@ -1,0 +1,10 @@
+<div class="service-menu service-menu_gray" id="profile-menu">
+	<a class="link close-btn"><span class="link-arrow"></span>Вернуться</a>
+	<h2>Восстановление пароля</h2>
+	<div class="service-menu__form recovery-confirmation">
+		<form novalidate>
+			@@include('components/ui/_input-text.html', {label: 'Введите четырехзначный код, который мы отправили на почту sobakasutulaya@yandex.ru', placeholder: '__ - __ - __ - __', errorMessage: 'Введиет код подтверждения', name: 'code', required: true})
+			@@include('components/ui/_button.html', {children: 'Далее', class: 'btn_secondary', type: 'submit'})
+		</form>
+	</div>
+</div>

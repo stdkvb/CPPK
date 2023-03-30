@@ -1,0 +1,92 @@
+.page-title {
+	position: absolute;
+	top: 30vh;
+	padding-left: 310px;
+	background-color: transparent;
+	@include desktop_large {
+		margin-left: 0;
+		top: 20vh;
+	}
+	@include tablet {
+		margin-left: 0;
+		top: 15vh;
+	}
+
+	h1 {
+		max-width: 960px;
+	}
+
+	&_secondary {
+		position: unset;
+		margin-top: 200px;
+		padding-left: 210px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include desktop_extra_small {
+			padding-left: 130px;
+		}
+		@include tablet {
+			margin-top: 44px;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+		h1 {
+			max-width: 1200px;
+			@include medium-40;
+			@include tablet {
+				@include bold-24;
+			}
+		}
+	}
+
+	.btn {
+		margin-top: 3.55em;
+		max-width: 306px;
+		@include regular-14-uppercase;
+	}
+
+	&__subtitle {
+		@include regular-28;
+		color: $white;
+		margin-bottom: 16px;
+		@include tablet {
+			@include regular-16;
+			margin-bottom: 12px;
+		}
+	}
+
+	&__details {
+		display: flex;
+		gap: 80px;
+		margin-top: 60px;
+		margin-bottom: 90px;
+		flex-wrap: wrap;
+		color: $white;
+		@include tablet {
+			gap: 20px;
+			margin-top: 44px;
+			margin-bottom: 60px;
+			flex-direction: column;
+		}
+	}
+
+	&__detail {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		max-width: 300px;
+		span {
+			margin: 0;
+			@include regular-16;
+			@include tablet {
+				margin: 0;
+			}
+			&:last-of-type {
+				@include bold-18;
+
+			}
+		}
+	}
+}

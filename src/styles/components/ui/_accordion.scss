@@ -1,0 +1,79 @@
+.accordion__list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25em;
+	position: relative;
+
+	.accordion__item {
+		max-width: 486px;
+		@include tablet {
+			max-width: unset;
+		}
+		.accordion__toggle {
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			span {
+				@include regular-18;
+				color: $white;
+			}
+
+			.accordion-icon {
+				transition: all 0.4s ease;
+				background-image: url(@icons/chevron-down.svg);
+				background-repeat: no-repeat;
+				width: 23px;
+				height: 23px;
+				background-color: transparent;
+				border: none;
+				background-position: center;
+				transition: $transitionDuration;
+				visibility: hidden;
+				@include tablet {
+					visibility: visible;
+				}
+			}
+		}
+		.accordion__content {
+			height: 0;
+    	max-height: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 0.75em;
+			font-size: 20px;
+			margin: 0;
+			transition: all $transitionDuration;
+			overflow-y: hidden;
+			@include tablet {
+				margin: 0 1em;
+			}
+
+			button {
+				padding: 16px 70px;
+			}
+
+			.link {
+				@include regular-16;
+				width: unset;
+				height: unset;
+			}
+		}
+		&_active {
+			.accordion__content {
+				height: unset;
+				max-height: 1000px;
+				@include tablet {
+					a:first-of-type {
+						margin-top: 0.75em;
+					}
+				}
+			}
+
+			.accordion-icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+}

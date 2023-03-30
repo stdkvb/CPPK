@@ -1,0 +1,73 @@
+.events {
+	height: calc(100vh - 110px);
+	display: flex;
+	align-items: end;
+	justify-content: flex-end;
+	@include tablet {
+		height: calc(100vh - 152px);
+		justify-content: unset;
+	}
+
+	&__container {
+		margin: 0 !important;
+		@include min_tablet {
+			max-width: 840px;
+		}
+		.swiper-slide {
+			padding: 1.5em 2.25em;
+			width: 17.5em;
+			background-color: $gray04;
+			height: unset;
+			max-width: 280px;
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			align-items: start;
+			@include regular-18;
+			color: $gray60;
+			@include tablet {
+				width: 18em;
+				min-height: 9.9em;
+			}
+
+			&:nth-child(1) {
+				background-color: $blue60;
+				color: $white;
+				.link {
+					color: $white;
+					transition: all $transitionDuration;
+					&:hover {
+						color: $gray30;
+					}
+				}
+			}
+
+			&:nth-child(2n) {
+				background-color: $gray10;
+			}
+
+			p {
+				@include regular-18;
+			}
+
+			span {
+				@include regular-32;
+				margin-right: 0.25em;
+			}
+
+			.link {
+				@include regular-16;
+				margin-top: 0.5em;
+				width: fit-content;
+				text-align: left;
+				color: $gray60;
+				margin-top: 2em;
+				text-decoration: underline;
+				transition: all $transitionDuration;
+				&:hover {
+					color: $gray90;
+				}
+			}
+		}
+	}
+}

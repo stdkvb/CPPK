@@ -1,0 +1,33 @@
+.cookie-container {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	background: $white;
+	padding: 22px 22px;
+	z-index: 10000;
+	display: none;
+	flex-direction: column;
+	gap: 9px;
+
+	&_showing {
+		display: flex;
+	}
+	.link-icon_cross {
+		width: 14px;
+		height: 14px;
+		align-self: flex-end;
+		@include min-tablet {
+			margin-right: 30px;
+		}
+	}
+
+	.description {
+		@include regular-16;
+		max-width: 1350px;
+		align-self: center;
+		a {
+			color: $black;
+			text-decoration: underline;
+		}
+	}
+}

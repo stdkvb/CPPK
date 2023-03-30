@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Контакты'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Контакты</h1>
+		</section>
+		<section class="sub-wrapper">
+			<div class="sub-wrapper__content">
+				<div class="contacts">
+					<div class="contacts__item">
+						<h2>Головной офис:</h2>
+
+						<h3>Фактический адрес:</h3>
+						<p>Республика Башкортостан, г. Уфа, ул. Цюрупы,
+							д. 17, этаж 1</p>
+
+						<h3 class="contacts__title">Время работы:</h3>
+						<p>пн.-пт. с 8:30 до 17:30</p>
+						<p>сб, вс — выходной</p>
+
+						<h3 class="contacts__title">Электронная почта:</h3>
+						<p><a href="mailto:2511152@mail.ru" class="link link_gray">2511152@mail.ru</a></p>
+
+						<h3 class="contacts__title">Телефоны:</h3>
+						<p><a href="tel:+73472009690" class="link link_gray">+7 (347) 200-96-90</a> (менеджер по
+							работе с клиентами)</p>
+						<p><a href="tel:+73472009690" class="link link_gray">+7 (347) 200-96-90</a>, добавочный 108
+							(приемная директора)
+						</p>
+						<p><a href="tel:88007001152" class="link link_gray">8-800-700-11-52</a> (многоканальный)</p>
+
+						<h3 class="contacts__title">Соцсети:</h3>
+						<a href="#" target="_blank">
+							<img src="@icons/contacts_tg.svg" alt="telegram">
+						</a>
+						<a href="#" target="_blank">
+							<img src="@icons/contacts_whatsup.svg" alt="telegram">
+						</a>
+						<a href="#" target="_blank">
+							<img src="@icons/contacts_vk.svg" alt="telegram">
+						</a>
+					</div>
+					<div class="contacts__item">
+						<h2>Представители:</h2>
+
+						<h3>г. Уфа:</h3>
+						<p>ул. Мира 14, 5 этаж, офис 506</p>
+						<p>тел.: <a href="tel:+73472009690" class="link link_gray">+7 (347) 200-96-90</a> (доб. 151)
+							(менеджер по работе с
+							клиентами)</p>
+
+						<h3>г. Стерлитамак:</h3>
+						<p>ул. Мира 14, 5 этаж, офис 506</p>
+						<p>тел.: <a href="tel:+73473206725" class="link link_gray">+7 (3473) 20-67-25</a> (менеджер
+							по работе с клиентами)
+						</p>
+
+						<h3>г. Нижний Новгород: </h3>
+						<p>ул. Ивана Романова, д. 2 офис 302</p>
+						<p>тел.: <a href="tel:+79990711179" class="link link_gray">+7 999 071-11-79</a> (менеджер по
+							работе с клиентами)
+						</p>
+					</div>
+				</div>
+
+				<div class="contacts__map" id="yandex-map"></div>
+
+			</div>
+
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu"',
+			links: '',
+			subscribe: '',
+			feedback: 'true'
+			})
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

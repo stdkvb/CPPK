@@ -1,0 +1,116 @@
+* {
+	@include FontFamilyMontserratRegular;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	line-height: 130%;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1 {
+	@include regular-64;
+	color: $white;
+
+	@include tablet {
+		@include regular-48
+	}
+
+	@include mobile {
+		@include regular-36
+	}
+}
+
+h2 {
+	@include medium-48;
+	color: $black;
+}
+
+h3 {
+	@include medium-20;
+	color: $gray80;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	cursor: pointer;
+
+	:disabled {
+		cursor: default;
+	}
+}
+
+p {
+	@include regular-16;
+}
+
+.container {
+	width: 100%;
+	padding-left: 210px;
+	background-color: $gray04;
+
+	@include desktop_extra_small {
+		padding-left: 130px;
+	}
+
+	@include tablet {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
+
+.sub-container {
+	max-width: 1810px;
+	margin-left: 110px;
+	padding: 80px 0 120px 100px;
+	&_min-height {
+		min-height: 338px;
+	}
+
+	h1 {
+		@include regular-36;
+		max-width: 785px;
+
+		@include tablet {
+			@include medium-28;
+		}
+	}
+
+	h2 {
+		@include regular-18;
+		color: $white;
+		margin-top: 24px;
+	}
+
+
+	@include desktop_extra_small {
+		margin-left: 26px;
+	}
+
+	@include tablet {
+		margin: 0;
+		padding: 44px 20px;
+	}
+
+	&_no-padding {
+		padding-bottom: 0;
+
+		@include tablet {
+			padding-bottom: 0;
+		}
+	}
+}

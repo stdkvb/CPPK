@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Курсы и семинары'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container sub-container_no-padding">
+			<h1>Курсы и семинары</h1>
+			<div class="nav-bar swiper">
+				<nav class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a class="nav-bar__link" href="#">Повышение<br>квалификации</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link " href="#">Профессиональная<br>переподготовка</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link" href="#">Краткосрочное<br>обучение</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="nav-bar__link  nav-bar__link_active" href="#">Курсы<br>и семинары</a>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<section class="courses container">
+			<form>
+				@@include('components/ui/_search-bar.html', { placeholder: 'Введите запрос'})
+			</form>
+			<div class="courses__right-bar">
+				<div class="aside-banner">
+					<p>12 февраля</p>
+					<h3>Семинар «Экономическая безопасность предпринимательской деятельности»</h3>
+					<a class="link">Подробнее</a>
+				</div>
+			</div>
+			<ul class="courses__cards cards-list">
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				<div class="courses__more">
+					<a class="btn btn_primary_blue show-more-btn">Показать еще</a>
+				</div>
+			</ul>
+
+		</section>
+		@@include('components/business/_banner.html',
+		{title: 'Не нашли нужную программу?',
+		subtitle: 'Возможно информация о ней еще не внесена на сайт. Позвоните нам по номеру 8-800-233-22-22 или скачайте полный перечень программ в формате pdf',
+		button: 'Получить перечень',
+		background: '@images/banner-background-2.png',
+		image: '@images/banner-image-2.png'
+		})
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

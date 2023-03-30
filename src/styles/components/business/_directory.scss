@@ -1,0 +1,38 @@
+.directory {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 60px;
+
+	@include tablet {
+		display: none;
+	}
+
+	.link_blue {
+		position: relative;
+		margin-right: 25px;
+		@include regular-14;
+		line-height: 1.3;
+
+		&::after {
+			content: "—";
+			font-size: 14px;
+			display: block;
+			color: #E0E0E0;
+			position: absolute;
+			right: -20px;
+			top: 0;
+		}
+	}
+
+	span {
+		display: block;
+		white-space: nowrap;
+		max-height: 18px;
+		max-width: 258px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		@include regular-14;
+		line-height: 1.3;
+		color: $gray40;
+	}
+}

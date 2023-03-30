@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Новости'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Новости</h1>
+		</section>
+		<section class="sub-wrapper">
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu sub-menu_bg"',
+			links: 'true',
+			subscribe: 'true',
+			feedback: ''
+			})
+
+			<div class="sub-wrapper__content">
+				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Новости'})
+
+				<div class="news__tabs swiper element-animation element-animation__fromLeft">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide_active">
+							<h2>Новости</h2>
+						</div>
+						<div class="swiper-slide">
+							<h2>События</h2>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+
+				<div class="news">
+					<div class="news__cards news__cards_list">
+						<a class="swiper-slide" href="/">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+							<img src="@images/news-1.png">
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>ЦППК подводит итоги 2022 года</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>ЦППК подводит итоги 2022 года</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>ЦППК подводит итоги 2022 года</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+						<a class="swiper-slide" href="/">
+							<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение
+								работников промышленных предприятий</h3>
+							<span>12 января 2023</span>
+							<span class="link-icon link-icon_arrow"></span>
+						</a>
+					</div>
+				</div>
+
+				@@include('components/ui/_pagination.html')
+			</div>
+
+
+		</section>
+		<section class="subscribe container">
+			<div class="subscribe__text">
+				<h3>Подпишитесь на рассылку</h3>
+				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших
+					клиентов по подписке</p>
+			</div>
+			<form class="subscribe__form">
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type:
+				'submit'})
+			</form>
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
