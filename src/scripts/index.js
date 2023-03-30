@@ -511,31 +511,33 @@ const firstProgrammsTabContent = document.getElementById('programms-tab-content-
 const secondProgrammsTabContent = document.getElementById('programms-tab-content-2')
 const thirdProgrammsTabContent = document.getElementById('programms-tab-content-3')
 
-function resetProgrammsActiveTabs () {
+if (firstProgrammsTab !== null) {
+	function resetProgrammsActiveTabs () {
+		programmsTabs.forEach((elem) => {
+			elem.classList.remove('swiper-slide_active')
+		})
+		programmsTabContents.forEach((elem) => {
+			elem.classList.remove('programms__cards_active')
+		})
+	}
+
 	programmsTabs.forEach((elem) => {
-		elem.classList.remove('swiper-slide_active')
+		elem.addEventListener('click', () => {
+			resetProgrammsActiveTabs ()
+			elem.classList.add('swiper-slide_active')
+		})
 	})
-	programmsTabContents.forEach((elem) => {
-		elem.classList.remove('programms__cards_active')
+
+	firstProgrammsTab.addEventListener('click', () => {
+		firstProgrammsTabContent.classList.add('programms__cards_active')
+	})
+	secondProgrammsTab.addEventListener('click', () => {
+		secondProgrammsTabContent.classList.add('programms__cards_active')
+	})
+	thirdProgrammsTab.addEventListener('click', () => {
+		thirdProgrammsTabContent.classList.add('programms__cards_active')
 	})
 }
-
-programmsTabs.forEach((elem) => {
-	elem.addEventListener('click', () => {
-		resetProgrammsActiveTabs ()
-		elem.classList.add('swiper-slide_active')
-	})
-})
-
-firstProgrammsTab.addEventListener('click', () => {
-	firstProgrammsTabContent.classList.add('programms__cards_active')
-})
-secondProgrammsTab.addEventListener('click', () => {
-	secondProgrammsTabContent.classList.add('programms__cards_active')
-})
-thirdProgrammsTab.addEventListener('click', () => {
-	thirdProgrammsTabContent.classList.add('programms__cards_active')
-})
 
 // benefits backgrounds
 const benefitsCards = document.querySelector('.benefits__cards')
@@ -588,31 +590,33 @@ const firstReviewsTabContent = document.getElementById('reviews-tab-content-1')
 const secondReviewsTabContent = document.getElementById('reviews-tab-content-2')
 const thirdReviewsTabContent = document.getElementById('reviews-tab-content-3')
 
-function resetReviewsActiveTabs () {
+if (firstReviewsTab !== null) {
+	function resetReviewsActiveTabs () {
+		reviewsTabs.forEach((elem) => {
+			elem.classList.remove('swiper-slide_active')
+		})
+		reviewsTabContents.forEach((elem) => {
+			elem.classList.remove('reviews__cards_active')
+		})
+	}
+
 	reviewsTabs.forEach((elem) => {
-		elem.classList.remove('swiper-slide_active')
+		elem.addEventListener('click', () => {
+			resetReviewsActiveTabs ()
+			elem.classList.add('swiper-slide_active')
+		})
 	})
-	reviewsTabContents.forEach((elem) => {
-		elem.classList.remove('reviews__cards_active')
+
+	firstReviewsTab.addEventListener('click', () => {
+		firstReviewsTabContent.classList.add('reviews__cards_active')
+	})
+	secondReviewsTab.addEventListener('click', () => {
+		secondReviewsTabContent.classList.add('reviews__cards_active')
+	})
+	thirdReviewsTab.addEventListener('click', () => {
+		thirdReviewsTabContent.classList.add('reviews__cards_active')
 	})
 }
-
-reviewsTabs.forEach((elem) => {
-	elem.addEventListener('click', () => {
-		resetReviewsActiveTabs ()
-		elem.classList.add('swiper-slide_active')
-	})
-})
-
-firstReviewsTab.addEventListener('click', () => {
-	firstReviewsTabContent.classList.add('reviews__cards_active')
-})
-secondReviewsTab.addEventListener('click', () => {
-	secondReviewsTabContent.classList.add('reviews__cards_active')
-})
-thirdReviewsTab.addEventListener('click', () => {
-	thirdReviewsTabContent.classList.add('reviews__cards_active')
-})
 
 // show more
 const cardsList = document.querySelector('.cards-list')
