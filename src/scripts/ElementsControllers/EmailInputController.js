@@ -1,5 +1,5 @@
-import isEmail from 'validator/es/lib/isEmail'
-import DefaultInputController from './DefaultInputController'
+import isEmail from 'validator/es/lib/isEmail.js'
+import DefaultInputController from './DefaultInputController.js'
 
 class EmailInputController extends DefaultInputController {
 	constructor(container, options = {}) {

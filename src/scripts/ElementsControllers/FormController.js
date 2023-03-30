@@ -1,9 +1,9 @@
-import DefaultInputController from './DefaultInputController'
-import EmailInputController from './EmailInputController'
-import PhoneInputController from './PhoneInputController'
-import CheckboxInputController from './CheckboxInputController'
-import TextAreaController from './TextAreaController'
-import PasswordInputController from './PasswordInputController'
+import DefaultInputController from './DefaultInputController.js'
+import EmailInputController from './EmailInputController.js'
+import PhoneInputController from './PhoneInputController.js'
+import CheckboxInputController from './CheckboxInputController.js'
+import TextAreaController from './TextAreaController.js'
+import PasswordInputController from './PasswordInputController.js'
 
 const typeCompliance = {
 	text: {

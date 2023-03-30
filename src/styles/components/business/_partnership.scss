@@ -10,11 +10,9 @@
 	grid-template-columns: 40% 60%;
 	gap: 43px;
 	overflow: hidden;
-
 	@include desktop_huge {
 		display: block;
 	}
-
 	@include tablet {
 		padding: 60px 0 0 24px;
 	}
@@ -22,11 +20,9 @@
 	h2 {
 		grid-area: title;
 		margin-bottom: 144px;
-
 		@include desktop_huge {
 			margin-bottom: 32px;
 		}
-
 		@include tablet {
 			@include medium-24;
 			margin: 0 24px 32px 0;
@@ -36,11 +32,9 @@
 	.btn {
 		max-width: 320px;
 		grid-area: button;
-
 		@include desktop_huge {
 			margin-top: 32px;
 		}
-
 		@include tablet {
 			margin: 32px 24px 0 0;
 		}
@@ -65,12 +59,10 @@
 			@include tablet {
 				width: 130px;
 				height: 98px !important;
-
 				img {
 					max-width: 110px;
 				}
 			}
-
 			&:hover {
 				filter: unset;
 			}

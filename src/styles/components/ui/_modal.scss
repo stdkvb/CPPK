@@ -13,12 +13,10 @@
 	overflow-y: auto;
 	padding: 20px 15px;
 	align-items: center;
-
 	@include mobile {
 		padding: 0;
 		padding-top: 80px;
 	}
-
 	.modal-close {
 		position: absolute;
 		top: 42px;
@@ -27,16 +25,13 @@
 		width: 43px;
 		z-index: 1000;
 		border: none;
-
 		@include tablet {
 			top: 22px;
 			right: 20px;
 		}
-
 		&:hover {
 			background: unset;
 		}
-
 		&:before {
 			content: url("@icons/close-modal.svg");
 			position: absolute;
@@ -45,7 +40,6 @@
 			transform: translate(-48%, -43%);
 		}
 	}
-
 	.modal-container {
 		width: 100%;
 		z-index: 1000;
@@ -53,10 +47,8 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-
 		img {
 			width: 520px;
-
 			@include tablet {
 				max-width: 340px;
 			}

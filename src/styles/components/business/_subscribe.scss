@@ -26,12 +26,11 @@
 			'input btn'
 			'checkbox checkbox';
 		gap: 20px;
-
 		@include mobile {
 			grid-template-areas:
-				'input'
-				'checkbox'
-				'btn';
+			'input'
+			'checkbox'
+			'btn';
 		}
 
 		.input__container {
@@ -53,7 +52,6 @@
 			display: flex;
 			justify-content: center;
 			width: fit-content;
-
 			@include mobile {
 				width: 100%;
 			}
@@ -62,7 +60,6 @@
 		.checkbox {
 			grid-area: checkbox;
 			justify-self: flex-end;
-
 			@include desktop_small {
 				justify-self: unset;
 			}

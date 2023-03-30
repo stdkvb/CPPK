@@ -2,18 +2,16 @@
 	padding-top: 80px;
 	padding-left: 110px;
 	background-color: $gray04;
-
 	@include tablet {
 		padding-top: 60px;
 		padding-bottom: 60px;
 		background-color: $white;
 	}
 
-	.search-bar {
+	.search-bar{
 		margin-left: 100px;
 		margin-top: unset;
 		width: calc(100% - 200px);
-
 		@include tablet {
 			width: 100%;
 			margin: 0;
@@ -31,11 +29,9 @@
 		margin-top: 60px;
 		border-top: solid 0.5px $gray10;
 		border-bottom: solid 0.5px $gray10;
-
 		@include desktop {
 			grid-template-columns: repeat(2, 1fr);
 		}
-
 		@include tablet {
 			margin-top: 32px;
 			grid-template-columns: 1fr;
@@ -54,11 +50,9 @@
 		min-height: 273px;
 		border: solid 0.5px $gray10;
 		transition: background-color $transitionDuration;
-
 		@include desktop_large {
 			padding: 40px 50px;
 		}
-
 		@include tablet {
 			background-color: $gray04;
 			border: none;
@@ -70,7 +64,6 @@
 				display: none;
 			}
 		}
-
 		a {
 			height: 100%;
 			display: flex;
@@ -82,12 +75,10 @@
 			color: $gray90;
 			@include medium-28;
 			transition: color $transitionDuration;
-
 			@include tablet {
 				@include medium-18;
 			}
 		}
-
 		.link {
 			transition: color $transitionDuration;
 			@include regular-16;
@@ -96,11 +87,9 @@
 		&:hover {
 			background-color: $blue50;
 			cursor: pointer;
-
 			h3 {
 				color: $white;
 			}
-
 			.link {
 				color: $white;
 			}
@@ -114,9 +103,7 @@
 
 		@include tablet {
 			display: inline-block;
-		}
-
-		;
+		};
 
 		@include mobile {
 			width: 100%;

@@ -6,7 +6,6 @@
 	gap: 20px;
 	position: sticky;
 	top: 0;
-
 	@include tablet {
 		padding: 20px 24px;
 	}
@@ -19,7 +18,6 @@
 	h3 {
 		@include medium-24;
 		color: $white;
-
 		@include tablet {
 			@include medium-18;
 		}
@@ -29,7 +27,6 @@
 		width: fit-content;
 		@include regular-16;
 		margin-top: 20px;
-
 		&:after {
 			margin-left: 14px;
 			content: url(@icons/long-arrow-white.svg)

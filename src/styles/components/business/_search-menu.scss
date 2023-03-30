@@ -11,13 +11,11 @@
 	overflow-y: scroll;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-
 	&::-webkit-scrollbar {
 		display: none;
 	}
-
 	@include tablet {
-		padding: 2em 1.5em 5em 1.5em;
+		padding: 2em 1.5em 	5em 1.5em;
 	}
 
 	&_active {
@@ -31,7 +29,6 @@
 		width: 2.125em;
 		height: 2.125em;
 		background-image: url(@icons/close.svg);
-
 		@include tablet {
 			display: none;
 		}
@@ -42,7 +39,6 @@
 		gap: 30px;
 		align-items: center;
 		margin-bottom: 80px;
-
 		@include desktop_huge {
 			gap: 0;
 			flex-direction: column;
@@ -55,18 +51,15 @@
 		margin: 0;
 		border: solid 1px $gray30;
 		max-width: 1135px;
-
 		@include tablet {
 			padding-right: 1.5em;
 		}
-
 		@include desktop_huge {
 			margin: 0 0 1em 0;
 		}
 
 		input {
 			color: $gray30;
-
 			@include tablet {
 				padding-left: 1em;
 			}
@@ -91,7 +84,6 @@
 		color: $white;
 		@include medium-28;
 		margin-bottom: 1.7em;
-
 		@include tablet {
 			@include medium-24;
 		}

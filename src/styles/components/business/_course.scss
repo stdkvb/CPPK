@@ -1,15 +1,12 @@
 .course {
 	padding-left: 0;
 	display: flex;
-
 	@include desktop_medium {
 		flex-direction: column-reverse;
 	}
-
 	@include desktop_extra_small {
 		padding-left: 0;
 	}
-
 	@include tablet {
 		padding: 0;
 		background-color: $white;
@@ -18,23 +15,19 @@
 	&__content {
 		overflow: hidden;
 		width: 100%;
-
 		.directory {
 			margin-top: 100px;
 			margin-left: 210px;
 			grid-area: directory;
-
 			@include desktop_medium {
 				display: none;
 			}
 		}
-
 		.course__text-content {
 			margin-top: 100px;
 			margin-bottom: 100px;
 			margin-left: 210px;
 			padding-right: 88px;
-
 			@include tablet {
 				margin-top: 0;
 				margin-bottom: 0;
@@ -48,7 +41,6 @@
 			h3 {
 				@include medium-36;
 				margin-bottom: 60px;
-
 				@include tablet {
 					@include medium-24;
 					margin-bottom: 32px;
@@ -64,7 +56,6 @@
 				@include regular-18;
 				margin-bottom: 30px;
 				color: $gray80;
-
 				@include tablet {
 					@include regular-16;
 					margin-bottom: 16px;
@@ -110,19 +101,16 @@
 				display: flex;
 				margin-right: 100px;
 				gap: 32px;
-
 				@include tablet {
 					margin-left: 0;
 					margin-right: 0;
 					padding: 20px;
 				}
-
 				@include mobile {
 					img {
 						display: none;
 					}
 				}
-
 				p {
 					color: $white;
 				}
@@ -144,18 +132,15 @@
 
 			&_recomendations {
 				list-style: none;
-
 				@include tablet {
 					padding-top: 50px;
 				}
-
 				li::before {
 					content: '';
 				}
 
 				.courses__card {
 					padding: 0;
-
 					a {
 						h3 {
 							@include medium-24;
@@ -171,7 +156,6 @@
 			margin-left: 110px;
 			width: unset;
 			height: unset;
-
 			@include tablet {
 				margin-left: 0;
 			}
@@ -300,7 +284,6 @@
 			margin-bottom: 100px;
 			margin-left: 110px;
 			padding: 100px;
-
 			@include tablet {
 				margin-bottom: 0;
 				padding-top: 50px;
@@ -314,7 +297,6 @@
 				@include medium-36;
 				color: $white;
 				margin-bottom: 60px;
-
 				@include tablet {
 					@include medium-24;
 					margin-bottom: 32px;
@@ -327,7 +309,6 @@
 					color: $white;
 					display: flex;
 					max-height: 87px;
-
 					@include tablet {
 						max-height: unset;
 					}
@@ -343,7 +324,6 @@
 						padding-top: 17px;
 						margin-right: 32px;
 						@include medium-24;
-
 						@include tablet {
 							background-image: url(@icons/stages-marker-mobile.svg);
 							@include medium-16;
@@ -356,23 +336,18 @@
 					&:nth-child(2):before {
 						content: '2';
 					}
-
 					&:nth-child(3):before {
 						content: '3';
 					}
-
 					&:nth-child(4):before {
 						content: '4';
 					}
-
 					&:nth-child(5):before {
 						content: '5';
 					}
-
 					&:nth-child(6):before {
 						content: '6';
 						height: 37px;
-
 						@include tablet {
 							height: 28px;
 						}
@@ -383,7 +358,6 @@
 						flex-direction: column;
 						gap: 6px;
 						@include medium-24;
-
 						@include tablet {
 							@include medium-18;
 							gap: 2px;
@@ -400,7 +374,6 @@
 							text-decoration: underline;
 							color: $blue10;
 							display: inline;
-
 							&:hover {
 								color: $blue30;
 							}
@@ -416,7 +389,6 @@
 			margin-bottom: 100px;
 			margin-left: 210px;
 			padding: 100px;
-
 			@include tablet {
 				margin-bottom: 0;
 				padding-top: 50px;
@@ -429,7 +401,6 @@
 			h3 {
 				@include medium-36;
 				margin-bottom: 60px;
-
 				@include tablet {
 					@include medium-24;
 					margin-bottom: 32px;
@@ -464,12 +435,10 @@
 				grid-template-areas:
 					"title button"
 					"subtitle button";
-
 				@include tablet {
 					display: block;
 					padding: 20px;
 				}
-
 				h4 {
 					grid-area: title;
 					margin-bottom: 12px;
@@ -486,7 +455,6 @@
 				.btn {
 					grid-area: button;
 					margin-left: 20px;
-
 					@include tablet {
 						width: 100%;
 						margin-top: 32px;
@@ -502,34 +470,27 @@
 			background-repeat: no-repeat;
 			background-color: $blue50;
 			overflow: hidden;
-
 			@include tablet {
 				padding-left: 20px;
 				padding-right: 20px;
 			}
-
 			div {
 				margin-top: 80px;
 				margin-bottom: 80px;
-
 				@include tablet {
 					margin-top: 50px;
 					margin-bottom: 60px;
 				}
-
 				h2 {
 					@include medium-36;
-
 					@include tablet {
 						@include medium-24;
 					}
 				}
-
 				.btn {
 					margin-top: 40px;
 				}
 			}
-
 			img {
 				margin-right: 40px;
 			}
@@ -541,26 +502,21 @@
 			padding-top: 0;
 			padding-bottom: 0;
 			margin-left: 210px;
-
 			@include tablet {
 				margin-left: 0;
 				padding-left: 20px;
 			}
-
 			@include mobile {
 				padding-left: 0;
 			}
-
 			h3 {
 				@include regular-36;
 				margin-bottom: 60px;
-
 				@include tablet {
 					@include regular-24;
 					margin-bottom: 32px;
 					margin-right: 20px;
 				}
-
 				@include mobile {
 					margin-left: 20px;
 				}
@@ -573,26 +529,21 @@
 			padding-right: 0;
 			padding-bottom: 0;
 			margin-left: 210px;
-
 			@include tablet {
 				margin-left: 0;
 				padding-left: 20px;
 			}
-
 			@include mobile {
 				padding-left: 0;
 			}
-
 			h3 {
 				@include regular-36;
 				margin-bottom: 60px;
-
 				@include tablet {
 					@include regular-24;
 					margin-bottom: 32px;
 					margin-right: 20px;
 				}
-
 				@include mobile {
 					margin-left: 20px;
 				}
@@ -604,17 +555,14 @@
 		grid-area: right-bar;
 		background-color: $white;
 		max-width: 472px;
-
-		@include desktop_medium {
+		@include desktop_medium  {
 			margin-left: 210px;
 			margin-right: 100px;
 			background-color: $gray04;
-
 			.aside-banner {
 				display: none;
 			}
 		}
-
 		@include tablet {
 			background-color: $white;
 			margin-top: 32px;
@@ -627,7 +575,6 @@
 			position: sticky;
 			top: 0;
 			border-bottom: solid 1px $gray10;
-
 			@include desktop_medium {
 				border: none;
 			}
@@ -643,22 +590,18 @@
 				grid-template-areas:
 					"image name"
 					"image phone";
-
 				@include desktop_medium {
 					display: none;
 				}
-
 				img {
 					border-radius: 50%;
 					grid-area: image;
 				}
-
 				span {
 					grid-area: name;
 					@include regular-16;
 					color: $gray50;
 				}
-
 				a {
 					grid-area: phone;
 					@include medium-16;
@@ -673,16 +616,13 @@
 				gap: 8px;
 				border-top: solid 1px $gray10;
 				border-bottom: solid 1px $gray10;
-
 				span {
 					@include medium-16;
 				}
-
 				span:last-of-type {
 					@include regular-14;
 					color: $gray50;
 				}
-
 				@include desktop_medium {
 					display: none;
 				}
@@ -692,11 +632,9 @@
 				grid-area: btn;
 				padding: 1.5em 2.25em;
 				margin: 32px 48px;
-
 				@include desktop_medium {
 					display: none;
 				}
-
 				.children:before {
 					content: '';
 					width: 16px;
@@ -707,7 +645,6 @@
 					background-size: contain;
 					transition: all $transitionDuration;
 				}
-
 				&:hover {
 					.children:before {
 						background-image: url(@icons/download-white.svg);
@@ -717,3 +654,4 @@
 		}
 	}
 }
+

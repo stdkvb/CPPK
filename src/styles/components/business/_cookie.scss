@@ -12,12 +12,10 @@
 	&_showing {
 		display: flex;
 	}
-
 	.link-icon_cross {
 		width: 14px;
 		height: 14px;
 		align-self: flex-end;
-
 		@include min-tablet {
 			margin-right: 30px;
 		}
@@ -27,7 +25,6 @@
 		@include regular-16;
 		max-width: 1350px;
 		align-self: center;
-
 		a {
 			color: $black;
 			text-decoration: underline;
