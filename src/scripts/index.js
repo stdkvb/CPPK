@@ -14,6 +14,7 @@ import takeControlCookie from './ElementsControllers/CookieController'
 import takeControlForms from './ElementsControllers/FormController'
 import takeControlModals from './ElementsControllers/ModalController'
 import takeControlYandexMap from './ElementsControllers/YandexMapController'
+import takeControlAdvantagesTabs from './ElementsControllers/AdvantagesTabsController'
 
 takeControlYandexMap()
 takeControlLeftBarScrollAnimation()
@@ -26,6 +27,7 @@ takeControlBenefitsBackground()
 takeControlVideo()
 takeControlShowMore()
 takeControlForms()
+takeControlAdvantagesTabs()
 takeControlcustomSelect('custom-select')
 takeControlCookie('.cookie-container', '.cookie-accept')
 takeControlModals('.open-modal', '.modal-close', {

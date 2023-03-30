@@ -221,6 +221,10 @@
 					h4 {
 						color: $gray50;
 						@include medium-18;
+
+						&:hover {
+							cursor: pointer;
+						}
 					}
 
 					&_active {
@@ -254,12 +258,16 @@
 			}
 
 			&__cards {
-				display: grid;
+				display: none;
 				grid-template-columns: repeat(2, 1fr);
 				margin-top: 24px;
 
 				@include tablet {
 					display: block;
+				}
+
+				&_active {
+					display: grid;
 				}
 			}
 
