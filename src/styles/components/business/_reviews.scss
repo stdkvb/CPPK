@@ -12,6 +12,9 @@
 		@include tablet {
 			padding: 0 12px 55px 0;
 		}
+		&:hover {
+			cursor: pointer;
+		}
 
 		.swiper-slide {
 			height: 62px;

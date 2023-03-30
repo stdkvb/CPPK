@@ -10,6 +10,8 @@ import customSelect from './ElementsControllers/CustomSelect'
 
 customSelect('custom-select')
 
+takeControlYandexMap()
+
 new CounterItemController({
 	countersElementsWrapperSelector: '.about-us__text-container',
 	counterElementSelector: '.about-us__numbers',
@@ -672,4 +674,4 @@ if (programmsSection !== null) {
 	visible(programmsSection)
 }
 
-// takeControlYandexMap()
+
