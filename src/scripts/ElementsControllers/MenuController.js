@@ -3,7 +3,7 @@ const takeControlMenu = () => {
 	const burgerBtn = document.getElementById('burger-btn')
 	const menu = document.getElementById('menu')
 	const profileBtn = document.getElementById('profile-btn')
-	const profileMenu = document.getElementById('profile-menu')
+	const profileMenu = document.getElementById('profile-access-menu')
 	const vrBtn = document.getElementById('vr-btn')
 	const vrMenu = document.getElementById('vr-menu')
 	const rlBtn = document.getElementById('rl-btn')

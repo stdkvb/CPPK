@@ -1,0 +1,10 @@
+<div class="service-menu service-menu_gray" id="profile-access-menu">
+	<a class="link close-btn"><span class="link-arrow"></span>Вернуться</a>
+	<h2>Восстановление пароля</h2>
+	<div class="service-menu__form recovery">
+		<form novalidate>
+			@@include('components/ui/_input-email.html', {label: 'Ведите почту, с помощью которой регистрировались на сайте. На нее мы отправим код подтверждения', name: 'email', required: true})
+			@@include('components/ui/_button.html', {children: 'Отправить код', class: 'btn_secondary', type: 'submit'})
+		</form>
+	</div>
+</div>
