@@ -4,49 +4,51 @@
 	bottom: 0;
 	height: 100vh;
 	width: 237px;
-	background-color: $gray80;
-	z-index: -1;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	padding-bottom: 3.75em;
+	justify-content: flex-end;
 
-	div {
-		height: 110px;
-		background-color: $white;
-		width: 100%;
-	}
+	&__wrapper {
+		background-color: $gray80;
+		height: calc(100vh - 110px);
+		padding-bottom: 3.75em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		nav {
+			padding-bottom: 130px;
+			margin-left: 78px;
+			a {
+				margin-bottom: 8px;
+				width: fit-content;
+				@include regular-14;
+				color: $gray10;
+				position: relative;
+			}
 
-	nav {
-		padding-bottom: 120px;
-		margin-left: 78px;
-		a {
-			margin-bottom: 8px;
-			width: fit-content;
+			.active {
+				@include medium-18;
+				color: $white;
+				&:hover {
+					cursor: unset;
+					color: $white;
+				}
+				&:before {
+					content: url(@icons/profile-menu-active.svg);
+					position: absolute;
+					left: -32px;
+					bottom: 4px;
+				}
+			}
+		}
+
+		.profile-menu__exit {
 			@include regular-14;
 			color: $gray10;
-			position: relative;
-		}
-
-		.active {
-			@include medium-18;
-			color: $white;
-			&:hover {
-				cursor: unset;
-				color: $white;
-			}
-			&:before {
-				content: url(@icons/profile-menu-active.svg);
-				position: absolute;
-				left: -32px;
-				bottom: 4px;
-			}
+			margin-left: 78px;
+			position: absolute;
+			bottom: 65px;
 		}
 	}
-
-	&__exit {
-		@include regular-14;
-		color: $gray10;
-		margin-left: 78px;
-	};
 }
