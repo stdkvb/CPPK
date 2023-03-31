@@ -20,8 +20,8 @@
 		width: 706px;
 		.input__container {
 			margin-bottom: 20px;
-			background-color: $white;
 			input {
+				background-color: $white;
 				color: $gray60;
 				&::placeholder {
 					color: $gray60;

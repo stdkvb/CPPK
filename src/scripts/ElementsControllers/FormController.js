@@ -213,6 +213,12 @@ const takeControlForms = () => {
 		onSubmit: () => {
 		}
 	})
+
+	takeControlForm('.profile', 'form', {
+		elementsNames: ['email', 'name', 'phone'],
+		onSubmit: () => {
+		}
+	})
 }
 
 export default takeControlForms

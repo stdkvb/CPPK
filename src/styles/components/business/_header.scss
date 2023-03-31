@@ -56,8 +56,14 @@
 		border-bottom: none;
 		position: fixed;
 		top: 0;
-		a {
+		.link {
 			color: $black;
+		}
+		.link_secondary {
+			color: $gray80;
+		}
+		.link-icon_eye {
+			content: url(@icons/eye-dark.svg);
 		}
 		.btn:hover {
 			background-color: $blue50;

@@ -3,19 +3,19 @@
 @@include('meta/_head.html', {title: 'Профиль'})
 
 <body>
-	@@include('components/business/_header.html', {class: 'header_white'})
+	@@include('components/business/_header.html', {class: 'header_white', logo: 'logo_dark'})
 	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
 	@@include('components/business/_profile-menu.html')
 	<main>
 		<section class="profile">
 			<h1 class="element-animation">Профиль</h1>
 			<p class="profile__subtitle element-animation">Данные организации</p>
-			<form class="element-animation" novalidate>
-				@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'ИНН', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'Юридический адрес организации', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+			<form class="element-animation profile-form" novalidate>
+				@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', errorMessage: 'Введите наименование организации', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'ИНН', errorMessage: 'Введите ИНН организации', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', errorMessage: 'Введите имя представителя', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите должность представителя', name: 'name', required: true})
 				@@include('components/ui/_input-phone.html', {placeholder: 'Телефон представителя', name: 'phone', required: true})
 				@@include('components/ui/_input-email.html', {name: 'email', required: true})
 				<div>

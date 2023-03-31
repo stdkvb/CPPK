@@ -6,12 +6,12 @@
 	</div>
 	<div class="service-menu__form disabled signup element-animation element-animation__fromLeft" id="signup">
 		<form novalidate>
-			@@include('components/ui/_input-email.html', {name: 'email', required: true})
-			@@include('components/ui/_input-password.html', {name: 'password', errorMessage: 'Придумайте пароль', required: true, id: 'password'})
-			@@include('components/ui/_input-password.html', {placeholder: 'Повторите пароль', errorMessage: 'Повторите пароль', name: 'repeatpassword', required: true})
-			@@include('components/ui/_input-text.html', {placeholder: 'ФИО', errorMessage: 'Введите ваше имя', name: 'name', required: true})
-			@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
-			@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="/" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: 'true'})
+			@@include('components/ui/_input-email.html', {name: 'email'})
+			@@include('components/ui/_input-password.html', {name: 'password', errorMessage: 'Придумайте пароль', id: 'password'})
+			@@include('components/ui/_input-password.html', {placeholder: 'Повторите пароль', errorMessage: 'Повторите пароль', name: 'repeatpassword'})
+			@@include('components/ui/_input-text.html', {placeholder: 'ФИО', errorMessage: 'Введите ваше имя', name: 'name'})
+			@@include('components/ui/_input-phone.html', {name: 'phone'})
+			@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="/" target="_blank">обработку моих персональных данных</a>', name: 'agreement', checked: 'true'})
 			@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
 		</form>
 	</div>

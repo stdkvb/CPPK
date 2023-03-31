@@ -7,4 +7,9 @@
 			content: url("@icons/logo-mini.svg");
 		}
 	}
+	&_dark {
+		&::before {
+			content: url("@icons/logo-dark.svg");
+		}
+	}
 }

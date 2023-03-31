@@ -23,7 +23,6 @@
 				margin-bottom: 8px;
 				width: fit-content;
 				@include regular-14;
-				color: $gray10;
 				position: relative;
 			}
 
@@ -45,7 +44,6 @@
 
 		.profile-menu__exit {
 			@include regular-14;
-			color: $gray10;
 			margin-left: 78px;
 			position: absolute;
 			bottom: 65px;
