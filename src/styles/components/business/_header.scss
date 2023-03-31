@@ -50,4 +50,15 @@
 		position: relative;
 		z-index: 9;
 	}
+
+	&_white {
+		background-color: $white;
+		border-bottom: none;
+		a {
+			color: $black;
+		}
+		.btn:hover {
+			background-color: $blue50;
+		}
+	}
 }
