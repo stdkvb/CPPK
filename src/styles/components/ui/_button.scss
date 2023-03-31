@@ -13,7 +13,7 @@
 	justify-content: center;
 
 	&:hover {
-		background-color: $white;
+		background-color: transparent;
 		color: $gray90;
 
 		.children .btn-arrow {
@@ -63,8 +63,10 @@
 
 	&_blue-border {
 		border: 1px solid $blue50;
-		color: $black;
-		display: block;
+		color: $blue50;
+		display: flex;
+		align-items: center;
+		width: fit-content;
 
 		&_disable {
 			border: 1px solid $gray30;

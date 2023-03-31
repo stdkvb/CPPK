@@ -54,6 +54,8 @@
 	&_white {
 		background-color: $white;
 		border-bottom: none;
+		position: fixed;
+		top: 0;
 		a {
 			color: $black;
 		}

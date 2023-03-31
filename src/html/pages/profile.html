@@ -7,8 +7,22 @@
 	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
 	@@include('components/business/_profile-menu.html')
 	<main>
-		<section class="profile profile-container">
-			<h1>Профиль</h1>
+		<section class="profile">
+			<h1 class="element-animation">Профиль</h1>
+			<p class="profile__subtitle element-animation">Данные организации</p>
+			<form class="element-animation" novalidate>
+				@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'ИНН', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Юридический адрес организации', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+				@@include('components/ui/_input-phone.html', {placeholder: 'Телефон представителя', name: 'phone', required: true})
+				@@include('components/ui/_input-email.html', {name: 'email', required: true})
+				<div>
+					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', href: '#'})
+					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill', type: 'submit'})
+				</div>
+			</form>
 		</section>
 	</main>
 	@@include('components/business/_bottom-bar.html')
