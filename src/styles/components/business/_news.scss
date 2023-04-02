@@ -1,5 +1,6 @@
 .news__tabs {
-	margin-bottom: 64px;
+	margin-bottom: 34px;
+	padding-bottom: 30px;
 
 	@include tablet {
 		margin-bottom: 32px;
@@ -11,6 +12,8 @@
 
 	.swiper-slide {
 		width: fit-content !important;
+		display: flex;
+		align-items: center;
 
 		h2 {
 			@include regular-24;
@@ -23,7 +26,7 @@
 
 		&_active {
 			h2 {
-				@include medium-36;
+				@include medium-28;
 				color: $gray90;
 
 				@include tablet {
@@ -31,6 +34,11 @@
 				}
 			}
 		}
+	}
+
+	.swiper-scrollbar {
+		bottom: 30px;
+		background: #aad4ec;
 	}
 }
 
@@ -40,10 +48,24 @@
 	position: relative;
 	overflow: hidden;
 
+	height: auto;
+	display: none;
+
+	&_active {
+		display: block;
+	}
+
+
 	@include tablet {
 		padding-top: 50px;
 		padding-bottom: 60px;
 		padding-right: 0;
+	}
+
+	&__tab {
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	h2 {
