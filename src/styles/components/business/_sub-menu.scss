@@ -134,8 +134,19 @@
 			color: $gray60;
 			font-weight: 500;
 
+
 			&:hover {
 				color: $blue50;
+
+				&::before {
+					content: "—";
+					font-size: 16px;
+					font-weight: 700;
+					display: block;
+					color: $blue50;
+					position: relative;
+					left: -15px;
+				}
 			}
 
 			&:not(:last-child) {

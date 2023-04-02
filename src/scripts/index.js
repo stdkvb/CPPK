@@ -4,6 +4,8 @@ import takeControlLeftBarScrollAnimation from './ElementsControllers/LeftBarScro
 import takeControlNotification from './ElementsControllers/NotificationController'
 import takeControlProgrammsTabs from './ElementsControllers/ProgrammsTabsController'
 import takeControlReviewsTabs from './ElementsControllers/ReviewsTabsController'
+import takeControlNewsTabs from './ElementsControllers/NewsTabsController'
+import takeControlDocumentsTabs from './ElementsControllers/DocumentsTabsController'
 import takeControlProfileTabs from './ElementsControllers/ProfileTabsController'
 import takeControlMenu from './ElementsControllers/MenuController'
 import takeControlBenefitsBackground from './ElementsControllers/BenefitsBackgroundController'
@@ -21,6 +23,8 @@ takeControlLeftBarScrollAnimation()
 takeControlNotification()
 takeControlProgrammsTabs()
 takeControlReviewsTabs()
+takeControlNewsTabs()
+takeControlDocumentsTabs()
 takeControlProfileTabs()
 takeControlMenu()
 takeControlBenefitsBackground()
@@ -199,13 +203,8 @@ new Swiper('.reviews__cards', {
 new Swiper('.news__tabs', {
 	slidesPerView: 2,
 	spaceBetween: 44,
-	scrollbar: {
-		el: '.swiper-scrollbar',
-		draggable: true
-	},
 	breakpoints: {
 		992: {
-			scrollbar: false,
 			spaceBetween: 80
 		}
 	}
