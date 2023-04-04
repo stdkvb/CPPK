@@ -7,6 +7,20 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	@include tablet {
+		height: 277px;
+		width: 100%;
+		left: 0;
+		z-index: 10;
+		bottom: -277px;
+		opacity: 0;
+		transition: all $transitionDuration;
+
+		&_active {
+			transform: translateY(-277px) !important;
+			opacity: 1 !important;
+		}
+	}
 
 	&__wrapper {
 		background-color: $gray80;
@@ -24,6 +38,9 @@
 				width: fit-content;
 				@include regular-14;
 				position: relative;
+				@include tablet {
+					margin-bottom: 12px;
+				}
 			}
 
 			.active {
@@ -40,6 +57,10 @@
 					bottom: 4px;
 				}
 			}
+
+			@include tablet {
+				padding-bottom: 62px;
+			}
 		}
 
 		.profile-menu__exit {
@@ -47,6 +68,13 @@
 			margin-left: 78px;
 			position: absolute;
 			bottom: 65px;
+			@include tablet {
+				bottom: 104px;
+			}
+		}
+
+		@include tablet {
+			padding-top: 32px;
 		}
 	}
 }

@@ -69,4 +69,10 @@
 			background-color: $blue50;
 		}
 	}
+
+	&_mobile-hidden {
+		@include tablet {
+			display: none;
+		}
+	}
 }

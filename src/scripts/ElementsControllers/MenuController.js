@@ -18,20 +18,26 @@ const takeControlMenu = () => {
 	const learningPlanRequestMenu = document.getElementById('learning-plan-request-menu')
 	const bottomVRButton = document.getElementById('virtual-reality')
 	const bottomRLButton = document.getElementById('remote-learning')
-	const bottomProfilebutton = document.getElementById('profile')
+	const bottomProfileButton = document.getElementById('profile')
 	const bottomSearchButton = document.getElementById('bottom-search-btn')
 	const bottomBurgerButton = document.getElementById('bottom-burger-btn')
+	const bottomProfileLoggedButton = document.getElementById('profile-logged')
+	const profileLoggedMenu = document.getElementById('profile-logged-menu')
 
 	function closeAllMenu() {
 		mailMenu.classList.remove('service-menu_active')
 		menu.classList.remove('menu_active')
 		searchMenu.classList.remove('search-menu_active')
-		profileMenu.classList.remove('service-menu_active')
+		if (profileMenu !== null) {
+			profileMenu.classList.remove('service-menu_active')
+		}
 		vrMenu.classList.remove('service-menu_active')
 		rlMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
 		learningPlanRequestMenu.classList.remove('service-menu_active')
-		profileBtn.classList.remove('link-icon_disable')
+		if (profileBtn !== null) {
+			profileBtn.classList.remove('link-icon_disable')
+		}
 		vrBtn.classList.remove('link-icon_disable')
 		rlBtn.classList.remove('link-icon_disable')
 		searchBtn.classList.remove('link-icon_disable')
@@ -40,11 +46,15 @@ const takeControlMenu = () => {
 		bottomRLButton.classList.remove('link_disable')
 		bottomSearchButton.classList.remove('link_disable')
 		bottomBurgerButton.classList.remove('link_disable')
-		bottomProfilebutton.classList.remove('link_disable')
+		if (bottomProfileButton !== null) {
+			bottomProfileButton.classList.remove('link_disable')
+		}
 	}
 
 	function disableServiceMenuIcons() {
-		profileBtn.classList.add('link-icon_disable')
+		if (profileBtn !== null) {
+			profileBtn.classList.add('link-icon_disable')
+		}
 		vrBtn.classList.add('link-icon_disable')
 		rlBtn.classList.add('link-icon_disable')
 		searchBtn.classList.add('link-icon_disable')
@@ -72,12 +82,14 @@ const takeControlMenu = () => {
 		})
 	}
 
-	profileBtn.addEventListener('click', () => {
-		closeAllMenu()
-		disableServiceMenuIcons()
-		profileBtn.classList.remove('link-icon_disable')
-		profileMenu.classList.add('service-menu_active')
-	})
+	if (profileBtn !== null) {
+		profileBtn.addEventListener('click', () => {
+			closeAllMenu()
+			disableServiceMenuIcons()
+			profileBtn.classList.remove('link-icon_disable')
+			profileMenu.classList.add('service-menu_active')
+		})
+	}
 
 	vrBtn.addEventListener('click', () => {
 		closeAllMenu()
@@ -112,26 +124,48 @@ const takeControlMenu = () => {
 		bottomRLButton.classList.add('link_disable')
 		bottomSearchButton.classList.add('link_disable')
 		bottomBurgerButton.classList.add('link_disable')
-		bottomProfilebutton.classList.add('link_disable')
+		if (bottomProfileButton !== null) {
+			bottomProfileButton.classList.add('link_disable')
+		}
+		if (bottomProfileLoggedButton !== null) {
+			bottomProfileLoggedButton.classList.add('link_disable')
+		}
 	}
 
-	bottomProfilebutton.addEventListener('click', () => {
-		searchMenu.classList.remove('search-menu_active')
-		menu.classList.remove('menu_active')
-		vrMenu.classList.remove('service-menu_active')
-		rlMenu.classList.remove('service-menu_active')
-		callRequestMenu.classList.remove('service-menu_active')
-		learningPlanRequestMenu.classList.remove('service-menu_active')
-		disableBottomBarIcons()
-		bottomProfilebutton.classList.remove('link_disable')
-		profileMenu.classList.toggle('service-menu_active')
-		document.body.style.overflow = 'hidden'
-	})
+	if (bottomProfileButton !== null) {
+		bottomProfileButton.addEventListener('click', () => {
+			searchMenu.classList.remove('search-menu_active')
+			menu.classList.remove('menu_active')
+			vrMenu.classList.remove('service-menu_active')
+			rlMenu.classList.remove('service-menu_active')
+			callRequestMenu.classList.remove('service-menu_active')
+			learningPlanRequestMenu.classList.remove('service-menu_active')
+			disableBottomBarIcons()
+			bottomProfileButton.classList.remove('link_disable')
+			profileMenu.classList.toggle('service-menu_active')
+			document.body.style.overflow = 'hidden'
+		})
+	}
+
+	if (bottomProfileLoggedButton !== null) {
+		bottomProfileLoggedButton.addEventListener('click', () => {
+			searchMenu.classList.remove('search-menu_active')
+			menu.classList.remove('menu_active')
+			vrMenu.classList.remove('service-menu_active')
+			rlMenu.classList.remove('service-menu_active')
+			callRequestMenu.classList.remove('service-menu_active')
+			learningPlanRequestMenu.classList.remove('service-menu_active')
+			disableBottomBarIcons()
+			bottomProfileLoggedButton.classList.remove('link_disable')
+			profileLoggedMenu.classList.toggle('profile-menu_active')
+		})
+	}
 
 	bottomVRButton.addEventListener('click', () => {
 		searchMenu.classList.remove('search-menu_active')
 		menu.classList.remove('menu_active')
 		profileMenu.classList.remove('service-menu_active')
+		profileLoggedMenu.classList.remove('profile-menu_active')
 		rlMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
 		learningPlanRequestMenu.classList.remove('service-menu_active')
@@ -145,6 +179,7 @@ const takeControlMenu = () => {
 		searchMenu.classList.remove('search-menu_active')
 		menu.classList.remove('menu_active')
 		profileMenu.classList.remove('service-menu_active')
+		profileLoggedMenu.classList.remove('profile-menu_active')
 		vrMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
 		learningPlanRequestMenu.classList.remove('service-menu_active')
@@ -157,6 +192,7 @@ const takeControlMenu = () => {
 	bottomSearchButton.addEventListener('click', () => {
 		menu.classList.remove('menu_active')
 		profileMenu.classList.remove('service-menu_active')
+		profileLoggedMenu.classList.remove('profile-menu_active')
 		vrMenu.classList.remove('service-menu_active')
 		rlMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
@@ -170,6 +206,7 @@ const takeControlMenu = () => {
 	bottomBurgerButton.addEventListener('click', () => {
 		searchMenu.classList.remove('search-menu_active')
 		profileMenu.classList.remove('service-menu_active')
+		profileLoggedMenu.classList.remove('profile-menu_active')
 		vrMenu.classList.remove('service-menu_active')
 		rlMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')

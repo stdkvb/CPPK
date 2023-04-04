@@ -1,9 +1,14 @@
 <div id="left-bar" class="left-bar element-animation element-animation__fromLeft@@if (context.class) { @@class}">
 	@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
 	<ul>
+		<!-- кнопка для авторизованного пользователя -->
 		<li class="service-menu-link">
-			<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg)"></a>
+			<a class="link link-icon" id="profile-logged-btn" style="background-image: url(@icons/user.svg)" href="/profile.html"></a>
 		</li>
+		<!-- кнопка для не авторизованного пользователя -->
+		<!-- <li class="service-menu-link">
+			<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg)"></a>
+		</li> -->
 		<li class="service-menu-link">
 			<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg)"></a>
 		</li>

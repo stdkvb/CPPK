@@ -1,23 +1,23 @@
 .element-animation {
-	opacity: 0 !important;
-	-webkit-transform: translateY(100px) !important;
-	transform: translateY(100px) !important;
+	opacity: 0;
+	-webkit-transform: translateY(100px);
+	transform: translateY(100px);
 	-webkit-transition: all $transitionDuration;
 	transition: all $transitionDuration;
 
 	&__fromLeft {
-		-webkit-transform: translateX(-100px) !important;
-		transform: translateX(-100px) !important;
+		-webkit-transform: translateX(-100px);
+		transform: translateX(-100px);
 	}
 
     &__fromRight {
-		-webkit-transform: translateX(100px) !important;
-		transform: translateX(100px) !important;
+		-webkit-transform: translateX(100px);
+		transform: translateX(100px);
 	}
 
 	&__fromUp {
-		-webkit-transform: translateY(-100px) !important;
-		transform: translateY(-100px) !important;
+		-webkit-transform: translateY(-100px);
+		transform: translateY(-100px);
 	}
 
 	&__delay {
@@ -25,8 +25,8 @@
 	}
 
 	&.element-show {
-		opacity: 1 !important;
-		-webkit-transform: none !important;
-		transform: none !important;
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
 	}
 }

@@ -36,4 +36,8 @@
 		background-color: transparent;
 		border: none;
 	}
+
+	&_dark {
+		background-color: $gray90;
+	}
 }

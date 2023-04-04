@@ -3,11 +3,18 @@
 	padding: 158px 48px 48px 395px;
 	min-height: 100vh;
 	height: 100%;
+	@include tablet {
+		padding: 40px 20px 150px 20px;
+	}
 
 	h1 {
 		color: $black;
 		@include regular-36;
 		margin-bottom: 60px;
+		@include tablet {
+			@include regular-28;
+			margin-bottom: 52px;
+		}
 	}
 
 	&__subtitle {
@@ -29,9 +36,20 @@
 				}
 			}
 		}
-		div {
+		.profile-form__button-container {
 			display: flex;
 			justify-content: space-between;
+			@include mobile {
+				flex-direction: column;
+				margin-top: 28px;
+				gap: 28px;
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+		@include tablet_small {
+			width: 100%;
 		}
 	}
 }

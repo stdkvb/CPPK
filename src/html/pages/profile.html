@@ -3,7 +3,7 @@
 @@include('meta/_head.html', {title: 'Профиль'})
 
 <body>
-	@@include('components/business/_header.html', {class: 'header_white', logo: 'logo_dark'})
+	@@include('components/business/_header.html', {class: 'header_white header_mobile-hidden', logo: 'logo_dark'})
 	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
 	@@include('components/business/_profile-menu.html')
 	<main>
@@ -18,14 +18,14 @@
 				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите должность представителя', name: 'name', required: true})
 				@@include('components/ui/_input-phone.html', {placeholder: 'Телефон представителя', name: 'phone', required: true})
 				@@include('components/ui/_input-email.html', {name: 'email', required: true})
-				<div>
+				<div class="profile-form__button-container">
 					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', href: '#'})
 					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill', type: 'submit'})
 				</div>
 			</form>
 		</section>
 	</main>
-	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_bottom-bar.html', {class: 'bottom-bar_dark'})
 	@@include('components/business/_cookie.html')
 	@@include('meta/_includeScripts.html')
 </body>
