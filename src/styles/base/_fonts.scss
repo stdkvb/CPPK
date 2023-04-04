@@ -93,6 +93,10 @@
 	font-size: 64px;
 	font-weight: 400;
 }
+@mixin medium-12 {
+	font-size: 12px;
+	font-weight: 500;
+}
 @mixin medium-14 {
 	font-size: 14px;
 	font-weight: 500;

@@ -40,4 +40,20 @@
 	&_dark {
 		background-color: $gray90;
 	}
+
+	#profile-logged {
+		@include medium-12;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		width: 37px;
+		height: 37px;
+		border: solid 2px $white;
+		margin-right: 14px;
+
+		&:hover {
+			color: $white;
+		}
+	}
 }

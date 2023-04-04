@@ -3,6 +3,7 @@ const takeControlMenu = () => {
 	const burgerBtn = document.getElementById('burger-btn')
 	const menu = document.getElementById('menu')
 	const profileBtn = document.getElementById('profile-btn')
+	const profileLoggedBtn = document.getElementById('profile-logged-btn')
 	const profileMenu = document.getElementById('profile-access-menu')
 	const vrBtn = document.getElementById('vr-btn')
 	const vrMenu = document.getElementById('vr-menu')
@@ -54,6 +55,9 @@ const takeControlMenu = () => {
 	function disableServiceMenuIcons() {
 		if (profileBtn !== null) {
 			profileBtn.classList.add('link-icon_disable')
+		}
+		if (profileLoggedBtn !== null) {
+			profileLoggedBtn.classList.add('link-icon_disable')
 		}
 		vrBtn.classList.add('link-icon_disable')
 		rlBtn.classList.add('link-icon_disable')

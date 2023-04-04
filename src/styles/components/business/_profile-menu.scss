@@ -8,16 +8,16 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	@include tablet {
-		height: 277px;
+		height: 283px;
 		width: 100%;
 		left: 0;
 		z-index: 10;
-		bottom: -277px;
+		bottom: -283px;
 		opacity: 0;
 		transition: all $transitionDuration;
 
 		&_active {
-			transform: translateY(-277px) !important;
+			transform: translateY(-283px) !important;
 			opacity: 1 !important;
 		}
 	}
@@ -75,6 +75,12 @@
 
 		@include tablet {
 			padding-top: 32px;
+		}
+	}
+
+	&_desktop-hidden {
+		@include min_tablet {
+			display: none;
 		}
 	}
 }
