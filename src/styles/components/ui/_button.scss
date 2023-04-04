@@ -67,6 +67,9 @@
 		display: flex;
 		align-items: center;
 		width: fit-content;
+		@include mobile {
+			width: 100%;
+		}
 
 		&_disable {
 			border: 1px solid $gray30;
@@ -83,6 +86,10 @@
 	&_blue-fill {
 		background-color: $blue50;
 		color: $white;
+		width: fit-content;
+		@include mobile {
+			width: 100%;
+		}
 
 		&_disable {
 			border: 1px solid $gray30;

@@ -1,0 +1,27 @@
+
+<li class="favorites__card@@if (context.class) { @@class}">
+	@@if (context.title) {
+		<h3>@@title</h3>
+	}
+	<div class="favorites__tags">
+		@@if (context.tag1) {
+			<span>@@tag1</span>
+		}
+		@@if (context.tag2) {
+			<span>@@tag2</span>
+		}
+		@@if (context.tag3) {
+			<span>@@tag3</span>
+		}
+	</div>
+	@@if (context.oldprice) {
+		<span class="favorites__old-price">@@oldprice ₽</span>
+	}
+	@@if (context.oldprice) {
+		<span class="favorites__new-price">@@newprice ₽</span>
+	}
+	<div class="favorites__card-buttons">
+		@@include('components/ui/_button.html', {children: 'Удалить', class: 'btn_blue-border', type: 'button', href: '/'})
+		@@include('components/ui/_button.html', {children: 'В заказ', class: 'btn_blue-fill', type: 'button', href: '/'})
+	</div>
+</li>

@@ -1,0 +1,46 @@
+.favorites {
+	background-color: $gray04;
+	padding: 158px 48px 48px 395px;
+	min-height: 100vh;
+	height: 100%;
+	@include tablet {
+		padding: 40px 20px 150px 20px;
+	}
+
+	h1 {
+		color: $black;
+		@include regular-36;
+		margin-bottom: 60px;
+		@include tablet {
+			@include regular-28;
+			margin-bottom: 52px;
+		}
+	}
+
+	&__subtitle {
+		@include regular-24;
+		margin-bottom: 28px;
+		@include mobile {
+			@include regular-18;
+		}
+		&_small {
+			@include medium-16;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		margin-bottom: 40px;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: flex-end;
+		gap: 24px;
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+}
