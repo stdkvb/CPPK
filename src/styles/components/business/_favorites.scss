@@ -23,9 +23,6 @@
 		@include mobile {
 			@include regular-18;
 		}
-		&_small {
-			@include medium-16;
-		}
 	}
 
 	&__list {

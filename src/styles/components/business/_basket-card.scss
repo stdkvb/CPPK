@@ -1,0 +1,56 @@
+.basket__card {
+	padding: 44px 48px;
+	min-height: 248px;
+	background-color: $white;
+	transition: background-color $transitionDuration;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"title price"
+		"code price"
+		"tags buttons";
+	@include tablet {
+		height: unset;
+		padding: 24px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	h3 {
+		grid-area: title;
+		@include medium-18;
+		transition: color $transitionDuration;
+
+		@include tablet {
+			@include medium-18;
+			margin-bottom: 28px;
+		}
+	}
+
+	.basket__tags {
+		grid-area: tags;
+		display: flex;
+		align-items: end;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 10px;
+		@include tablet {
+			margin-bottom: 24px;
+		}
+		 span {
+			display: block;
+			width: fit-content;
+			height: 26px;
+			padding: 4px 12px;
+			background-color: $blue04;
+			color: $blue60;
+			transition: all $transitionDuration;
+			@include regular-14;
+		 }
+	}
+
+	.basket__price {
+		grid-area: price;
+
+	}
+}

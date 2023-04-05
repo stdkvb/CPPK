@@ -92,9 +92,14 @@
 		}
 
 		&_disable {
-			border: 1px solid $gray30;
-			color: $gray30;
+			background-color: $blue04;
+			color: $blue10;
 			cursor: default;
+			&:hover {
+				background-color: $blue04;
+				color: $blue10;
+				cursor: default !important;
+			}
 		}
 	}
 

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Пустая корзина'})
+
+<body>
+	@@include('components/business/_header.html', {class: 'header_white header_mobile-hidden', logo: 'logo_dark'})
+	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
+	@@include('components/business/_profile-menu.html')
+	<main>
+		<section class="basket">
+			<div class="basket__content">
+				<h1 class="element-animation">Корзина</h1>
+				<p class="favorites__subtitle element-animation">В корзине еще нет курсов</p>
+				@@include('components/ui/_link-button.html', {children: 'Перейти в каталог', class: 'btn_blue-fill', href: '#'})
+			</div>
+			<div class="basket__side-bar">
+				<div class="basket__order">
+					<div class="basket__order-detail">
+						Ваш заказ:
+						<p>Программы:<span>0 ₽</span></p>
+					</div>
+					<div class="basket__order-total">
+						<p>Итого:<span>0 ₽</span></p>
+					</div>
+					@@include('components/ui/_link-button.html', {children: 'Сформировать счет', class: 'btn_blue-fill btn_blue-fill_disable', href: '#'})
+				</div>
+				<div class="basket__hotline">
+					<span>Телефон горячей линии:</span>
+					<a href="tel:88002332222">8-800-233-22-22</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('components/business/_bottom-bar.html', {class: 'bottom-bar_dark'})
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>
