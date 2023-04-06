@@ -3,7 +3,6 @@
 	height: 4.57em;
 	padding: 1em 2.25em;
 	border: solid 1px rgba(255, 255, 255, 0.6);
-	background-color: transparent;
 	color: $white;
 	position: relative;
 	cursor: pointer;
@@ -11,9 +10,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: linear-gradient(to right, $white 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
 
 	&:hover {
-		background-color: transparent;
+		background-position: left bottom;
 		color: $gray90;
 
 		.children .btn-arrow {
@@ -27,10 +29,12 @@
 	}
 
 	&_primary_blue {
-		background-color: transparent;
 		color: $blue50;
 		border: solid 1px $blue50;
 		padding: 22px 88px;
+		background: linear-gradient(to right, $blue50 50%, transparent 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
 
 		&_disabled {
 			pointer-events: none;
@@ -40,17 +44,19 @@
 		}
 
 		&:hover {
-			background-color: $blue50;
+			background-position: left bottom;
 			color: $white;
 		}
 	}
 
 	&_secondary {
-		background-color: $white;
 		color: $gray90;
+		background: linear-gradient(to right, transparent 50%, $white 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
 
 		&:hover {
-			background-color: transparent;
+			background-position: left bottom;
 			color: $white;
 		}
 
@@ -67,6 +73,9 @@
 		display: flex;
 		align-items: center;
 		width: fit-content;
+		background: linear-gradient(to right, $blue50 50%, transparent 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
 		@include mobile {
 			width: 100%;
 		}
@@ -78,28 +87,35 @@
 		}
 
 		&:hover {
-			background-color: $blue50;
+			background-position: left bottom;
 			color: $white;
 		}
 	}
 
 	&_blue-fill {
-		background-color: $blue50;
 		color: $white;
 		width: fit-content;
+		background: linear-gradient(to right, transparent 50%, $blue50 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
 		@include mobile {
 			width: 100%;
 		}
 
 		&_disable {
-			background-color: $blue04;
-			color: $blue10;
-			cursor: default;
-			&:hover {
-				background-color: $blue04;
-				color: $blue10;
+			background: $blue04 !important;
+			color: $blue10 !important;
+			border: none !important;
+			cursor: default !important;
+			a {
 				cursor: default !important;
 			}
+		}
+
+		&:hover {
+			background-position: left bottom;
+			color: $blue50;
+			border: 1px solid $blue50;
 		}
 	}
 

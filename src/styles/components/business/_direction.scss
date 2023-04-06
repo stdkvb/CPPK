@@ -6,7 +6,6 @@
 	 "search right-bar"
 	 "cards right-bar"
 	 "text-content right-bar";
-	 padding-bottom: 140px;
 	@include desktop_medium {
 		display: block;
 		padding-top: 60px;
@@ -141,8 +140,10 @@
 	&__text-content {
 		grid-area: text-content;
 		padding-right: 88px;
+		padding-bottom: 140px;
 		@include tablet {
 			padding-right: 0;
+			padding-bottom: 0;
 		}
 
 		h3 {
