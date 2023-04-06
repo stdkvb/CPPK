@@ -4,21 +4,36 @@
 	min-height: 100vh;
 	height: 100%;
 	display: flex;
+	@include desktop {
+		flex-direction: column;
+		gap: 60px;
+	}
 	@include tablet {
-		padding: 0 0 150px 0;
+		padding: 0 0 72px 0;
 	}
 
 	&__content {
 		padding-top: 158px;
 		width: calc(100% - 360px);
 		padding-right: 48px;
+		@include desktop {
+			width: 100%;
+		}
+		@include tablet {
+			padding-top: 40px;
+			padding-left: 48px;
+		}
+		@include mobile {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 		h1 {
 			color: $black;
 			@include regular-36;
 			margin-bottom: 60px;
 			@include tablet {
 				@include regular-28;
-				margin-bottom: 52px;
+				margin-bottom: 32px;
 			}
 		}
 
@@ -58,13 +73,26 @@
 		position: fixed;
 		top: 0;
 		right: 0;
+		@include desktop {
+			position: unset;
+			width: 100%;
+			padding-top: 0;
+			padding-right: 48px;
+			height: unset;
+			background-color: transparent;
+		}
+		@include tablet {
+			padding-right: 0;
+		}
 	}
 
 	&__order {
 		padding: 48px 44px;
 		border-top: solid 1px $gray04;
 		border-bottom: solid 1px $gray04;
-
+		@include desktop {
+			background-color: $white;
+		}
 		.btn {
 			margin-top: 44px;
 			width: 100%;

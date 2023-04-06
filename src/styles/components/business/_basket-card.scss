@@ -35,7 +35,9 @@
 
 		@include tablet {
 			@include medium-18;
-			margin-bottom: 28px;
+		}
+		@include mobile {
+			margin-bottom: 0;
 		}
 	}
 
@@ -51,7 +53,8 @@
 		gap: 8px;
 		margin-top: 10px;
 		@include tablet {
-			margin-bottom: 24px;
+			margin-bottom: 0;
+			margin-top: 0;
 		}
 		span {
 			display: block;
@@ -118,6 +121,14 @@
 			span {
 				@include medium-18;
 			}
+			@include mobile {
+				width: 100%;
+			}
+		}
+		@include mobile {
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			gap: 20px;
 		}
 	}
 
