@@ -27,8 +27,7 @@ input {
 	gap: .75rem;
 
 	.input__label {
-		margin-bottom: 28px;
-		color: $white;
+		color: $black;
 		@include regular-16;
 
 		& ~ .toggle-show-password-btn {

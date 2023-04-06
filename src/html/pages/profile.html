@@ -11,13 +11,13 @@
 			<h1 class="element-animation">Профиль</h1>
 			<p class="profile__subtitle element-animation">Данные организации</p>
 			<form class="element-animation profile-form" novalidate>
-				@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', errorMessage: 'Введите наименование организации', name: 'company', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'ИНН', errorMessage: 'Введите ИНН организации', name: 'inn', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'Юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'adress', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', errorMessage: 'Введите имя представителя', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите должность представителя', name: 'position', required: true})
-				@@include('components/ui/_input-phone.html', {placeholder: 'Телефон представителя', name: 'phone', required: true})
-				@@include('components/ui/_input-email.html', {name: 'email', required: true})
+				@@include('components/ui/_input-text.html', {label: 'ФИО представителя', placeholder: 'Введите имя представителя', errorMessage: 'Введите имя представителя', name: 'name', required: true})
+				@@include('components/ui/_input-phone.html', {label: 'Телефон представителя', placeholder: 'Введите телефон представителя', name: 'phone', required: true})
+				@@include('components/ui/_input-email.html', {label: 'Электронная почта представителя', placeholder: 'Введите электронную почту представителя', name: 'email', required: true})
+				@@include('components/ui/_input-text.html', {label: 'Наименование организации', placeholder: 'Введите наименование организации', errorMessage: 'Введите наименование организации', name: 'company', required: true})
+				@@include('components/ui/_input-text.html', {label: 'ИНН организации', placeholder: 'Введите ИНН организации', errorMessage: 'Введите ИНН организации', name: 'inn', required: true})
+				@@include('components/ui/_input-text.html', {label: 'Юридический адрес организации', placeholder: 'Введите юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'adress', required: true})
+				@@include('components/ui/_input-text.html', {label: 'Должность представителя', placeholder: 'Введите должность представителя', errorMessage: 'Введите должность представителя', name: 'position', required: true})
 				<div class="profile-form__button-container">
 					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', href: '#'})
 					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill', type: 'submit'})

@@ -11,13 +11,13 @@
 			<h1 class="element-animation">Профиль</h1>
 			<p class="profile__subtitle element-animation">Данные организации</p>
 			<form class="element-animation profile-form" novalidate>
-				@@include('components/ui/_input-text.html', {placeholder: 'АО Организация', errorMessage: 'Введите наименование организации', name: 'company'})
-				@@include('components/ui/_input-text.html', {placeholder: '4815162342', errorMessage: 'Введите ИНН организации', name: 'inn'})
-				@@include('components/ui/_input-text.html', {placeholder: '450043, г.Москва, ул.Академическая 15', errorMessage: 'Введите юридический адрес организации', name: 'adress'})
-				@@include('components/ui/_input-text.html', {placeholder: 'Голунов Иван Валентинович', errorMessage: 'Введите имя представителя', name: 'name'})
-				@@include('components/ui/_input-text.html', {placeholder: 'Менеджер', errorMessage: 'Введите должность представителя', name: 'position'})
-				@@include('components/ui/_input-phone.html', {placeholder: '+7 (481) 516-12-42', name: 'phone',})
-				@@include('components/ui/_input-email.html', {placeholder: 'mail@email.com', name: 'email'})
+				@@include('components/ui/_input-text.html', {label: 'ФИО представителя', value: 'Голунов Иван Валентинович', errorMessage: 'Введите имя представителя', name: 'name'})
+				@@include('components/ui/_input-phone.html', {label: 'Телефон представителя', value: '+7 (481) 516-12-42', name: 'phone'})
+				@@include('components/ui/_input-email.html', {label: 'Электронная почта представителя', value: 'mail@email.com', name: 'email'})
+				@@include('components/ui/_input-text.html', {label: 'Наименование организации', valuer: 'АО Организация', errorMessage: 'Введите наименование организации', name: 'company'})
+				@@include('components/ui/_input-text.html', {label: 'ИНН организации', value: '4815162342', errorMessage: 'Введите ИНН организации', name: 'inn'})
+				@@include('components/ui/_input-text.html', {label: 'Юридический адрес организации', value: '450043, г.Москва, ул.Академическая 15', errorMessage: 'Введите юридический адрес организации', name: 'adress'})
+				@@include('components/ui/_input-text.html', {label: 'Должность представителя', value: 'Менеджер' ,errorMessage: 'Введите должность представителя', name: 'position'})
 				<div class="profile-form__button-container">
 					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', href: '#'})
 					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill btn_blue-fill_disable', id: 'save', type: 'submit'})
