@@ -16,6 +16,7 @@
 		@@if (!context.placeholder) {placeholder="Номер телефона@@if (context.required) {*}"}
 		@@if (context.required) {required}
 		@@if (context.id) {id="@@id"}
+		@@if (context.value) {value="@@value"}
 		data-type="tel"
 		type="tel"
 	>
