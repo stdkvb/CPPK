@@ -8,6 +8,9 @@
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	@include tablet {
+		min-height: calc(100vh - 72px);
+	}
 
 	video {
 		 width: 100%;

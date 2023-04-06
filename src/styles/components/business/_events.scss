@@ -4,7 +4,7 @@
 	align-items: end;
 	justify-content: flex-end;
 	@include tablet {
-		height: calc(100vh - 152px);
+		height: unset;
 		justify-content: unset;
 	}
 

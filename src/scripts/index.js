@@ -44,7 +44,6 @@ takeControlBasket()
 function onEntry(entry) {
 	document.querySelector('#header').classList.add('element-show')
 	document.querySelector('#left-bar').classList.add('element-show')
-	document.querySelector('#bottom-bar').classList.add('element-show')
 	entry.forEach((change) => {
 		if (change.isIntersecting) {
 			change.target.classList.add('element-show')

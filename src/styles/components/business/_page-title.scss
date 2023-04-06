@@ -9,7 +9,11 @@
 	}
 	@include tablet {
 		margin-left: 0;
-		top: 15vh;
+		position: unset;
+		height: calc(100vh - 152px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	h1 {
