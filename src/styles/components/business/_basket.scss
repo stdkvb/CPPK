@@ -77,18 +77,20 @@
 		@include medium-24;
 		p {
 			@include regular-18;
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-template-columns: 116px 1fr 20px;
 			&:nth-child(1) {
 				margin-top: 24px;
 				span {
 					color: $gray80;
+					justify-self: flex-end;
 				}
 			}
 			&:nth-child(2) {
 				margin-top: 8px;
 				span {
 					color: $error50;
+					justify-self: flex-end;
 				}
 			}
 		}
@@ -98,8 +100,11 @@
 		p {
 			@include medium-24;
 			margin-top: 24px;
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-template-columns: 80px 1fr 20px;
+			span {
+				justify-self: flex-end;
+			}
 		}
 	}
 

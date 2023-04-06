@@ -4,45 +4,7 @@
 
 <body>
 	@@include('components/business/_header.html')
-	<div id="left-bar" class="left-bar element-animation element-animation__fromLeft@@if (context.class) { @@class}">
-		@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
-		<ul>
-			<!-- кнопка для авторизованного пользователя -->
-			<!-- <li class="service-menu-link">
-				<a class="link link-icon" id="profile-logged-btn" href="/profile.html">АВ</a>
-			</li> -->
-			<!-- кнопка для не авторизованного пользователя -->
-			<li class="service-menu-link">
-				<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg)"></a>
-			</li>
-			<li class="service-menu-link">
-				<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg)"></a>
-			</li>
-			<li class="service-menu-link">
-				<a class="link link-icon" id="rl-btn" style="background-image: url(@icons/laptop.svg)"></a>
-			</li>
-		</ul>
-		<ul>
-			<li>
-				<a class="link link-icon" id="search-btn" style="background-image: url(@icons/search.svg)"></a>
-			</li>
-			<li>
-				<a class="link link-icon" id="mail-btn" style="background-image: url(@icons/mail.svg)"></a>
-			</li>
-		</ul>
-		@@include('components/business/_menu.html')
-		@@include('components/business/profile-access/_profile-access.html')
-		@@include('components/business/profile-access/_recovery.html')
-		@@include('components/business/profile-access/_recovery-confirmation.html')
-		@@include('components/business/profile-access/_recovery-new-password.html')
-		@@include('components/business/profile-access/_recovery-success.html')
-		@@include('components/business/_vr-menu.html')
-		@@include('components/business/_rl-menu.html')
-		@@include('components/business/_search-menu.html')
-		@@include('components/business/_call-request.html')
-		@@include('components/business/_learning-plan-request.html')
-		@@include('components/business/_write-to-us.html')
-	</div>
+	@@include('components/business/_left-bar.html')
 	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
 	<div class="page-background">
 		<video src="@videos/video-background.mp4" autoplay muted loop playsinline disablepictureinpicture preload="auto"></video>
@@ -708,16 +670,7 @@
 		</section>
 	</main>
 	@@include('components/business/_footer.html')
-	<div id="bottom-bar" class="bottom-bar element-animation@@if (context.class) { @@class}">
-		<!-- кнопка для авторизованного пользователя -->
-		<!-- <a class="link" id="profile-logged">АВ</a> -->
-		<!-- кнопка для не авторизованного пользователя -->
-		<a class="link" id="profile" style="background-image: url(@icons/user.svg);"></a>
-		<a class="link" id="virtual-reality" style="background-image: url(@icons/VR.svg);"></a>
-		<a class="link" id="remote-learning" style="background-image: url(@icons/laptop.svg);"></a>
-		<a class="link" id="bottom-search-btn" style="background-image: url(@icons/search.svg);"></a>
-		@@include('components/ui/_button.html', {children: '', id:'bottom-burger-btn', class: 'btn_secondary'})
-	</div>
+	@@include('components/business/_bottom-bar.html')
 	@@include('components/business/_reviews-modal.html', { modalId: 'review-1', image: 'review.png'})
 	@@include('components/business/_reviews-modal.html', { modalId: 'review-2', image: 'review.png'})
 	@@include('components/ui/_notification.html', { title: 'Заголовок', subtitle: 'Уведомление'})

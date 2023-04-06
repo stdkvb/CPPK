@@ -47,6 +47,10 @@
 			margin-right: 1.3em;
 		}
 
+		@include tablet {
+			margin-right: 0;
+		}
+
 		@include mobile {
 			@include regular-18;
 		}

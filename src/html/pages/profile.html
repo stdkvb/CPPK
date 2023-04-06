@@ -11,11 +11,11 @@
 			<h1 class="element-animation">Профиль</h1>
 			<p class="profile__subtitle element-animation">Данные организации</p>
 			<form class="element-animation profile-form" novalidate>
-				@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', errorMessage: 'Введите наименование организации', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'ИНН', errorMessage: 'Введите ИНН организации', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'Юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Наименование организации', errorMessage: 'Введите наименование организации', name: 'company', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'ИНН', errorMessage: 'Введите ИНН организации', name: 'inn', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'adress', required: true})
 				@@include('components/ui/_input-text.html', {placeholder: 'ФИО представителя', errorMessage: 'Введите имя представителя', name: 'name', required: true})
-				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите должность представителя', name: 'name', required: true})
+				@@include('components/ui/_input-text.html', {placeholder: 'Должность представителя', errorMessage: 'Введите должность представителя', name: 'position', required: true})
 				@@include('components/ui/_input-phone.html', {placeholder: 'Телефон представителя', name: 'phone', required: true})
 				@@include('components/ui/_input-email.html', {name: 'email', required: true})
 				<div class="profile-form__button-container">

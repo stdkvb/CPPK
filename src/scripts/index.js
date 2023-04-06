@@ -17,6 +17,7 @@ import takeControlForms from './ElementsControllers/FormController'
 import takeControlModals from './ElementsControllers/ModalController'
 import takeControlYandexMap from './ElementsControllers/YandexMapController'
 import takeControlAdvantagesTabs from './ElementsControllers/AdvantagesTabsController'
+import takeControlBasket from './ElementsControllers/BasketController'
 
 takeControlYandexMap()
 takeControlLeftBarScrollAnimation()
@@ -37,6 +38,7 @@ takeControlCookie('.cookie-container', '.cookie-accept')
 takeControlModals('.open-modal', '.modal-close', {
 	activeModalClass: 'modal_active'
 })
+takeControlBasket()
 
 // page laod animation
 function onEntry(entry) {

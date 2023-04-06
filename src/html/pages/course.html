@@ -416,6 +416,7 @@
 			<form class="subscribe__form">
 				@@include('components/ui/_input-email.html', {name: 'email'})
 				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary',  type: 'submit'})
+				@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
 			</form>
 		</section>
 	</main>

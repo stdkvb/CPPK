@@ -10,26 +10,39 @@
 		<section class="basket">
 			<div class="basket__content">
 				<h1 class="element-animation">Корзина</h1>
-				<ul class="basket__list">
+				<ul class="basket__list element-animation">
 					@@include('components/business/_basket-card.html',
 					{
 						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
 						code: 'B21354',
 						tag1: 'Дистанционно',
-						tag2: 'Очно',
-						price: '24 000'
+						price: '24000'
+					})
+					@@include('components/business/_basket-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						code: 'B21354',
+						tag1: 'Дистанционно',
+						price: '14000'
+					})
+					@@include('components/business/_basket-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						code: 'B21354',
+						tag1: 'Дистанционно',
+						price: '14000'
 					})
 				</ul>
 			</div>
-			<div class="basket__side-bar">
+			<div class="basket__side-bar element-animation element-animation__fromRight">
 				<div class="basket__order">
 					<div class="basket__order-detail">
 						Ваш заказ:
-						<p>Программы:<span>108 000 ₽</span></p>
-						<p>Скидка:<span>-12 120 ₽</span></p>
+						<p>Программы:<span class="main-subtotal">0</span><span>₽</span></p>
+						<p>Скидка:<span class="discount">-12120</span><span>₽</span></p>
 					</div>
 					<div class="basket__order-total">
-						<p>Итого:<span>95 880 ₽</span></p>
+						<p>Итого:<span class="total">0</span><span>₽</span></p>
 					</div>
 					@@include('components/ui/_link-button.html', {children: 'Сформировать счет', class: 'btn_blue-fill', href: '#'})
 				</div>

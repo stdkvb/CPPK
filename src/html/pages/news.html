@@ -17,7 +17,6 @@
 			@@include('components/business/_sub-menu.html', {
 			class: 'class="sub-menu sub-menu_bg"',
 			links: 'true',
-			subscribe: 'true',
 			feedback: ''
 			})
 
@@ -170,6 +169,7 @@
 				@@include('components/ui/_input-email.html', {name: 'email'})
 				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type:
 				'submit'})
+				@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
 			</form>
 		</section>
 	</main>

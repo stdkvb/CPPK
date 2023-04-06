@@ -1,8 +1,11 @@
 .about-us {
 	padding-top: 130px;
-	padding-left: 0;
 	background-color: $white;
-	@include desktop_small {
+	@include desktop_extra_small {
+		padding-left: 110px;
+	}
+	@include tablet {
+		padding-top: 60px;
 		padding-left: 0;
 	}
 
@@ -74,12 +77,11 @@
 	.about-us__photo {
 		margin-left: 110px;
 		position: relative;
-		@include desktop {
-			// padding-bottom: 120px;
+		@include desktop_extra_small {
+			margin-left: 0;
 		}
 		@include tablet {
 			margin-left: 0;
-			// padding-bottom: 140px;
 		}
 		img {
 			width: 100%;

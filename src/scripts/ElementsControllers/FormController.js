@@ -143,6 +143,17 @@ class FormController {
 	}
 }
 
+// кнопка сохранить профиль
+const profileForm = document.querySelector('.profile_filled')
+if (profileForm !== null) {
+	const profileInputs = profileForm.querySelectorAll('input')
+	profileInputs.forEach((elem) => {
+		elem.addEventListener('change', () => {
+			document.getElementById('save').classList.remove('btn_blue-fill_disable')
+		})
+	})
+}
+
 const takeControlForm = (formContainerSelector, formSelector, defaultOptions) => {
 	const formsContainers = document.querySelectorAll(formContainerSelector)
 
@@ -215,7 +226,7 @@ const takeControlForms = () => {
 	})
 
 	takeControlForm('.profile', 'form', {
-		elementsNames: ['email', 'name', 'phone'],
+		elementsNames: ['company', 'inn', 'adress', 'position', 'email', 'name', 'phone'],
 		onSubmit: () => {
 		}
 	})
