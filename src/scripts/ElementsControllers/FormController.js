@@ -148,7 +148,7 @@ const profileForm = document.querySelector('.profile_filled')
 if (profileForm !== null) {
 	const profileInputs = profileForm.querySelectorAll('input')
 	profileInputs.forEach((elem) => {
-		elem.addEventListener('change', () => {
+		elem.addEventListener('input', () => {
 			document.getElementById('save').classList.remove('btn_blue-fill_disable')
 		})
 	})
@@ -182,7 +182,7 @@ const takeControlForms = () => {
 
 	takeControlForm('.signin', 'form', {
 		elementsNames: ['email', 'password'],
-		onSubmit: (event) => {
+		onSubmit: () => {
 		}
 	})
 

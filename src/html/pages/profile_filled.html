@@ -19,7 +19,7 @@
 				@@include('components/ui/_input-text.html', {label: 'Юридический адрес организации', value: '450043, г.Москва, ул.Академическая 15', errorMessage: 'Введите юридический адрес организации', name: 'adress'})
 				@@include('components/ui/_input-text.html', {label: 'Должность представителя', value: 'Менеджер' ,errorMessage: 'Введите должность представителя', name: 'position'})
 				<div class="profile-form__button-container">
-					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', href: '#'})
+					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', id: 'password-change-btn'})
 					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill btn_blue-fill_disable', id: 'save', type: 'submit'})
 				</div>
 			</form>

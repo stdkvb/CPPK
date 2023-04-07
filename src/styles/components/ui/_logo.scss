@@ -12,4 +12,10 @@
 			content: url("@icons/logo-dark.svg");
 		}
 	}
+
+	&_secondary {
+		&::before {
+			content: url("@icons/logo-secondary.svg");
+		}
+	}
 }
