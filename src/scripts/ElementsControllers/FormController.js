@@ -240,6 +240,12 @@ const takeControlForms = () => {
 		}
 	})
 
+	takeControlForm('.profile_personally', 'form', {
+		elementsNames: ['email', 'name', 'phone'],
+		onSubmit: () => {
+		}
+	})
+
 	takeControlForm('.password-change', 'form', {
 		elementsNames: ['old-password', 'password', 'repeat-password'],
 		onSubmit: () => {
