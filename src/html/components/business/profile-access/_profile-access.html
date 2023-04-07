@@ -20,7 +20,7 @@
 		<form novalidate>
 			@@include('components/ui/_input-email.html', {name: 'email', required: true})
 			@@include('components/ui/_input-password.html', {errorMessage: 'Введите пароль', name: 'password', required: true})
-			<a>Восстановление пароля</a>
+			<span id="password-recovery-btn">Восстановление пароля</span>
 			@@include('components/ui/_button.html', {children: 'Авторизоваться', class: 'btn_secondary', type: 'submit'})
 		</form>
 	</div>

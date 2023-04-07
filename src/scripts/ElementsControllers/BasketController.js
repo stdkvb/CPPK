@@ -1,7 +1,6 @@
 const takeControlBasket = () => {
 	const incrementButtons = document.querySelectorAll('.increment')
 	const decrementButtons = document.querySelectorAll('.decrement')
-	// const quantitys = document.querySelectorAll(".quantity");
 	const subtotals = document.querySelectorAll('.subtotal-value')
 	const mainSubtotal = document.querySelector('.main-subtotal')
 	const discount = document.querySelector('.discount')
@@ -12,11 +11,12 @@ const takeControlBasket = () => {
 		for (let i = 0; i < subtotals.length; i++) {
 			sum += parseFloat(subtotals[i].innerHTML)
 		}
-		mainSubtotal.innerHTML = sum
 	}
 
 	function totalSum() {
-		total.innerHTML = parseFloat(mainSubtotal.innerHTML - discount.innerHTML)
+		if (total !==null) {
+			total.innerHTML = parseFloat(mainSubtotal.innerHTML - discount.innerHTML)
+		}
 	}
 
 	incrementButtons.forEach((elem) => {
@@ -43,14 +43,8 @@ const takeControlBasket = () => {
 		})
 	})
 
-	// quantitys.forEach((elem) => {
-	// 	elem.addEventListener("change", () => {
-	// 		let price = elem.parentElement.previousElementSibling.innerHTML;
-	// 		let quantity = elem.previousElementSibling.value;
-	// 		let subtotal = parseFloat(price * quantity);
-	// 		elem.parentElement.nextElementSibling.innerHTML = subtotal;
-	// 	})
-	// })
+	subtotalSum()
+	totalSum()
 }
 
 export default takeControlBasket

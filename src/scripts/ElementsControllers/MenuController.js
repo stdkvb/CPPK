@@ -26,6 +26,11 @@ const takeControlMenu = () => {
 	const profileLoggedMenu = document.getElementById('profile-logged-menu')
 	const passwordChangeBtn = document.getElementById('password-change-btn')
 	const passwordChangeMenu = document.getElementById('password-change-menu')
+	const passwordRecoveryBtn = document.getElementById('password-recovery-btn')
+	const passwordRecoveryMenu = document.getElementById('password-recovery-menu')
+	const recoveryConfirmationMenu = document.getElementById('recovery-confirmation-menu')
+	const recoveryNewPasswordMenu = document.getElementById('recovery-new-password-menu')
+	const recoverySuccessMenu = document.getElementById('recovery-success-menu')
 
 	function closeAllMenu() {
 		mailMenu.classList.remove('service-menu_active')
@@ -38,13 +43,19 @@ const takeControlMenu = () => {
 		rlMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
 		learningPlanRequestMenu.classList.remove('service-menu_active')
-		passwordChangeMenu.classList.remove('service-menu_active')
+		if (passwordChangeMenu !== null) {
+			passwordChangeMenu.classList.remove('service-menu_active')
+		}
 		if (profileBtn !== null) {
 			profileBtn.classList.remove('link-icon_disable')
 		}
 		if (profileLoggedBtn !== null) {
 			profileLoggedBtn.classList.remove('link-icon_disable')
 		}
+		passwordRecoveryMenu.classList.remove('service-menu_active')
+		recoveryConfirmationMenu.classList.remove('service-menu_active')
+		recoveryNewPasswordMenu.classList.remove('service-menu_active')
+		recoverySuccessMenu.classList.remove('service-menu_active')
 		vrBtn.classList.remove('link-icon_disable')
 		rlBtn.classList.remove('link-icon_disable')
 		searchBtn.classList.remove('link-icon_disable')
@@ -92,7 +103,6 @@ const takeControlMenu = () => {
 		})
 	}
 
-	console.log(passwordChangeBtn)
 	if (passwordChangeBtn !== null) {
 		passwordChangeBtn.addEventListener('click', () => {
 			closeAllMenu()
@@ -106,6 +116,15 @@ const takeControlMenu = () => {
 			disableServiceMenuIcons()
 			profileBtn.classList.remove('link-icon_disable')
 			profileMenu.classList.add('service-menu_active')
+		})
+	}
+
+	if (profileBtn !== null) {
+		passwordRecoveryBtn.addEventListener('click', () => {
+			closeAllMenu()
+			disableServiceMenuIcons()
+			profileBtn.classList.remove('link-icon_disable')
+			passwordRecoveryMenu.classList.add('service-menu_active')
 		})
 	}
 
@@ -245,18 +264,18 @@ const takeControlMenu = () => {
 	})
 
 	// menu accordeon
-// takeControlAccordion('.menu__accordion', '.accordion__list', {
-// 	accordionItemSelector: '.accordion__item',
-// 	accordionItemTogglerSelector: '.accordion__toggle',
-// 	accordionItemContentSelector: '.accordion__content',
-// 	accordionItemActiveClass: 'accordion__item_active'
-// })
+	// takeControlAccordion('.menu__accordion', '.accordion__list', {
+	// 	accordionItemSelector: '.accordion__item',
+	// 	accordionItemTogglerSelector: '.accordion__toggle',
+	// 	accordionItemContentSelector: '.accordion__content',
+	// 	accordionItemActiveClass: 'accordion__item_active'
+	// })
 
-// const menuToggle = document.querySelector('.accordion__toggle')
-// const subMenu = document.querySelector('.accordion__content')
-// menuToggle.addEventListener('mouseover', () => {
-// 	subMenu.classList.add('accordion__content_active')
-// })
+	// const menuToggle = document.querySelector('.accordion__toggle')
+	// const subMenu = document.querySelector('.accordion__content')
+	// menuToggle.addEventListener('mouseover', () => {
+	// 	subMenu.classList.add('accordion__content_active')
+	// })
 
 	const subMenuToggle = document.querySelector('.sub-menu__toggle')
 	const subMenuContent = document.querySelector('.sub-menu__content')

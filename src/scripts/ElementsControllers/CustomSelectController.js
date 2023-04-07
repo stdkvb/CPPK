@@ -1,9 +1,3 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable func-names */
-/* eslint-disable eqeqeq */
-/* eslint-disable no-shadow */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable prefer-const */
 // custom select
 function takeControlcustomSelect(id) {
 	let x
