@@ -11,10 +11,13 @@ const takeControlBasket = () => {
 		for (let i = 0; i < subtotals.length; i++) {
 			sum += parseFloat(subtotals[i].innerHTML)
 		}
+		if (mainSubtotal !== null) {
+			mainSubtotal.innerHTML = sum
+		}
 	}
 
 	function totalSum() {
-		if (total !==null) {
+		if (total !== null) {
 			total.innerHTML = parseFloat(mainSubtotal.innerHTML - discount.innerHTML)
 		}
 	}
