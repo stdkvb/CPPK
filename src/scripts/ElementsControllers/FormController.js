@@ -230,6 +230,12 @@ const takeControlForms = () => {
 		onSubmit: () => {
 		}
 	})
+
+	takeControlForm('.password-change', 'form', {
+		elementsNames: ['old-password', 'password', 'repeat-password'],
+		onSubmit: () => {
+		}
+	})
 }
 
 export default takeControlForms

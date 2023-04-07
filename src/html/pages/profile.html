@@ -19,7 +19,7 @@
 				@@include('components/ui/_input-text.html', {label: 'Юридический адрес организации', placeholder: 'Введите юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'adress', required: true})
 				@@include('components/ui/_input-text.html', {label: 'Должность представителя', placeholder: 'Введите должность представителя', errorMessage: 'Введите должность представителя', name: 'position', required: true})
 				<div class="profile-form__button-container">
-					@@include('components/ui/_link-button.html', {children: 'Сменить пароль', class: 'btn_blue-border', href: '#'})
+					@@include('components/ui/_button.html', {children: 'Сменить пароль', class: 'btn_blue-border', id: 'password-change-btn', type: 'button'})
 					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill', type: 'submit'})
 				</div>
 			</form>

@@ -24,6 +24,8 @@ const takeControlMenu = () => {
 	const bottomBurgerButton = document.getElementById('bottom-burger-btn')
 	const bottomProfileLoggedButton = document.getElementById('profile-logged')
 	const profileLoggedMenu = document.getElementById('profile-logged-menu')
+	const passwordChangeBtn = document.getElementById('password-change-btn')
+	const passwordChangeMenu = document.getElementById('password-change-menu')
 
 	function closeAllMenu() {
 		mailMenu.classList.remove('service-menu_active')
@@ -36,8 +38,12 @@ const takeControlMenu = () => {
 		rlMenu.classList.remove('service-menu_active')
 		callRequestMenu.classList.remove('service-menu_active')
 		learningPlanRequestMenu.classList.remove('service-menu_active')
+		passwordChangeMenu.classList.remove('service-menu_active')
 		if (profileBtn !== null) {
 			profileBtn.classList.remove('link-icon_disable')
+		}
+		if (profileLoggedBtn !== null) {
+			profileLoggedBtn.classList.remove('link-icon_disable')
 		}
 		vrBtn.classList.remove('link-icon_disable')
 		rlBtn.classList.remove('link-icon_disable')
@@ -83,6 +89,14 @@ const takeControlMenu = () => {
 		learningPlanRequestBtn.addEventListener('click', () => {
 			closeAllMenu()
 			learningPlanRequestMenu.classList.add('service-menu_active')
+		})
+	}
+
+	console.log(passwordChangeBtn)
+	if (passwordChangeBtn !== null) {
+		passwordChangeBtn.addEventListener('click', () => {
+			closeAllMenu()
+			passwordChangeMenu.classList.add('service-menu_active')
 		})
 	}
 
