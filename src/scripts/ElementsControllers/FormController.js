@@ -143,7 +143,7 @@ class FormController {
 	}
 }
 
-// кнопка сохранить профиль
+// save profile button
 const profileForm = document.querySelector('.profile_filled')
 if (profileForm !== null) {
 	const profileInputs = profileForm.querySelectorAll('input')
@@ -153,6 +153,15 @@ if (profileForm !== null) {
 		})
 	})
 }
+
+// password toggle
+const passwordToggle = document.querySelectorAll('.toggle-show-password-btn')
+passwordToggle.forEach((elem) => {
+	elem.addEventListener('click', e =>{
+		const type = elem.previousElementSibling.getAttribute("type") === "password" ? "text" : "password"
+		elem.previousElementSibling.setAttribute("type", type)
+	})
+})
 
 const takeControlForm = (formContainerSelector, formSelector, defaultOptions) => {
 	const formsContainers = document.querySelectorAll(formContainerSelector)

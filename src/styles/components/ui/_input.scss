@@ -49,27 +49,26 @@ input {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 26px;
-			height: 26px;
-			top: calc(1.0625rem - 3px);
-			right: .8125rem;
-
+			width: 20px;
+			height: 20px;
+			top: 1.5rem;
+			right: 1.5rem;
 			cursor: pointer;
 		}
 
 		input[type="password"] + .toggle-show-password-btn {
 			&::before {
-				width: 18px;
-				height: 16px;
-				content: url("@icons/openLock.svg");
+				width: 20px;
+				height: 20px;
+				content: url("@icons/closeLock.svg");
 			}
 		}
 
 		input[type="text"] + .toggle-show-password-btn {
 			&::before {
-				width: 19px;
-				height: 11px;
-				content: url("@icons/closeLock.svg")
+				width: 20px;
+				height: 20px;
+				content: url("@icons/openLock.svg");
 			}
 		}
 	}
