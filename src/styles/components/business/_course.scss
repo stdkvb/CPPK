@@ -246,12 +246,12 @@
 				grid-template-columns: repeat(2, 1fr);
 				margin-top: 24px;
 
-				@include tablet {
-					display: block;
-				}
-
 				&_active {
 					display: grid;
+
+					@include tablet {
+						display: block;
+					}
 				}
 			}
 
