@@ -32,9 +32,12 @@
 			padding-left: 130px;
 		}
 		@include tablet {
-			margin-top: 44px;
+			margin-top: 0;
 			padding-left: 24px;
 			padding-right: 24px;
+			padding-top: 44px;
+			overflow: scroll;
+			justify-content: flex-start;
 		}
 		h1 {
 			max-width: 1200px;
