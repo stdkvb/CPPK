@@ -1,0 +1,142 @@
+.basket__card {
+	padding: 44px 48px;
+	min-height: 248px;
+	background-color: $white;
+	transition: background-color $transitionDuration;
+	display: flex;
+	margin-bottom: 2px;
+	@include desktop_huge {
+		flex-direction: column;
+		gap: 24px;
+	}
+	@include tablet {
+		height: unset;
+		padding: 24px;
+		flex-direction: column;
+	}
+
+	.basket__card-column {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&:last-of-type {
+			align-items: flex-end
+		}
+		@include desktop_huge {
+			width: 100%;
+			gap: 28px;
+		}
+	}
+
+	h3 {
+		@include medium-18;
+		transition: color $transitionDuration;
+
+		@include tablet {
+			@include medium-18;
+		}
+		@include mobile {
+			margin-bottom: 0;
+		}
+	}
+
+	.basket__programm-code {
+		color: $gray40;
+		@include regular-14;
+	}
+
+	.basket__tags {
+		display: flex;
+		align-items: end;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 10px;
+		@include tablet {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+		span {
+			display: block;
+			width: fit-content;
+			height: 26px;
+			padding: 4px 12px;
+			background-color: $blue04;
+			color: $blue60;
+			transition: all $transitionDuration;
+			@include regular-14;
+		}
+	}
+
+	.basket__price {
+		display: flex;
+		gap: 40px;
+		align-items: center;
+		.input-wrapper {
+			width: 162px;
+			height: 44px;
+			display: flex;
+			border: solid 1px $gray20;
+
+			input[type="number"]::-webkit-inner-spin-button,
+			input[type="number"]::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				appearance: none;
+				margin: 0;
+			}
+
+			input[type="number"] {
+				-moz-appearance: textfield;
+				color: $gray50;
+				padding: 13px 0;
+				width: 72px;
+				text-align: center;
+			}
+
+			button {
+				cursor: pointer;
+				color: $gray60;
+				background: transparent;
+				max-width: 44px;
+			}
+
+			button:first-child {
+				border-right: solid 1px $gray20;
+			}
+
+			button:last-child {
+				border-left: solid 1px $gray20;
+			}
+		}
+		.input-wrapper * {
+			border: none;
+			flex: 1;
+		}
+		.subtotal {
+			@include medium-18;
+			color: $black;
+			width: 90px;
+			display: flex;
+			justify-content: flex-end;
+			span {
+				@include medium-18;
+			}
+			@include mobile {
+				width: 100%;
+			}
+		}
+		@include mobile {
+			justify-content: flex-end;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+	}
+
+	.basket__card-buttons {
+		display: flex;
+		gap: 24px;
+		.link {
+			@include regular-16;
+		}
+	}
+}

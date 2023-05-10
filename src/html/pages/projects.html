@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Проекты'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Проекты</h1>
+		</section>
+		<section class="sub-wrapper">
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu sub-menu_bg"',
+			links: 'true',
+			subscribe: '',
+			feedback: ''
+			})
+
+			<div class="sub-wrapper__content">
+				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Проекты'})
+
+				<div class="projects">
+					<a href="#" class="projects__item">
+						<div class="projects__logo"><img src="@icons/competention.svg" alt="АИС Компетенция"></div>
+						<h3 class="projects__title">АИС "Компетенция"</h3>
+						<span class="projects__text">
+							Автоматизация процессов управления компетенциями сотрудников
+						</span>
+					</a>
+					<a href="#" class="projects__item">
+						<div class="projects__logo"><img src="@icons/project__vr.svg" alt="vr"></div>
+						<h3 class="projects__title">VR</h3>
+						<span class="projects__text">
+							Обучение с помощью шлемов виртуальной реальности
+						</span>
+					</a>
+					<a href="#" class="projects__item">
+						<div class="projects__logo"><img src="@icons/zoom.svg" alt="zoom"></div>
+						<h3 class="projects__title">Аудит промышленной безопасности</h3>
+						<span class="projects__text">
+							Рекомендации для приведения документации и оборудования предприятия в соответствие с
+							требованиями промышленной безопасности
+						</span>
+					</a>
+					<a href="#" class="projects__item">
+						<div class="projects__logo"><img src="@icons/decret.svg" alt="decret"></div>
+						<h3 class="projects__title">Содействие занятости женщин -
+							декретницы</h3>
+						<span class="projects__text">
+							Программы обучения и повышения квалификации женщин, находящихся в отпуске по уходу за
+							ребенком
+						</span>
+					</a>
+				</div>
+			</div>
+
+
+
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

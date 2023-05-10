@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Профиль'})
+
+<body>
+	@@include('components/business/_header.html', {class: 'header_white header_mobile-hidden', logo: 'logo_dark'})
+	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
+	@@include('components/business/_profile-menu.html')
+	<main>
+		<section class="profile">
+			<h1 class="element-animation">Профиль</h1>
+			<p class="profile__subtitle element-animation">Данные организации</p>
+			<form class="element-animation profile-form" novalidate>
+				@@include('components/ui/_input-text.html', {label: 'ФИО представителя', placeholder: 'Введите имя представителя', errorMessage: 'Введите имя представителя', name: 'name', required: true})
+				@@include('components/ui/_input-phone.html', {label: 'Телефон представителя', placeholder: 'Введите телефон представителя', name: 'phone', required: true})
+				@@include('components/ui/_input-email.html', {label: 'Электронная почта представителя', placeholder: 'Введите электронную почту представителя', name: 'email', required: true})
+				@@include('components/ui/_input-text.html', {label: 'Наименование организации', placeholder: 'Введите наименование организации', errorMessage: 'Введите наименование организации', name: 'company', required: true})
+				@@include('components/ui/_input-text.html', {label: 'ИНН организации', placeholder: 'Введите ИНН организации', errorMessage: 'Введите ИНН организации', name: 'inn', required: true})
+				@@include('components/ui/_input-text.html', {label: 'Юридический адрес организации', placeholder: 'Введите юридический адрес организации', errorMessage: 'Введите юридический адрес организации', name: 'adress', required: true})
+				@@include('components/ui/_input-text.html', {label: 'Должность представителя', placeholder: 'Введите должность представителя', errorMessage: 'Введите должность представителя', name: 'position', required: true})
+				<div class="profile-form__button-container">
+					@@include('components/ui/_button.html', {children: 'Сменить пароль', class: 'btn_blue-border', id: 'password-change-btn', type: 'button'})
+					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill', type: 'submit'})
+				</div>
+			</form>
+		</section>
+	</main>
+	@@include('components/business/_bottom-bar.html', {class: 'bottom-bar_dark'})
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

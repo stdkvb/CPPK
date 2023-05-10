@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Документы'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Документы</h1>
+		</section>
+		<section class="sub-wrapper">
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu sub-menu_bg"',
+			links: 'true',
+			subscribe: '',
+			feedback: ''
+			})
+
+			<div class="sub-wrapper__content">
+				@@include('components/business/_directory.html', {parent: 'О центре', disabled: 'Документы'})
+
+				<div class="documents__tabs swiper element-animation element-animation__fromLeft">
+					<div class="swiper-wrapper">
+						<div id="documents-tab-1" class="documents__tab swiper-slide swiper-slide_active">
+							<h2>Образцы заявок на обучение</h2>
+						</div>
+						<div id="documents-tab-2" class="documents__tab swiper-slide">
+							<h2>Лицензии</h2>
+						</div>
+						<div id="documents-tab-3" class="documents__tab swiper-slide">
+							<h2>Договоры</h2>
+						</div>
+						<div id="documents-tab-4" class="documents__tab swiper-slide">
+							<h2>Квитанции</h2>
+						</div>
+					</div>
+					<div class="swiper-scrollbar"></div>
+				</div>
+
+				<div id="documents-tab-content-1"
+					class="documents__links documents__links_active element-animation element-animation__fromLeft">
+					<div class="sub-wrapper__text">
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявка на обучение для юридического
+								лица</a>
+						</p>
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявление на обучение для физического
+								лица</a>
+						</p>
+					</div>
+				</div>
+				<div id="documents-tab-content-2"
+					class="documents__links element-animation element-animation__fromLeft">
+					<div class="sub-wrapper__text">
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявка на обучение для юридического
+								лица2</a>
+						</p>
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявление на обучение для физического
+								лица2</a>
+						</p>
+					</div>
+				</div>
+				<div id="documents-tab-content-3"
+					class="documents__links element-animation element-animation__fromLeft">
+					<div class="sub-wrapper__text">
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявка на обучение для юридического
+								3</a>
+						</p>
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявление на обучение для физического
+								лица3</a>
+						</p>
+					</div>
+				</div>
+				<div id="documents-tab-content-4"
+					class="documents__links element-animation element-animation__fromLeft">
+					<div class="sub-wrapper__text">
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявка на обучение для юридического
+								лица4</a>
+						</p>
+						<p>
+							<a href="#" tablet="_blank" class="link link_blue">Заявление на обучение для физического
+								лица4</a>
+						</p>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

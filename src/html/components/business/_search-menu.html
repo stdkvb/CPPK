@@ -1,0 +1,29 @@
+<div class="search-menu" id="search-menu">
+	<a class="link close-btn"></a>
+	<form class="top-container">
+		@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
+		@@include('components/ui/_select.html', {
+			class: 'custom-select_secondary',
+			placeholder: 'Поиск по категориям',
+			selectItems: [
+				{	text: 'Категория 1',
+					value: 'Категория 1'
+				},
+				{	text: 'Категория 2',
+					value: 'Категория 2'
+				},
+				{	text: 'Категория 3',
+				value: 'Категория 3'
+				},
+			]
+		})
+	</form>
+	<h2>Популярные запросы</h2>
+	<ul>
+		<li><a class="link link_secondary" href="/">Деятельность учителя по формированию функциональной грамотности школьников</a></li>
+		<li><a class="link link_secondary" href="/">Поведенческий аудит безопасности (ПАБ)</a></li>
+		<li><a class="link link_secondary" href="/">Специалист по метрологии</a></li>
+		<li><a class="link link_secondary" href="/">Транспорт/Безопасность дорожного движения</a></li>
+		<li><a class="link link_secondary" href="/">Бережливое производство</a></li>
+	</ul>
+</div>

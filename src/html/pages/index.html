@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'ЦППК'})
+
+<body>
+	@@include('components/business/_header.html')
+	<div id="left-bar" class="left-bar element-animation element-animation__fromLeft@@if (context.class) { @@class}">
+		@@include('components/ui/_button.html', {children: '', href: '/', class: 'btn_secondary burger-btn', id: 'burger-btn'})
+		<ul>
+			<!-- кнопка для авторизованного пользователя -->
+			<!-- <li class="service-menu-link">
+				<a class="link link-icon" id="profile-logged-btn" href="/profile.html">АВ</a>
+			</li> -->
+			<!-- кнопка для не авторизованного пользователя -->
+			<li class="service-menu-link">
+				<a class="link link-icon" id="profile-btn" style="background-image: url(@icons/user.svg)"></a>
+			</li>
+			<li class="service-menu-link">
+				<a class="link link-icon" id="vr-btn" style="background-image: url(@icons/VR.svg)"></a>
+			</li>
+			<li class="service-menu-link">
+				<a class="link link-icon" id="rl-btn" style="background-image: url(@icons/laptop.svg)"></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a class="link link-icon" id="search-btn" style="background-image: url(@icons/search.svg)"></a>
+			</li>
+			<li>
+				<a class="link link-icon" id="mail-btn" style="background-image: url(@icons/mail.svg)"></a>
+			</li>
+		</ul>
+		@@include('components/business/_menu.html')
+		@@include('components/business/profile-access/_profile-access.html')
+		@@include('components/business/profile-access/_recovery.html')
+		@@include('components/business/profile-access/_recovery-confirmation.html')
+		@@include('components/business/profile-access/_recovery-new-password.html')
+		@@include('components/business/profile-access/_recovery-success.html')
+		@@include('components/business/_vr-menu.html')
+		@@include('components/business/_rl-menu.html')
+		@@include('components/business/_search-menu.html')
+		@@include('components/business/_call-request.html')
+		@@include('components/business/_learning-plan-request.html')
+		@@include('components/business/_programms-list-request.html')
+		@@include('components/business/_write-to-us.html')
+	</div>
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background">
+		<video src="@videos/video-background.mp4" autoplay muted loop playsinline disablepictureinpicture preload="auto"></video>
+	</div>
+	<main>
+		<section class="page-title container element-animation">
+			<h1>Постройте эффективную систему корпоративного обучения</h1>
+			@@include('components/ui/_button.html', {children: 'Перейти к программам<span class="btn-arrow"></span>',	href: '/'})
+		</section>
+		<section class="events">
+			<div class="events__container swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<p><span>18</span>февраля</p>
+						<a class="link">Набор в группу тренинг тренеров</a>
+					</div>
+					<div class="swiper-slide">
+						<p><span>24</span>февраля</p>
+						<a class="link">Набор в группу Специалист в сфере закупок</a>
+					</div>
+					<div class="swiper-slide">
+						<p><span>03</span>марта</p>
+						<a class="link">Набор в группу Оказание первой помощи (по новым правилам)</a>
+					</div>
+					<div class="swiper-slide">
+						<p><span>18</span>февраля</p>
+						<a class="link">Набор в группу тренинг тренеров</a>
+					</div>
+					<div class="swiper-slide">
+						<p><span>24</span>февраля</p>
+						<a class="link">Набор в группу Специалист в сфере закупок</a>
+					</div>
+					<div class="swiper-slide">
+						<p><span>03</span>марта</p>
+						<a class="link">Набор в группу Оказание первой помощи (по новым правилам)</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="programms container">
+			<div class="programms__tabs swiper element-animation">
+				<div class="swiper-wrapper">
+					<div id="programms-tab-1" class="programms__tab swiper-slide swiper-slide_active">
+						<h2>Повышение<br>квалификации</h2>
+					</div>
+					<div id="programms-tab-2" class="programms__tab swiper-slide">
+						<h2>Профессиональная<br>переподготовка</h2>
+					</div>
+					<div id="programms-tab-3" class="programms__tab swiper-slide">
+						<h2>Курсы<br>и семинары</h2>
+					</div>
+				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+			<div id="programms-tab-content-1" class="programms__cards programms__cards_active swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Профессиональное обучение по рабочим профессиям</h3>
+							<span>38 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Железнодорожная безопасность</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Строительство, проектирование, инженерные изыскания</h3>
+							<span>41 специальность &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Радиационная безопасность</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Жилищно-коммунальное хозяйство</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Кадровое дело, HR, персонал</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Нефтегазовое дело</h3>
+							<span>2 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Сельское хозяйство</h3>
+							<span>3 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Профессиональное обучение по рабочим профессиям</h3>
+							<span>38 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Железнодорожная безопасность</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Строительство, проектирование, инженерные изыскания</h3>
+							<span>41 специальность &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Радиационная безопасность</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Жилищно-коммунальное хозяйство</h3>
+							<span>24 специальности &rarr;</span></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Кадровое дело, HR, персонал</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Нефтегазовое дело</h3>
+							<span>2 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Сельское хозяйство</h3>
+							<span>3 специальности &rarr;</span>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="programms-tab-content-2" class="programms__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+										<div class="swiper-slide">
+						<a href="#">
+							<h3>Кадровое дело, HR, персонал</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Нефтегазовое дело</h3>
+							<span>2 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Сельское хозяйство</h3>
+							<span>3 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Профессиональное обучение по рабочим профессиям</h3>
+							<span>38 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Железнодорожная безопасность</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Профессиональное обучение по рабочим профессиям</h3>
+							<span>38 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Железнодорожная безопасность</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Строительство, проектирование, инженерные изыскания</h3>
+							<span>41 специальность &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Радиационная безопасность</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Жилищно-коммунальное хозяйство</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Строительство, проектирование, инженерные изыскания</h3>
+							<span>41 специальность &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Радиационная безопасность</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Жилищно-коммунальное хозяйство</h3>
+							<span>24 специальности &rarr;</span></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Кадровое дело, HR, персонал</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Нефтегазовое дело</h3>
+							<span>2 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Сельское хозяйство</h3>
+							<span>3 специальности &rarr;</span>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="programms-tab-content-3" class="programms__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Строительство, проектирование, инженерные изыскания</h3>
+							<span>41 специальность &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Радиационная безопасность</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Жилищно-коммунальное хозяйство</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Кадровое дело, HR, персонал</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Профессиональное обучение по рабочим профессиям</h3>
+							<span>38 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Железнодорожная безопасность</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Нефтегазовое дело</h3>
+							<span>2 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Сельское хозяйство</h3>
+							<span>3 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Профессиональное обучение по рабочим профессиям</h3>
+							<span>38 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Железнодорожная безопасность</h3>
+							<span>24 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Строительство, проектирование, инженерные изыскания</h3>
+							<span>41 специальность &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Радиационная безопасность</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Жилищно-коммунальное хозяйство</h3>
+							<span>24 специальности &rarr;</span></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Кадровое дело, HR, персонал</h3>
+							<span>9 специальностей &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Нефтегазовое дело</h3>
+							<span>2 специальности &rarr;</span>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#">
+							<h3>Сельское хозяйство</h3>
+							<span>3 специальности &rarr;</span>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div class="programms__download element-animation element-animation__fromLeft">
+				<h3>Скачайте полный перечень программ в формате pdf</h3>
+				@@include('components/ui/_button.html', {children: 'получить перечень', class: 'btn_secondary', id: 'programms-list-request-btn'})
+			</div>
+		</section>
+		<section class="benefits container">
+			<h2 class="element-animation">Более 800 специальностей<br>по различным направлениям</h2>
+			<div class="benefits__cards element-animation">
+				<div class="benefits__card element-animation">
+					<h3>Получайте не только теорию</h3>
+					<p>Мы используем современные технологии, в том числе шлем виртуальной реальности, используя который
+						Вы сможете отработать новые навыки безопасно</p>
+				</div>
+				<div class="benefits__card element-animation">
+					<h3>Осуществляем трудоустройство по заявкам работодателей</h3>
+					<p>С нами вы не только сможете обучить уже работающий у Вас персонал, но и получить новые кадры</p>
+				</div>
+				<div class="benefits__card element-animation">
+					<h3>Экономьте с нами</h3>
+					<p>Большой выбор учебных программ и скидки для корпоративных клиентов.</p>
+				</div>
+				<div class="benefits__card element-animation">
+					<h3>Обучайте кадры дистанционно!</h3>
+					<p>Вам больше не нужно отправлять персонал в другой город. Для обучения достаточно иметь компьютер.
+					</p>
+				</div>
+				<div class="benefits__card element-animation">
+					<a class="link"><span></span>Скачайте презентацию<br>о компании</a>
+				</div>
+			</div>
+		</section>
+		@@include('components/business/_banner.html',
+		{title: 'Спланируйте годовой бюджет компании',
+		subtitle: 'Оставьте свою почту, и мы вышлем подробный учебный план на текущий год',
+		button: 'Получить учебный план',
+		background: '@images/banner-background-1.png',
+		image: '@images/banner-image-1.png'
+		})
+		<section class="about-us">
+			<div class="about-us__text-container">
+				<div>
+					<h2 class="element-animation">Центр профессиональной подготовки кадров</h2>
+					<p class="element-animation element-animation__fromLeft">Мы один из крупнейших учебных центров Башкирии, и растем каждый год! Большой опыт работы на
+						образовательном рынке позволяет нам создавать эффективные инструменты успеха.</p>
+					@@include('components/ui/_button.html', {children: 'Подробнее о компании', class: 'btn_blue-border element-animation element-animation__fromLeft',
+					href: '/'})
+				</div>
+				<div class="about-us__numbers element-animation">
+					<span class="value">20</span>
+					<p>лет на рынке профессионального образования</p>
+				</div>
+				<div class="about-us__numbers element-animation">
+					<span class="value">800</span>
+					<p>специальностей и профессий по 33 направлениям</p>
+				</div>
+			</div>
+			<div class="about-us__photo swiper element-animation">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img data-swiper-parallax="100%" src="@images/about-us-1.png">
+					</div>
+					<div class="swiper-slide">
+						<img data-swiper-parallax="100%" src="@images/about-us-1.png">
+					</div>
+				</div>
+				<div class="about-us__photo-description element-animation element-animation__fromLeft">
+					<p>Мы один из крупнейших учебных центров Башкирии, и растем каждый год!</p>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="partnership container">
+			<h2 class="element-animation">Обучаем сотрудников крупнейших компаний</h2>
+			<div class="partnership__icons swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="@icons/UMK_color.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/GR_color.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/CPK_color.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/RSH_color.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/MON_color.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/HSE.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/AMK.svg">
+					</div>
+					<div class="swiper-slide">
+						<img src="@icons/DPORB_color.svg">
+					</div>
+				</div>
+			</div>
+			@@include('components/ui/_button.html', {children: 'Подробнее о сотрудничестве', class: 'btn_blue-border element-animation element-animation__fromLeft',
+			href: '/'})
+		</section>
+		<section class="reviews container">
+			<div class="reviews__tabs swiper element-animation element-animation__fromLeft">
+				<div class="swiper-wrapper">
+					<div id="reviews-tab-1" class="reviews__tab swiper-slide swiper-slide_active">
+						<h2>Отзывы</h2>
+					</div>
+					<div id="reviews-tab-2" class="reviews__tab swiper-slide">
+						<h2>Благодарности</h2>
+					</div>
+					<div id="reviews-tab-3" class="reviews__tab swiper-slide">
+						<h2>Грамоты</h2>
+					</div>
+				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+			<div id="reviews-tab-content-1" class="reviews__cards reviews__cards_active swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="reviews-tab-content-2" class="reviews__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<div id="reviews-tab-content-3" class="reviews__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-1">
+					</div>
+					<div class="swiper-slide">
+						<img class="open-modal" src="@images/review.png" modalId="review-2">
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</section>
+		<section class="news news_active container">
+			<h2 class="element-animation element-animation__fromLeft">Новости</h2>
+			<div class="news__cards swiper element-animation element-animation__fromRight">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="/">
+						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+						<img src="@images/news-1.png">
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>ЦППК подводит итоги 2022 года</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide">
+						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников промышленных предприятий</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>ЦППК подводит итоги 2022 года</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Министр сельского хозяйства РБ вручил благодарности экспертам ЦППК</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>Башкортостан занял 1 место по объему привлеченных федеральных средств на обучение работников
+							промышленных предприятий</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+					<a class="swiper-slide" href="/">
+						<h3>ЦППК подводит итоги 2022 года</h3>
+						<span>12 января 2023</span>
+						<span class="link-icon link-icon_arrow"></span>
+					</a>
+				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+			@@include('components/ui/_button.html', {children: 'Все новости', class: 'btn_blue-border element-animation element-animation__fromRight', type: 'button',
+			href: '/'})
+		</section>
+		<section class="subscribe container">
+			<div class="subscribe__text">
+				<h3>Подпишитесь на рассылку</h3>
+				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших
+					клиентов по подписке</p>
+			</div>
+			<form class="subscribe__form" novalidate>
+				@@include('components/ui/_input-email.html', {name: 'email', required: true})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary', type: 'submit'})
+				@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
+			</form>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+	<div id="bottom-bar" class="bottom-bar @@if (context.class) { @@class}">
+		<!-- кнопка для авторизованного пользователя -->
+		<!-- <a class="link" id="profile-logged">АВ</a> -->
+		<!-- кнопка для не авторизованного пользователя -->
+		<a class="link" id="profile" style="background-image: url(@icons/user.svg);"></a>
+		<a class="link" id="virtual-reality" style="background-image: url(@icons/VR.svg);"></a>
+		<a class="link" id="remote-learning" style="background-image: url(@icons/laptop.svg);"></a>
+		<a class="link" id="bottom-search-btn" style="background-image: url(@icons/search.svg);"></a>
+		@@include('components/ui/_button.html', {children: '', id:'bottom-burger-btn', class: 'btn_secondary'})
+	</div>
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-1', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-2', image: 'review.png'})
+	@@include('components/ui/_notification.html', { title: 'Заголовок', subtitle: 'Уведомление'})
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

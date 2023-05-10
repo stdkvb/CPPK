@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Профиль'})
+
+<body>
+	@@include('components/business/_header.html', {class: 'header_white header_mobile-hidden', logo: 'logo_secondary'})
+	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
+	@@include('components/business/_profile-menu.html')
+	<main>
+		<section class="profile profile_filled profile_personally">
+			<h1 class="element-animation">Профиль</h1>
+			<form class="element-animation profile-form" novalidate>
+				@@include('components/ui/_input-text.html', {label: 'ФИО',value: 'Голунов Иван Валентинович', placeholder: 'Введите имя', errorMessage: 'Введите имя', name: 'name'})
+				@@include('components/ui/_input-phone.html', {label: 'Телефон',value: '+7 (481) 516-12-42', placeholder: 'Введите телефон', name: 'phone'})
+				@@include('components/ui/_input-email.html', {label: 'Электронная почта', value: 'mail@email.com', placeholder: 'Введите электронную почту', name: 'email'})
+				<div class="profile-form__button-container">
+					@@include('components/ui/_button.html', {children: 'Сменить пароль', class: 'btn_blue-border', id: 'password-change-btn', type: 'button'})
+					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill btn_blue-fill_disable', id: 'save', type: 'submit'})
+				</div>
+			</form>
+		</section>
+	</main>
+	@@include('components/business/_bottom-bar.html', {class: 'bottom-bar_dark'})
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

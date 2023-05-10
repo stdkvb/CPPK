@@ -1,0 +1,198 @@
+.sub-menu {
+	background-color: $white;
+	padding: 52px;
+	grid-area: sidebar;
+
+	&_no-padding {
+		padding: 0;
+	}
+
+	@include desktop_medium {
+		padding: 52px 26px 52px 26px;
+	}
+
+	@include desktop_extra_small {
+		margin-left: 110px;
+		padding: 60px 20px 32px;
+	}
+
+	@include tablet {
+		margin-left: 0;
+	}
+
+	&_bg {
+		@include desktop_extra_small {
+			background-color: $gray04;
+		}
+
+	}
+
+	&__list {
+		position: sticky;
+		top: 52px;
+		display: flex;
+		flex-direction: column;
+		gap: 52px;
+
+		.subscribe {
+			background: url(@images/subscribe_bg.png);
+			flex-direction: column;
+			gap: 40px;
+
+			margin: 0 -52px;
+			width: auto;
+
+			@include desktop_medium {
+				margin: 0 -26px;
+			}
+
+			@include desktop_extra_small {
+				display: none;
+			}
+
+			&__text {
+				width: auto !important;
+			}
+
+			&__form {
+				flex-direction: column;
+
+				.input__container {
+					width: 100% !important;
+				}
+			}
+		}
+
+		.container {
+			padding-left: 52px;
+			padding-right: 52px;
+
+			@include desktop_medium {
+				padding-left: 26px;
+				padding-right: 26px;
+			}
+		}
+	}
+
+	&__links_active &__icon {
+		transform: rotate(180deg);
+	}
+
+	&__toggle {
+		display: none;
+
+
+		@include desktop_extra_small {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-bottom: 17px;
+			border-bottom: 1px solid $gray20;
+
+			& span {
+				font-size: 16px;
+				line-height: 1.3;
+				font-weight: 500;
+				color: $gray90;
+			}
+		}
+
+	}
+
+	&__icon {
+		transition: all .4s ease;
+		background-image: url(../files/icons/chevron-down_black.svg);
+		background-repeat: no-repeat;
+		width: 23px;
+		height: 23px;
+		background-color: transparent;
+		border: none;
+		background-position: center;
+		visibility: visible;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		transition: all $transitionDuration;
+		overflow-y: hidden;
+
+
+
+		@include tablet {
+			height: 0;
+			max-height: 0;
+
+			&_active {
+				height: unset;
+				max-height: 1000px;
+			}
+		}
+
+		& .link {
+			padding: 16px 0 16px 24px;
+			color: $gray60;
+			font-weight: 500;
+
+
+			&:hover {
+				color: $blue50;
+
+				&::before {
+					content: "—";
+					font-size: 16px;
+					font-weight: 700;
+					display: block;
+					color: $blue50;
+					position: relative;
+					left: -15px;
+				}
+			}
+
+			&:not(:last-child) {
+				border-bottom: .5px solid $gray10;
+
+				@include tablet {
+					border-bottom: none;
+				}
+			}
+
+			@include tablet {
+				padding: 12px 0;
+			}
+
+			&:first-child {
+				@include tablet {
+					padding-top: 16px;
+				}
+			}
+
+			&:last-child {
+				@include tablet {
+					padding: 12px 0 0;
+				}
+			}
+
+			&_active {
+				color: $blue50;
+				padding-left: 40px;
+
+				&::before {
+					content: "—";
+					font-size: 16px;
+					font-weight: 700;
+					display: block;
+					color: $blue50;
+					position: relative;
+					left: -15px;
+				}
+
+				@include tablet {
+					padding-left: 24px;
+				}
+			}
+
+
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<div class="service-menu service-menu_gray" id="profile-access-menu">
+	<a class="link close-btn"><span class="link-arrow"></span>Закрыть</a>
+	<div class="service-menu__tabs">
+		<h2 id="signup-btn">Регистрация</h2>
+		<h2 class="active" id="signin-btn">Авторизация</h2>
+	</div>
+	<div class="service-menu__form disabled signup element-animation element-animation__fromLeft" id="signup">
+		<form novalidate>
+			@@include('components/ui/_input-email.html', {name: 'email', required: true})
+			@@include('components/ui/_input-password.html', {name: 'password', errorMessage: 'Придумайте пароль', id: 'password', required: true})
+			@@include('components/ui/_input-password.html', {name: 'repeatpassword', placeholder: 'Повторите пароль', errorMessage: 'Повторите пароль', id: 'repeat-password', required: true})
+			@@include('components/ui/_input-text.html', {placeholder: 'ФИО', errorMessage: 'Введите ваше имя', name: 'name', required: true})
+			@@include('components/ui/_input-phone.html', {name: 'phone', required: true})
+			@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я являюсь юридическим лицом', name: 'entity'})
+			@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="/" target="_blank">обработку моих персональных данных</a>', name: 'agreement', checked: 'true', required: true})
+			@@include('components/ui/_button.html', {children: 'Зарегистрироваться', class: 'btn_secondary', type: 'submit'})
+		</form>
+	</div>
+	<div class="service-menu__form signin element-animation element-animation__fromLeft" id="signin">
+		<form novalidate>
+			@@include('components/ui/_input-email.html', {name: 'email', required: true})
+			@@include('components/ui/_input-password.html', {errorMessage: 'Введите пароль', name: 'password', required: true})
+			<span id="password-recovery-btn">Восстановление пароля</span>
+			@@include('components/ui/_button.html', {children: 'Авторизоваться', class: 'btn_secondary', type: 'submit'})
+		</form>
+	</div>
+</div>

@@ -1,0 +1,72 @@
+textarea {
+	transition: all $transitionDuration;
+	width: 100%;
+	min-height: 7.6875rem;
+	padding: 1.67em 1.8em;
+	border: 1px solid $gray20;
+	outline: none;
+	resize: none;
+	@include regular-14;
+	color: $white;
+	background-color: transparent;
+
+	&:focus {
+
+	}
+	&:disabled {
+
+	}
+	&::placeholder {
+		color: $white;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $gray20;
+		border-radius: 20px;
+	}
+	&:focus::-webkit-scrollbar-thumb {
+		background-color: $gray40;
+	}
+	&:disabled::-webkit-scrollbar-thumb {
+		background-color: $gray30;
+	}
+}
+
+.textarea__container {
+
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: .75rem;
+
+	.textarea__label {
+		margin-bottom: 28px;
+		color: $white;
+		@include regular-16;
+	}
+
+	.error-message {
+		@include errorMessageStyles;
+	}
+
+	&_valid {
+		textarea:not(:focus) {
+		}
+	}
+
+	&_invalid {
+		textarea:not(:focus) {
+		}
+
+		.error-message {
+			display: block;
+		}
+	}
+}

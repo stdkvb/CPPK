@@ -1,0 +1,45 @@
+
+<li class="basket__card@@if (context.class) { @@class}">
+		<div class="basket__card-column">
+			@@if (context.title) {
+				<h3>@@title</h3>
+			}
+			@@if (context.code) {
+				<span class="basket__programm-code">Код программы: @@code</span>
+			}
+			<div class="basket__tags">
+				@@if (context.tag1) {
+					<span>@@tag1</span>
+				}
+				@@if (context.tag2) {
+					<span>@@tag2</span>
+				}
+				@@if (context.tag3) {
+					<span>@@tag3</span>
+				}
+			</div>
+		</div>
+		<div class="basket__card-column">
+			@@if (context.price) {
+				<div class="basket__price">
+					<div class="price">
+						<span>@@price</span>
+						₽
+					</div>
+					<span class="input-wrapper">
+						<button class="decrement" onclick="event.preventDefault()">-</button>
+						<input class="quantity" type="number" value="1" min="0"/>
+						<button class="increment" onclick="event.preventDefault()">+</button>
+					</span>
+					<div class="subtotal">
+						<span class="subtotal-value">@@price</span>
+						₽
+					</div>
+				</div>
+			}
+			<div class="basket__card-buttons">
+				<a class="link link_blue" href="#">В избранное</a>
+				<a class="link link_blue" href="#">Удалить</a>
+			</div>
+		</div>
+</li>

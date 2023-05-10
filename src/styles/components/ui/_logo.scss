@@ -1,0 +1,21 @@
+.logo {
+	&::before {
+		content: url("@icons/logo.svg");
+	}
+	@include mobile {
+		&::before {
+			content: url("@icons/logo-mini.svg");
+		}
+	}
+	&_dark {
+		&::before {
+			content: url("@icons/logo-dark.svg");
+		}
+	}
+
+	&_secondary {
+		&::before {
+			content: url("@icons/logo-secondary.svg");
+		}
+	}
+}

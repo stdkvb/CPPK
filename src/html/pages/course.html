@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'ЦППК'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background">
+		<video src="@videos/video-background.mp4" autoplay muted loop playsinline disablepictureinpicture preload="auto"></video>
+	</div>
+	<main>
+		<section class="page-title page-title_secondary container element-animation">
+			<span class="page-title__subtitle">Повышение квалификации по программе:</span>
+			<h1>Монтаж, техническое обслуживание и ремонт систем (элементов систем) дымоудаления и противодымной вентиляции, включая диспетчеризацию и проведение пусконаладочных работ</h1>
+			<div class="page-title__details">
+				<div class="page-title__detail">
+					<span>Код программы:</span>
+					<span>B 138</span>
+				</div>
+				<div class="page-title__detail">
+					<span>Длительность:</span>
+					<span>72 ак. часа</span>
+				</div>
+				<div class="page-title__detail">
+					<span>Форма обучения:</span>
+					<span>Очно, заочно, дистанционно</span>
+				</div>
+				<div class="page-title__detail">
+					<span>Документ:</span>
+					<span>Диплом о профессиональной переподготовке</span>
+				</div>
+				<div class="page-title__detail">
+					<span>Учебный план курса:</span>
+					<a class="link" href="#" download="#">Получить учебный план</a>
+				</div>
+			</div>
+		</section>
+		<div class="course container">
+			<div class="course__content">
+				@@include('components/business/_directory.html', {parent: 'Обучение', link: 'Повышение квалификации', nextlink: 'Пожарная безопасность',
+				disabled: 'Монтаж, техническое обслуживание'})
+				<div class="course__text-content">
+					<h3>Описание курса</h3>
+					<p>Специалист по охране труда - специалист, который занимается охраной человеческого труда в различных видах деятельности, осуществляет контроль и обеспечение охраны жизнедеятельности человека.</p>
+					<p>Системы охраны труда постоянно развиваются, создавая условия для повышения безопасности деятельности человека в процессе внедрения новых технологий, и создания новых образцов продукции. Специалист по охране труда постоянно отслеживает внедрение новых технологий, сопровождая их соответствующими мерами по охране труда. Основная цель вида профессиональной деятельности:</p>
+					<p>Профилактика несчастных случаев на производстве и профессиональных заболеваний, снижение уровня воздействия (устранение воздействия) на работников вредных и (или) опасных производственных факторов, управление профессиональными рисками</p>
+				</div>
+				@@include('components/business/_video.html')
+				<div class="course__text-content course__text-content_gray">
+					<h3>Кому подойдет этот курс</h3>
+					<ul>
+						<li>Руководители и специалисты по охране труда.</li>
+						<li>Руководители и специалисты по промышленной безопасности</li>
+						<li>Начальники отдела кадров</li>
+						<li>Инспекторы по кадрам</li>
+						<li>Юристы</li>
+						<li>Руководители организаций</li>
+					</ul>
+					<h4>Пройденный курс позволит вам:</h4>
+					<p>Профилактика несчастных случаев на производстве и профессиональных заболеваний, снижение уровня воздействия (устранение воздействия) на работников вредных и (или) опасных производственных факторов, управление профессиональными рисками</p>
+				</div>
+				<div class="course__text-content course__text-content_blue">
+					<img src="@icons/!.svg">
+					<p>Все работники организации, в том числе ее руководитель, обязаны проходить программу обучения по охране труда и проверку знаний требований охраны труда в порядке, установленном Правительством Российской Федерации.</p>
+				</div>
+				<section class="advantages">
+					<h3>Учиться у нас удобно и выгодно</h3>
+					<div class="advantages__tabs swiper">
+						<div class="swiper-wrapper">
+							<div id="advantages-tab-1" class="advantages__tab swiper-slide swiper-slide_active">
+								<h4>Очно</h4>
+							</div>
+							<div id="advantages-tab-2" class="advantages__tab swiper-slide">
+								<h4>Заочно</h4>
+							</div>
+							<div id="advantages-tab-3" class="advantages__tab swiper-slide">
+								<h4>Дистанционно</h4>
+							</div>
+						</div>
+						<div class="swiper-scrollbar"></div>
+					</div>
+					<p>Очное обучение проходит под руководством опытных преподавателей, в современных учебных аудиториях, оснащенных необходимыми техническими средствами для проведения лекций и практических занятий.</p>
+					<div id="advantages-tab-content-1" class="advantages__cards advantages__cards_active">
+						<div class="advantages__card">
+							<img src="@icons/advantages-1.svg" />
+							<h4>Без отрыва от работы</h4>
+							<p>Больше не нужно отправлять сотрудников в командировки. Они могут пройти обучение дистанционно</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-2.svg" />
+							<h4>Оплачивайте онлайн</h4>
+							<p>Выбирайте программы, добавляйте в корзину, оплачивайте все разом онлайн через личный кабинет</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-3.svg" />
+							<h4>Получите документы удобным способом</h4>
+							<p>Вам не придётся ехать в наш офис лично. Мы можем прислать документы по почте</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-4.svg" />
+							<h4>Практикующие преподаватели</h4>
+							<p>Все преподаватели имеют реальный опыт работы, а значит вы получаете только релевантные знания которые можно использовать на практике сразу</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-5.svg" />
+							<h4>Индивидуальный график обучения</h4>
+							<p>Если не подходят групповые занятия, то Вы всегда можете выбрать обучение по индивидуальному графику</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-6.svg" />
+							<h4>Раздаточные материалы</h4>
+							<p>Все материалы остаются у вас, оплачивать их дополнительно не нужно</p>
+						</div>
+					</div>
+					<div id="advantages-tab-content-2" class="advantages__cards">
+						<div class="advantages__card">
+							<img src="@icons/advantages-1.svg" />
+							<h4>Без отрыва от работы</h4>
+							<p>Больше не нужно отправлять сотрудников в командировки. Они могут пройти обучение дистанционно</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-5.svg" />
+							<h4>Индивидуальный график обучения</h4>
+							<p>Если не подходят групповые занятия, то Вы всегда можете выбрать обучение по индивидуальному графику</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-6.svg" />
+							<h4>Раздаточные материалы</h4>
+							<p>Все материалы остаются у вас, оплачивать их дополнительно не нужно</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-2.svg" />
+							<h4>Оплачивайте онлайн</h4>
+							<p>Выбирайте программы, добавляйте в корзину, оплачивайте все разом онлайн через личный кабинет</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-3.svg" />
+							<h4>Получите документы удобным способом</h4>
+							<p>Вам не придётся ехать в наш офис лично. Мы можем прислать документы по почте</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-4.svg" />
+							<h4>Практикующие преподаватели</h4>
+							<p>Все преподаватели имеют реальный опыт работы, а значит вы получаете только релевантные знания которые можно использовать на практике сразу</p>
+						</div>
+					</div>
+					<div id="advantages-tab-content-3" class="advantages__cards">
+						<div class="advantages__card">
+							<img src="@icons/advantages-4.svg" />
+							<h4>Практикующие преподаватели</h4>
+							<p>Все преподаватели имеют реальный опыт работы, а значит вы получаете только релевантные знания которые можно использовать на практике сразу</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-5.svg" />
+							<h4>Индивидуальный график обучения</h4>
+							<p>Если не подходят групповые занятия, то Вы всегда можете выбрать обучение по индивидуальному графику</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-6.svg" />
+							<h4>Раздаточные материалы</h4>
+							<p>Все материалы остаются у вас, оплачивать их дополнительно не нужно</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-1.svg" />
+							<h4>Без отрыва от работы</h4>
+							<p>Больше не нужно отправлять сотрудников в командировки. Они могут пройти обучение дистанционно</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-2.svg" />
+							<h4>Оплачивайте онлайн</h4>
+							<p>Выбирайте программы, добавляйте в корзину, оплачивайте все разом онлайн через личный кабинет</p>
+						</div>
+						<div class="advantages__card">
+							<img src="@icons/advantages-3.svg" />
+							<h4>Получите документы удобным способом</h4>
+							<p>Вам не придётся ехать в наш офис лично. Мы можем прислать документы по почте</p>
+						</div>
+					</div>
+				</section>
+				@@include('components/business/_banner.html',
+					{title: 'Экономьте на обучении с ЦППК',
+					subtitle: 'При заключении договора о подготовке нескольких работников предоставляются скидки от 3 до 10%.  При повторном обращении скидка составит 15%',
+					button: 'Узнать подробнее',
+					background: '@images/banner-background-3.png',
+					image: '@images/banner-image-3.png'
+				})
+				<div class="course__text-content course__text-content_gray">
+					<h3>Требования к слушателям</h3>
+					<p>Для поступления на обучение гражданам Российской Федерации вместе с заявлением необходимо предоставить:</p>
+					<ul>
+						<li>Диплом о высшем образовании (диплом бакалавра, специалиста, магистра) или диплом о среднем профессиональном образовании</li>
+						<li>Документ, удостоверяющий личность и гражданство</li>
+						<li>Справку с места учёбы для студентов, проходящих обучение в заведениях высшего и среднего профессионального образования (при необходимости)</li>
+						<li>Свидетельства об изменении фамилии, имени, отчества (при необходимости)</li>
+						<li>СНИЛС</li>
+					</ul>
+					<p>Документы принимаются в электронном виде (скан или фото хорошего качества) в форматах JPEG, JPG, PNG, doc, docx, pdf.</p>
+				</div>
+				<div class="stages">
+					<h3>Этапы обучения</h3>
+					<ul>
+						<li>
+							<div>
+								Заявка<span>Подайте <a class="link link_blue" href="#">заявку на обучение</a></span>
+							</div>
+						</li>
+						<li>
+							<div>
+								Получение материалов<span>Получите доступ к обучающим материалам (лекции, видео, тесты, кейсы)</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								Изучение материалов<span>Изучайте материал согласно учебному плану</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								Подготовка аттестационной работы<span>Пишите аттестационную работу, выполняйте итоговое тестирование</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								Проверка<span>Пришлите аттестационную работу на проверку</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								Получение диплома<span>Получите диплом о профессиональной переподготовке в нашем офисе, по почте или курьерской службой</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="modules">
+					<h3>Содержание курса</h3>
+					<span class="modules__module">Модуль 1</span>
+					<ul>
+						<li>Основы охраны труда</li>
+						<li>Система управления охраной труда</li>
+						<li>Надзор и контроль в области охраны труда</li>
+						<li>Инструктаж, обучение и проверка заний работников, специалистов, и руководителей организаций по охране труда</li>
+					</ul>
+					<span class="modules__module">Модуль 2</span>
+					<ul>
+						<li>Основы охраны труда</li>
+						<li>Система управления охраной труда</li>
+						<li>Надзор и контроль в области охраны труда</li>
+						<li>Инструктаж, обучение и проверка заний работников, специалистов, и руководителей организаций по охране труда</li>
+					</ul>
+					<span class="modules__module">Модуль 3</span>
+					<ul>
+						<li>Основы охраны труда</li>
+						<li>Система управления охраной труда</li>
+						<li>Надзор и контроль в области охраны труда</li>
+						<li>Инструктаж, обучение и проверка заний работников, специалистов, и руководителей организаций по охране труда</li>
+					</ul>
+					<span class="modules__module">Модуль 4</span>
+					<ul>
+						<li>Основы охраны труда</li>
+						<li>Система управления охраной труда</li>
+						<li>Надзор и контроль в области охраны труда</li>
+						<li>Инструктаж, обучение и проверка заний работников, специалистов, и руководителей организаций по охране труда</li>
+					</ul>
+					<div class="modules__banner">
+						<h4>Получите программу курса</h4>
+						<p>Отправим подробную программу курса на почту</p>
+						@@include('components/ui/_button.html', {class: 'btn_secondary', children: 'Получить программу', href: '#'})
+					</div>
+				</div>
+				<div class="course__text-content course__text-content_gray course__text-content_diplom">
+					<h3>Выдаваемый документ</h3>
+					<img src="@images/diplom.png">
+					<p>Диплом о профессиональной переподготовке</p>
+				</div>
+				<section class="reviews">
+					<h3>Отзывы</h3>
+					<div class="reviews__cards reviews__cards_active swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="open-modal" src="@images/review.png" modalId="review-1">
+							</div>
+							<div class="swiper-slide" >
+								<img class="open-modal" src="@images/review.png" modalId="review-2">
+							</div>
+							<div class="swiper-slide">
+								<img class="open-modal" src="@images/review.png" modalId="review-1">
+							</div>
+							<div class="swiper-slide">
+								<img class="open-modal" src="@images/review.png" modalId="review-1">
+							</div>
+							<div class="swiper-slide" >
+								<img class="open-modal" src="@images/review.png" modalId="review-2">
+							</div>
+							<div class="swiper-slide">
+								<img class="open-modal" src="@images/review.png" modalId="review-1">
+							</div>
+							<div class="swiper-slide">
+								<img class="open-modal" src="@images/review.png" modalId="review-1">
+							</div>
+
+						</div>
+					</div>
+				</section>
+				<section class="partnership">
+					<h3>Компании прошедшие обучение у нас</h3>
+					<div class="partnership__icons swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="@icons/RSH_color.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/UMK_color.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/HSE.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/DPORB_color.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/MON_color.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/HSE.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/AMK.svg">
+							</div>
+							<div class="swiper-slide">
+								<img src="@icons/DPORB_color.svg">
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="course__text-content course__text-content_gray">
+					<h3>Кто ведет курс</h3>
+						<ul>
+							<li>Комарова Любовь Анатольевна</li>
+							<li>Кашапов Рамис Земфирович</li>
+							<li>Банин Владимр Рюрикович</li>
+						</ul>
+				</div>
+				@@include('components/business/_banner.html',
+					{title: 'Получите полную консультацию по выбранной програме',
+					subtitle: '*Это бесплатно и ни к чему вас не обязывает',
+					button: 'Получить консультацию',
+					background: '@images/banner-background-3.png',
+					image: '@images/banner-image-4.png'
+				})
+				<div class="course__text-content course__text-content_recomendations course__text-content_gray">
+					<h3>Рекомендованные курсы</h3>
+					@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				@@include('components/business/_course-card.html',
+					{
+						title: 'Монтаж, техническое обслуживание и ремонт систем пожаротушения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ',
+						tag1: '72 ак.часа',
+						tag2: 'Дистанционно',
+						tag3: 'Очно',
+						oldprice: '36 000',
+						newprice: '24 000'
+					})
+				</div>
+			</div>
+			<div class="course__right-bar">
+				<div class="sticky-container element-animation element-animation__fromRight">
+					<form class="buy-banner">
+						<span class="buy-banner__old-price">24 000 руб</span>
+						<span class="buy-banner__new-price">15 000 руб</span>
+						@@include('components/ui/_checkbox.html', { label: '<span>Скидка - 10%</span> при оплате до 12.02.2022'})
+						@@include('components/ui/_checkbox.html', { label: '<span>Скидка - 30%</span> при оплате за 3х и более участников одним чеком'})
+						@@include('components/ui/_select.html', {
+							placeholder: 'Форма обучения',
+							selectItems: [
+								{	text: 'Очная форма',
+									value: 'Очная форма'
+								},
+								{	text: 'Заочная форма',
+									value: 'Заочная форма'
+								},
+								{	text: 'Дистанционное обучение',
+								value: 'Дистанционное обучение'
+								},
+							]
+						})
+						<p>Начало курса <span>12.04.2023</span></p>
+						@@include('components/ui/_button.html', { children: 'Оставить заявку', class: 'btn_blue-fill', type: 'submit'})
+						<p><span>4356</span> человек уже прошли этот курс</p>
+					</form>
+					<div class="manager">
+						<img src="@images/manager.png">
+						<span>Алефтина Киселева, ответственный менеджер</span>
+						<a href="tel:+79862562323">тел: +7 (986)-256-23-23</a>
+					</div>
+					<div class="order">
+						<span>ПРИКАЗ МИНИСТЕРСТВА ТРУДА И СОЦИАЛЬНОЙ ЗАЩИТЫ РОССИЙСКОЙ ФЕДЕРАЦИИ</span>
+						<span>от 22 апреля 2021 года N 274н Об утверждении профессионального стандарта "Специалист в области охраны труда"</span>
+					</div>
+					@@include('components/ui/_link-button.html', { children: 'скачать учебный план', class: 'btn_blue-border', href: '#'})
+				</div>
+			</div>
+		</div>
+		<section class="subscribe container">
+			<div class="subscribe__text">
+				<h3>Подпишитесь на рассылку</h3>
+				<p>Мы постоянно публикуем новую и интересную информацию, акции и специальные предложения для наших клиентов по подписке</p>
+			</div>
+			<form class="subscribe__form">
+				@@include('components/ui/_input-email.html', {name: 'email'})
+				@@include('components/ui/_button.html', {children: 'Подписаться', class: 'btn_secondary',  type: 'submit'})
+				@@include('components/ui/_checkbox.html', {class: 'checkbox_white', label: 'Я даю свое согласие на <a href="#" target="_blank">обработку моих персональных данных</a>', name: 'agreement', required: true, checked: true})
+			</form>
+		</section>
+	</main>
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-1', image: 'review.png'})
+	@@include('components/business/_reviews-modal.html', { modalId: 'review-2', image: 'review.png'})
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

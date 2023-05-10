@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Ошибка 404'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Ошибка 404</h1>
+		</section>
+		<section class="error-page">
+			<div class="error-page__content">
+				<h2>Упс! Ошибка!</h2>
+				<p>Страница удалена или перенесена на другой адрес!</p>
+				<p>Мы уверены, что вы найдете то, что искали, если воспользуетесь поиском</p>
+			</div>
+			<div class="error-page__search">
+				<form>
+					@@include('components/ui/_search-bar.html', {placeholder: 'Введите запрос'})
+					@@include('components/ui/_select.html', {
+					class: 'custom-select_secondary',
+					placeholder: 'Поиск по программам',
+					selectItems: [
+					{ text: 'Программа 1',
+					value: 'Программа 1'
+					},
+					{ text: 'Программа 2',
+					value: 'Программа 2'
+					},
+					{ text: 'Программа 3',
+					value: 'Программа 3'
+					},
+					]
+					})
+
+				</form>
+			</div>
+
+
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

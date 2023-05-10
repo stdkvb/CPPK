@@ -1,0 +1,79 @@
+.subscribe {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	padding-right: 130px;
+	background-color: $blue50;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+	@include desktop_small {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.subscribe__text {
+		width: 50%;
+
+		@include tablet {
+			width: unset;
+		}
+	}
+
+	.subscribe__form {
+		display: grid;
+		grid-template-areas:
+			'input btn'
+			'checkbox checkbox';
+		gap: 20px;
+		@include mobile {
+			grid-template-areas:
+			'input'
+			'checkbox'
+			'btn';
+		}
+
+		.input__container {
+			grid-area: input;
+			width: 413px;
+
+			@include tablet {
+				width: 100%;
+			}
+
+			input {
+				width: 100%;
+				border: solid 1px $white;
+			}
+		}
+
+		.btn {
+			grid-area: btn;
+			display: flex;
+			justify-content: center;
+			width: fit-content;
+			@include mobile {
+				width: 100%;
+			}
+		}
+
+		.checkbox {
+			grid-area: checkbox;
+			justify-self: flex-end;
+			@include desktop_small {
+				justify-self: unset;
+			}
+		}
+	}
+
+
+	h3 {
+		@include medium-24;
+		color: $white;
+		margin-bottom: 8px;
+	}
+
+	p {
+		color: $white;
+	}
+}

@@ -1,0 +1,127 @@
+.menu {
+	position: absolute;
+	top: 0;
+	left: -100vw;
+	width: 100vw;
+	height: 100vh;
+	background-color: $gray80;
+	padding: 5em 5em 5em 10em;
+	visibility: visible;
+	transition: all $transitionDuration;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	@include tablet {
+		padding: 2em 1.5em 	5em 1.5em;
+	}
+
+	&_active {
+		transform: translateX(100vw);
+	}
+
+	.close-btn {
+		position: sticky;
+		margin-left: -140px;
+		margin-top: -60px;
+		top: -60px;
+		width: 21px;
+		height: 21px;
+		background-image: url(@icons/close.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		@include tablet {
+			display: none;
+		}
+	}
+
+	ul {
+		max-width: 486px;
+		margin-bottom: 48px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		@include tablet {
+			margin-bottom: 24px;
+			gap: 12px;
+		}
+		.link {
+			color: $white;
+			@include medium-24;
+			@include tablet {
+				@include medium-18;
+			}
+		}
+		.link_secondary {
+			color: $gray30;
+		}
+	}
+
+	// @include min_tablet{
+	// 	.menu__accordion {
+	// 		position: relative;
+	// 	}
+
+	// 	.accordion__toggle {
+	// 		span {
+	// 			@include regular-28;
+	// 			color: $gray30;
+	// 		}
+	// 	}
+
+	// 	.accordion__item_active {
+	// 		.accordion__toggle {
+	// 			span {
+	// 				color: $white;
+	// 			}
+	// 		}
+	// 		.accordion__content {
+	// 			left: 486px;
+	// 			opacity: 1;
+	// 		}
+	// 	}
+
+	// 	.accordion__content {
+	// 		position: absolute;
+	// 		top: 0;
+	// 		// left: 486px;
+	// 		left: 0;
+	// 		opacity: 0;
+	// 		.link {
+	// 			@include regular-18;
+	// 		}
+	// 	}
+	// }
+
+	.menu__phone {
+		width: fit-content;
+		@include regular-22;
+		color: $white;
+		height: unset;
+		margin-top: 3.2em;
+		margin-bottom: 0.75em;
+		@include min_tablet {
+			display: none;
+		}
+	}
+
+	.menu__social {
+		margin-top: 0.25em;
+		gap: 1em;
+		display: flex;
+		@include min_tablet {
+			display: none;
+		}
+
+		.link-icon {
+			display: flex;
+			align-items: center;
+			line-height: 0;
+			width: 1.5em;
+			height: 1.5em;
+			position: relative;
+		}
+	}
+}

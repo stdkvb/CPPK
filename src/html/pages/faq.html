@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Вопросы и ответы'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Вопросы и ответы</h1>
+		</section>
+		<section class="sub-wrapper">
+			<div class="sub-wrapper__content">
+				<div class="sub-wrapper__accordion">
+					<div class="accordion__list">
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<h3>С какой частотой вы проводите обучение?</h3>
+								<div>
+									<button class="accordion__icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<p>Запуски программ проходят ежемесячно: онлайн-формате, в очном, дистанционном. Вы
+									можете выбрать удобный город и формат из расписания. Обратите внимание: если
+									пойдете учиться вдвоем или сразу выберете несколько курсов, стоимость обучения
+									снизится на треть.</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<h3>В какое время проходит обучение (график обучения)?</h3>
+								<div>
+									<button class="accordion__icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<p>Запуски программ проходят ежемесячно: онлайн-формате, в очном, дистанционном.
+									Вы можете выбрать удобный город и формат из расписания. Обратите внимание:
+									если пойдете учиться вдвоем или сразу выберете несколько курсов, стоимость
+									обучения снизится на треть.</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<h3>Как получить расписание учебных программ?</h3>
+								<div>
+									<button class="accordion__icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<p>Запуски программ проходят ежемесячно: онлайн-формате, в очном, дистанционном.
+									Вы можете выбрать удобный город и формат из расписания. Обратите внимание:
+									если пойдете учиться вдвоем или сразу выберете несколько курсов, стоимость
+									обучения снизится на треть.</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<h3>Где можно посмотреть программу курса?</h3>
+								<div>
+									<button class="accordion__icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<p>Запуски программ проходят ежемесячно: онлайн-формате, в очном, дистанционном.
+									Вы можете выбрать удобный город и формат из расписания. Обратите внимание:
+									если пойдете учиться вдвоем или сразу выберете несколько курсов, стоимость
+									обучения снизится на треть.</p>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__toggle">
+								<h3>Можно ли организовать корпоративное обучение?</h3>
+								<div>
+									<button class="accordion__icon"></button>
+								</div>
+							</div>
+							<div class="accordion__content">
+								<p>Запуски программ проходят ежемесячно: онлайн-формате, в очном, дистанционном.
+									Вы можете выбрать удобный город и формат из расписания. Обратите внимание:
+									если пойдете учиться вдвоем или сразу выберете несколько курсов, стоимость
+									обучения снизится на треть.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			@@include('components/business/_sub-menu.html', {
+			class: 'class="sub-menu"',
+			links: '',
+			subscribe: '',
+			feedback: 'true'
+			})
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+.profile-menu {
+	position: fixed;
+	left: 110px;
+	bottom: 0;
+	height: 100vh;
+	width: 237px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	@include tablet {
+		height: 283px;
+		width: 100%;
+		left: 0;
+		z-index: 10;
+		bottom: -283px;
+		opacity: 0;
+		transition: all $transitionDuration;
+
+		&_active {
+			transform: translateY(-283px) !important;
+			opacity: 1 !important;
+		}
+	}
+
+	&__wrapper {
+		background-color: $gray80;
+		height: calc(100vh - 110px);
+		padding-bottom: 3.75em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		nav {
+			padding-bottom: 130px;
+			margin-left: 78px;
+			a {
+				margin-bottom: 8px;
+				width: fit-content;
+				@include regular-14;
+				position: relative;
+				@include tablet {
+					margin-bottom: 12px;
+				}
+			}
+
+			.active {
+				@include medium-18;
+				color: $white;
+				&:hover {
+					cursor: unset;
+					color: $white;
+				}
+				&:before {
+					content: url(@icons/profile-menu-active.svg);
+					position: absolute;
+					left: -32px;
+					bottom: 4px;
+				}
+			}
+
+			@include tablet {
+				padding-bottom: 62px;
+			}
+		}
+
+		.profile-menu__exit {
+			@include regular-14;
+			margin-left: 78px;
+			position: absolute;
+			bottom: 65px;
+			@include tablet {
+				bottom: 104px;
+			}
+		}
+
+		@include tablet {
+			padding-top: 32px;
+		}
+	}
+
+	&_desktop-hidden {
+		@include min_tablet {
+			display: none;
+		}
+	}
+}

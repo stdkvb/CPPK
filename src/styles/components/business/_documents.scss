@@ -1,0 +1,60 @@
+.documents {
+
+	&__tabs {
+		margin-bottom: 34px;
+		padding-bottom: 30px;
+
+		@include tablet {
+			margin-bottom: 32px;
+		}
+
+		.swiper-wrapper {
+			align-items: baseline;
+		}
+
+		.swiper-slide {
+			width: fit-content !important;
+			max-width: 322px !important;
+
+			h2 {
+				@include regular-24;
+				color: $gray30;
+
+				@include tablet {
+					@include regular-18;
+				}
+			}
+
+			&_active {
+				h2 {
+					@include medium-28;
+					color: $gray90;
+
+					@include tablet {
+						@include medium-20;
+					}
+				}
+			}
+		}
+
+		.swiper-scrollbar {
+			bottom: 30px;
+			background: #aad4ec;
+		}
+	}
+
+	&__tab {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__links {
+		height: auto;
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+}

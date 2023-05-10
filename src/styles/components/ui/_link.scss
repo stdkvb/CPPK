@@ -1,0 +1,143 @@
+.link {
+	transition: color $transitionDuration;
+	color: $white;
+	@include regular-18;
+	display: flex;
+	align-items: center;
+
+	&:hover {
+		color: $blue30;
+		cursor: pointer;
+
+		.link-arrow {
+			opacity: 0.5;
+		}
+	}
+
+	&_secondary {
+		color: $gray20;
+		@include regular-16;
+	}
+
+	&_blue {
+		color: $blue50;
+		@include regular-18;
+
+		&:link,
+		&:visited {
+			color: $blue50;
+		}
+
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
+
+		&_disabled {
+			cursor: auto;
+			color: $gray30;
+			@include regular-18;
+		}
+	}
+
+	&-phone {
+		@include regular-22;
+
+		@include desktop_huge {
+			margin-right: 1.3em;
+		}
+
+		@include tablet {
+			margin-right: 0;
+		}
+
+		@include mobile {
+			@include regular-18;
+		}
+	}
+
+	&-arrow {
+		display: block;
+		width: 24px;
+		height: 0.9em;
+		background-image: url(@icons/link-arrow.svg);
+		background-repeat: no-repeat;
+		margin-right: 20px;
+		transition: opacity $transitionDuration;
+	}
+
+	&-icon {
+		display: flex;
+		align-items: center;
+		line-height: 0;
+		width: 1.5em;
+		height: 1.5em;
+		position: relative;
+
+		&__group {
+			display: flex;
+			gap: 1rem;
+		}
+
+		&_burger {
+			&::before {
+				content: url("@icons/burger.svg");
+			}
+		}
+
+		&_eye {
+			&::before {
+				content: url("@icons/eye.svg");
+			}
+		}
+
+		&_youtube {
+			&::before {
+				content: url("@icons/youtube.svg");
+			}
+		}
+
+		&_vk {
+			&::before {
+				content: url("@icons/vk.svg");
+			}
+		}
+
+		&_arrow {
+			&::before {
+				content: url("@icons/arrow-in-circle.svg");
+			}
+		}
+
+		&_cross {
+			&::before {
+				content: url("@icons/cross-black.svg");
+			}
+		}
+
+		.cover {
+			@include contain;
+			z-index: 30;
+		}
+	}
+
+	&_gray {
+		@include regular-18;
+
+		&:link,
+		&:visited {
+			color: $gray60;
+		}
+
+		&:hover,
+		&:active {
+			color: $blue30;
+		}
+
+		&_disabled {
+			cursor: auto;
+			color: $gray30;
+			@include regular-18;
+		}
+	}
+}

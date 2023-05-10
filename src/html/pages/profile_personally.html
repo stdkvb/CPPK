@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Профиль'})
+
+<body>
+	@@include('components/business/_header.html', {class: 'header_white header_mobile-hidden', logo: 'logo_secondary'})
+	@@include('components/business/_left-bar.html', {class: 'left-bar_black'})
+	@@include('components/business/_profile-menu.html')
+	<main>
+		<section class="profile profile_personally">
+			<h1 class="element-animation">Профиль</h1>
+			<form class="element-animation profile-form" novalidate>
+				@@include('components/ui/_input-text.html', {label: 'ФИО', placeholder: 'Введите имя', errorMessage: 'Введите имя представителя', name: 'name', required: true})
+				@@include('components/ui/_input-phone.html', {label: 'Телефон', placeholder: 'Введите телефон', name: 'phone', required: true})
+				@@include('components/ui/_input-email.html', {label: 'Электронная почта', placeholder: 'Введите электронную почту', name: 'email', required: true})
+				<div class="profile-form__button-container">
+					@@include('components/ui/_button.html', {children: 'Сменить пароль', class: 'btn_blue-border', id: 'password-change-btn', type: 'button'})
+					@@include('components/ui/_button.html', {children: 'Сохранить', class: 'btn_blue-fill', type: 'submit'})
+				</div>
+			</form>
+		</section>
+	</main>
+	@@include('components/business/_bottom-bar.html', {class: 'bottom-bar_dark'})
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

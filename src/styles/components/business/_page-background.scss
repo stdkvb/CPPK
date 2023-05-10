@@ -1,0 +1,35 @@
+.page-background {
+	min-height: 100vh;
+	width: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	filter: brightness(40%);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	@include tablet {
+		min-height: calc(100vh - 72px);
+	}
+
+	video {
+		 width: 100%;
+		 object-fit: cover;
+	}
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&_sub {
+		min-height: none;
+		filter: none;
+		display: unset;
+
+		img {
+			width: unset;
+		}
+	}
+}
+

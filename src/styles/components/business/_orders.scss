@@ -1,0 +1,119 @@
+.orders {
+	background-color: $gray04;
+	padding: 158px 48px 48px 395px;
+	min-height: 100vh;
+	height: 100%;
+	@include tablet {
+		padding: 40px 20px 150px 20px;
+	}
+
+	h1 {
+		color: $black;
+		@include regular-36;
+		margin-bottom: 60px;
+		@include mobile {
+			@include regular-28;
+			margin-bottom: 32px;
+		}
+	}
+
+	&__list {
+		width: 100%;
+		li {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 4% 8% 16% 8% 7% 7% 8% 9%;
+			justify-content: space-between;
+			padding: 12px 20px;
+			color: $gray70;
+			@include regular-16;
+
+			div {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.orders__date {
+				flex-direction: row;
+			}
+
+			.orders__status {
+				flex-direction: row;
+				&_paid {
+					color: #32D583;
+				}
+				&_waiting {
+					color: #F79009;
+				}
+				&_complete {
+					color: #007DC5;
+				}
+				&_expired {
+					color: #F65D5D;
+				}
+			}
+
+			.link {
+				text-decoration: underline;
+				@include regular-16;
+			}
+
+			svg {
+				// transform: translateY(2px);
+				min-width: 18px;
+				min-height: 18px;
+			}
+
+			.btn {
+				width: 100%;
+				@include regular-12;
+				@include desktop_large {
+					margin-top: 12px;
+					width: fit-content;
+				}
+				@include mobile {
+					width: 100%;
+				}
+			}
+
+			.orders__list-header_mobile {
+				color: $black;
+				margin-top: 12px;
+				&:first-of-type {
+					margin-top: 0;
+				}
+			}
+
+			&:nth-child(1) {
+
+				color: $black;
+				align-items: center;
+			}
+
+			&:nth-child(2n+1) {
+				background-color: $blue04;
+			}
+
+			&:nth-child(2n) {
+				background-color: $white;
+			}
+		}
+
+		@include desktop_large {
+			.orders__list-header {
+				display: none;
+			}
+			li {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+		}
+		@include min_desktop_large {
+			.orders__list-header_mobile {
+				display: none;
+			}
+		}
+	}
+}

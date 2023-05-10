@@ -1,0 +1,78 @@
+.header {
+	z-index: 10;
+	background-color: transparent;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+	height: 110px;
+	display: flex;
+	gap: 2.5em;
+	justify-content: space-between;
+	align-items: center;
+
+	@include tablet {
+		backdrop-filter: blur(20px);
+		height: 80px;
+		gap: 1.5em;
+	}
+
+	nav {
+		display: flex;
+		gap: 3.75em;
+		@include tablet {
+			display: none;
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			gap: 2.5em;
+			&:last-of-type {
+				@include desktop_large {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.btn {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		border: none;
+		border-left: solid 1px rgba(255, 255, 255, 0.2);
+		@include regular-14-uppercase;
+		@include desktop_huge {
+			display: none;
+		}
+	}
+
+	.logo {
+		height: max-content;
+		position: relative;
+		z-index: 9;
+	}
+
+	&_white {
+		background-color: $white;
+		border-bottom: none;
+		position: fixed;
+		top: 0;
+		.link {
+			color: $black;
+		}
+		.link_secondary {
+			color: $gray80;
+		}
+		.link-icon_eye {
+			content: url(@icons/eye-dark.svg);
+		}
+		.btn:hover {
+			background-color: $blue50;
+		}
+	}
+
+	&_mobile-hidden {
+		@include tablet {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang='ru'>
+@@include('meta/_head.html', {title: 'Результаты поиска'})
+
+<body>
+	@@include('components/business/_header.html')
+	@@include('components/business/_left-bar.html')
+	@@include('components/business/_profile-menu.html', {class: 'profile-menu_desktop-hidden'})
+	<div class="page-background page-background_sub">
+		<img src="@images/sub-fon.png" />
+	</div>
+	<main>
+		<section class="sub-container">
+			<h1>Результаты поиска</h1>
+			<h2>По запросу «проведение пусконаладочных работ» было найдено 2 результата</h2>
+		</section>
+		<section class="search-results">
+			<ul>
+				<li>
+					<a href="#" class="link link_blue">Монтаж, техническое обслуживание и ремонт систем (элементов систем) дымоудаления и противодымной вентиляции, включая диспетчеризацию и проведение пусконаладочных работ</a>
+					<p>...дымоудаления и противодымной вентиляции, включая диспетчеризацию и <span>проведение пусконаладочных работ</span></p>
+				</li>
+				<li>
+					<a href="#" class="link link_blue">Монтаж, техническое обслуживание и ремонт систем (элементов систем) дымоудаления и противодымной вентиляции, включая диспетчеризацию и проведение пусконаладочных работ</a>
+					<p>...дымоудаления и противодымной вентиляции, включая диспетчеризацию и <span>проведение пусконаладочных работ</span></p>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	@@include('components/business/_footer.html')
+	@@include('components/business/_bottom-bar.html')
+	@@include('components/business/_cookie.html')
+	@@include('meta/_includeScripts.html')
+</body>
+
+</html>

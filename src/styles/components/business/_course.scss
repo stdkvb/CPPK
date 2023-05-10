@@ -1,0 +1,656 @@
+.course {
+	padding-left: 0;
+	display: flex;
+	@include desktop_medium {
+		flex-direction: column-reverse;
+	}
+	@include desktop_extra_small {
+		padding-left: 0;
+	}
+	@include tablet {
+		padding: 0;
+		background-color: $white;
+	}
+
+	&__content {
+		overflow: hidden;
+		width: 100%;
+		.directory {
+			margin-top: 100px;
+			margin-left: 210px;
+			grid-area: directory;
+			@include desktop_medium {
+				display: none;
+			}
+		}
+		.course__text-content {
+			margin-top: 100px;
+			margin-bottom: 100px;
+			margin-left: 210px;
+			padding-right: 88px;
+			@include tablet {
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-left: 0;
+				padding-top: 60px;
+				padding-bottom: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			h3 {
+				@include medium-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			h4 {
+				@include medium-18;
+				margin-bottom: 10px;
+			}
+
+			p {
+				@include regular-18;
+				margin-bottom: 30px;
+				color: $gray80;
+				@include tablet {
+					@include regular-16;
+					margin-bottom: 16px;
+				}
+			}
+
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+
+			ul {
+				margin-bottom: 43px;
+			}
+
+			li {
+				@include regular-18;
+				line-height: 1.3;
+				position: relative;
+				padding-left: 50px;
+
+				&:not(:first-child) {
+					margin-top: 24px;
+				}
+
+
+				&::before {
+					content: url(@icons/check.svg);
+					width: 26px;
+					height: 26px;
+					position: absolute;
+					left: 0;
+
+				}
+
+				@include tablet {
+					@include regular-16;
+				}
+			}
+
+			&_blue {
+				background-color: $blue50;
+				padding: 40px 48px;
+				display: flex;
+				margin-right: 100px;
+				gap: 32px;
+				@include tablet {
+					margin-left: 0;
+					margin-right: 0;
+					padding: 20px;
+				}
+				@include mobile {
+					img {
+						display: none;
+					}
+				}
+				p {
+					color: $white;
+				}
+			}
+
+			&_gray {
+				@include tablet {
+					background-color: $gray04;
+				}
+			}
+
+			&_diplom {
+				img {
+					width: 100%;
+					max-width: 510px;
+					margin-bottom: 24px;
+				}
+			}
+
+			&_recomendations {
+				list-style: none;
+				@include tablet {
+					padding-top: 50px;
+				}
+				li::before {
+					content: '';
+				}
+
+				.courses__card {
+					a {
+						h3 {
+							@include medium-24;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.video-container {
+			margin-top: 0;
+			margin-left: 110px;
+			width: unset;
+			height: unset;
+			@include tablet {
+				margin-left: 0;
+			}
+		}
+
+		.advantages {
+			margin-left: 210px;
+			margin-right: 100px;
+			margin-bottom: 100px;
+
+			@include tablet {
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 0;
+				padding: 60px 20px 60px 20px;
+				background-color: $gray04;
+			}
+
+			h3 {
+				@include medium-36;
+				margin-bottom: 60px;
+
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			p {
+				@include regular-18;
+				color: $gray60;
+			}
+
+			&__tabs {
+				margin-bottom: 24px;
+
+				@include tablet {
+					padding-bottom: 47px;
+				}
+
+				.swiper-slide {
+					max-width: fit-content;
+					display: flex;
+					align-items: flex-end;
+					height: 31px;
+
+					h4 {
+						color: $gray50;
+						@include medium-18;
+
+						&:hover {
+							cursor: pointer;
+						}
+					}
+
+					&_active {
+						h4 {
+							color: $black;
+							@include medium-24;
+						}
+					}
+
+					@include tablet {
+						&_active {
+							h4 {
+								@include medium-20;
+							}
+						}
+					}
+				}
+
+				.swiper-scrollbar {
+					bottom: 24px;
+					background: $blue20;
+
+					@include min_tablet {
+						display: none;
+					}
+
+					.swiper-scrollbar-drag {
+						background: $blue50;
+					}
+				}
+			}
+
+			&__cards {
+				display: none;
+				grid-template-columns: repeat(2, 1fr);
+				margin-top: 24px;
+
+				&_active {
+					display: grid;
+
+					@include tablet {
+						display: block;
+					}
+				}
+			}
+
+			&__card {
+				padding: 48px;
+				background-color: $white;
+				border: solid 2px $gray04;
+
+				@include tablet {
+					padding: 24px;
+				}
+
+				img {
+					margin-bottom: 32px;
+				}
+
+				h4 {
+					@include medium-18;
+					margin-bottom: 20px;
+				}
+
+				p {
+					@include regular-16;
+				}
+			}
+		}
+
+		.stages {
+			background-color: $blue50;
+			margin-bottom: 100px;
+			margin-left: 110px;
+			padding: 100px;
+			@include tablet {
+				margin-bottom: 0;
+				padding-top: 50px;
+				padding-bottom: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-left: 0;
+			}
+
+			h3 {
+				@include medium-36;
+				color: $white;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			ul {
+				li {
+					max-width: 923px;
+					color: $white;
+					display: flex;
+					max-height: 87px;
+					@include tablet {
+						max-height: unset;
+					}
+
+					&:before {
+						content: '1';
+						background-image: url(@icons/stages-marker.svg);
+						background-repeat: no-repeat;
+						min-width: 54px;
+						height: 87px;
+						display: flex;
+						justify-content: center;
+						padding-top: 17px;
+						margin-right: 32px;
+						@include medium-24;
+						@include tablet {
+							background-image: url(@icons/stages-marker-mobile.svg);
+							@include medium-16;
+							padding-top: 8px;
+							height: unset;
+							min-width: 36px;
+						}
+					}
+
+					&:nth-child(2):before {
+						content: '2';
+					}
+					&:nth-child(3):before {
+						content: '3';
+					}
+					&:nth-child(4):before {
+						content: '4';
+					}
+					&:nth-child(5):before {
+						content: '5';
+					}
+					&:nth-child(6):before {
+						content: '6';
+						height: 37px;
+						@include tablet {
+							height: 28px;
+						}
+					}
+
+					div {
+						display: flex;
+						flex-direction: column;
+						gap: 6px;
+						@include medium-24;
+						@include tablet {
+							@include medium-18;
+							gap: 2px;
+							margin-bottom: 10px;
+						}
+
+						span {
+							@include regular-16;
+							color: $blue10;
+						}
+
+						a {
+							@include regular-16;
+							text-decoration: underline;
+							color: $blue10;
+							display: inline;
+							&:hover {
+								color: $blue30;
+							}
+						}
+					}
+				}
+
+			}
+		}
+
+		.modules {
+			background-color: $white;
+			margin-bottom: 100px;
+			margin-left: 210px;
+			padding: 100px;
+			@include tablet {
+				margin-bottom: 0;
+				padding-top: 50px;
+				padding-bottom: 60px;
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-left: 0;
+			}
+
+			h3 {
+				@include medium-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include medium-24;
+					margin-bottom: 32px;
+				}
+			}
+
+			&__module {
+				@include medium-24;
+				display: block;
+				width: 100%;
+				background-color: $gray10;
+				padding: 20px 28px;
+			}
+
+			ul {
+				list-style-type: decimal;
+				padding-left: 40px;
+				padding-top: 28px;
+
+				li {
+					margin-bottom: 12px;
+					max-width: 923px;
+				}
+			}
+
+			&__banner {
+				background-color: $blue50;
+				padding: 40px 48px;
+				margin-top: 48px;
+				display: grid;
+				grid-template-columns: 1fr 284px;
+				grid-template-areas:
+					"title button"
+					"subtitle button";
+				@include tablet {
+					display: block;
+					padding: 20px;
+				}
+				h4 {
+					grid-area: title;
+					margin-bottom: 12px;
+					@include medium-28;
+					color: $white;
+				}
+
+				p {
+					grid-area: subtitle;
+					@include medium-18;
+					color: $white;
+				}
+
+				.btn {
+					grid-area: button;
+					margin-left: 20px;
+					@include tablet {
+						width: 100%;
+						margin-top: 32px;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+
+		.banner {
+			padding-left: 210px;
+			background-position: right;
+			background-repeat: no-repeat;
+			background-color: $blue50;
+			overflow: hidden;
+			@include tablet {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			div {
+				margin-top: 80px;
+				margin-bottom: 80px;
+				@include tablet {
+					margin-top: 50px;
+					margin-bottom: 60px;
+				}
+				h2 {
+					@include medium-36;
+					@include tablet {
+						@include medium-24;
+					}
+				}
+				.btn {
+					margin-top: 40px;
+				}
+			}
+			img {
+				margin-right: 40px;
+			}
+		}
+
+		.reviews {
+			background-color: $gray04;
+			padding-right: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-left: 210px;
+			@include tablet {
+				margin-left: 0;
+				padding-left: 20px;
+			}
+			@include mobile {
+				padding-left: 0;
+			}
+			h3 {
+				@include regular-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include regular-24;
+					margin-bottom: 32px;
+					margin-right: 20px;
+				}
+				@include mobile {
+					margin-left: 20px;
+				}
+			}
+		}
+
+		.partnership {
+			display: block;
+			background-color: $gray04;
+			padding-right: 0;
+			padding-bottom: 0;
+			margin-left: 210px;
+			@include tablet {
+				margin-left: 0;
+				padding-left: 20px;
+			}
+			@include mobile {
+				padding-left: 0;
+			}
+			h3 {
+				@include regular-36;
+				margin-bottom: 60px;
+				@include tablet {
+					@include regular-24;
+					margin-bottom: 32px;
+					margin-right: 20px;
+				}
+				@include mobile {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+
+	&__right-bar {
+		grid-area: right-bar;
+		background-color: $white;
+		max-width: 472px;
+		@include desktop_medium  {
+			margin-left: 210px;
+			margin-right: 100px;
+			background-color: $gray04;
+			.aside-banner {
+				display: none;
+			}
+		}
+		@include tablet {
+			background-color: $white;
+			margin-top: 32px;
+			margin-left: 0;
+			margin-right: 0;
+			min-width: unset;
+		}
+
+		.sticky-container {
+			position: sticky;
+			top: 0;
+			border-bottom: solid 1px $gray10;
+			@include desktop_medium {
+				border: none;
+			}
+
+			.manager {
+				padding: 32px 51px;
+				border-top: solid 1px $gray10;
+				display: grid;
+				column-gap: 20px;
+				row-gap: 4px;
+				grid-template-columns: 66px 1fr;
+				grid-template-rows: 42px 1fr;
+				grid-template-areas:
+					"image name"
+					"image phone";
+				@include desktop_medium {
+					display: none;
+				}
+				img {
+					border-radius: 50%;
+					grid-area: image;
+				}
+				span {
+					grid-area: name;
+					@include regular-16;
+					color: $gray50;
+				}
+				a {
+					grid-area: phone;
+					@include medium-16;
+					color: $gray90;
+				}
+			}
+
+			.order {
+				padding: 32px 48px;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				border-top: solid 1px $gray10;
+				border-bottom: solid 1px $gray10;
+				span {
+					@include medium-16;
+				}
+				span:last-of-type {
+					@include regular-14;
+					color: $gray50;
+				}
+				@include desktop_medium {
+					display: none;
+				}
+			}
+
+			.btn_blue-border {
+				grid-area: btn;
+				padding: 1.5em 2.25em;
+				margin: 32px 48px;
+				@include desktop_medium {
+					display: none;
+				}
+				.children:before {
+					content: '';
+					width: 16px;
+					height: 16px;
+					margin-right: 16px;
+					background-image: url(@icons/download-blue.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+					transition: all $transitionDuration;
+				}
+				&:hover {
+					.children:before {
+						background-image: url(@icons/download-white.svg);
+					}
+				}
+			}
+		}
+	}
+}
+

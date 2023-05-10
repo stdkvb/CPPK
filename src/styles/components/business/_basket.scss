@@ -1,0 +1,154 @@
+.basket {
+	background-color: $gray04;
+	padding: 0 0 0 395px;
+	min-height: 100vh;
+	height: 100%;
+	display: flex;
+	@include desktop {
+		flex-direction: column;
+		gap: 60px;
+	}
+	@include tablet {
+		padding: 0 0 72px 0;
+	}
+
+	&__content {
+		padding-top: 158px;
+		width: calc(100% - 360px);
+		padding-right: 48px;
+		@include desktop {
+			width: 100%;
+		}
+		@include tablet {
+			padding-top: 40px;
+			padding-left: 48px;
+		}
+		@include mobile {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		h1 {
+			color: $black;
+			@include regular-36;
+			margin-bottom: 60px;
+			@include tablet {
+				@include regular-28;
+				margin-bottom: 32px;
+			}
+		}
+
+		&__subtitle {
+			@include regular-24;
+			margin-bottom: 28px;
+			@include mobile {
+				@include regular-18;
+			}
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 2px;
+			margin-bottom: 40px;
+		}
+
+		&__buttons {
+			display: flex;
+			justify-content: flex-end;
+			gap: 24px;
+			@include mobile {
+				flex-direction: column;
+			}
+		}
+	}
+
+	&__side-bar {
+		padding-top: 110px;
+		width: 360px;
+		background-color: $white;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: fixed;
+		top: 0;
+		right: 0;
+		@include desktop {
+			position: unset;
+			width: 100%;
+			padding-top: 0;
+			padding-right: 48px;
+			height: unset;
+			background-color: transparent;
+		}
+		@include tablet {
+			padding-right: 0;
+		}
+	}
+
+	&__order {
+		padding: 48px 44px;
+		border-top: solid 1px $gray04;
+		border-bottom: solid 1px $gray04;
+		@include desktop {
+			background-color: $white;
+		}
+		.btn {
+			margin-top: 44px;
+			width: 100%;
+		}
+	}
+
+	&__order-detail {
+		border-bottom: solid 1px $gray04;
+		padding-bottom: 24px;
+		@include medium-24;
+		p {
+			@include regular-18;
+			display: grid;
+			grid-template-columns: 116px 1fr 20px;
+			&:nth-child(1) {
+				margin-top: 24px;
+				span {
+					color: $gray80;
+					justify-self: flex-end;
+				}
+			}
+			&:nth-child(2) {
+				margin-top: 8px;
+				span {
+					color: $error50;
+					justify-self: flex-end;
+				}
+			}
+		}
+	}
+
+	&__order-total {
+		p {
+			@include medium-24;
+			margin-top: 24px;
+			display: grid;
+			grid-template-columns: 80px 1fr 20px;
+			span {
+				justify-self: flex-end;
+			}
+		}
+	}
+
+	&__hotline {
+		border-top: solid 1px $gray04;
+		padding: 32px 44px;
+		span {
+			color: $gray50;
+			@include regular-14;
+			margin-bottom: 4px;
+		}
+		a {
+			color: $gray90;
+			@include medium-16;
+		}
+	}
+}
+
+
